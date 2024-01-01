@@ -1,58 +1,61 @@
 {
-    "name": "zachwatkins.github.io",
-    "version": "0.1.0",
-    "description": "Portfolio for Zachary K. Watkins",
-    "private": true,
-    "type": "module",
-    "engines": {
-        "node": "18.17.1"
-    },
-    "scripts": {
-        "serve": "vite",
-        "dev": "vite",
-        "build": "vite build",
-        "lint": "prettier --check .",
-        "format": "prettier --write ."
-    },
-    "keywords": [
-        "portfolio",
-        "blog",
-        "web"
+  "name": "zachwatkins.github.io",
+  "version": "0.1.0",
+  "description": "Portfolio for Zachary K. Watkins",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "18.17.1"
+  },
+  "scripts": {
+    "serve": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "keywords": [
+    "portfolio",
+    "blog",
+    "web"
+  ],
+  "author": "Zachary Kendall Watkins <watkinza@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.5",
+    "babel-plugin-transform-vite-meta-env": "^1.0.3",
+    "prettier": "^3.1.1",
+    "tailwindcss": "^3.1.0",
+    "vite": "^5.0.10",
+    "vitepress": "^1.0.0-rc.34",
+    "vue": "^3.4.3"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "arrowParens": "always",
+    "jsxSingleQuote": true,
+    "endOfLine": "lf",
+    "quoteProps": "preserve",
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "singleAttributePerLine": true,
+    "proseWrap": "never",
+    "htmlWhitespaceSensitivity": "strict"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
     ],
-    "author": "Zachary Kendall Watkins <watkinza@gmail.com>",
-    "license": "MIT",
-    "dependencies": {
-    },
-    "devDependencies": {
-        "@babel/preset-env": "^7.23.5",
-        "prettier": "^3.1.1",
-        "tailwindcss": "^3.1.0",
-        "vite": "^5.0.10",
-        "babel-plugin-transform-vite-meta-env": "^1.0.3"
-    },
-    "prettier": {
-        "singleQuote": true,
-        "printWidth": 80,
-        "tabWidth": 4,
-        "useTabs": false,
-        "semi": true,
-        "arrowParens": "always",
-        "jsxSingleQuote": true,
-        "endOfLine": "lf",
-        "quoteProps": "preserve",
-        "trailingComma": "all",
-        "bracketSpacing": true,
-        "bracketSameLine": false,
-        "singleAttributePerLine": true,
-        "proseWrap": "never",
-        "htmlWhitespaceSensitivity": "strict"
-    },
-    "babel": {
-        "presets": [
-            "@babel/preset-env"
-        ],
-        "plugins": [
-            "babel-plugin-transform-vite-meta-env"
-        ]
-    }
+    "plugins": [
+      "babel-plugin-transform-vite-meta-env"
+    ]
+  }
 }

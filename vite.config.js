@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import insertGATag from './bin/insert-ga-tag';
+import insertGATag from './scripts/insert-views';
 
 export default defineConfig(({ command, mode, ssrBuild }) => {
     return {

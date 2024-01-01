@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import packageJson from './package.json';
-import insertGATag from './scripts/insert-views';
+import includeHtml from './scripts/vite-include-html';
 
 export default defineConfig(({ command, mode, ssrBuild }) => {
     return {
@@ -10,7 +10,8 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
             ),
         },
         plugins: [
-            insertGATag(mode),
+            includeHtml(mode),
         ],
+        base: '/'
     };
 });

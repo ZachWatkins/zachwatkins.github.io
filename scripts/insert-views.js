@@ -9,12 +9,15 @@ export default function insertViews(mode) {
             if (!matches) {
                 return html;
             }
+            let newHtml = html;
             for (let i = 0; i < matches.length; i++) {
                 const match = matches[i];
                 const filePath = match.replace(pattern, '$1');
                 const fileContent = fs.readFileSync(filePath);
-                html = html.replace(match, fileContent);
+                const fileHtml = fileContent.toString();
+                newHtml = newHtml.replace(match, fileHtml);
             }
+            return newHtml;
         },
     };
 }

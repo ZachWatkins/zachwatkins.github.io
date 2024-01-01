@@ -2,6 +2,6 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Zachary K. Watkins",
-  description: "A VitePress Site",
+  title: "My Awesome Project",
+  description: "A VitePress Site"
 })

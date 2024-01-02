@@ -1,6 +1,6 @@
 <script setup>
 import { useData } from 'vitepress'
-
+import Navigation from './Navigation.vue'
 // https://vitepress.dev/reference/runtime-api#usedata
 const { page, site, theme, frontmatter } = useData()
 </script>
@@ -11,17 +11,7 @@ const { page, site, theme, frontmatter } = useData()
       <h1>{{ site.title }}</h1>
       <p>{{ site.description }}</p>
     </header>
-    <nav>
-      <span v-for="(link, i) in theme.nav">
-        <span v-if="i > 0"> | </span>
-        <a
-          :key="link.text"
-          :href="link.link"
-        >
-          {{ link.text }}
-        </a>
-      </span>
-    </nav>
+    <Navigation />
     <main v-if="page.isNotFound"> Oh no! </main>
     <main v-else>
       <div v-if="frontmatter.home">
@@ -29,6 +19,7 @@ const { page, site, theme, frontmatter } = useData()
           <li><a href="/markdown-examples.html">Markdown Examples</a></li>
           <li><a href="/api-examples.html">API Examples</a></li>
         </ul>
+        <Content />
       </div>
       <div v-else>
         <Content />

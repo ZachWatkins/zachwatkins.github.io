@@ -27,11 +27,11 @@ export default defineConfig({
     footerNav: [
       { text: 'Privacy Policy', link: '/privacy' },
     ],
-    social: [
-      { text: 'GitHub', link: 'https://github.com/zachwatkins/' },
-      { text: 'X', link: 'https://x.com/zachtypedit' },
-      { text: 'LinkedIn', link: 'https://www.linkedin.com/in/zacharykwatkins/' },
-      { text: 'Email', link: 'mailto:watkinza@gmail.com' },
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/zachwatkins/' },
+      { icon: 'x', link: 'https://x.com/zachtypedit' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/zacharykwatkins/' },
+      { icon: 'email', link: 'mailto:watkinza@gmail.com' },
     ],
   },
 })

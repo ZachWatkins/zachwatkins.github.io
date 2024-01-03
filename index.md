@@ -3,9 +3,10 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "Full stack developer"
+  text: "with an artist's eye."
+  tagline: Since 2006 I’ve designed, developed, provisioned, and maintained web technology for public and private organizations.
+   This is where I publish some of my work, opinions, and presentations.
   actions:
     - theme: brand
       text: Markdown Examples

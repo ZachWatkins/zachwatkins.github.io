@@ -4,23 +4,22 @@ layout: home
 
 hero:
   name: "Full stack developer"
-  text: "with an artist's eye."
-  tagline: Since 2006 I’ve designed, developed, provisioned, and maintained web technology for public and private organizations.
-   This is where I publish some of my work, opinions, and presentations.
+  text: "with an art degree."
+  tagline: I plan, create, deploy, and maintain web technology for the public and private sector. Check out my work, articles, and resources.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Portfolio
+      link: /portfolio
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Contact Me
+      link: /contact-me
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Articles
+    details: Posts, tutorials, and other content I've written about web development.
+  - title: Resources
+    details: Websites, applications, and open source software I've published.
+  - title: Experience
+    details: Skills, credentials, work experience, and education.
 ---
 

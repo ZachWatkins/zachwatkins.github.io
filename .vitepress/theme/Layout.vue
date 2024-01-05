@@ -1,6 +1,7 @@
 <script setup>
 import { useData } from 'vitepress'
 import Navigation from './Navigation.vue'
+import Home from './Home.vue'
 import Footer from './Footer.vue'
 // https://vitepress.dev/reference/runtime-api#usedata
 const { page, site, theme, frontmatter } = useData()
@@ -14,17 +15,14 @@ const { page, site, theme, frontmatter } = useData()
     </header>
     <Navigation />
     <main v-if="page.isNotFound"> Oh no! </main>
+    <main v-else-if="frontmatter.layout === 'home'">
+      <Home
+        :hero="frontmatter.hero"
+        :features="frontmatter.features"
+      />
+    </main>
     <main v-else>
-      <div v-if="frontmatter.home">
-        <ul>
-          <li><a href="/markdown-examples.html">Markdown Examples</a></li>
-          <li><a href="/api-examples.html">API Examples</a></li>
-        </ul>
-        <Content />
-      </div>
-      <div v-else>
-        <Content />
-      </div>
+      <Content />
     </main>
     <hr />
     <Footer

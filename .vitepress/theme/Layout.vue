@@ -1,6 +1,7 @@
 <script setup>
 import { useData } from 'vitepress'
 import Navigation from './Navigation.vue'
+import Footer from './Footer.vue'
 // https://vitepress.dev/reference/runtime-api#usedata
 const { page, site, theme, frontmatter } = useData()
 </script>
@@ -26,16 +27,10 @@ const { page, site, theme, frontmatter } = useData()
       </div>
     </main>
     <hr />
-    <footer>
-      <a href="/">{{ site.title }}</a> &copy; {{ theme.date.copyrightYears }}
-      {{ theme.author }}<br />
-      <a
-        v-for="link in theme.footerNav"
-        :key="link.text"
-        :href="link.link"
-      >
-        {{ link.text }}
-      </a>
-    </footer>
+    <Footer
+      :copyrightYears="theme.date.copyrightYears"
+      :author="theme.author"
+      :nav="theme.footerNav"
+    />
   </div>
 </template>

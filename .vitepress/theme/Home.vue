@@ -10,7 +10,7 @@
       v-for="action in hero.actions"
       :key="action.text"
       :href="action.link"
-      :class="'button ' + action.theme"
+      :class="`button ${action.theme}`"
     >
       {{ action.text }}
     </a>

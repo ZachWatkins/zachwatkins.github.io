@@ -21,12 +21,11 @@ export default defineConfig({
     nav: [
       { text: 'Blog', link: '/blog' },
       { text: 'Portfolio', link: '/portfolio' },
-      { text: 'Open Source', link: '/websites' },
-      { text: 'Contact', link: '/resources' },
+      { text: 'Open Source', link: '/open-source' },
+      { text: 'Contact', link: '/contact' },
     ],
     footerNav: [
       { text: 'Blog', link: '/blog' },
-      { text: 'Projects', link: '/projects' },
       { text: 'Resources', link: '/resources' },
       { text: 'Experience', link: '/experience' },
       { text: 'Contact', link: '/contact' },

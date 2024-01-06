@@ -8,11 +8,11 @@ hero:
   tagline: I plan, create, deploy, and maintain web technology for the public and private sector. Check out my work, articles, and resources.
   actions:
     - theme: main
-      text: Portfolio
-      link: /contact-me
-    - theme: alt
       text: Blog
       link: /portfolio
+    - theme: alt
+      text: Portfolio
+      link: /contact-me
 
 features:
   - title: Articles

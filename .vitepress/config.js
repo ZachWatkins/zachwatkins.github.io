@@ -20,9 +20,9 @@ export default defineConfig({
     },
     nav: [
       { text: 'Blog', link: '/blog' },
-      { text: 'Projects', link: '/projects' },
-      { text: 'Experience', link: '/experience' },
-      { text: 'Contact', link: '/contact' },
+      { text: 'Portfolio', link: '/portfolio' },
+      { text: 'Open Source', link: '/websites' },
+      { text: 'Contact', link: '/resources' },
     ],
     footerNav: [
       { text: 'Blog', link: '/blog' },

@@ -29,14 +29,14 @@ const { page, site, theme, frontmatter } = useData()
     Oh no!
   </main>
   <main
-    v-else-if="frontmatter.layout === 'home'"
+    v-else-if="'home' === frontmatter.layout"
     class="pl-5 pr-5 m-auto max-w-screen-xl"
   >
-    <div
-      ><strong>{{ frontmatter.hero.name }}</strong>
-      {{ frontmatter.hero.text }}</div
+    <h1 class="text-5xl mb-8"
+      ><span class="font-bold">{{ frontmatter.hero.name }}&nbsp;</span
+      ><span class="">{{ frontmatter.hero.text }}</span></h1
     >
-    <p>
+    <p class="text-2xl w-1/2 mb-8">
       {{ frontmatter.hero.tagline }}
     </p>
     <p>
@@ -44,7 +44,7 @@ const { page, site, theme, frontmatter } = useData()
         v-for="action in frontmatter.hero.actions"
         :key="action.text"
         :href="action.link"
-        :class="`button ${action.theme}`"
+        :class="`hero-action-${action.theme} p-2 pl-6 pr-6 m-2 text-2xl rounded-full`"
       >
         {{ action.text }}
       </a>

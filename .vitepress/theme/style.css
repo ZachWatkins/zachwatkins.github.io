@@ -14,6 +14,7 @@
   --javascript-yellow-dark-rgb: rgb(230, 199, 0);
   --php-purple: #777bb3;
   --php-purple-rgb: rgb(119, 123, 179);
+  --php-purple-hsl: hsl(240, 33%, 55%);
   --computer-green: #007700;
   --computer-green-rgb: rgb(0, 119, 0);
   --error: #ff0000;
@@ -79,6 +80,20 @@ footer {
   height: 3rem;
 }
 /** <-- */
+
+.hero-action-main {
+  background-color: hsl(0, 90%, 32%);
+  color: #fff;
+  text-shadow: 0 0 0.5rem #000;
+  box-shadow: 0 0 0.25rem #000 inset;
+}
+
+.hero-action-alt {
+  background-color: hsl(235, 90%, 50%);
+  color: #fff;
+  text-shadow: 0 0 0.5rem #000;
+  box-shadow: 0 0 0.25rem #000 inset;
+}
 
 /**
  * Customize default theme styling by overriding CSS variables:

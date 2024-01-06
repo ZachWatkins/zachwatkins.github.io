@@ -7,12 +7,12 @@ hero:
   text: "with an art degree."
   tagline: I plan, create, deploy, and maintain web technology for the public and private sector. Check out my work, articles, and resources.
   actions:
-    - theme: brand
+    - theme: main
       text: Portfolio
-      link: /portfolio
-    - theme: alt
-      text: Contact Me
       link: /contact-me
+    - theme: alt
+      text: Blog
+      link: /portfolio
 
 features:
   - title: Articles

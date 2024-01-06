@@ -5,7 +5,7 @@ const { page, site, theme, frontmatter } = useData()
 </script>
 
 <template>
-  <header class="p-1 text-black border-b-4 border-b-black bg-js-yellow">
+  <header class="p-1 border-b-4 border-b-black">
     <div class="max-w-screen-xl m-auto flex items-center">
       <div class="p-1 m-4 mt-0 mb-0 font-bold text-4xl flex-grow">
         {{ site.title }}
@@ -57,7 +57,7 @@ const { page, site, theme, frontmatter } = useData()
     <Content />
   </main>
   <hr />
-  <footer class="p-1 text-black border-t-4 border-t-black bg-js-yellow">
+  <footer class="p-1 border-t-4 border-t-black">
     <div class="max-w-screen-xl m-auto flex items-center h-full">
       <div class="flex-grow">
         <a

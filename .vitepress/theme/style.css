@@ -3,13 +3,19 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --theme-blue: #00b3dd;
+  --tapfuel-blue: #00b3dd;
+  --tapfuel-blue-rgb: rgb(0, 179, 221);
+  --tapfuel-blue-hsl: hsl(191, 100%, 43%);
   --theme-orange: #ff8c00;
   --javascript-yellow: #f7df1e;
   --javascript-yellow-rgb: rgb(247, 223, 30);
+  --javascript-yellow-hsl: hsl(50, 92%, 59%);
   --javascript-yellow-dark: #e6c700;
   --javascript-yellow-dark-rgb: rgb(230, 199, 0);
+  --php-purple: #777bb3;
+  --php-purple-rgb: rgb(119, 123, 179);
   --computer-green: #007700;
+  --computer-green-rgb: rgb(0, 119, 0);
   --error: #ff0000;
   --success: #00ff00;
 }
@@ -26,6 +32,18 @@ html {
 body {
   margin: 0;
   padding: 0;
+}
+
+header,
+footer {
+  background: linear-gradient(
+    90deg,
+    hsl(191, 100%, 43%) 0%,
+    hsl(191, 100%, 0%) 15%,
+    hsl(50, 92%, 0%) 85%,
+    hsl(50, 92%, 59%) 100%
+  );
+  color: #fff;
 }
 
 main {

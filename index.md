@@ -23,3 +23,4 @@ features:
     details: Skills, credentials, work experience, and education.
 ---
 
+This website is a work in progress. Please check back soon for more content.

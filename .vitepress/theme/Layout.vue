@@ -39,7 +39,7 @@ const { page, site, theme, frontmatter } = useData()
     <p class="text-2xl w-1/2 mb-8">
       {{ frontmatter.hero.tagline }}
     </p>
-    <p>
+    <p class="mb-8">
       <a
         v-for="action in frontmatter.hero.actions"
         :key="action.text"
@@ -49,6 +49,7 @@ const { page, site, theme, frontmatter } = useData()
         {{ action.text }}
       </a>
     </p>
+    <Content />
   </main>
   <main
     v-else

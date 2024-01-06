@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 :root {
   --theme-blue: #00b3dd;
   --theme-orange: #ff8c00;

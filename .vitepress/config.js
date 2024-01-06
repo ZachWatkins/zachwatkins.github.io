@@ -5,7 +5,7 @@ export default defineConfig({
   lang: "en-US",
   title: "Zach Watkins",
   titleTemplate: ":title - Zach Watkins",
-  description: "Solve the problem, then write the code.",
+  description: "Full stack developer with an art degree.",
   head: [
     ['meta', { name: 'author', content: 'Zachary K. Watkins' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -19,12 +19,17 @@ export default defineConfig({
       copyrightYears: 2024 === new Date().getFullYear() ? '2024' : `2024 - ${new Date().getFullYear()}`,
     },
     nav: [
-      { text: 'Articles', link: '/articles' },
-      { text: 'Work', link: '/work' },
-      { text: 'Demos', link: '/demos' },
+      { text: 'Blog', link: '/blog' },
+      { text: 'Projects', link: '/projects' },
+      { text: 'Experience', link: '/experience' },
       { text: 'Contact', link: '/contact' },
     ],
     footerNav: [
+      { text: 'Blog', link: '/blog' },
+      { text: 'Projects', link: '/projects' },
+      { text: 'Resources', link: '/resources' },
+      { text: 'Experience', link: '/experience' },
+      { text: 'Contact', link: '/contact' },
       { text: 'Privacy Policy', link: '/privacy' },
     ],
     sidebar: [

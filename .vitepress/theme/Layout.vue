@@ -1,49 +1,77 @@
 <script setup>
 import { useData } from 'vitepress'
-import Home from './Home.vue'
 // https://vitepress.dev/reference/runtime-api#usedata
 const { page, site, theme, frontmatter } = useData()
 </script>
 
 <template>
-  <header>
-    <div class="max-w-screen-xl m-auto">
-      <div class="font-bold text-4xl">
+  <header class="p-1 text-black border-b-4 border-b-black bg-js-yellow">
+    <div class="max-w-screen-xl m-auto flex items-center">
+      <div class="p-1 m-4 mt-0 mb-0 font-bold text-4xl flex-grow">
         {{ site.title }}
       </div>
-      <span class="text-xl">{{ site.description }}</span>
+      <nav class="text-xl flex-initial text-right font-bold flex h-full">
+        <a
+          v-for="(link, i) in theme.nav"
+          :key="link.text"
+          :href="link.link"
+          class="p-1 m-4"
+        >
+          {{ link.text }}
+        </a>
+      </nav>
     </div>
   </header>
-  <nav>
-    <div class="max-w-screen-xl m-auto text-xl">
-      <a
-        v-for="(link, i) in theme.nav"
-        :key="link.text"
-        :href="link.link"
-      >
-        {{ link.text }}
-      </a>
-    </div>
-  </nav>
-  <main v-if="page.isNotFound"> Oh no! </main>
-  <main v-else-if="frontmatter.layout === 'home'">
-    <Home
-      :hero="frontmatter.hero"
-      :features="frontmatter.features"
-    />
+  <main
+    v-if="page.isNotFound"
+    class="m-auto max-w-screen-xl"
+  >
+    Oh no!
   </main>
-  <main v-else>
+  <main
+    v-else-if="frontmatter.layout === 'home'"
+    class="pl-5 pr-5 m-auto max-w-screen-xl"
+  >
+    <div
+      ><strong>{{ frontmatter.hero.name }}</strong>
+      {{ frontmatter.hero.text }}</div
+    >
+    <p>
+      {{ frontmatter.hero.tagline }}
+    </p>
+    <p>
+      <a
+        v-for="action in frontmatter.hero.actions"
+        :key="action.text"
+        :href="action.link"
+        :class="`button ${action.theme}`"
+      >
+        {{ action.text }}
+      </a>
+    </p>
+  </main>
+  <main
+    v-else
+    class="pl-5 pr-5 m-auto max-w-screen-xl"
+  >
     <Content />
   </main>
   <hr />
-  <footer>
-    &copy; {{ theme.date.copyrightYears }} {{ theme.author }}<br />
-    <a
-      v-for="link in theme.footerNav"
-      :key="link.text"
-      :href="link.link"
-    >
-      {{ link.text }}
-    </a>
+  <footer class="p-1 text-black border-t-4 border-t-black bg-js-yellow">
+    <div class="max-w-screen-xl m-auto flex items-center h-full">
+      <div class="flex-grow">
+        <a
+          v-for="link in theme.footerNav"
+          :key="link.text"
+          :href="link.link"
+          class="p-1 m-4"
+        >
+          {{ link.text }}
+        </a>
+      </div>
+      <div class="flex-initial p-1 m-4 mt-0 mb-0">
+        &copy; {{ theme.date.copyrightYears }} {{ theme.author }}
+      </div>
+    </div>
   </footer>
 </template>

@@ -11,6 +11,10 @@
   --success: #00ff00;
 }
 
+.bg-js-yellow {
+  background-color: var(--javascript-yellow);
+}
+
 body {
   margin: 0;
   padding: 0;

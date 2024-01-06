@@ -32,16 +32,25 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background: black;
+  background: linear-gradient(
+    90deg,
+    hsl(50, 50%, 15%) 0%,
+    hsl(50, 50%, 0%) 15%,
+    hsl(191, 50%, 0%) 85%,
+    hsl(191, 50%, 15%) 100%
+  );
+  color: #fff;
 }
 
 header,
 footer {
   background: linear-gradient(
     90deg,
-    hsl(191, 100%, 43%) 0%,
-    hsl(191, 100%, 0%) 15%,
-    hsl(50, 92%, 0%) 85%,
-    hsl(50, 92%, 59%) 100%
+    hsl(50, 100%, 43%) 0%,
+    hsl(50, 100%, 0%) 15%,
+    hsl(191, 100%, 0%) 85%,
+    hsl(191, 100%, 43%) 100%
   );
   color: #fff;
 }

@@ -56,7 +56,6 @@ const { page, site, theme, frontmatter } = useData()
   >
     <Content />
   </main>
-  <hr />
   <footer class="p-1 border-t-4 border-t-black">
     <div class="max-w-screen-xl m-auto flex items-center h-full">
       <div class="flex-grow">

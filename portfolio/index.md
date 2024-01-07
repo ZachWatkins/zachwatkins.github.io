@@ -1,49 +1,14 @@
----
-outline: deep
----
-
 # Portfolio
 
-This page demonstrates usage of some of the runtime APIs provided by VitePress.
+<img style="float:left;margin:0 2rem 2rem 0;" src="/profile-214x300.jpg" alt="Zachary K. Watkins" width="214" height="300" />
 
-The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
+I have a presence on the following platforms, which I draw from to build this portfolio:
 
-```md
-<script setup>
-import { useData } from 'vitepress'
-
-const { theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
-```
-
-<script setup>
-import { useData } from 'vitepress'
-
-const { site, theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
-
-## More
-
-Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
+| Platform | | Link |
+| --- | --- | --- |
+| GitHub | &nbsp;&nbsp;&nbsp; | https://github.com/zachwatkins |
+| CodePen | &nbsp;&nbsp;&nbsp; | https://codepen.io/zw |
+| WordPress | &nbsp;&nbsp;&nbsp; | https://profiles.wordpress.org/zachwtx/ |
+| LinkedIn | &nbsp;&nbsp;&nbsp; | https://www.linkedin.com/in/zacharykwatkins/ |
+| Twitter | &nbsp;&nbsp;&nbsp; | https://twitter.com/zachtypedit |
+| Packagist | &nbsp;&nbsp;&nbsp; | https://packagist.org/users/zachwatkins/packages/ |

@@ -1,3 +1,3 @@
 # Blog
 
-Check out some of the blog posts I've written.
+Posts, tutorials, and other content I've written about web development.

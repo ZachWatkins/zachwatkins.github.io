@@ -22,6 +22,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Blog', link: '/blog/' },
+      { text: 'Career', link: '/career/' },
       { text: 'Portfolio', link: '/portfolio/' },
       { text: 'Resources', link: '/resources/' },
       { text: 'Contact', link: '/contact/' },

@@ -68,6 +68,30 @@ main a {
   text-decoration: underline;
 }
 
+main h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+main h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+main p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+main blockquote {
+  margin: 1rem;
+  padding: 0 1rem;
+  border-left: 0.25rem solid #666;
+}
+
 a:focus,
 a:hover {
   color: var(--tapfuel-blue);
@@ -127,6 +151,32 @@ footer {
 .hero-action-2 {
   background-color: hsl(235, 90%, 50%);
 }
+
+/** --> Table of contents */
+.table-of-contents {
+  float: right;
+  top: 2rem;
+  max-width: 20rem;
+  margin-left: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  backdrop-filter: blur(0.5rem);
+  border: 1px solid hsla(50, 92%, 59%, 50%);
+  font-size: 1.25rem;
+  line-height: 1.75;
+}
+
+.table-of-contents::before {
+  content: 'Table of Contents';
+  display: block;
+  font-weight: bold;
+}
+
+.table-of-contents a {
+  text-decoration: none;
+}
+/** <-- */
 
 /**
  * Customize default theme styling by overriding CSS variables:

@@ -19,17 +19,17 @@ export default defineConfig({
       copyrightYears: 2024 === new Date().getFullYear() ? '2024' : `2024 - ${new Date().getFullYear()}`,
     },
     nav: [
-      { text: 'Blog', link: '/blog' },
-      { text: 'Portfolio', link: '/portfolio' },
-      { text: 'Open Source', link: '/open-source' },
-      { text: 'Contact', link: '/contact' },
+      { text: 'Blog', link: '/blog/' },
+      { text: 'Portfolio', link: '/portfolio/' },
+      { text: 'Resources', link: '/resources/' },
+      { text: 'Contact', link: '/contact/' },
     ],
     footerNav: [
-      { text: 'Blog', link: '/blog' },
-      { text: 'Resources', link: '/resources' },
-      { text: 'Experience', link: '/experience' },
-      { text: 'Contact', link: '/contact' },
-      { text: 'Privacy Policy', link: '/privacy' },
+      { text: 'Blog', link: '/blog/' },
+      { text: 'Portfolio', link: '/portfolio/' },
+      { text: 'Resources', link: '/resources/' },
+      { text: 'Contact', link: '/contact/' },
+      { text: 'Privacy Policy', link: '/privacy/' },
     ],
     sidebar: [
       {

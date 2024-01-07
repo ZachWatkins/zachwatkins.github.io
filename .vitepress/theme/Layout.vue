@@ -5,10 +5,10 @@ const { page, site, theme, frontmatter } = useData()
 </script>
 
 <template>
-  <header class="p-1 border-b-4 border-b-black">
+  <header class="p-1">
     <div class="max-w-screen-xl m-auto flex items-center">
       <div class="p-1 m-4 mt-0 mb-0 font-bold text-4xl flex-grow">
-        {{ site.title }}
+        <a href="/">{{ site.title }}</a>
       </div>
       <nav class="text-xl flex-initial text-right font-bold flex h-full">
         <a
@@ -24,27 +24,27 @@ const { page, site, theme, frontmatter } = useData()
   </header>
   <main
     v-if="page.isNotFound"
-    class="m-auto max-w-screen-xl"
+    class="pl-5 pr-5 m-auto max-w-screen-xl text-center"
   >
     Oh no!
   </main>
   <main
     v-else-if="'home' === frontmatter.layout"
-    class="pl-5 pr-5 m-auto max-w-screen-xl"
+    class="home pl-5 pr-5 m-auto max-w-screen-xl text-xl text-center"
   >
-    <h1 class="text-5xl mb-8"
-      ><span class="font-bold">{{ frontmatter.hero.name }}&nbsp;</span
+    <h1 class="text-6xl mb-8"
+      ><span class="font-extrabold">{{ frontmatter.hero.name }}<br /></span
       ><span class="">{{ frontmatter.hero.text }}</span></h1
     >
-    <p class="text-2xl w-1/2 mb-8">
+    <p class="text-2xl w-2/3 mb-8 ml-auto mr-auto">
       {{ frontmatter.hero.tagline }}
     </p>
     <p class="mb-8">
       <a
-        v-for="action in frontmatter.hero.actions"
+        v-for="(action, i) in frontmatter.hero.actions"
         :key="action.text"
         :href="action.link"
-        :class="`hero-action-${action.theme} p-2 pl-6 pr-6 m-2 text-2xl rounded-full`"
+        :class="`hero-action-${i} p-2 pl-6 pr-6 m-2 text-2xl rounded-full`"
       >
         {{ action.text }}
       </a>
@@ -53,11 +53,11 @@ const { page, site, theme, frontmatter } = useData()
   </main>
   <main
     v-else
-    class="pl-5 pr-5 m-auto max-w-screen-xl"
+    class="pl-10 pr-5 m-auto max-w-screen-xl"
   >
     <Content />
   </main>
-  <footer class="p-1 border-t-4 border-t-black">
+  <footer class="p-1">
     <div class="max-w-screen-xl m-auto flex items-center h-full">
       <div class="flex-grow">
         <a

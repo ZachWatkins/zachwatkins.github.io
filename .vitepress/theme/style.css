@@ -71,6 +71,15 @@ main {
 
 main {
   padding-bottom: 5rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
 }
 
 footer {
@@ -81,14 +90,27 @@ footer {
 }
 /** <-- */
 
-.hero-action-main {
+#app:has(.home) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.hero-action-0 {
   background-color: hsl(0, 90%, 32%);
   color: #fff;
   text-shadow: 0 0 0.5rem #000;
   box-shadow: 0 0 0.25rem #000 inset;
 }
 
-.hero-action-alt {
+.hero-action-1 {
+  background-color: hsl(118, 90%, 20%);
+  color: #fff;
+  text-shadow: 0 0 0.5rem #000;
+  box-shadow: 0 0 0.25rem #000 inset;
+}
+
+.hero-action-2 {
   background-color: hsl(235, 90%, 50%);
   color: #fff;
   text-shadow: 0 0 0.5rem #000;

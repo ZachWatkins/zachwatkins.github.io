@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Full stack developer"
-  text: "with an art degree."
+  name: "Senior full stack developer"
+  text: "with a degree in graphic design."
   tagline: I plan, create, deploy, and maintain web technology for the public and private sector.
   actions:
     - text: Blog

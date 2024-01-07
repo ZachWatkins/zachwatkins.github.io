@@ -107,25 +107,25 @@ footer {
   flex-direction: column;
 }
 
-.hero-action-0 {
-  background-color: hsl(0, 90%, 32%);
+.hero-action-0,
+.hero-action-1,
+.hero-action-2 {
   color: #fff;
   text-shadow: 0 0 0.5rem #000;
   box-shadow: 0 0 0.25rem #000 inset;
+  text-decoration: none;
+}
+
+.hero-action-0 {
+  background-color: hsl(0, 90%, 32%);
 }
 
 .hero-action-1 {
   background-color: hsl(118, 90%, 20%);
-  color: #fff;
-  text-shadow: 0 0 0.5rem #000;
-  box-shadow: 0 0 0.25rem #000 inset;
 }
 
 .hero-action-2 {
   background-color: hsl(235, 90%, 50%);
-  color: #fff;
-  text-shadow: 0 0 0.5rem #000;
-  box-shadow: 0 0 0.25rem #000 inset;
 }
 
 /**

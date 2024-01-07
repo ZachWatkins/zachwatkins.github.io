@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Full stack developer"
   text: "with an art degree."
-  tagline: I plan, create, deploy, and maintain web technology for both the public and private sector.
+  tagline: I plan, create, deploy, and maintain web technology for the public and private sector.
   actions:
     - text: Blog
       link: /blog/

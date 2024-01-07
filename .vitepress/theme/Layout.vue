@@ -36,7 +36,7 @@ const { page, site, theme, frontmatter } = useData()
       ><span class="font-extrabold">{{ frontmatter.hero.name }}<br /></span
       ><span class="">{{ frontmatter.hero.text }}</span></h1
     >
-    <p class="text-2xl w-2/3 mb-8 ml-auto mr-auto">
+    <p class="text-2xl w-3/4 mb-8 ml-auto mr-auto">
       {{ frontmatter.hero.tagline }}
     </p>
     <p class="mb-8">

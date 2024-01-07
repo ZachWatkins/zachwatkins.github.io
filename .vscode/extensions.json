@@ -4,6 +4,7 @@
     "webben.browserslist",
     "wix.vscode-import-cost",
     "esbenp.prettier-vscode",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "bradlc.vscode-tailwindcss"
   ]
 }

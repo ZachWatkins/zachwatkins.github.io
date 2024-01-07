@@ -12,7 +12,10 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "lint": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
   },
   "keywords": [
     "portfolio",
@@ -22,16 +25,19 @@
   "author": "Zachary Kendall Watkins <watkinza@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
     "prettier": "^3.1.1",
+    "tailwindcss": "^3.4.1",
     "vitepress": "^1.0.0-rc.34",
     "vue": "^3.4.3"
   },
   "prettier": {
     "singleQuote": true,
     "printWidth": 80,
-    "tabWidth": 4,
+    "tabWidth": 2,
     "useTabs": false,
-    "semi": true,
+    "semi": false,
     "arrowParens": "always",
     "jsxSingleQuote": true,
     "endOfLine": "lf",
@@ -42,5 +48,8 @@
     "singleAttributePerLine": true,
     "proseWrap": "never",
     "htmlWhitespaceSensitivity": "strict"
+  },
+  "dependencies": {
+    "primevue": "^3.45.0"
   }
 }

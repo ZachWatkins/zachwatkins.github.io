@@ -1,4 +1,5 @@
 // https://vitepress.dev/guide/custom-theme
+import './tailwind.postcss'
 import Layout from './Layout.vue'
 import './style.css'
 
@@ -9,4 +10,3 @@ export default {
     // ...
   }
 }
-

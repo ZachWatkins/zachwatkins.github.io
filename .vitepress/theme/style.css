@@ -1,5 +1,268 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-html {
-  font-family: Arial, Helvetica;
+:root {
+  --tapfuel-blue: #00b3dd;
+  --tapfuel-blue-rgb: rgb(0, 179, 221);
+  --tapfuel-blue-hsl: hsl(191, 100%, 43%);
+  --theme-orange: #ff8c00;
+  --javascript-yellow: #f7df1e;
+  --javascript-yellow-rgb: rgb(247, 223, 30);
+  --javascript-yellow-hsl: hsl(50, 92%, 59%);
+  --javascript-yellow-dark: #e6c700;
+  --javascript-yellow-dark-rgb: rgb(230, 199, 0);
+  --php-purple: #777bb3;
+  --php-purple-rgb: rgb(119, 123, 179);
+  --php-purple-hsl: hsl(240, 33%, 55%);
+  --computer-green: #007700;
+  --computer-green-rgb: rgb(0, 119, 0);
+  --error: #ff0000;
+  --success: #00ff00;
 }
 
+html {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+}
+
+.bg-js-yellow {
+  background-color: var(--javascript-yellow);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  background: linear-gradient(
+    90deg,
+    hsl(50, 50%, 15%) 0%,
+    hsl(50, 50%, 0%) 15%,
+    hsl(191, 50%, 0%) 85%,
+    hsl(191, 50%, 15%) 100%
+  );
+  color: #fff;
+}
+
+header,
+footer {
+  background: linear-gradient(
+    90deg,
+    hsl(50, 100%, 43%) 0%,
+    hsl(50, 100%, 0%) 15%,
+    hsl(191, 100%, 0%) 85%,
+    hsl(191, 100%, 43%) 100%
+  );
+  color: #fff;
+}
+
+main {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+}
+
+main a {
+  color: var(--tapfuel-blue);
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  color: var(--tapfuel-blue);
+  text-decoration: underline;
+}
+
+/** --> Position footer at bottom of screen if content is short. */
+#app {
+  position: relative;
+  min-height: 100vh;
+}
+
+main {
+  padding-bottom: 5rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+}
+/** <-- */
+
+#app:has(.home) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.hero-action-0 {
+  background-color: hsl(0, 90%, 32%);
+  color: #fff;
+  text-shadow: 0 0 0.5rem #000;
+  box-shadow: 0 0 0.25rem #000 inset;
+}
+
+.hero-action-1 {
+  background-color: hsl(118, 90%, 20%);
+  color: #fff;
+  text-shadow: 0 0 0.5rem #000;
+  box-shadow: 0 0 0.25rem #000 inset;
+}
+
+.hero-action-2 {
+  background-color: hsl(235, 90%, 50%);
+  color: #fff;
+  text-shadow: 0 0 0.5rem #000;
+  box-shadow: 0 0 0.25rem #000 inset;
+}
+
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * Colors
+ *
+ * Each colors have exact same color scale system with 3 levels of solid
+ * colors with different brightness, and 1 soft color.
+ *
+ * - `XXX-1`: The most solid color used mainly for colored text. It must
+ *   satisfy the contrast ratio against when used on top of `XXX-soft`.
+ *
+ * - `XXX-2`: The color used mainly for hover state of the button.
+ *
+ * - `XXX-3`: The color for solid background, such as bg color of the button.
+ *   It must satisfy the contrast ratio with pure white (#ffffff) text on
+ *   top of it.
+ *
+ * - `XXX-soft`: The color used for subtle background such as custom container
+ *   or badges. It must satisfy the contrast ratio when putting `XXX-1` colors
+ *   on top of it.
+ *
+ *   The soft color must be semi transparent alpha channel. This is crucial
+ *   because it allows adding multiple "soft" colors on top of each other
+ *   to create a accent, such as when having inline code block inside
+ *   custom containers.
+ *
+ * - `default`: The color used purely for subtle indication without any
+ *   special meanings attched to it such as bg color for menu hover state.
+ *
+ * - `brand`: Used for primary brand colors, such as link text, button with
+ *   brand theme, etc.
+ *
+ * - `tip`: Used to indicate useful information. The default theme uses the
+ *   brand color for this by default.
+ *
+ * - `warning`: Used to indicate warning to the users. Used in custom
+ *   container, badges, etc.
+ *
+ * - `danger`: Used to show error, or dangerous message to the users. Used
+ *   in custom container, badges, etc.
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-c-default-1: var(--vp-c-gray-1);
+  --vp-c-default-2: var(--vp-c-gray-2);
+  --vp-c-default-3: var(--vp-c-gray-3);
+  --vp-c-default-soft: var(--vp-c-gray-soft);
+
+  --vp-c-brand-1: var(--vp-c-indigo-1);
+  --vp-c-brand-2: var(--vp-c-indigo-2);
+  --vp-c-brand-3: var(--vp-c-indigo-3);
+  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  --vp-c-warning-1: var(--vp-c-yellow-1);
+  --vp-c-warning-2: var(--vp-c-yellow-2);
+  --vp-c-warning-3: var(--vp-c-yellow-3);
+  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+
+  --vp-c-danger-1: var(--vp-c-red-1);
+  --vp-c-danger-2: var(--vp-c-red-2);
+  --vp-c-danger-3: var(--vp-c-red-3);
+  --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #bd34fe 30%,
+    #41d1ff
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #bd34fe 50%,
+    #47caff 50%
+  );
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}

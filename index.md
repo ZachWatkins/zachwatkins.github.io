@@ -9,10 +9,10 @@ hero:
   actions:
     - text: Blog
       link: /blog/
+    - text: Career
+      link: /career/
     - text: Portfolio
       link: /portfolio/
-    - text: Resources
-      link: /resources/
 ---
 
 This website is a work in progress, so check back soon for more content.

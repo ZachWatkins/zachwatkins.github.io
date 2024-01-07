@@ -70,7 +70,8 @@ const { page, site, theme, frontmatter } = useData()
         </a>
       </div>
       <div class="flex-initial p-1 m-4 mt-0 mb-0">
-        &copy; {{ theme.date.copyrightYears }} {{ theme.author }}
+        v{{ theme.version }} &copy; {{ theme.date.copyrightYears }}
+        {{ theme.author }}
       </div>
     </div>
   </footer>

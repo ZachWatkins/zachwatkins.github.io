@@ -63,6 +63,17 @@ main {
   padding-top: 2rem;
 }
 
+main a {
+  color: var(--tapfuel-blue);
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  color: var(--tapfuel-blue);
+  text-decoration: underline;
+}
+
 /** --> Position footer at bottom of screen if content is short. */
 #app {
   position: relative;

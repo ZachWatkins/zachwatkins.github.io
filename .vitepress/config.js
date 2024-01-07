@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import pkg from '../package.json'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -14,6 +15,7 @@ export default defineConfig({
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap'}]
   ],
   themeConfig: {
+    version: pkg.version,
     author: "Zachary K. Watkins",
     date: {
       copyrightYears: 2024 === new Date().getFullYear() ? '2024' : `2024 - ${new Date().getFullYear()}`,

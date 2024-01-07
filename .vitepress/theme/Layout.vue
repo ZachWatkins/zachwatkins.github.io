@@ -32,7 +32,7 @@ const { page, site, theme, frontmatter } = useData()
     v-else-if="'home' === frontmatter.layout"
     class="home pl-5 pr-5 m-auto max-w-screen-xl text-xl text-center"
   >
-    <h1 class="text-6xl mb-8"
+    <h1 class="text-6xl mb-8 leading-tight"
       ><span class="font-extrabold">{{ frontmatter.hero.name }}<br /></span
       ><span class="">{{ frontmatter.hero.text }}</span></h1
     >

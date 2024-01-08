@@ -98,6 +98,28 @@ a:hover {
   text-decoration: underline;
 }
 
+main hr {
+  margin: 1rem 0;
+}
+
+main h2 {
+  position: relative;
+}
+
+main h2::before {
+  content: '\00A7 ';
+  position: absolute;
+  margin-right: 1rem;
+  right: 100%;
+  top: 0;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.star::before {
+  content: '\22C6 ';
+}
+
 /** --> Position footer at bottom of screen if content is short. */
 #app {
   position: relative;

@@ -71,9 +71,9 @@ My coursework focused on graphic design and typography. I was a member of the Ho
 
 ## Certification
 
-__Cyber Secure Coder__
+__Cyber Secure Coder__ ~ *December 2023*
 
-[View](https://www.credential.net/2eca68a1-e2e0-4c17-b3e9-3c376dcb4429) &bull; [Download](/pdf/certification-cyber-secure-coder.pdf)  
+[Download](/pdf/certification-cyber-secure-coder.pdf) &bull; [Verify](https://www.credential.net/2eca68a1-e2e0-4c17-b3e9-3c376dcb4429)
 
 > *"Earners of the CertNexus Cyber Secure Coder (CSC) certification are skilled software developers, testers, and architects who have the ability to design and develop a variety of applications for various platforms, analyze security concerns outside of specific languages and platforms, use a number of testing and analysis tools, and mitigate against common threats to data systems."* - [CertNexus](https://certnexus.com/cyber-secure-coder/)
 

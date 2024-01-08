@@ -77,13 +77,18 @@ __Cyber Secure Coder__
 
 > *"Earners of the CertNexus Cyber Secure Coder (CSC) certification are skilled software developers, testers, and architects who have the ability to design and develop a variety of applications for various platforms, analyze security concerns outside of specific languages and platforms, use a number of testing and analysis tools, and mitigate against common threats to data systems."* - [CertNexus](https://certnexus.com/cyber-secure-coder/)
 
-December 2023  
-CertNexus Credential ID 2022003327  
+CertNexus Credential ID 2022003327
 
-__ITIL&reg; Foundation Level__
+---
 
-PeopleCert Credential GR671329641ZW &bull; [Look up credential](https://www.peoplecert.org/for-corporations/certificate-verification-service) &bull; [Visit Site](https://www.peoplecert.org/browse-certifications/it-governance-and-service-management/ITIL-1/itil-4-foundation-2565)  
+__ITIL&reg; Foundation Level__ ~ *October 2021*
+
+[Download](/pdf/certification-itil-foundation-level.pdf) &bull; [Verify](https://www.peoplecert.org/for-corporations/certificate-verification-service)
+
+PeopleCert Credential ID GR671329641ZW &bull; [Look up credential](https://www.peoplecert.org/for-corporations/certificate-verification-service) &bull; [Visit Site](https://www.peoplecert.org/browse-certifications/it-governance-and-service-management/ITIL-1/itil-4-foundation-2565)  
 October 2021
+
+---
 
 ## Experience
 

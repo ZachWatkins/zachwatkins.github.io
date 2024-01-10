@@ -34,14 +34,14 @@ body {
   margin: 0;
   padding: 0;
   background: radial-gradient(
-      farthest-corner at 0 0,
-      hsla(191, 100%, 43%, 100%) 0%,
-      hsla(191, 100%, 43%, 0%) 20%
+      circle farthest-corner at 0 -150px,
+      hsla(191, 100%, 43%, 100%),
+      hsla(191, 100%, 43%, 0%) 23vw
     ),
     radial-gradient(
-      farthest-corner at 100% 100%,
+      circle farthest-corner at 100% 100vh,
       hsl(50, 92%, 59%) 0%,
-      #000 20%
+      #000 23vw
     );
   color: #fff;
 }

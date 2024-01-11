@@ -68,6 +68,10 @@ main a {
   text-decoration: underline;
 }
 
+main a img {
+  display: inline-block;
+}
+
 main h2 {
   font-weight: bold;
   font-size: 2rem;

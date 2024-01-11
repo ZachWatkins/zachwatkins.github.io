@@ -70,7 +70,12 @@ const { page, site, theme, frontmatter } = useData()
         </a>
       </div>
       <div class="flex-initial p-1 m-4 mt-0 mb-0">
-        v{{ theme.version }} &copy; {{ theme.date.copyrightYears }}
+        <a
+          href="https://github.com/zachwatkins/zachwatkins.github.io"
+          target="_blank"
+          >v{{ theme.version }}</a
+        >
+        &copy; {{ theme.date.copyrightYears }}
         {{ theme.author }}
       </div>
     </div>

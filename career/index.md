@@ -4,7 +4,7 @@
 
 [[toc]]
 
-I am a full stack application and website developer with 16 years of experience (13 years with WordPress), CI/CD, DevOps, database and system administration. While at the Texas A&M University System I’ve given presentations on creating CI/CD pipelines between Github and WP Engine, created custom WordPress plugins and themes, migrated and managed large multisite networks using WP-CLI, and evaluated and addressed web accessibility issues. At Texas A&M Transportation Institute I develop and administrate custom full stack web applications for transportation research grants and meet with researchers to ensure the right work gets done.
+I am a full stack application and website developer with 18 years of experience (13 years with WordPress), CI/CD, DevOps, database and system administration. While at the Texas A&M University System I’ve given presentations on creating CI/CD pipelines between Github and WP Engine, created custom WordPress plugins and themes, migrated and managed large multisite networks using WP-CLI, and evaluated and addressed web accessibility issues. At Texas A&M Transportation Institute I develop and administrate custom full stack web applications for transportation research grants and meet with researchers to ensure the right work gets done.
 
 I’ve developed for more than 1,400 high-traffic websites and applications for public and private sector clients. In my freelance work I meet with clients, discuss their problems, requirements, and limitations, and we come up with a solution that meets their needs while being mindful of its impact on the long term cost of ownership of their web technology. I am happiest when my work is saving people a significant amount of time or makes their work and lives easier.
 

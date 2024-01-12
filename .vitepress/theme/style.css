@@ -198,7 +198,7 @@ footer a {
 }
 
 .table-of-contents::before {
-  content: 'Table of Contents';
+  content: 'Sections';
   display: block;
   font-weight: bold;
 }

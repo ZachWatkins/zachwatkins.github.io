@@ -22,7 +22,6 @@
 }
 
 html {
-  font-family: 'Fira Sans', sans-serif;
   font-size: 16px;
 }
 
@@ -46,6 +45,12 @@ body {
   color: #fff;
 }
 
+a,
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
 header,
 footer {
   color: #fff;
@@ -61,6 +66,10 @@ main {
   margin-left: auto;
   margin-right: auto;
   padding-top: 2rem;
+}
+
+main p,
+main table {
   font:
     400 1.25rem / 2rem 'Source Serif 4',
     'Times New Roman',
@@ -69,7 +78,6 @@ main {
   overflow-wrap: break-word;
   text-rendering: optimizeLegibility;
   word-break: break-word;
-  /* letter-spacing: -0.003em; */
 }
 
 main a {
@@ -102,12 +110,6 @@ main blockquote {
   margin: 1rem;
   padding: 0 1rem;
   border-left: 0.25rem solid #666;
-}
-
-a,
-a:focus,
-a:hover {
-  text-decoration: underline;
 }
 
 main hr {

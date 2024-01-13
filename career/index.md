@@ -12,13 +12,13 @@ For frameworks I primarily use WordPress, Laravel, and React and am comfortable 
 
 ## Skills
 
-|  |  |  |
-| :-- | --- | :-- |
-| **Languages** | &nbsp;&nbsp;&nbsp; | PHP, SQL, JavaScript, HTML, CSS, bash |
-| **Frameworks** | &nbsp;&nbsp;&nbsp; | WordPress, Laravel, React, jQuery, SASS, Node, Vue, Foundation, Grunt |
-| **Tools** | &nbsp;&nbsp;&nbsp; | Visual Studio Code, Docker, git, composer, npm, wp-cli, Local (by Flywheel), Sourcetree, Github actions |
-| **Practices** | &nbsp;&nbsp;&nbsp; | OOP, CI/CD, unit testing, documentation, code style and analysis, accessibility, SEO |
-| **Services** | &nbsp;&nbsp;&nbsp; | WP Engine, Github, Google Analytics, Azure, Browserstack |
+|  |  |
+| :-- | :-- |
+| **Languages** | PHP, SQL, JavaScript, HTML, CSS, bash |
+| **Frameworks** | WordPress, Laravel, React, jQuery, SASS, Node, Vue, Foundation, Grunt |
+| **Tools** | Visual Studio Code, Docker, git, composer, npm, wp-cli, Local (by Flywheel), Sourcetree, Github actions |
+| **Practices** | OOP, CI/CD, unit testing, documentation, code style and analysis, accessibility, SEO |
+| **Services** | WP Engine, Github, Google Analytics, Azure, Browserstack |
 
 ## Accomplishments
 

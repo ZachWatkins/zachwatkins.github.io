@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
     "webben.browserslist",
     "wix.vscode-import-cost",
     "esbenp.prettier-vscode",

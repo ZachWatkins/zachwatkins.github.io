@@ -80,6 +80,15 @@ main table {
   word-break: break-word;
 }
 
+main td {
+  padding: 0.25rem 0.5rem;
+  vertical-align: top;
+}
+
+main td:first-child {
+  word-break: keep-all;
+}
+
 main a {
   text-decoration: underline;
 }

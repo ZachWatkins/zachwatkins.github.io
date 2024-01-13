@@ -3,22 +3,34 @@ import pkg from '../package.json'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  lang: "en-US",
-  title: "Zach Watkins",
-  titleTemplate: ":title - Zach Watkins",
-  description: "Full stack developer with an art degree.",
+  lang: 'en-US',
+  title: 'Zach Watkins',
+  titleTemplate: ':title - Zach Watkins',
+  description: 'Full stack developer with an art degree.',
   head: [
     ['meta', { name: 'author', content: 'Zachary K. Watkins' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
-    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap'}]
+    [
+      'link',
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+    ],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,900;1,8..60,400;1,8..60,600;1,8..60,900&display=swap',
+      },
+    ],
   ],
   themeConfig: {
     version: pkg.version,
-    author: "Zachary K. Watkins",
+    author: 'Zachary K. Watkins',
     date: {
-      copyrightYears: 2024 === new Date().getFullYear() ? '2024' : `2024 - ${new Date().getFullYear()}`,
+      copyrightYears:
+        2024 === new Date().getFullYear()
+          ? '2024'
+          : `2024 - ${new Date().getFullYear()}`,
     },
     nav: [
       { text: 'Blog', link: '/blog/' },
@@ -39,14 +51,17 @@ export default defineConfig({
         text: 'Examples',
         items: [
           { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+          { text: 'Runtime API Examples', link: '/api-examples' },
+        ],
+      },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/zachwatkins/' },
       { icon: 'x', link: 'https://x.com/zachtypedit' },
-      { icon: 'linkedin', link: 'https://www.linkedin.com/in/zacharykwatkins/' },
+      {
+        icon: 'linkedin',
+        link: 'https://www.linkedin.com/in/zacharykwatkins/',
+      },
       { icon: 'email', link: 'mailto:watkinza@gmail.com' },
     ],
   },

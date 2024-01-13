@@ -22,7 +22,7 @@
 }
 
 html {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Source Serif 4', sans-serif;
   font-size: 16px;
 }
 
@@ -61,6 +61,15 @@ main {
   margin-left: auto;
   margin-right: auto;
   padding-top: 2rem;
+  font:
+    400 1.25rem / 2rem 'Source Serif 4',
+    'Times New Roman',
+    Times,
+    serif;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  word-break: break-word;
+  /* letter-spacing: -0.003em; */
 }
 
 main a {
@@ -132,7 +141,6 @@ main h2::before {
 
 main {
   padding-bottom: 5rem;
-  font-size: 1.5rem;
 }
 
 h1 {

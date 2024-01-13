@@ -73,7 +73,6 @@ main {
 }
 
 main a {
-  color: var(--tapfuel-blue);
   text-decoration: underline;
 }
 
@@ -105,9 +104,9 @@ main blockquote {
   border-left: 0.25rem solid #666;
 }
 
+a,
 a:focus,
 a:hover {
-  color: var(--tapfuel-blue);
   text-decoration: underline;
 }
 
@@ -209,10 +208,6 @@ footer a {
   content: 'Sections';
   display: block;
   font-weight: bold;
-}
-
-.table-of-contents a {
-  text-decoration: none;
 }
 /** <-- */
 

@@ -52,14 +52,14 @@ export default defineConfig({
           : `2024 - ${new Date().getFullYear()}`,
     },
     nav: [
-      { text: 'Posts', link: '/posts/' },
+      { text: 'Articles', link: '/articles/' },
       { text: 'Career', link: '/career/' },
       { text: 'Portfolio', link: '/portfolio/' },
       { text: 'Resources', link: '/resources/' },
       { text: 'Contact', link: '/contact/' },
     ],
     footerNav: [
-      { text: 'Posts', link: '/posts/' },
+      { text: 'Articles', link: '/articles/' },
       { text: 'Portfolio', link: '/portfolio/' },
       { text: 'Resources', link: '/resources/' },
       { text: 'Contact', link: '/contact/' },

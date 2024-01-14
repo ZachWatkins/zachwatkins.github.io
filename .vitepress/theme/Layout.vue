@@ -4,7 +4,7 @@ import { useData } from 'vitepress'
 const { page, site, theme, frontmatter } = useData()
 import Home from './Home.vue'
 import Post from './Post.vue'
-import Posts from './Posts.vue'
+import Articles from './Articles.vue'
 </script>
 
 <template>
@@ -27,7 +27,8 @@ import Posts from './Posts.vue'
   </header>
   <Post
     v-if="
-      page.filePath.startsWith('posts/') && 'posts/index.md' !== page.filePath
+      page.filePath.startsWith('articles/') &&
+      'articles/index.md' !== page.filePath
     "
   />
   <main
@@ -40,7 +41,7 @@ import Posts from './Posts.vue'
     v-else
     class="pl-10 pr-5 m-auto max-w-screen-xl"
   >
-    <Posts v-if="'posts/index.md' === page.filePath" />
+    <Articles v-if="'articles/index.md' === page.filePath" />
     <Content v-else-if="!page.isNotFound" />
     <div v-else> Oh no! </div>
   </main>

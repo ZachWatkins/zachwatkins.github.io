@@ -1,12 +1,12 @@
 <script setup>
-import { data as posts } from './posts.data.js'
+import { data as articles } from './articles.data.js'
 </script>
 
 <template>
   <div>
     <Content />
     <ul>
-      <li v-for="{ title, url, date, excerpt } of posts">
+      <li v-for="{ title, url, date, excerpt } of articles">
         <article>
           <div>
             <div>

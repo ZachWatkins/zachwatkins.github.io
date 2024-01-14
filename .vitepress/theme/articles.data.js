@@ -1,6 +1,6 @@
 import { createContentLoader } from 'vitepress'
 
-export default createContentLoader('posts/*/*.md', {
+export default createContentLoader('articles/*/*.md', {
   excerpt: true,
   transform(raw) {
     return raw
@@ -8,10 +8,10 @@ export default createContentLoader('posts/*/*.md', {
         title: frontmatter.title,
         url,
         excerpt,
-        date: formatDate(frontmatter.date)
+        date: formatDate(frontmatter.date),
       }))
       .sort((a, b) => b.date.time - a.date.time)
-  }
+  },
 })
 
 function formatDate(raw) {
@@ -22,7 +22,7 @@ function formatDate(raw) {
     string: date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
-    })
+      day: 'numeric',
+    }),
   }
 }

@@ -71,8 +71,8 @@ img {
   display: inline-block;
 }
 
-header,
-footer {
+#app > header,
+#app > footer {
   color: #fff;
   text-shadow:
     0 0 0.5rem #000,
@@ -174,14 +174,14 @@ main {
   padding-bottom: 5rem;
 }
 
-footer {
+#app > footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 3rem;
 }
 
-footer a {
+#app > footer a {
   text-decoration: underline;
 }
 /** <-- */

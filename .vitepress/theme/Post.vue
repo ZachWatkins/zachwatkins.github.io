@@ -31,14 +31,10 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
           }}</time>
         </dd>
       </dl>
-      <Author />
     </header>
-
-    <main>
-      <Content />
-    </main>
-
+    <Content />
     <footer>
+      <Author />
       <div v-if="nextPost">
         <h2> Next Article </h2>
         <div>

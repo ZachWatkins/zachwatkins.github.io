@@ -1,48 +1,35 @@
 <script setup>
 import { useData } from 'vitepress'
 
-const { frontmatter } = useData()
+const { frontmatter, theme } = useData()
 </script>
 
 <template>
-  <dl
-    class="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 dark:xl:border-slate-200/5"
-  >
+  <dl>
     <dt class="sr-only">Authors</dt>
     <dd>
-      <ul
-        class="flex justify-center xl:block space-x-8 sm:space-x-12 xl:space-x-0 xl:space-y-8"
-      >
-        <li class="flex items-center space-x-2">
+      <ul>
+        <li>
           <img
-            v-if="frontmatter.gravatar"
-            :src="'https://gravatar.com/avatar/' + frontmatter.gravatar"
+            v-if="theme.gravatar"
+            :src="'https://gravatar.com/avatar/' + theme.gravatar + '.jpg'"
             alt="author image"
-            class="w-10 h-10 rounded-full"
+            class="rounded-full"
           />
-          <img
-            v-else-if="frontmatter.avatar"
-            :src="frontmatter.avatar"
-            alt="author image"
-            class="w-10 h-10 rounded-full"
-          />
-          <dl class="text-sm font-medium leading-5 whitespace-nowrap">
+          <dl class="text-sm whitespace-nowrap">
             <dt class="sr-only">Name</dt>
-            <dd class="text-gray-900 dark:text-white">{{
-              frontmatter.author
-            }}</dd>
+            <dd>{{ frontmatter.author }}</dd>
             <dt
-              v-if="frontmatter.twitter"
+              v-if="theme.twitter"
               class="sr-only"
               >Twitter</dt
             >
-            <dd v-if="frontmatter.twitter">
+            <dd v-if="theme.twitter">
               <a
-                :href="'https://twitter.com/' + frontmatter.twitter"
+                :href="'https://twitter.com/' + theme.twitter"
                 target="_blank"
                 rel="noopnener noreferrer"
-                class="link"
-                >{{ frontmatter.twitter }}</a
+                >{{ theme.twitter }}</a
               >
             </dd>
           </dl>

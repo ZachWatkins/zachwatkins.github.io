@@ -42,6 +42,9 @@ export default defineConfig({
   themeConfig: {
     version: pkg.version,
     author: 'Zachary K. Watkins',
+    gravatar:
+      '049719b54832b7e452d5ba7f791da76c3eb1952cf234e58f25eea074d5976212',
+    twitter: '@zachtypedit',
     date: {
       copyrightYears:
         2024 === new Date().getFullYear()

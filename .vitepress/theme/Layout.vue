@@ -2,6 +2,9 @@
 import { useData } from 'vitepress'
 // https://vitepress.dev/reference/runtime-api#usedata
 const { page, site, theme, frontmatter } = useData()
+import Home from './Home.vue'
+import Post from './Post.vue'
+import Posts from './Posts.vue'
 </script>
 
 <template>
@@ -32,30 +35,25 @@ const { page, site, theme, frontmatter } = useData()
     v-else-if="'home' === frontmatter.layout"
     class="home pl-5 pr-5 m-auto max-w-screen-xl text-xl text-center"
   >
-    <h1 class="text-6xl mb-8 leading-tight"
-      ><span class="font-extrabold">{{ frontmatter.hero.name }}<br /></span
-      ><span class="">{{ frontmatter.hero.text }}</span></h1
-    >
-    <p class="text-2xl w-3/4 mb-8 ml-auto mr-auto">
-      {{ frontmatter.hero.tagline }}
-    </p>
-    <p class="mb-8">
-      <a
-        v-for="(action, i) in frontmatter.hero.actions"
-        :key="action.text"
-        :href="action.link"
-        :class="`hero-action-${i} p-2 pl-6 pr-6 m-2 text-2xl rounded-full`"
-      >
-        {{ action.text }}
-      </a>
-    </p>
+    <Home />
+  </main>
+  <main
+    v-else-if="'posts' === frontmatter.layout"
+    class="posts pl-10 pr-5 m-auto max-w-screen-xl"
+  >
+    <Posts />
+  </main>
+  <main
+    v-else-if="'page' === frontmatter.layout"
+    class="pl-10 pr-5 m-auto max-w-screen-xl"
+  >
     <Content />
   </main>
   <main
     v-else
     class="pl-10 pr-5 m-auto max-w-screen-xl"
   >
-    <Content />
+    <Post />
   </main>
   <footer class="p-1">
     <div class="max-w-screen-xl m-auto flex items-center h-full">

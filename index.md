@@ -7,8 +7,8 @@ hero:
   text: "with a degree in graphic design."
   tagline: I plan, create, deploy, and maintain web technology for the public and private sector.
   actions:
-    - text: Blog
-      link: /blog/
+    - text: Posts
+      link: /posts/
     - text: Career
       link: /career/
     - text: Portfolio

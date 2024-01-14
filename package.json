@@ -17,11 +17,6 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
-  "keywords": [
-    "portfolio",
-    "blog",
-    "web"
-  ],
   "author": "Zachary Kendall Watkins <watkinza@gmail.com>",
   "license": "MIT",
   "devDependencies": {

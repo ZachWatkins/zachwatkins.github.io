@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Privacy Policy
 
 [[toc]]

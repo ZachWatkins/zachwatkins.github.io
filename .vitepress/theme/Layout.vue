@@ -5,8 +5,6 @@ const { page, site, theme, frontmatter } = useData()
 import Home from './Home.vue'
 import Post from './Post.vue'
 import Posts from './Posts.vue'
-const isPost =
-  page?.filePath?.startsWith('posts/') && !page?.filePath?.endsWith('index.md')
 </script>
 
 <template>
@@ -37,8 +35,8 @@ const isPost =
     v-else
     class="pl-10 pr-5 m-auto max-w-screen-xl"
   >
-    <Post v-if="isPost" />
-    <Posts v-else-if="'posts' === frontmatter.layout" />
+    <Posts v-if="'posts/index.md' === page.filePath" />
+    <Post v-else-if="page.filePath.startsWith('posts/')" />
     <Content v-else-if="!page.isNotFound" />
     <div v-else> Oh no! </div>
   </main>

@@ -22,6 +22,22 @@
 }
 
 html {
+  font-family: 'Source Serif 4', 'Times New Roman', Times, serif;
+  text-rendering: optimizeLegibility;
+}
+
+#app > header,
+#app > footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Source Sans 4', sans-serif;
+}
+
+html {
   font-size: 16px;
 }
 
@@ -68,15 +84,11 @@ main {
   padding-top: 2rem;
 }
 
-main p,
-main table {
-  font:
-    400 1.25rem / 2rem 'Source Serif 4',
-    'Times New Roman',
-    Times,
-    serif;
+main > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 2rem;
   overflow-wrap: break-word;
-  text-rendering: optimizeLegibility;
   word-break: break-word;
 }
 

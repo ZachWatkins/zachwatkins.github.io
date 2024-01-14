@@ -19,7 +19,7 @@ export default defineConfig({
       'link',
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Source+Sans+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,900;1,8..60,400;1,8..60,600;1,8..60,900&display=swap',
       },
     ],
     [

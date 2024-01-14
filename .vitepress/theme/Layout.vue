@@ -25,8 +25,13 @@ import Posts from './Posts.vue'
       </nav>
     </div>
   </header>
+  <Post
+    v-if="
+      page.filePath.startsWith('posts/') && 'posts/index.md' !== page.filePath
+    "
+  />
   <main
-    v-if="'home' === frontmatter.layout"
+    v-else-if="'home' === frontmatter.layout"
     class="home pl-5 pr-5 m-auto max-w-screen-xl text-xl text-center"
   >
     <Home />
@@ -36,7 +41,6 @@ import Posts from './Posts.vue'
     class="pl-10 pr-5 m-auto max-w-screen-xl"
   >
     <Posts v-if="'posts/index.md' === page.filePath" />
-    <Post v-else-if="page.filePath.startsWith('posts/')" />
     <Content v-else-if="!page.isNotFound" />
     <div v-else> Oh no! </div>
   </main>

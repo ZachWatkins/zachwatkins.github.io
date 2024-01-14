@@ -18,8 +18,8 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
 </script>
 
 <template>
-  <article>
-    <header class="pt-6 xl:pb-10 space-y-1 text-center">
+  <article class="pl-10 pr-5 m-auto max-w-screen-xl">
+    <header class="text-center">
       <dl>
         <dt class="sr-only">Published on</dt>
         <dd>
@@ -28,57 +28,32 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
           }}</time>
         </dd>
       </dl>
-      <h1 class="text-3xl font-extrabold sm:text-4xl sm:leading-10 md:text-5xl">
+      <h1 class="font-extrabold">
         {{ data.title }}
       </h1>
     </header>
 
-    <div
-      class="divide-y xl:divide-y-0 divide-gray-200 dark:divide-slate-200/5 xl:grid xl:grid-cols-4 xl:gap-x-10 pb-16 xl:pb-20"
-      style="grid-template-rows: auto 1fr"
-    >
+    <div>
       <Author />
-      <div
-        class="divide-y divide-gray-200 dark:divide-slate-200/5 xl:pb-0 xl:col-span-3 xl:row-span-2"
-      >
-        <Content class="prose dark:prose-invert max-w-none pt-10 pb-8" />
-      </div>
+      <main>
+        <Content />
+      </main>
 
-      <footer
-        class="text-sm font-medium leading-5 divide-y divide-gray-200 dark:divide-slate-200/5 xl:col-start-1 xl:row-start-2"
-      >
-        <div
-          v-if="nextPost"
-          class="py-8"
-        >
-          <h2
-            class="text-xs tracking-wide uppercase text-gray-500 dark:text-white"
-          >
-            Next Article
-          </h2>
-          <div class="link">
+      <footer>
+        <div v-if="nextPost">
+          <h2> Next Article </h2>
+          <div>
             <a :href="nextPost.url">{{ nextPost.title }}</a>
           </div>
         </div>
-        <div
-          v-if="prevPost"
-          class="py-8"
-        >
-          <h2
-            class="text-xs tracking-wide uppercase text-gray-500 dark:text-white"
-          >
-            Previous Article
-          </h2>
+        <div v-if="prevPost">
+          <h2> Previous Article </h2>
           <div class="link">
             <a :href="prevPost.url">{{ prevPost.title }}</a>
           </div>
         </div>
-        <div class="pt-8">
-          <a
-            class="link"
-            href="/"
-            >← Back to the blog</a
-          >
+        <div>
+          <a href="/">← Back to the blog</a>
         </div>
       </footer>
     </div>

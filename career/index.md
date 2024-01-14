@@ -34,15 +34,15 @@ In 2016 I developed and implemented a continuous deployment workflow for all of 
 
 **Strategies for Resilient Web Applications and Websites**
 
-[Slides (PDF)](https://zachwatkins.dev/wp-content/uploads/2022/11/Strategies-for-Resilient-Web-Applications-and-Websites.pdf) &bull; 2022 &bull; Texas A&M Technology Summit &bull; Online
+[Slides (PDF)](/pdf/Strategies-for-Resilient-Web-Applications-and-Websites.pdf) &bull; 2022 &bull; Texas A&M Technology Summit &bull; Online
 
 **Streamline Building, Deploying, and Maintaining Your (Higher-Ed) Websites with WordPress!**
 
-[Slides (PDF)](https://zachwatkins.dev/wp-content/uploads/2022/11/Presentation-2019-WP-Higher-Ed-WordPress.pdf) &bull; 2019 &bull; Texas A&M Technology Summit &bull; Moody Gardens Convention Center, Corpus Christi, Texas
+[Slides (PDF)](/pdf/Presentation-2019-WP-Higher-Ed-WordPress.pdf) &bull; 2019 &bull; Texas A&M Technology Summit &bull; Moody Gardens Convention Center, Corpus Christi, Texas
 
 **Continuous Deployment from GitHub to WP Engine**
 
-[Slides (PDF)](https://zachwatkins.dev/wp-content/uploads/2022/11/Presentation-2017-01-03-Continuous-Deployment-from-Github-to-WP-Engine.pdf) &bull; 2017 &bull; Texas A&M Technology Summit &bull; Moody Gardens Convention Center, Corpus Christi, Texas
+[Slides (PDF)](/pdf/Presentation-2017-01-03-Continuous-Deployment-from-Github-to-WP-Engine.pdf) &bull; 2017 &bull; Texas A&M Technology Summit &bull; Moody Gardens Convention Center, Corpus Christi, Texas
 
 ## Open Source
 

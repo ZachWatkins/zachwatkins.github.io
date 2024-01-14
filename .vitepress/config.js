@@ -29,6 +29,15 @@ export default defineConfig({
         href: 'https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,900;1,8..60,400;1,8..60,600;1,8..60,900&display=swap',
       },
     ],
+    ['meta', { name: 'twitter:site', content: '@zachtypedit' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    [
+      'meta',
+      {
+        name: 'twitter:image',
+        content: 'https://zachwatkins.github.io/android-chrome-192x192.png',
+      },
+    ],
   ],
   themeConfig: {
     version: pkg.version,

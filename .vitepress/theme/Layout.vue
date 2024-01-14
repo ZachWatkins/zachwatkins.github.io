@@ -5,6 +5,8 @@ const { page, site, theme, frontmatter } = useData()
 import Home from './Home.vue'
 import Post from './Post.vue'
 import Posts from './Posts.vue'
+const isPost =
+  page?.filePath?.startsWith('posts/') && !page?.filePath?.endsWith('index.md')
 </script>
 
 <template>
@@ -26,34 +28,19 @@ import Posts from './Posts.vue'
     </div>
   </header>
   <main
-    v-if="page.isNotFound"
-    class="pl-5 pr-5 m-auto max-w-screen-xl text-center"
-  >
-    Oh no!
-  </main>
-  <main
-    v-else-if="'home' === frontmatter.layout"
+    v-if="'home' === frontmatter.layout"
     class="home pl-5 pr-5 m-auto max-w-screen-xl text-xl text-center"
   >
     <Home />
   </main>
   <main
-    v-else-if="'posts' === frontmatter.layout"
-    class="posts pl-10 pr-5 m-auto max-w-screen-xl"
-  >
-    <Posts />
-  </main>
-  <main
-    v-else-if="'page' === frontmatter.layout"
-    class="pl-10 pr-5 m-auto max-w-screen-xl"
-  >
-    <Content />
-  </main>
-  <main
     v-else
     class="pl-10 pr-5 m-auto max-w-screen-xl"
   >
-    <Post />
+    <Post v-if="isPost" />
+    <Posts v-else-if="'posts' === frontmatter.layout" />
+    <Content v-else-if="!page.isNotFound" />
+    <div v-else> Oh no! </div>
   </main>
   <footer class="p-1">
     <div class="max-w-screen-xl m-auto flex items-center h-full">

@@ -1,7 +1,3 @@
----
-layout: page
----
-
 # Career
 
 <img style="float:left;margin:0 2rem 2rem 0;" src="/img/profile/profile-214x300.jpg" alt="Zachary K. Watkins" width="214" height="300" />

@@ -4,7 +4,7 @@ author: Zachary K. Watkins
 date: 2022-11-4
 ---
 
-It’s old news but on February 2, 2020 (02/02/2020) Github preserved a snapshot of every active public repository. This code was compressed as individual TAR files, QR-encoded, and then preserved in film. They believe the preservation process will allow the code to be preserved in this state for 1,000 years.
+It’s old news, but on February 2, 2020 (02/02/2020) Github preserved a snapshot of every active public repository. This code was compressed as individual TAR files, QR-encoded, and then preserved in film. They believe the preservation process will allow the code to be preserved in this state for 1,000 years.
 
 ---
 

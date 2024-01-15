@@ -20,7 +20,7 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
 <template>
   <article>
     <header class="text-center mb-4">
-      <h1 class="font-extrabold">
+      <h1>
         {{ data.title }}
       </h1>
       <dl>
@@ -48,7 +48,7 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
         </div>
       </div>
       <div>
-        <a href="/articles/">← Back to the blog</a>
+        <a href="/articles/">← View all articles</a>
       </div>
     </footer>
   </article>

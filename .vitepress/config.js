@@ -4,7 +4,7 @@ import pkg from '../package.json'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'en-US',
-  title: 'Zach Watkins',
+  title: 'Zachary Watkins',
   titleTemplate: ':title - Zach Watkins',
   description: 'Full stack developer with an art degree.',
   head: [
@@ -41,8 +41,9 @@ export default defineConfig({
   ],
   themeConfig: {
     version: pkg.version,
-    author: 'Zachary K. Watkins',
-    authorBio: 'Full stack developer with an art degree.',
+    author: 'Zachary Watkins',
+    authorBio:
+      'Zachary Watkins is the lead web application developer for the Communications division at Texas A&M Transportation Institute in College Station, Texas. He spends most of his time working closely with researchers to create web-based tools, visualize data, and scope technical work for his team. He also has many side projects, including one for crossword puzzle enthusiasts.',
     gravatar:
       '049719b54832b7e452d5ba7f791da76c3eb1952cf234e58f25eea074d5976212',
     twitter: '@zachtypedit',

@@ -27,13 +27,13 @@ import Articles from './Articles.vue'
   </header>
   <main
     v-if="'home' === frontmatter.layout"
-    class="home pl-5 pr-5 m-auto max-w-screen-xl text-xl text-center"
+    class="home pl-5 pr-5 max-w-screen-xl text-xl text-center"
   >
     <Home />
   </main>
   <main
     v-else
-    class="pl-10 pr-5 m-auto max-w-screen-xl"
+    class="pl-10 pr-5"
   >
     <Articles v-if="'articles/index.md' === page.filePath" />
     <Post v-else-if="page.filePath.startsWith('articles/')" />

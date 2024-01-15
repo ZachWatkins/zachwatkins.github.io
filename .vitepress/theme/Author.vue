@@ -5,7 +5,7 @@ const { frontmatter, theme } = useData()
 </script>
 
 <template>
-  <dl class="author border-t-2 border-b-2 pt-4 pb-4 mt-6 mb-6">
+  <dl class="author border-t-2 border-b-2 pt-4 pb-4 mt-6">
     <dt class="text-center mb-2 font-bold text-3xl">About the Author</dt>
     <dd>
       <ul>

@@ -2,6 +2,7 @@
 title: 'Why I (still) do side projects'
 author: Zachary Watkins
 date: 2023-10-8
+tags: [Career, Life]
 ---
 
 We have 3 kids under 8 and it’s hard to find time to do things for myself. They come first. If I thought that doing side projects didn’t help them at all, then I wouldn’t do it. Time is much harder to find these days and I think much differently about why I’m working on a side project than I did at first. I thought that was worth sharing here.

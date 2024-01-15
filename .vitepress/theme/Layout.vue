@@ -11,7 +11,7 @@ import Articles from './Articles.vue'
 <template>
   <Header />
   <main
-    v-if="'home' === frontmatter.layout"
+    v-if="'index.md' === page.filePath"
     class="home pl-5 pr-5 max-w-screen-xl text-xl text-center m-auto"
   >
     <Home />

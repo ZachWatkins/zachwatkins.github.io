@@ -42,7 +42,7 @@ import Articles from './Articles.vue'
   </main>
   <footer class="p-1">
     <div class="max-w-screen-xl m-auto flex items-center h-full">
-      <div class="flex-grow">
+      <div class="flex-grow text-xl">
         <a
           v-for="link in theme.footerNav"
           :key="link.text"

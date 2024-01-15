@@ -10,7 +10,7 @@ I have a presence on the following platforms, which I draw from to build this po
 | CodePen   | https://codepen.io/zw                             |
 | WordPress | https://profiles.wordpress.org/zachwtx/           |
 | LinkedIn  | https://www.linkedin.com/in/zacharykwatkins/      |
-| Twitter   | https://twitter.com/zachwatkins0                  |
+| Twitter   | https://twitter.com/zachwatkinsv1                 |
 | Packagist | https://packagist.org/users/zachwatkins/packages/ |
 
 ## Photos

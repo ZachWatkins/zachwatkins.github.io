@@ -78,7 +78,7 @@ export default defineConfig({
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/zachwatkins/' },
-      { icon: 'x', link: 'https://x.com/zachwatkins0' },
+      { icon: 'x', link: 'https://x.com/zachwatkinsv1' },
       {
         icon: 'linkedin',
         link: 'https://www.linkedin.com/in/zacharykwatkins/',

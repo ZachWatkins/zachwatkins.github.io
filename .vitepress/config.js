@@ -8,7 +8,7 @@ export default defineConfig({
   titleTemplate: ':title - Zach Watkins',
   description: 'Full stack developer with an art degree.',
   head: [
-    ['meta', { name: 'author', content: 'Zachary K. Watkins' }],
+    ['meta', { name: 'author', content: 'Zachary Watkins' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     [

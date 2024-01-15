@@ -1,7 +1,7 @@
 {
   "name": "zachwatkins.github.io",
   "version": "1.1.0",
-  "description": "Portfolio for Zachary K. Watkins",
+  "description": "Portfolio for Zachary Watkins",
   "private": true,
   "type": "module",
   "engines": {

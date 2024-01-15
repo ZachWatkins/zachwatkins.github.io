@@ -158,6 +158,11 @@ main h2 {
   content: '\22C6 ';
 }
 
+footer .author .description {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
 /** --> Position footer at bottom of screen if content is short. */
 #app {
   position: relative;

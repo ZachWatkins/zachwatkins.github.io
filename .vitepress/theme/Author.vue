@@ -5,8 +5,8 @@ const { frontmatter, theme } = useData()
 </script>
 
 <template>
-  <dl class="author">
-    <dt class="text-center">About the Author</dt>
+  <dl class="author border-t-2 border-b-2 pt-4 pb-4 mt-6 mb-6">
+    <dt class="text-center mb-2">About the Author</dt>
     <dd>
       <ul>
         <li class="flex">
@@ -14,7 +14,7 @@ const { frontmatter, theme } = useData()
             <img
               v-if="theme.gravatar"
               :src="
-                'https://gravatar.com/avatar/' + theme.gravatar + '.jpg?s=126'
+                'https://gravatar.com/avatar/' + theme.gravatar + '.jpg?s=176'
               "
               alt="author image"
               class="rounded-full"
@@ -24,12 +24,12 @@ const { frontmatter, theme } = useData()
             <dt class="sr-only">Name</dt>
             <dd>{{ frontmatter.author }}</dd>
             <dt class="sr-only">Description</dt>
-            <dd
+            <dd class="description"
               >Zachary Watkins is the lead web application developer for the
               Communications division at Texas A&M Transportation Institute in
-              College Station, Texas. He spends most of his time working closely
-              with researchers to create web-based tools, visualize data, and
-              scope technical work for his team. He also posts on Twitter
+              College Station, Texas. He spends most of his time creating
+              web-based tools, visualizing data, and writing technical
+              documents. He also posts on Twitter
               <a
                 :href="'https://twitter.com/' + theme.twitter"
                 target="_blank"

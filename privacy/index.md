@@ -4,7 +4,7 @@
 
 ## About
 
-This website is a personal project of Zachary K. Watkins. The purpose of this website is to share information about Zach Watkins, his career, and his work.
+This website is a personal project of Zachary Watkins. The purpose of this website is to share information about Zach Watkins, his career, and his work.
 
 This privacy policy will be updated as the website changes over time.
 

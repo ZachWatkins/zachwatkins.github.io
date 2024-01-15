@@ -1,4 +1,4 @@
-# Portfolio for Zachary K. Watkins
+# Portfolio for Zachary Watkins
 
 This website hosts my most relevant work, writings, and experiences.
 

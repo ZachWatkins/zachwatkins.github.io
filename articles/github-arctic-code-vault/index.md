@@ -1,6 +1,6 @@
 ---
 title: 'Github preserved my WordPress code on film in the Arctic'
-author: Zachary K. Watkins
+author: Zachary Watkins
 date: 2022-11-4
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Why I (still) do side projects'
-author: Zachary K. Watkins
+author: Zachary Watkins
 date: 2023-10-8
 ---
 

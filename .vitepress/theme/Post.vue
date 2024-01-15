@@ -33,7 +33,7 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
         <dt class="sr-only">Tags</dt>
         <dd>
           <ul
-            v-if="data.tags.length > 0"
+            v-if="data.tags && data.tags.length > 0"
             class="flex justify-center"
           >
             <li

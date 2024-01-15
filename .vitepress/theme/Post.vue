@@ -36,18 +36,18 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
     <footer>
       <Author />
       <div v-if="nextPost">
-        <h2> Next Article </h2>
+        <h2 class="mb-0"> Next Article </h2>
         <div>
           <a :href="nextPost.url">{{ nextPost.title }}</a>
         </div>
       </div>
       <div v-if="prevPost">
-        <h2> Previous Article </h2>
+        <h2 class="mb-0"> Previous Article </h2>
         <div class="link">
           <a :href="prevPost.url">{{ prevPost.title }}</a>
         </div>
       </div>
-      <div>
+      <div class="mt-6">
         <a href="/articles/">← View all articles</a>
       </div>
     </footer>

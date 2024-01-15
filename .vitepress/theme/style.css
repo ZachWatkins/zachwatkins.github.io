@@ -21,7 +21,8 @@
   --success: #00ff00;
 }
 
-html {
+html,
+.font-family-prose {
   font-family: Georgia, Times, 'Times New Roman', serif;
   text-rendering: optimizeLegibility;
 }
@@ -156,11 +157,6 @@ main h2 {
 
 .star::before {
   content: '\22C6 ';
-}
-
-footer .author .description {
-  font-size: 1.25rem;
-  line-height: 1.2;
 }
 
 /** --> Position footer at bottom of screen if content is short. */

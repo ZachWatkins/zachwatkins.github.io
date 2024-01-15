@@ -41,7 +41,9 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
               :key="tag"
             >
               {{ i > 0 ? ', ' : '' }}
-              {{ tag }}
+              <a :href="'/articles/tags/' + tag.toLowerCase() + '/'">
+                {{ tag }}
+              </a>
             </li>
           </ul>
         </dd>

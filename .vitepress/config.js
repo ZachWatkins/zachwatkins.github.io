@@ -7,6 +7,7 @@ export default defineConfig({
   title: 'Zachary Watkins',
   titleTemplate: ':title - Zach Watkins',
   description: 'Full stack developer with an art degree.',
+  lastUpdated: true,
   head: [
     ['meta', { name: 'author', content: 'Zachary Watkins' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -84,5 +85,8 @@ export default defineConfig({
       },
       { icon: 'email', link: 'mailto:watkinza@gmail.com' },
     ],
+  },
+  sitemap: {
+    hostname: 'https://zacharywatkins.com',
   },
 })

@@ -30,17 +30,17 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
             date.string
           }}</time>
         </dd>
-        <dt class="sr-only">Tags</dt>
-        <dd>
+        <dt class="inline-block mr-2">Posted in:</dt>
+        <dd class="inline-block">
           <ul
             v-if="data.tags && data.tags.length > 0"
             class="flex justify-center"
           >
             <li
-              v-for="tag in data.tags"
+              v-for="(tag, i) in data.tags"
               :key="tag"
-              class="mr-2"
             >
+              {{ i > 0 ? ', ' : '' }}
               {{ tag }}
             </li>
           </ul>

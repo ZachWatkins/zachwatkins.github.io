@@ -9,7 +9,7 @@ const { frontmatter, theme } = useData()
     <dt class="text-center mb-2">About the Author</dt>
     <dd>
       <ul>
-        <li class="flex">
+        <li class="flex items-center">
           <div class="pr-4 flex-shrink-0">
             <img
               v-if="theme.gravatar"
@@ -22,7 +22,7 @@ const { frontmatter, theme } = useData()
           </div>
           <dl>
             <dt class="sr-only">Name</dt>
-            <dd>{{ frontmatter.author }}</dd>
+            <dd class="sr-only">{{ frontmatter.author }}</dd>
             <dt class="sr-only">Description</dt>
             <dd class="description"
               >Zachary Watkins is the lead web application developer for the

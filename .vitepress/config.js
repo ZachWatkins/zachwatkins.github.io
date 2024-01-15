@@ -29,7 +29,7 @@ export default defineConfig({
         href: 'https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,900;1,8..60,400;1,8..60,600;1,8..60,900&display=swap',
       },
     ],
-    ['meta', { name: 'twitter:site', content: '@zachwatkins0' }],
+    ['meta', { name: 'twitter:site', content: '@zachwatkinsv1' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
     [
       'meta',
@@ -44,7 +44,7 @@ export default defineConfig({
     author: 'Zachary Watkins',
     gravatar:
       '049719b54832b7e452d5ba7f791da76c3eb1952cf234e58f25eea074d5976212',
-    twitter: '@zachwatkins0',
+    twitter: '@zachwatkinsv1',
     date: {
       copyrightYears:
         2024 === new Date().getFullYear()

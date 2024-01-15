@@ -27,7 +27,7 @@ import Articles from './Articles.vue'
   </header>
   <main
     v-if="'home' === frontmatter.layout"
-    class="home pl-5 pr-5 max-w-screen-xl text-xl text-center"
+    class="home pl-5 pr-5 max-w-screen-xl text-xl text-center m-auto"
   >
     <Home />
   </main>

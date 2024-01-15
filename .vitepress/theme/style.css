@@ -22,19 +22,24 @@
 }
 
 html {
-  font-family: 'Source Serif 4', 'Times New Roman', Times, serif;
+  font-family: Georgia, Times, 'Times New Roman', serif;
   text-rendering: optimizeLegibility;
 }
 
-#app > header,
-#app > footer,
+header,
+footer,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Source Sans 4', sans-serif;
+  font-family: 'Franklin Gothic', sans-serif;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
 }
 
 html {
@@ -80,23 +85,19 @@ img {
     0 0 0.25rem #000;
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 700;
+header a[href='/'] {
+  text-decoration: none;
 }
 
 main {
   background-color: rgba(0, 0, 0, 0.5);
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 2rem;
-}
-
-main > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
   overflow-wrap: break-word;
   word-break: break-word;
 }
@@ -118,15 +119,18 @@ main a img {
   display: inline-block;
 }
 
-main h2 {
+h2,
+h3 {
   font-weight: bold;
+}
+
+main h2 {
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 main h3 {
-  font-weight: bold;
   font-size: 1.5rem;
   margin-top: 2rem;
 }

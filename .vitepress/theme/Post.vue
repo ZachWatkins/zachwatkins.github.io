@@ -18,8 +18,8 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
 </script>
 
 <template>
-  <article class="pl-10 pr-10 m-auto max-w-screen-xl">
-    <header class="text-center">
+  <article>
+    <header class="text-center mb-4">
       <h1 class="font-extrabold">
         {{ data.title }}
       </h1>

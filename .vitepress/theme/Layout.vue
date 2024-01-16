@@ -2,31 +2,16 @@
 import { useData } from 'vitepress'
 // https://vitepress.dev/reference/runtime-api#usedata
 const { page, site, theme, frontmatter, params } = useData()
+import Header from './Header.vue'
 import Home from './Home.vue'
 import Post from './Post.vue'
 import Articles from './Articles.vue'
 </script>
 
 <template>
-  <header class="p-1">
-    <div class="max-w-screen-xl m-auto flex items-center">
-      <div class="p-1 m-4 mt-0 mb-0 font-bold text-4xl flex-grow">
-        <a href="/">{{ site.title }}</a>
-      </div>
-      <nav class="text-xl flex-initial text-right font-bold flex h-full">
-        <a
-          v-for="(link, i) in theme.nav"
-          :key="link.text"
-          :href="link.link"
-          class="p-1 m-4"
-        >
-          {{ link.text }}
-        </a>
-      </nav>
-    </div>
-  </header>
+  <Header />
   <main
-    v-if="'home' === frontmatter.layout"
+    v-if="'index.md' === page.filePath"
     class="home pl-5 pr-5 max-w-screen-xl text-xl text-center m-auto"
   >
     <Home />
@@ -50,7 +35,7 @@ import Articles from './Articles.vue'
   </main>
   <footer class="p-1">
     <div class="max-w-screen-xl m-auto flex items-center h-full">
-      <div class="flex-grow">
+      <div class="flex-grow text-xl">
         <a
           v-for="link in theme.footerNav"
           :key="link.text"
@@ -60,14 +45,14 @@ import Articles from './Articles.vue'
           {{ link.text }}
         </a>
       </div>
-      <div class="flex-initial p-1 m-4 mt-0 mb-0">
+      <div class="flex-initial p-1 m-4 mt-0 mb-0 text-right">
+        &copy; {{ theme.date.copyrightYears }} {{ theme.author }}. All rights
+        reserved.<br />
         <a
           href="https://github.com/zachwatkins/zachwatkins.github.io"
           target="_blank"
           >v{{ theme.version }}</a
         >
-        &copy; {{ theme.date.copyrightYears }}
-        {{ theme.author }}
       </div>
     </div>
   </footer>

@@ -19,6 +19,13 @@
   --computer-green-rgb: rgb(0, 119, 0);
   --error: #ff0000;
   --success: #00ff00;
+  --vp-local-search-bg: #000;
+  --vp-local-search-result-bg: #000;
+  --vp-local-search-result-border: #666;
+  --vp-local-search-result-selected-bg: #000;
+  --vp-local-search-result-selected-border: var(--tapfuel-blue);
+  --vp-local-search-highlight-bg: var(--tapfuel-blue);
+  --vp-local-search-highlight-text: #fff;
 }
 
 html,
@@ -228,3 +235,8 @@ main {
   font-weight: bold;
 }
 /** <-- */
+
+#localsearch-list a {
+  text-decoration: none;
+  font-family: 'Franklin Gothic', sans-serif;
+}

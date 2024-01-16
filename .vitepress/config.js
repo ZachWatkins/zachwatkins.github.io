@@ -41,6 +41,9 @@ export default defineConfig({
     ],
   ],
   themeConfig: {
+    search: {
+      provider: 'local',
+    },
     version: pkg.version,
     author: 'Zachary Watkins',
     gravatar:
@@ -57,7 +60,6 @@ export default defineConfig({
       { text: 'Articles', link: '/articles/' },
       { text: 'Career', link: '/career/' },
       { text: 'Portfolio', link: '/portfolio/' },
-      { text: 'Resources', link: '/resources/' },
       { text: 'Contact', link: '/contact/' },
     ],
     footerNav: [

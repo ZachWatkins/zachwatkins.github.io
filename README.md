@@ -25,6 +25,11 @@ This website uses VitePress for static site generation from markdown files. See 
 
 ## Design Notes
 
+### Fonts
+
+- Long-form content: Georgia, Times, 'Times New Roman', serif;
+- Everything else: 'Franklin Gothic', sans-serif;
+
 ### Favicon
 
 The favicon was generated using the following font:

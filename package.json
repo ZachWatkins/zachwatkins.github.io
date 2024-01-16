@@ -44,8 +44,5 @@
     "singleAttributePerLine": true,
     "proseWrap": "never",
     "htmlWhitespaceSensitivity": "strict"
-  },
-  "dependencies": {
-    "primevue": "^3.45.0"
   }
 }

@@ -21,8 +21,7 @@ This website uses VitePress for static site generation from markdown files. See 
 - `public` - Files uploaded to the website without processing.
 - `scripts` - Scripts used during the build process.
 - `index.md` - Home page content.
-
-Other top-level directories likely point to a page on the website and contain a `index.md` file.
+- `<other top-level directories>` - Pages on the website.
 
 ## Design Notes
 

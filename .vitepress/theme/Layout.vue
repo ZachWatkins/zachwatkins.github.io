@@ -1,7 +1,7 @@
 <script setup>
 import { useData } from 'vitepress'
 // https://vitepress.dev/reference/runtime-api#usedata
-const { page, theme } = useData()
+const { page, site, theme, frontmatter, params } = useData()
 import Header from './Header.vue'
 import Home from './Home.vue'
 import Post from './Post.vue'
@@ -21,7 +21,15 @@ import Articles from './Articles.vue'
     class="pl-10 pr-5"
   >
     <Articles v-if="'articles/index.md' === page.filePath" />
-    <Post v-else-if="page.filePath.startsWith('articles/')" />
+    <Articles
+      v-else-if="page.filePath.startsWith('articles/tags') && params?.tag"
+    />
+    <Post
+      v-else-if="
+        page.filePath.startsWith('articles/') &&
+        page.filePath !== 'articles/tags.md'
+      "
+    />
     <Content v-else-if="!page.isNotFound" />
     <div v-else> Oh no! </div>
   </main>

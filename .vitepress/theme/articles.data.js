@@ -4,11 +4,13 @@ export default createContentLoader('articles/*/*.md', {
   excerpt: true,
   transform(raw) {
     return raw
+      .filter(({ url }) => !url.includes('/tags/'))
       .map(({ url, frontmatter, excerpt }) => ({
         title: frontmatter.title,
         url,
         excerpt,
         date: formatDate(frontmatter.date),
+        tags: frontmatter.tags,
       }))
       .sort((a, b) => b.date.time - a.date.time)
   },

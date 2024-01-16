@@ -89,4 +89,8 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://zacharywatkins.com',
   },
+  rewrites: {
+    'articles/tags/:tag.md': 'articles/tags/:tag/index.md',
+    'articles/tags.md': 'articles/tags/index.md',
+  },
 })

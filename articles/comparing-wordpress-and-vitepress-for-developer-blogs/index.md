@@ -1,7 +1,7 @@
 ---
 title: 'Comparing WordPress and VitePress For Developer Blogs'
 author: Zachary Watkins
-date: 2024-1-15
+date: 2024-1-17
 ---
 
 Developers have many options when creating their own website. I always recommend WordPress for organizations and businesses, but I've decided to use a static site generator for zacharywatkins.com. I'll explain the tradeoffs and why I chose VitePress.
@@ -10,13 +10,15 @@ Developers have many options when creating their own website. I always recommend
 
 [[toc]]
 
-This year I decided to move my personal website from WordPress to VitePress for a better writing experience from my code editor. During this process, I've noticed several differences between them that I felt were worth writing about.
+This year I decided to move my personal website from WordPress to VitePress. I wanted a better writing experience for developer content and a better developer experience for creating a custom theme. I also wanted to see how much time it would actually save me to do a developer blog this way. I've noticed several differences between them that I felt were worth writing about.
+
+**_I'm not trying to convince anyone to use one framework over the other. I'm just sharing my experience and opinions. I'm also leaving plenty of opinions out and I may update this article later._**
 
 ## Background
 
 I've designed, developed, and maintained WordPress websites, themes, and plugins since 2011 - primarily for higher education and state agencies. I've also used it to develop business websites and web applications.
 
-In contrast, this website is my first VitePress project. I've used Vue and Vite for a few years, and heard enough about it from Vue conference talks on [YouTube](https://youtu.be/GXr8FOssWqM?si=20IHIEMOsxi2pOj1) to look into it. The official documentation was well defined and the relevant WordPress features seem to be possible in VitePress.
+In contrast, this website is my first VitePress project. I've used Vue and Vite for a few years, and heard enough about it from conference talks on [YouTube](https://youtu.be/GXr8FOssWqM?si=20IHIEMOsxi2pOj1) to look into it. The official documentation was well defined and the essential WordPress features for a blog seem to be possible in VitePress.
 
 ## Criteria
 
@@ -32,7 +34,20 @@ I've chosen to compare them in the following areas:
 6. Analytics
 7. Security
 
+There are many dimensions that I could compare them on, but I'm focused on these:
+
+1. Which saves me the most **time**?
+2. Which takes the least amount of **effort**?
+3. Which is the most **affordable**?
+
+I've given each framework a number score out of 3 for each area. Low scores are better. If an area doesn't make sense to compare, then I've left it blank.
+
 ## Writing Experience
+
+|           | Time | Effort | Cost |
+| --------: | :--: | :----: | :--: |
+| WordPress |  2   |   2    |      |
+| VitePress |  1   |   1    |      |
 
 **Preferred: VitePress**
 
@@ -47,6 +62,11 @@ Regarding accessibility, this is hard to compare. If I were to compare the acces
 There's no question that I would choose WordPress for any kind of website that needed to enable a non-developer user to create or manage content. WordPress has a great writing experience and it's easy to train non-technical users to use it. It's also easier to adhere to a design system with WordPress because the block editor separates content from design fairly well.
 
 ## Content Discovery
+
+|           | Time | Effort | Cost |
+| --------: | :--: | :----: | :--: |
+| WordPress |  1   |   1    |  1   |
+| VitePress |  2   |   2    |  2   |
 
 **Preferred: WordPress**
 
@@ -96,7 +116,7 @@ WordPress is powerful but for a developer blog I don't need a database or server
 
 **Preferred: WordPress**
 
-Hands-down the easiest time you'll have adding analytics to a blog is with WordPress. It's as easy to implement as installing and activating a plugin (Jetpack, Monster Insights, etc.) and pasting in your analytics ID. It even embeds some of the analytics data in your WordPress admin user interface for convenience. That makes it quick and easy to check in the same site as I'm writing my content. If the content writing experience for my developer blog weren't so much better with VitePress, I would have stuck with WordPress for its ease of implementation for site analytics and content discovery.
+Hands-down the easiest time you'll have adding analytics to a blog is with WordPress. You can self-host analytics logic and data, or use a plugin (Jetpack, Monster Insights, etc.) and configure your third party service's credentials. Plugins can embed analytics data in your WordPress admin user interface which makes it quick and easy to check. If the content writing experience for my developer blog weren't so much better with VitePress, I would have stuck with WordPress for its ease of implementation for site analytics and content discovery.
 
 It's easy enough to add Google Analytics to a VitePress site and check it in the Google Analytics dashboard.
 
@@ -110,4 +130,4 @@ Since I don't need a database, users, or public forms for this website, I can af
 
 ## Conclusion
 
-VitePress has been great to work with, and I'm happy with it so far. If I need to add forms and email, then I may switch back to WordPress if I can't find an affordable third party solution. For now, I'm happy with the tradeoffs. If I wanted to I could even write a custom data loader that pulls WordPress posts from its REST API and renders them in the VitePress site, or adapt the VitePress site to use WordPress as a headless CMS. I'm trying to keep things simple for now.
+VitePress has been great to work with, and I'm happy with it so far. If I need to add forms and email, and I can't find a quick, easy, and affordable way to integrate it, then I'll likely switch back to WordPress. I could also try for push notifications and RSS feeds over email as an outbound communication tool. I'm happy with the tradeoffs for now and I'm trying to keep things simple.

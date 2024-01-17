@@ -8,6 +8,8 @@ Developers have many options when creating their own website. I always recommend
 
 ---
 
+[[toc]]
+
 This year I decided to move my personal website from WordPress to VitePress for a better writing experience from my code editor. During this process, I've noticed several differences between them that I felt were worth writing about.
 
 ## Background
@@ -18,16 +20,17 @@ In contrast, this website is my first VitePress project. I've used Vue and Vite 
 
 ## Criteria
 
-These frameworks are very different from a developer's perspective. This is a developer blog and portfolio site and I only work on it when my kids are asleep or I have a few minutes of free time. Because my time is limited, I prioritize level of effort when deciding which framework to use. I've chosen to compare them in the following areas:
+These frameworks are very different from a developer's perspective. This is a developer blog and portfolio site and I only work on it when my kids are asleep or I have a few minutes of free time. Because my time is limited, I prioritize level of effort when deciding which framework to use. WordPress solves problems that I don't have when making a developer blog and portfolio website.
+
+I've chosen to compare them in the following areas:
 
 1. Writing experience
 2. Content discovery
 3. Custom theme development
-4. Hosting
-5. Maintenance
-6. Cost
-7. Analytics
-8. Security
+4. Forms and Email
+5. Cost, Hosting, and Maintenance
+6. Analytics
+7. Security
 
 ## Writing Experience
 
@@ -57,28 +60,54 @@ I may be wrong, but to provide a search feature with filters and sorting I belie
 
 **Preferred: VitePress**
 
-I've developed custom themes for WordPress for years, and I've developed custom themes for VitePress for a few weeks. The challenge with developing a WordPress theme is in how long it takes to adapt a website design to the hooks and filters that allow users to customize its appearance and content. It has been far easier to develop this site's VitePress theme as a series of Vue components, which are little more than HTML templates with TailwindCSS and data loaders.
+I've developed custom themes for WordPress for years, and I've developed custom themes for VitePress for a few weeks. That being said, my comparison is based on making an identical custom theme with both frameworks.
 
-Search engine optimization (SEO) seems evenly matched between the base theme within WordPress Core (no not Twenty Twenty-Four) and a custom VitePress theme with no modifications. SEO plugins for WordPress are easy to implement and give it an advantage. I haven't implemented any SEO features in my custom VitePress theme yet aside from adhering to well-structured HTML.
+It's been quick and easy to develop this site's VitePress theme as a series of Vue components, which are little more than HTML templates with TailwindCSS and data loaders. If I were to write the same HTML templates in a WordPress theme, I would need to write them in PHP and use WordPress hooks, filters, and templates to output the HTML with data sanitization. This would take longer to implement, and would be more verbose markup.
 
-Since WordPress has functions which output HTML for various front-end features, I consider it better at providing an accessible theme. I still feel confident that the disadvantage address accessibility for my VitePress theme by relying on a Vue component library with accessibility assurances or use the [USWDS](https://designsystem.digital.gov/). I can use these with either framework.
+Hot module reloading with VitePress can speed up development with a faster feedback loop.
 
-## What WordPress Does Better than VitePress
+Search engine optimization (SEO) seems pointless to compare, but I'll say that it's easier to have good SEO with a WordPress site than if you're writing your own HTML in a VitePress theme. The only real way to test SEO is to publish a site and check out the results using a tool like Google Search Console.
 
-1. SEO
+Accessibility is also difficult to compare. Since I don't need a UI to write content, the only accessibility I care about is the public-facing website. Neither framework makes it easier or harder to write accessible HTML. I can use a component library with accessibility assurances with either framework.
 
-## What VitePress can do after some work
+Overall, I prefer VitePress for custom theme development because it's faster and easier to write HTML templates with Vue components than PHP templates with WordPress hooks and filters.
 
-### Dynamic routing for post collections by tag
+## Forms and Email
 
-I was able to use the dynamic routing feature of VitePress to define a route for all article tags. The current limitation not found in WordPress is that I must define the tags used by articles in `articles/tags/[tag].paths.js`. I don't intend to have many tags, but if it becomes a challenge then I can write a script to generate the list of used tags.
+**Preferred: WordPress**
 
-### Full text search
+Without server scripting, I can't send email, receive form submissions, or store them in a database. I can use a third party service for these things, but I have to consider the financial cost and level of effort to implement and maintain each service. With WordPress, I can send email, receive form submissions, and store them in a database by writing my own PHP scripts or using plugins. I've implemented these features for long enough to know it's a piece of cake with WordPress.
 
-I was **very** surprised to find that VitePress has a full-text search feature. It's part of the default theme and works great, but I've implemented it into my custom theme and it works great after adding the proper CSS variables and theme configuration.
+## Cost, Hosting, and Maintenance
 
-## What I haven't solved yet
+**Preferred: VitePress**
 
-### Paginated post list pages
+A static website is quick, easy, and more affordable to host and maintain than a Linux server running Apache or NGINX, MySQL, and PHP.
 
-I haven't made time to find a way to limit post archive pages to 10 posts per page and dynamically generate the subsequent pages. I'm sure it's possible, but I have a feeling the level of effort would be significant. It's not worth it yet for me because I have very few posts.
+I host this website for free on GitHub Pages with a free SSL and a $10 custom domain. I don't have to worry about server security, database backups, or server updates. I can focus on writing content and developing the theme. Deployment from GitHub Actions is simple and fast. It's also easy to roll back to a previous version of the site if I need to since the entire site - content and all - are in the same git repository.
+
+It might take close to the same amount of time to create a WordPress website as a VitePress website if I'm using a good WordPress hosting provider. It can be about $5 / month to host a WordPress website so that's not a deal breaker. Both take similar effort to assign a custom domain and SSL certificate. Long term maintenance effort for a WordPress website is potentially even to a VitePress website if you enable automatic updates, use a good hosting provider, and don't install plugins that you can't set to auto-update.
+
+If you use page caching for WordPress to improve load times, then you'll need to ensure the feature that provides this caching can update the cache when you change your site's content. You'll also need Wordfence or another security plugin to protect your site from malicious activity that can lead to denial of service for legitimate users. Theoretically you'll also need this for a VitePress site, but it's less likely to be a problem because there's no database to attack or server scripts to overload.
+
+WordPress is powerful but for a developer blog I don't need a database or server scripting. Not yet anyway.
+
+## Analytics
+
+**Preferred: WordPress**
+
+Hands-down the easiest time you'll have adding analytics to a blog is with WordPress. It's as easy to implement as installing and activating a plugin (Jetpack, Monster Insights, etc.) and pasting in your analytics ID. It even embeds some of the analytics data in your WordPress admin user interface for convenience. That makes it quick and easy to check in the same site as I'm writing my content. If the content writing experience for my developer blog weren't so much better with VitePress, I would have stuck with WordPress for its ease of implementation for site analytics and content discovery.
+
+It's easy enough to add Google Analytics to a VitePress site and check it in the Google Analytics dashboard.
+
+## Security
+
+**Preferred: VitePress**
+
+When installed correctly and on a good hosting provider, WordPress Core is generally secure. Problems arise when a plugin or theme has a security vulnerability, the WordPress installation and PHP version aren't kept up to date, or the site isn't with a good hosting provider.
+
+Since I don't need a database, users, or public forms for this website, I can afford to use static HTML. If and when I need forms, like a newsletter or contact form, then I can try a third party service, but if the level of effort or cost is too high then I may consider switching back to WordPress.
+
+## Conclusion
+
+VitePress has been great to work with, and I'm happy with it so far. If I need to add forms and email, then I may switch back to WordPress if I can't find an affordable third party solution. For now, I'm happy with the tradeoffs. If I wanted to I could even write a custom data loader that pulls WordPress posts from its REST API and renders them in the VitePress site, or adapt the VitePress site to use WordPress as a headless CMS. I'm trying to keep things simple for now.

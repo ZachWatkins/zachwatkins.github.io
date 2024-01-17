@@ -31,7 +31,7 @@ These frameworks are very different from a developer's perspective. This is a de
 
 ## Writing Experience
 
-**Winner: VitePress**
+**Preferred: VitePress**
 
 WordPress has a great writing experience, but writing articles is much easier with my IDE (Visual Studio Code). I write articles using markdown syntax and VitePress builds them to HTML files. If that's all I was doing then WordPress has the advantage due to the limitations of markdown syntax compared to the block editor.
 
@@ -45,7 +45,7 @@ There's no question that I would choose WordPress for any kind of website that n
 
 ## Content Discovery
 
-**Winner: WordPress**
+**Preferred: WordPress**
 
 WordPress has a built-in search feature that works well, and has post tags and categories that provide dynamic routes for post collections. It's hard to argue that a website without content in a database is better at providing content discovery than a website with content in a database.
 
@@ -55,7 +55,7 @@ I may be wrong, but to provide a search feature with filters and sorting I belie
 
 ## Custom Theme Development
 
-**Winner: VitePress**
+**Preferred: VitePress**
 
 I've developed custom themes for WordPress for years, and I've developed custom themes for VitePress for a few weeks. The challenge with developing a WordPress theme is in how long it takes to adapt a website design to the hooks and filters that allow users to customize its appearance and content. It has been far easier to develop this site's VitePress theme as a series of Vue components, which are little more than HTML templates with TailwindCSS and data loaders.
 

@@ -42,12 +42,12 @@ There are many dimensions that I could compare them on, but I'm focused on these
 
 I've given each framework a number score out of 3 for each area. Low scores are better. If an area doesn't make sense to compare, then I've left it blank.
 
-## Writing Experience
+## Writing Experience for Developer Content
 
-|           | Time | Effort | Cost |
-| --------: | :--: | :----: | :--: |
-| WordPress |  2   |   2    |      |
-| VitePress |  1   |   1    |      |
+|           | Time | Effort |
+| --------: | :--: | :----: |
+| VitePress |  1   |   1    |
+| WordPress |  2   |   2    |
 
 **Preferred: VitePress**
 
@@ -63,10 +63,10 @@ There's no question that I would choose WordPress for any kind of website that n
 
 ## Content Discovery
 
-|           | Time | Effort | Cost |
-| --------: | :--: | :----: | :--: |
-| WordPress |  1   |   1    |  1   |
-| VitePress |  2   |   2    |  2   |
+|           | Time | Effort |
+| --------: | :--: | :----: |
+| VitePress |  2   |   2    |
+| WordPress |  1   |   1    |
 
 **Preferred: WordPress**
 
@@ -77,6 +77,11 @@ If we were only talking about full text searches then by level of effort they wo
 I may be wrong, but to provide a search feature with filters and sorting I believe it would take significantly more effort to do this in VitePress than WordPress.
 
 ## Custom Theme Development
+
+|           | Time | Effort |
+| --------: | :--: | :----: |
+| VitePress |  1   |   2    |
+| WordPress |  2   |   3    |
 
 **Preferred: VitePress**
 
@@ -94,40 +99,71 @@ Overall, I prefer VitePress for custom theme development because it's faster and
 
 ## Forms and Email
 
+|           | Time | Effort |
+| --------: | :--: | :----: |
+| VitePress |  3   |   3    |
+| WordPress |  2   |   1    |
+
 **Preferred: WordPress**
 
-Without server scripting, I can't send email, receive form submissions, or store them in a database. I can use a third party service for these things, but I have to consider the financial cost and level of effort to implement and maintain each service. With WordPress, I can send email, receive form submissions, and store them in a database by writing my own PHP scripts or using plugins. I've implemented these features for long enough to know it's a piece of cake with WordPress.
+Without server scripting, I can't send email, receive form submissions, or store them in a database. I can use a third party service for these things, but I have to consider the financial cost and level of effort to implement and maintain each service. With WordPress, I can send email, receive form submissions, and store them in a database by writing my own PHP scripts or using plugins. I've implemented these features for long enough to know it's a piece of cake with WordPress and just takes some time to set up plugins or write my own scripts.
+
+I could try using push notifications or RSS feeds as a substitute for sending emails to users, and I think the only two forms that are common for a developer blog are a newsletter sign-up form and a contact form. If and when I need these features, I'll try to find a third party service that's quick, easy, and affordable to integrate with VitePress.
 
 ## Cost, Hosting, and Maintenance
+
+|           | Time | Effort | Cost |
+| --------: | :--: | :----: | :--: |
+| VitePress |  1   |   1    |  1   |
+| WordPress |  3   |   2    |  3   |
 
 **Preferred: VitePress**
 
 A static website is quick, easy, and more affordable to host and maintain than a Linux server running Apache or NGINX, MySQL, and PHP.
 
-I host this website for free on GitHub Pages with a free SSL and a $10 custom domain. I don't have to worry about server security, database backups, or server updates. I can focus on writing content and developing the theme. Deployment from GitHub Actions is simple and fast. It's also easy to roll back to a previous version of the site if I need to since the entire site - content and all - are in the same git repository.
+The only thing I actually need to pay for in a VitePress site is the domain name, unless I need a third party service for things like sending emails or handling form submissions. For a WordPress website hosting is typically the highest cost, but affordable shared hosting plans are available from several hosting providers. I was using Namecheap's Stellar Plus plan for $42.88 / year ($3.57 / month). The VitePress site is hosted for free on GitHub Pages. In either case I pay about $10 / year for a custom domain and get an SSL certificate for free.
 
-It might take close to the same amount of time to create a WordPress website as a VitePress website if I'm using a good WordPress hosting provider. It can be about $5 / month to host a WordPress website so that's not a deal breaker. Both take similar effort to assign a custom domain and SSL certificate. Long term maintenance effort for a WordPress website is potentially even to a VitePress website if you enable automatic updates, use a good hosting provider, and don't install plugins that you can't set to auto-update.
+When using a static site generator like VitePress, I don't have to worry about server security, database backups, or server updates. I can focus on writing content and developing the theme. Deployment from GitHub Actions is simple and fast, but is a pain to set up for most WordPress hosts. WP Engine makes it easy with their own GitHub Action but the cost of their hosting plans are outside of the budget for my developer blog.
 
-If you use page caching for WordPress to improve load times, then you'll need to ensure the feature that provides this caching can update the cache when you change your site's content. You'll also need Wordfence or another security plugin to protect your site from malicious activity that can lead to denial of service for legitimate users. Theoretically you'll also need this for a VitePress site, but it's less likely to be a problem because there's no database to attack or server scripts to overload.
+One of the nice things about a static site is how easy it is to look at or revert to a previous version of the site since it's all in version control. I can only do this with a WordPress site if I develop my theme and content in a way where all of the content and media files are in version control. This is possible, but the extra time and complexity doesn't seem worth it to me.
 
-WordPress is powerful but for a developer blog I don't need a database or server scripting. Not yet anyway.
+It might take close to the same amount of time to create a WordPress website as a VitePress website if I'm using a good WordPress hosting provider. Both take similar effort to assign a custom domain and SSL certificate. Long term maintenance effort for a WordPress website is possibly even to a VitePress website if I enable automatic updates, use a good hosting provider, and don't install plugins that I can't set to auto-update.
+
+If I use page caching for WordPress to improve load times, then I'll need to ensure the feature that provides this caching can update the cache when I change the site's content. I'll also need Wordfence or another security plugin to protect the site from malicious activity that can lead to denial of service for legitimate users. Theoretically I could also need this for a VitePress site, but it's less likely to be a target for attacks from the start.
 
 ## Analytics
+
+|           | Time | Effort |
+| --------: | :--: | :----: |
+| VitePress |  2   |   2    |
+| WordPress |  1   |   1    |
 
 **Preferred: WordPress**
 
 Hands-down the easiest time you'll have adding analytics to a blog is with WordPress. You can self-host analytics logic and data, or use a plugin (Jetpack, Monster Insights, etc.) and configure your third party service's credentials. Plugins can embed analytics data in your WordPress admin user interface which makes it quick and easy to check. If the content writing experience for my developer blog weren't so much better with VitePress, I would have stuck with WordPress for its ease of implementation for site analytics and content discovery.
 
-It's easy enough to add Google Analytics to a VitePress site and check it in the Google Analytics dashboard.
+It's easy enough to add Google Analytics to a VitePress site and check it in the Google Analytics dashboard. That being said it adds time and effort long-term to check analytics in a third party service instead of in the WordPress admin user interface where I'm already logging in anyway.
 
 ## Security
 
+|           | Time | Effort |
+| --------: | :--: | :----: |
+| VitePress |  1   |   1    |
+| WordPress |  3   |   2    |
+
 **Preferred: VitePress**
 
-When installed correctly and on a good hosting provider, WordPress Core is generally secure. Problems arise when a plugin or theme has a security vulnerability, the WordPress installation and PHP version aren't kept up to date, or the site isn't with a good hosting provider.
+Without a database, users, or public forms, there's not much to secure with a VitePress site. I just need an SSL certificate and a good hosting provider. If and when I need forms, like a newsletter or contact form, then I can try a third party service, but if the level of effort or cost is too high then I may consider switching back to WordPress.
 
-Since I don't need a database, users, or public forms for this website, I can afford to use static HTML. If and when I need forms, like a newsletter or contact form, then I can try a third party service, but if the level of effort or cost is too high then I may consider switching back to WordPress.
+When installed correctly and on a good hosting provider, WordPress Core is generally secure. Problems arise when a plugin or theme has a security vulnerability, the WordPress installation and PHP version aren't kept up to date, or the site isn't with a good hosting provider. Additional measures I recommend are to install and configure the Wordfence plugin, turn off user account creation and post comments, turn off XML RPC, and use Wordfence's two-factor user authentication feature.
 
 ## Conclusion
 
-VitePress has been great to work with, and I'm happy with it so far. If I need to add forms and email, and I can't find a quick, easy, and affordable way to integrate it, then I'll likely switch back to WordPress. I could also try for push notifications and RSS feeds over email as an outbound communication tool. I'm happy with the tradeoffs for now and I'm trying to keep things simple.
+|           | Time | Effort | Cost |
+| --------: | :--: | :----: | :--: |
+| VitePress |  11  |   12   |  1   |
+| WordPress |  14  |   12   |  3   |
+
+As you can see from the numbers, it's a close match. I'm not surprised that WordPress is a better choice for a developer blog and portfolio website. It's a mature framework with a great writing experience and content discovery features. It's also easy to add analytics and security features. The only thing that's not easy is custom theme development, but it's not hard either.
+
+VitePress has been great to work with, and I'm happy with it so far. If I get to a point where I need server-side features that would cost more than a WordPress hosting plan or take too much of my time away from writing, then I'll reconsider using WordPress. I'm happy with the tradeoffs for now and I'm trying to keep things simple.

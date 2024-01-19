@@ -4,11 +4,12 @@ import { useData } from 'vitepress'
 
 const { params } = useData()
 if (params?.value?.tag) {
-  articles.forEach((article, index) => {
-    if (!article.tags || !article.tags.includes(params.value.tag)) {
-      articles.splice(index, 1)
+  for (let i = 0; i < articles.length; i++) {
+    if (!articles[i].tags || !articles[i].tags.includes(params.value.tag)) {
+      articles.splice(i, 1)
+      i--
     }
-  })
+  }
 }
 </script>
 

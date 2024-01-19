@@ -1,6 +1,6 @@
 # Portfolio
 
-<a href="/profile.jpg"><img style="float:left;margin:0 2rem 2rem 0;" src="/img/profile/profile-214x300.jpg" alt="Zachary Watkins" width="214" height="300" /></a>
+<p style="float:left;margin:0 2rem 2rem 0;"><a href="/profile.jpg"><img src="/img/profile/profile-214x300.jpg" alt="Zachary Watkins" width="214" height="300" /></a></p>
 
 I have a presence on the following platforms, which I draw from to build this portfolio:
 

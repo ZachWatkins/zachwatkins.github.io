@@ -11,7 +11,7 @@ Developers have many options when creating their own website. I always recommend
 
 [[toc]]
 
-This year I want to start writing more for my personal website, and I'm pretty sure that it will be easier and faster if I can use my code editor to write articles. I also wanted to see how much time it would actually save me to build a custom theme this way. I've noticed several differences between WordPress and VitePress that I felt were worth writing about.
+This year I want to start writing more for my personal website, and I'm pretty sure that it will be easier and faster if I can use my code editor to write articles. I also want to see how much time it takes to build a custom theme with VitePress. I've noticed several differences between it and WordPress that I felt were worth writing about.
 
 **_I'm not trying to convince anyone to use one framework over the other. I'm just sharing my experience and opinions. I'm also leaving plenty of opinions out and I may update this article later._**
 

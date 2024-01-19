@@ -24,7 +24,7 @@ if (params?.value?.tag) {
               <h2 class="mb-0">
                 <a :href="url">{{ title }}</a>
               </h2>
-              <dl>
+              <dl class="float-left mr-2">
                 <dt class="sr-only">Published on</dt>
                 <dd>
                   <time :datetime="new Date(date.time).toISOString()">{{
@@ -32,8 +32,10 @@ if (params?.value?.tag) {
                   }}</time>
                 </dd>
               </dl>
+              <span class="float-left mr-2">&mdash;</span>
               <div
                 v-if="excerpt"
+                class="italic"
                 v-html="excerpt"
               ></div>
             </div>

@@ -18,7 +18,7 @@ import Articles from './Articles.vue'
   </main>
   <main
     v-else
-    class="pl-10 pr-5"
+    class="pl-10 pr-5 w-full m-auto"
   >
     <Articles v-if="'articles/index.md' === page.filePath" />
     <Articles

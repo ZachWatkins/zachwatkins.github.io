@@ -144,7 +144,8 @@ main h3 {
 }
 
 main p,
-main table {
+main table,
+main ol {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -173,6 +174,12 @@ main hr {
 
 main h2 {
   position: relative;
+}
+
+main ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-left: 2rem;
 }
 
 .star::before {

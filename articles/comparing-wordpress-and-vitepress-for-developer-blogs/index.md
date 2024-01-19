@@ -50,8 +50,6 @@ I've given each framework a number score out of 3 for each area. Low scores are 
 | VitePress |  1   |   1    |
 | WordPress |  2   |   2    |
 
-**Preferred: VitePress**
-
 WordPress has a great writing experience, but writing articles is much easier with my IDE (Visual Studio Code). I write articles using markdown syntax and VitePress builds them to HTML files. If that's all I was doing then WordPress has the advantage due to the limitations of markdown syntax compared to the block editor.
 
 Generating static pages from dynamic content is easier to implement when writing a markdown file for VitePress than a post for WordPress. I can fetch data from an API or a local file using VitePress and adapt it to an HTML template within minutes. To do this in WordPress, I would need to use a custom block or a custom shortcode written in PHP and included in a custom plugin or my custom theme. This would take much longer to implement.
@@ -69,8 +67,6 @@ There's no question that I would choose WordPress for any kind of website that n
 | VitePress |  2   |   2    |
 | WordPress |  1   |   1    |
 
-**Preferred: WordPress**
-
 WordPress has a built-in search feature that works well, and has post tags and categories that provide dynamic routes for post collections. It's hard to argue that a website without content in a database is better at providing content discovery than a website with content in a database.
 
 If we were only talking about full text searches then by level of effort they would be evenly matched. VitePress includes a surprisingly effective full text search feature in the default theme. Here is how I added it to my custom theme: [Add search #19](https://github.com/ZachWatkins/zachwatkins.github.io/pull/19/files). I can't say how well this will scale, since I only have 3 articles as of this writing.
@@ -83,8 +79,6 @@ I may be wrong, but to provide a search feature with filters and sorting I belie
 | --------: | :--: | :----: |
 | VitePress |  1   |   2    |
 | WordPress |  2   |   3    |
-
-**Preferred: VitePress**
 
 I've developed custom themes for WordPress for years, and I've developed custom themes for VitePress for a few weeks. That being said, my comparison is based on making an identical custom theme with both frameworks.
 
@@ -105,8 +99,6 @@ Overall, I prefer VitePress for custom theme development because it's faster and
 | VitePress |  3   |   2    |
 | WordPress |  2   |   1    |
 
-**Preferred: WordPress**
-
 Without server scripting, I can't send email, receive form submissions, or store them in a database. I can use a third party service for these things, but I have to consider the financial cost and level of effort to implement and maintain each service. With WordPress, I can send email, receive form submissions, and store them in a database by writing my own PHP scripts or using plugins. I've implemented these features for long enough to know it's a piece of cake with WordPress and just takes some time to set up plugins.
 
 If I had to pick an ideal solution for doing this with VitePress, I would use Google Forms and manually send emails on a schedule. I could also try using push notifications or RSS feeds instead of sending general audience notification emails.
@@ -117,8 +109,6 @@ If I had to pick an ideal solution for doing this with VitePress, I would use Go
 | --------: | :--: | :----: | :--: |
 | VitePress |  1   |   1    |  1   |
 | WordPress |  3   |   2    |  3   |
-
-**Preferred: VitePress**
 
 A static website is quick, easy, and more affordable to host and maintain than a Linux server running Apache or NGINX, MySQL, and PHP.
 
@@ -139,8 +129,6 @@ If I use page caching for WordPress to improve load times, then I'll need to ens
 | VitePress |  2   |   2    |
 | WordPress |  1   |   1    |
 
-**Preferred: WordPress**
-
 Hands-down the easiest time I'll have adding analytics to a blog is with WordPress. I can self-host analytics logic and data, or use a plugin (Jetpack, Monster Insights, etc.) and configure the third party service's credentials. Plugins can embed analytics data in the WordPress admin user interface which makes it quick and easy to check. If the content writing experience for my developer blog weren't so much better with VitePress, I would have stuck with WordPress for its ease of implementation for site analytics and content discovery.
 
 It's easy enough to add Google Analytics to a VitePress site and check it in the Google Analytics dashboard. That being said it adds time and effort long-term to check analytics in a third party service instead of in the WordPress admin user interface where I'm already logging in anyway.
@@ -151,8 +139,6 @@ It's easy enough to add Google Analytics to a VitePress site and check it in the
 | --------: | :--: | :----: |
 | VitePress |  1   |   1    |
 | WordPress |  3   |   2    |
-
-**Preferred: VitePress**
 
 Without a database, users, or public forms, there's not much to secure with a VitePress site. I just need an SSL certificate and a good hosting provider. If and when I need forms, like a newsletter or contact form, then I can try a third party service, but if the level of effort or cost is too high then I may consider switching back to WordPress.
 

@@ -2,6 +2,7 @@
 title: 'Comparing WordPress and VitePress For Developer Blogs'
 author: Zachary Watkins
 date: 2024-1-18
+tags: [wordpress, comparison, development]
 ---
 
 Developers have many options when creating their own website. I always recommend WordPress for organizations and businesses, but I decided to move my personal website to a static site generator called VitePress. I'll explain the tradeoffs.

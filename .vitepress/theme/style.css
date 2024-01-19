@@ -143,9 +143,22 @@ main h3 {
   margin-top: 2rem;
 }
 
-main p {
+main p,
+main table {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+main table,
+main table th,
+main table td {
+  border-width: 1px;
+}
+
+main table th,
+main table td {
+  padding: 0.5rem 1rem;
+  vertical-align: top;
 }
 
 main blockquote {
@@ -239,10 +252,4 @@ main {
 #localsearch-list a {
   text-decoration: none;
   font-family: 'Franklin Gothic', sans-serif;
-}
-
-article table th,
-article table td {
-  padding: 0.25rem 0.5rem;
-  vertical-align: top;
 }

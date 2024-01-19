@@ -12,7 +12,7 @@ function findCurrentIndex() {
   return articles.findIndex((p) => p.url === route.path)
 }
 
-const date = computed(() => articles[findCurrentIndex()].date)
+const date = computed(() => articles && articles.length ? articles[findCurrentIndex()].date : { time: null, string: '' })
 const nextPost = computed(() => articles[findCurrentIndex() - 1])
 const prevPost = computed(() => articles[findCurrentIndex() + 1])
 </script>

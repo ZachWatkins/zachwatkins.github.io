@@ -23,7 +23,7 @@ const { site, theme } = useData()
             {{ link.text }}
           </a>
         </nav>
-        <div id="search">
+        <div id="search" class="absolute top-0 right-0 md:static">
           <VPNavBarSearch class="search pl-0" />
         </div>
       </div>

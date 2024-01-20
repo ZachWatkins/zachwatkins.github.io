@@ -34,7 +34,7 @@ import Articles from './Articles.vue'
     <div v-else> Oh no! </div>
   </main>
   <footer class="p-1">
-    <div class="max-w-screen-xl m-auto flex items-center h-full">
+    <div class="max-w-screen-lg m-auto md:flex md:items-center md:h-full">
       <div class="flex-grow text-xl">
         <a
           v-for="link in theme.footerNav"

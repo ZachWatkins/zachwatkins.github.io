@@ -11,6 +11,12 @@ import fs from 'fs'
 // })
 processImage('assets/century tree_crystal littrell_138.jpg', {
   dest: 'public/img/profile/2016-century-tree.jpg',
+  thumbnail: {
+    width: 150,
+    height: 150,
+    fit: 'cover',
+    position: 'top',
+  },
   extract: {
     left: 1280,
     top: 600,
@@ -18,19 +24,22 @@ processImage('assets/century tree_crystal littrell_138.jpg', {
     height: 1900,
   },
 })
-processImage('assets/century tree_crystal littrell_138.jpg', {
-  dest: 'public/img/profile/2016-century-tree-thumbnail.jpg',
+processImage('assets/century tree_crystal littrell_137.jpg', {
+  dest: 'public/img/profile/2016-century-tree-sitting-thumbnail.jpg',
   extract: {
-    left: 1600,
-    top: 700,
-    width: 500,
-    height: 1000,
+    left: 1760,
+    top: 1150,
+    width: 320,
+    height: 320,
   },
-  resize: {
-    width: 150,
-    height: 150,
-    fit: 'cover',
-    position: 'top',
+})
+processImage('assets/century tree_crystal littrell_137.jpg', {
+  dest: 'public/img/profile/2016-century-tree-sitting.jpg',
+  extract: {
+    left: 1150,
+    top: 1000,
+    width: 1400,
+    height: 1500,
   },
 })
 
@@ -39,15 +48,12 @@ processImage('assets/century tree_crystal littrell_138.jpg', {
  * @param {string} src - The source image path.
  * @param {object} options - The options object.
  * @param {string} options.dest - The destination image path.
- * @param {boolean} options.thumbnail - Whether or not to generate a thumbnail for the image.
- * @param {import('sharp').ResizeOptions} [options.resize] - The resize object.* @param {object} options.extract - The extract object.
- * @param {number} options.extract.left - The left coordinate of the extracted image.
- * @param {number} options.extract.top - The top coordinate of the extracted image.
- * @param {number} options.extract.width - The width of the extracted image.
- * @param {number} options.extract.height - The height of the extracted image.
+ * @param {import('sharp').ResizeOptions} [options.resize] - The resize object.*
+ * @param {import('sharp').ResizeOptions} [options.thumbnail] - Resize options for the thumbnail version of the image.
+ * @param {import('sharp').Region} [options.extract] - The extract region.
  * @returns {Promise} - The promise of the image processing.
  */
-function processImage(src, { dest, thumbnail = false, resize, extract }) {
+function processImage(src, { dest, thumbnail, resize, extract }) {
   const srcSharp = sharp(src)
   const srcFileSize = fs.statSync(src).size
   return srcSharp.metadata().then((metadata) => {
@@ -87,7 +93,7 @@ function processImage(src, { dest, thumbnail = false, resize, extract }) {
         })
         if (thumbnail) {
           return sharp(dest)
-            .resize(150, 150, { fit: 'cover' })
+            .resize(thumbnail)
             .withMetadata({
               density: 72,
               resolutionUnit: 'pixelsperinch',
@@ -96,7 +102,7 @@ function processImage(src, { dest, thumbnail = false, resize, extract }) {
               quality: 95,
               mozjpeg: true,
             })
-            .toFile(dest.replace('.jpg', '-thumb.jpg'))
+            .toFile(dest.replace('.jpg', '-thumbnail.jpg'))
         }
       })
   })

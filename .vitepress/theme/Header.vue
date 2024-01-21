@@ -11,14 +11,14 @@ const { site, theme } = useData()
         <a href="/">{{ site.title }}</a>
       </div>
       <div
-        class="w-full md:w-auto md:flex-initial md:h-full md:flex p-1 mt-0 mb-0 md:m-4 md:text-right text-xl md:items-center"
+        class="w-full justify-center md:w-auto md:flex-initial md:h-full flex p-1 mt-0 mb-0 md:m-4 md:text-right text-xl md:items-center"
       >
         <nav class="font-bold">
           <a
             v-for="(link, i) in theme.nav"
             :key="link.text"
             :href="link.link"
-            class="p-1 w-1/4 inline-block md:w-auto md:m-2 lg:m-4"
+            class="p-1 inline-block m-1 md:m-2 lg:m-4"
           >
             {{ link.text }}
           </a>

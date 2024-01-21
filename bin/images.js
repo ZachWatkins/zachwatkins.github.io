@@ -32,6 +32,12 @@ processImage('assets/century tree_crystal littrell_137.jpg', {
     width: 320,
     height: 320,
   },
+  resize: {
+    width: 150,
+    height: 150,
+    fit: 'cover',
+    position: 'top',
+  },
 })
 processImage('assets/century tree_crystal littrell_137.jpg', {
   dest: 'public/img/profile/2016-century-tree-sitting.jpg',

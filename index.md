@@ -14,5 +14,3 @@ hero:
     - text: Portfolio
       link: /portfolio/
 ---
-
-This website is a work in progress, so check back soon for more content.

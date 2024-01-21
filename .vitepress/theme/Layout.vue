@@ -33,24 +33,20 @@ import Articles from './Articles.vue'
     <Content v-else-if="!page.isNotFound" />
     <div v-else> Oh no! </div>
   </main>
-  <footer class="p-1">
-    <div
-      class="text-center max-w-screen-lg m-auto md:text-left"
-    >
-      <div class="text-lg md:text-xl">
-        <a
-          v-for="link in theme.footerNav"
-          :key="link.text"
-          :href="link.link"
-          class="ml-2 mr-2 mt-1 mb-1 inline-block whitespace-nowrap text-lg md:ml-4 md:mr-4 md:mt-2 md:mb-2"
-        >
-          {{ link.text }}
-        </a>
-      </div>
-      <div class="p-1 m-4 mt-0 mb-0 md:text-right">
-        v{{ theme.version }} &copy; {{ theme.date.copyrightYears }}
-        {{ theme.author }}. All rights reserved.
-      </div>
+  <footer class="w-full p-4 text-center max-w-screen-lg m-auto md:text-left">
+    <div class="text-lg md:text-xl">
+      <a
+        v-for="link in theme.footerNav"
+        :key="link.text"
+        :href="link.link"
+        class="mr-5 mb-2 inline-block whitespace-nowrap text-lg"
+      >
+        {{ link.text }}
+      </a>
+    </div>
+    <div class="md:text-right">
+      v{{ theme.version }} &copy; {{ theme.date.copyrightYears }}
+      {{ theme.author }}. All rights reserved.
     </div>
   </footer>
 </template>

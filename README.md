@@ -19,7 +19,7 @@ This website uses VitePress for static site generation from markdown files. See 
 - `articles` - Website articles.
 - `assets` - Files used during the build process and not uploaded to the website.
 - `public` - Files uploaded to the website without processing.
-- `scripts` - Scripts used during the build process.
+- `bin` - Scripts used during the build process.
 - `index.md` - Home page content.
 - `<other top-level directories>` - Pages on the website.
 

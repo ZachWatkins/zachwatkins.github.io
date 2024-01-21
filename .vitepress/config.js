@@ -68,6 +68,11 @@ export default defineConfig({
       { text: 'Resources', link: '/resources/' },
       { text: 'Contact', link: '/contact/' },
       { text: 'Privacy Policy', link: '/privacy/' },
+      {
+        text: `View Source`,
+        link: 'https://github.com/zachwatkins/zachwatkins.github.io',
+        target: '_blank',
+      },
     ],
     sidebar: [
       {

@@ -48,13 +48,8 @@ import Articles from './Articles.vue'
         </a>
       </div>
       <div class="flex-initial p-1 m-4 mt-0 mb-0 md:text-right">
-        <a
-          href="https://github.com/zachwatkins/zachwatkins.github.io"
-          target="_blank"
-          >v{{ theme.version }}</a
-        >
-        &copy; {{ theme.date.copyrightYears }} {{ theme.author }}. All rights
-        reserved.
+        v{{ theme.version }} &copy; {{ theme.date.copyrightYears }}
+        {{ theme.author }}. All rights reserved.
       </div>
     </div>
   </footer>

@@ -16,7 +16,7 @@ const { frontmatter } = useData()
       v-for="(action, i) in frontmatter.hero.actions"
       :key="action.text"
       :href="action.link"
-      :class="`hero-action-${i} p-2 pl-6 pr-6 m-2 text-2xl rounded-full`"
+      :class="`hero-action-${i} p-2 pl-6 pr-6 m-2 text-2xl rounded-full whitespace-nowrap inline-block`"
     >
       {{ action.text }}
     </a>

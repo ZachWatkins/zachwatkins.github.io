@@ -11,7 +11,7 @@ const { site, theme } = useData()
         <a href="/">{{ site.title }}</a>
       </div>
       <div
-        class="w-full md:w-auto md:flex-initial md:h-full md:flex p-1 md:m-4 mt-0 mb-0 md:text-right text-xl md:items-center"
+        class="w-full md:w-auto md:flex-initial md:h-full md:flex p-1 mt-0 mb-0 md:m-4 md:text-right text-xl md:items-center"
       >
         <nav class="font-bold">
           <a

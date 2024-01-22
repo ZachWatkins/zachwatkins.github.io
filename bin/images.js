@@ -102,6 +102,19 @@ for (const job of jobs) {
 }
 
 /**
+ * Remove all metadata from an image.
+ * @param {string} src - The source image path.
+ * @returns {Promise} - The promise of the clean image filename.
+ */
+async function cleanImageMetadata(src) {
+  const fileType = src.split('.').pop()
+  const cleanFilename = src.replace(`.${fileType}`, `-clean.${fileType}`)
+  return sharp(src)
+    .toFile(cleanFilename)
+    .then(() => cleanFilename)
+}
+
+/**
  * Process an image from src to dest within a given width and height.
  * @param {object} options - The options object.
  * @param {string} options.src - The source image path.
@@ -111,57 +124,57 @@ for (const job of jobs) {
  * @param {import('sharp').Region} [options.extract] - The extract region.
  * @returns {Promise} - The promise of the image processing.
  */
-function processImage({ src, dest, thumbnail, resize, extract }) {
-  const srcSharp = sharp(src)
-  const srcFileSize = fs.statSync(src).size
-  return srcSharp.metadata().then((metadata) => {
-    console.log('before', {
-      fileSize: (srcFileSize / 1024).toFixed(2) + ' kb',
-      width: metadata.width,
-      height: metadata.height,
-      density: metadata.density,
-      resolutionUnit: metadata.resolutionUnit,
-    })
+async function processImage({ src, dest, thumbnail, resize, extract }) {
+  const cleanSrc = await cleanImageMetadata(src)
 
-    if (extract) {
-      srcSharp.extract(extract)
-    }
-
-    if (resize) {
-      srcSharp.resize(resize)
-    }
-
-    return srcSharp
-      .withMetadata({
-        density: 72,
-        resolutionUnit: 'pixelsperinch',
+  return sharp(src)
+    .metadata()
+    .then((metadata) => {
+      console.log('before', {
+        fileSize: (fs.statSync(src).size / 1024).toFixed(2) + ' kb',
+        width: metadata.width,
+        height: metadata.height,
+        density: metadata.density,
+        resolutionUnit: metadata.resolutionUnit,
       })
-      .jpeg({
-        quality: 95,
-        mozjpeg: true,
-      })
-      .toFile(dest)
-      .then((result) => {
-        console.log('after', {
-          fileSize: (result.size / 1024).toFixed(2) + ' kb',
-          width: result.width,
-          height: result.height,
+
+      const srcSharp = sharp(cleanSrc)
+
+      if (extract) {
+        srcSharp.extract(extract)
+      }
+
+      if (resize) {
+        srcSharp.resize(resize)
+      }
+
+      return srcSharp
+        .withMetadata({
           density: 72,
           resolutionUnit: 'pixelsperinch',
         })
-        if (thumbnail) {
-          return sharp(dest)
-            .resize(thumbnail)
-            .withMetadata({
-              density: 72,
-              resolutionUnit: 'pixelsperinch',
-            })
-            .jpeg({
-              quality: 95,
-              mozjpeg: true,
-            })
-            .toFile(dest.replace('.jpg', '-thumbnail.jpg'))
-        }
-      })
-  })
+        .jpeg({
+          quality: 95,
+          mozjpeg: true,
+        })
+        .toFile(dest)
+        .then((result) => {
+          console.log('after', {
+            fileSize: (result.size / 1024).toFixed(2) + ' kb',
+            width: result.width,
+            height: result.height,
+            density: 72,
+            resolutionUnit: 'pixelsperinch',
+          })
+          if (thumbnail) {
+            return sharp(dest)
+              .resize(thumbnail)
+              .jpeg({
+                quality: 95,
+                mozjpeg: true,
+              })
+              .toFile(dest.replace('.jpg', '-thumbnail.jpg'))
+          }
+        })
+    })
 }

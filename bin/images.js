@@ -95,6 +95,16 @@ const jobs = [
       position: 'top',
     },
   },
+  {
+    src: 'assets/20210719_074933.jpg',
+    dest: 'public/img/profile/20210719_074933.jpg',
+    rotate: 180,
+    resize: {
+      width: 2000,
+      height: 2000,
+      fit: 'inside',
+    }
+  }
 ]
 
 for (const job of jobs) {
@@ -122,9 +132,10 @@ async function cleanImageMetadata(src) {
  * @param {import('sharp').ResizeOptions} [options.resize] - The resize object.*
  * @param {import('sharp').ResizeOptions} [options.thumbnail] - Resize options for the thumbnail version of the image.
  * @param {import('sharp').Region} [options.extract] - The extract region.
+ * @param {number} [options.rotate] - The rotation angle in degrees.
  * @returns {Promise} - The promise of the image processing.
  */
-async function processImage({ src, dest, thumbnail, resize, extract }) {
+async function processImage({ src, dest, thumbnail, resize, extract, rotate }) {
   const cleanSrc = await cleanImageMetadata(src)
 
   return sharp(src)
@@ -142,6 +153,10 @@ async function processImage({ src, dest, thumbnail, resize, extract }) {
 
       if (extract) {
         srcSharp.extract(extract)
+      }
+
+      if (rotate) {
+        srcSharp.rotate(rotate)
       }
 
       if (resize) {

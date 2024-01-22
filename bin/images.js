@@ -80,13 +80,13 @@ const jobs = [
     },
   },
   {
-    src: 'public/img/profile/53318172658_3d0e313ea4_c.jpg',
+    src: 'assets/53318172658_5d8a4ded99_o.jpg',
     dest: 'public/img/profile/53318172658_3d0e313ea4_q.jpg',
     extract: {
-      left: 350,
-      top: 230,
-      width: 200,
-      height: 200,
+      left: 2000,
+      top: 1330,
+      width: 1100,
+      height: 1100,
     },
     resize: {
       width: 150,

@@ -103,8 +103,23 @@ const jobs = [
       width: 2000,
       height: 2000,
       fit: 'inside',
-    }
-  }
+    },
+  },
+  {
+    src: 'assets/20231015_085123.jpg',
+    dest: 'public/img/profile/20231015_085123.jpg',
+    rotate: 270,
+    thumbnail: {
+      width: 150,
+      height: 150,
+      fit: 'cover',
+    },
+    resize: {
+      width: 2000,
+      height: 2000,
+      fit: 'inside',
+    },
+  },
 ]
 
 for (const job of jobs) {

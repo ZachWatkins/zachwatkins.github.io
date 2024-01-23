@@ -1,6 +1,9 @@
 import sharp from 'sharp'
 import fs from 'fs'
 
+const THUMBNAIL = 150
+const FULL = 1500
+
 /**
  * A list of image processing task parameters for the processImage function which can run in any order.
  */
@@ -9,8 +12,8 @@ const jobs = [
     src: 'assets/century tree_crystal littrell_138.jpg',
     dest: 'public/img/profile/2016-century-tree.jpg',
     thumbnail: {
-      width: 150,
-      height: 150,
+      width: THUMBNAIL,
+      height: THUMBNAIL,
       fit: 'cover',
       position: 'top',
     },
@@ -19,6 +22,11 @@ const jobs = [
       top: 600,
       width: Math.round((1900 / 16) * 9),
       height: 1900,
+    },
+    resize: {
+      width: FULL,
+      height: FULL,
+      fit: 'inside',
     },
   },
   {
@@ -31,8 +39,8 @@ const jobs = [
       height: 320,
     },
     resize: {
-      width: 150,
-      height: 150,
+      width: THUMBNAIL,
+      height: THUMBNAIL,
       fit: 'cover',
       position: 'top',
     },
@@ -44,7 +52,7 @@ const jobs = [
       left: 1150,
       top: 1000,
       width: 1400,
-      height: 1500,
+      height: FULL,
     },
   },
   {
@@ -57,8 +65,8 @@ const jobs = [
       height: 320,
     },
     resize: {
-      width: 150,
-      height: 150,
+      width: THUMBNAIL,
+      height: THUMBNAIL,
       fit: 'cover',
       position: 'top',
     },
@@ -73,8 +81,8 @@ const jobs = [
       height: 288,
     },
     resize: {
-      width: 150,
-      height: 150,
+      width: THUMBNAIL,
+      height: THUMBNAIL,
       fit: 'cover',
       position: 'top',
     },
@@ -89,8 +97,8 @@ const jobs = [
       height: 1100,
     },
     resize: {
-      width: 150,
-      height: 150,
+      width: THUMBNAIL,
+      height: THUMBNAIL,
       fit: 'cover',
       position: 'top',
     },
@@ -98,45 +106,59 @@ const jobs = [
   {
     src: 'assets/20210719_074933.jpg',
     dest: 'public/img/profile/20210719_074933.jpg',
-    rotate: 180,
     resize: {
-      width: 2000,
-      height: 2000,
+      width: FULL,
+      height: FULL,
       fit: 'inside',
+    },
+    thumbnail: {
+      width: THUMBNAIL,
+      height: THUMBNAIL,
+      fit: 'cover',
     },
   },
   {
     src: 'assets/20231015_085123.jpg',
     dest: 'public/img/profile/20231015_085123.jpg',
-    rotate: 270,
-    thumbnail: {
-      width: 150,
-      height: 150,
-      fit: 'cover',
+    extract: {
+      left: 0,
+      top: 200,
+      width: 2207,
+      height: 2700,
     },
-    resize: {
-      width: 2000,
-      height: 2000,
-      fit: 'inside',
+    thumbnail: {
+      width: THUMBNAIL,
+      height: THUMBNAIL,
+      fit: 'cover',
     },
   },
 ]
 
 for (const job of jobs) {
-  processImage(job)
+  cleanImage(job.src).then(() => processImage(job))
 }
 
-/**
- * Remove all metadata from an image.
- * @param {string} src - The source image path.
- * @returns {Promise} - The promise of the clean image filename.
- */
-async function cleanImageMetadata(src) {
-  const fileType = src.split('.').pop()
-  const cleanFilename = src.replace(`.${fileType}`, `-clean.${fileType}`)
+async function cleanImage(src) {
   return sharp(src)
-    .toFile(cleanFilename)
-    .then(() => cleanFilename)
+    .metadata()
+    .then((metadata) => {
+      let needsCleaning = false
+      if (metadata.exif) needsCleaning = true
+      if (metadata.icc) needsCleaning = true
+      if (metadata.xmp) needsCleaning = true
+      if (metadata.iptc) needsCleaning = true
+      if (!needsCleaning) return
+
+      // Proceed with cleaning the source image and overwriting it.
+      const fileType = src.split('.').pop()
+      const tempFilename = src.replace(`.${fileType}`, `-old.${fileType}`)
+      fs.renameSync(src, tempFilename)
+      return sharp(tempFilename)
+        .toFile(src)
+        .then(() => {
+          fs.unlinkSync(tempFilename)
+        })
+    })
 }
 
 /**
@@ -151,60 +173,55 @@ async function cleanImageMetadata(src) {
  * @returns {Promise} - The promise of the image processing.
  */
 async function processImage({ src, dest, thumbnail, resize, extract, rotate }) {
-  const cleanSrc = await cleanImageMetadata(src)
+  const srcSharp = sharp(src)
+  return srcSharp.metadata().then((metadata) => {
+    console.log('before', {
+      fileSize: (fs.statSync(src).size / 1024).toFixed(2) + ' kb',
+      width: metadata.width,
+      height: metadata.height,
+      density: metadata.density,
+      resolutionUnit: metadata.resolutionUnit,
+    })
 
-  return sharp(src)
-    .metadata()
-    .then((metadata) => {
-      console.log('before', {
-        fileSize: (fs.statSync(src).size / 1024).toFixed(2) + ' kb',
-        width: metadata.width,
-        height: metadata.height,
-        density: metadata.density,
-        resolutionUnit: metadata.resolutionUnit,
+    if (extract) {
+      srcSharp.extract(extract)
+    }
+
+    if (rotate) {
+      srcSharp.rotate(rotate)
+    }
+
+    if (resize) {
+      srcSharp.resize(resize)
+    }
+
+    return srcSharp
+      .withMetadata({
+        density: 72,
+        resolutionUnit: 'pixelsperinch',
       })
-
-      const srcSharp = sharp(cleanSrc)
-
-      if (extract) {
-        srcSharp.extract(extract)
-      }
-
-      if (rotate) {
-        srcSharp.rotate(rotate)
-      }
-
-      if (resize) {
-        srcSharp.resize(resize)
-      }
-
-      return srcSharp
-        .withMetadata({
+      .jpeg({
+        quality: 95,
+        mozjpeg: true,
+      })
+      .toFile(dest)
+      .then((result) => {
+        console.log('after', {
+          fileSize: (result.size / 1024).toFixed(2) + ' kb',
+          width: result.width,
+          height: result.height,
           density: 72,
           resolutionUnit: 'pixelsperinch',
         })
-        .jpeg({
-          quality: 95,
-          mozjpeg: true,
-        })
-        .toFile(dest)
-        .then((result) => {
-          console.log('after', {
-            fileSize: (result.size / 1024).toFixed(2) + ' kb',
-            width: result.width,
-            height: result.height,
-            density: 72,
-            resolutionUnit: 'pixelsperinch',
-          })
-          if (thumbnail) {
-            return sharp(dest)
-              .resize(thumbnail)
-              .jpeg({
-                quality: 95,
-                mozjpeg: true,
-              })
-              .toFile(dest.replace('.jpg', '-thumbnail.jpg'))
-          }
-        })
-    })
+        if (thumbnail) {
+          return sharp(dest)
+            .resize(thumbnail)
+            .jpeg({
+              quality: 95,
+              mozjpeg: true,
+            })
+            .toFile(dest.replace('.jpg', '-thumbnail.jpg'))
+        }
+      })
+  })
 }

@@ -112,9 +112,9 @@ const jobs = [
       fit: 'inside',
     },
     thumbnail: {
-      width: THUMBNAIL,
-      height: THUMBNAIL,
-      fit: 'cover',
+      width: 250,
+      height: 250,
+      fit: 'inside',
     },
   },
   {
@@ -125,6 +125,26 @@ const jobs = [
       top: 200,
       width: 2207,
       height: 2700,
+    },
+    thumbnail: {
+      width: THUMBNAIL,
+      height: THUMBNAIL,
+      fit: 'cover',
+    },
+  },
+  {
+    src: 'assets/20221122_081808.jpg',
+    dest: 'public/img/profile/20221122_081808.jpg',
+    extract: {
+      left: 0,
+      top: 1300,
+      width: 2500,
+      height: 2400,
+    },
+    resize: {
+      width: FULL,
+      height: FULL,
+      fit: 'inside',
     },
     thumbnail: {
       width: THUMBNAIL,

@@ -4,6 +4,8 @@
 
 I have a presence on the following platforms, which I draw from to build this portfolio:
 
+<br style="clear:both" />
+
 | Platform  | Link                                              |
 | :-------- | :------------------------------------------------ |
 | GitHub    | https://github.com/zachwatkins                    |

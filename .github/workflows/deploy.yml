@@ -40,6 +40,8 @@ jobs:
           fi
   build:
     needs: check_commit
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -56,6 +58,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build with VitePress
+        env:
+          GA_TAG_ID: ${{ vars.GA_TAG_ID }}
         run: |
           npm run docs:build
           touch .vitepress/dist/.nojekyll

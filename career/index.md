@@ -1,8 +1,8 @@
 # Career
 
-<img style="float:left;margin:0 2rem 2rem 0;" src="/img/profile/profile-214x300.jpg" alt="Zachary Watkins" width="214" height="300" />
-
 [[toc]]
+
+<a href="/profile.jpg" class="md:float-left md:mr-8 md:mb-4" title="Zach in Fall of 2021 wearing a suit jacket and buttoned-up shirt"><img style="display:inline-block" src="/img/profile/profile-214x300.jpg" alt="Zach in Fall of 2021 wearing a suit jacket and buttoned-up shirt" width="214" height="300" /></a>
 
 I am a full stack application and website developer with 18 years of experience (13 years with WordPress), CI/CD, DevOps, database and system administration. While at the Texas A&M University System I’ve given presentations on creating CI/CD pipelines between Github and WP Engine, created custom WordPress plugins and themes, migrated and managed large multisite networks using WP-CLI, and evaluated and addressed web accessibility issues. At Texas A&M Transportation Institute I develop and administrate custom full stack web applications for transportation research grants and meet with researchers to ensure the right work gets done.
 

@@ -220,10 +220,6 @@ main ol {
 
 /** --> Table of contents */
 .table-of-contents {
-  float: right;
-  top: 2rem;
-  max-width: 20rem;
-  margin-left: 2rem;
   padding: 1rem;
   border-radius: 0.5rem;
   background-color: hsla(0, 0%, 0%, 0.5);
@@ -231,11 +227,38 @@ main ol {
   border: 1px solid hsla(50, 92%, 59%, 50%);
   font-size: 1.25rem;
   line-height: 1.75;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
-.table-of-contents::before {
+.table-of-contents li {
+  display: inline;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.table-of-contents ul::after {
+  content: "";
   display: block;
-  font-weight: bold;
+  clear: both;
+}
+
+@media screen and (min-width: 768px) {
+  .table-of-contents {
+    margin-top: 0;
+    float: right;
+    max-width: 20rem;
+    margin-left: 2rem;
+  }
+
+  .table-of-contents::before {
+    display: block;
+    font-weight: bold;
+  }
+
+  .table-of-contents li {
+    display: block;
+  }
 }
 /** <-- */
 

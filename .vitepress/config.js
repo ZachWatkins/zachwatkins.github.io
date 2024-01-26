@@ -27,7 +27,7 @@ const googleAnalytics = !process.env.GA_TAG_ID
 export default defineConfig({
   lang: 'en-US',
   title: 'Zachary Watkins',
-  titleTemplate: ':title - Zach Watkins',
+  titleTemplate: ':title - Zachary Watkins',
   description:
     'A blog website with articles and tutorials about JavaScript, PHP, WordPress, Laravel, DevOps, and anything related to web technology.',
   lastUpdated: true,

@@ -34,12 +34,34 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Zachary K. Watkins' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'twitter:site', content: '@zachwatkinsv1' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    [
+      'meta',
+      {
+        name: 'twitter:description',
+        content:
+          'A blog website with articles and tutorials about JavaScript, PHP, WordPress, Laravel, DevOps, and anything related to web technology.',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'twitter:title',
+        content: 'Zachary Watkins - Senior Full Stack Engineer',
+      },
+    ],
     [
       'meta',
       {
         name: 'twitter:image',
         content: 'https://zacharywatkins.com/android-chrome-192x192.png',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'robots',
+        content: 'index,follow',
       },
     ],
     ...googleAnalytics,

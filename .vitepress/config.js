@@ -31,7 +31,7 @@ export default defineConfig({
   description: 'Full stack developer with an art degree.',
   lastUpdated: true,
   head: [
-    ['meta', { name: 'author', content: 'Zachary Watkins' }],
+    ['meta', { name: 'author', content: 'Zachary K. Watkins' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'twitter:site', content: '@zachwatkinsv1' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
@@ -44,6 +44,17 @@ export default defineConfig({
     ],
     ...googleAnalytics,
   ],
+  transformPageData(pageData) {
+    const canonicalUrl = `https://zacharywatkins.com/${pageData.relativePath}`
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '.html')
+
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push([
+      'link',
+      { rel: 'canonical', href: canonicalUrl },
+    ])
+  },
   themeConfig: {
     search: {
       provider: 'local',

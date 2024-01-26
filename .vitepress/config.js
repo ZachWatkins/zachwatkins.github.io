@@ -34,6 +34,14 @@ export default defineConfig({
   head: [
     ['meta', { name: 'author', content: 'Zachary K. Watkins' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content:
+          'zachary watkins, zach watkins, web developer, full stack developer, software engineer, javascript, php, wordpress, laravel, devops, web technology',
+      },
+    ],
     ['meta', { name: 'twitter:site', content: '@zachwatkinsv1' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     [

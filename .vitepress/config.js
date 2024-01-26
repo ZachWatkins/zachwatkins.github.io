@@ -1,28 +1,6 @@
 import { defineConfig } from 'vitepress'
 import pkg from '../package.json'
 
-const googleAnalytics = !process.env.GA_TAG_ID
-  ? []
-  : [
-      [
-        'script',
-        {
-          async: true,
-          src: `https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TAG_ID}`,
-        },
-      ],
-      [
-        'script',
-        {},
-        [
-          `window.dataLayer = window.dataLayer || [];`,
-          `function gtag(){dataLayer.push(arguments);}`,
-          `gtag('js', new Date());`,
-          `gtag('config', '${process.env.GA_TAG_ID}');`,
-        ].join(''),
-      ],
-    ]
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'en-US',
@@ -61,7 +39,23 @@ export default defineConfig({
         content: 'https://zachwatkins.github.io/android-chrome-192x192.png',
       },
     ],
-    ...googleAnalytics,
+    [
+      'script',
+      {
+        async: true,
+        src: `https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TAG_ID}`,
+      },
+    ],
+    [
+      'script',
+      {},
+      [
+        `window.dataLayer = window.dataLayer || [];`,
+        `function gtag(){dataLayer.push(arguments);}`,
+        `gtag('js', new Date());`,
+        `gtag('config', '${process.env.GA_TAG_ID}');`,
+      ].join(''),
+    ],
   ],
   themeConfig: {
     search: {

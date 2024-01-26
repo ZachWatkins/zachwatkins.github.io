@@ -28,7 +28,8 @@ export default defineConfig({
   lang: 'en-US',
   title: 'Zachary Watkins',
   titleTemplate: ':title - Zach Watkins',
-  description: 'Full stack developer with an art degree.',
+  description:
+    'A blog website with articles and tutorials about JavaScript, PHP, WordPress, Laravel, DevOps, and anything related to web technology.',
   lastUpdated: true,
   head: [
     ['meta', { name: 'author', content: 'Zachary K. Watkins' }],

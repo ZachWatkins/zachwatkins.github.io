@@ -1,3 +1,8 @@
+---
+title: Privacy Policy
+description: Privacy Policy for zacharywatkins.com
+---
+
 # Privacy Policy for zacharywatkins.com
 
 Last updated on January 24, 2024.

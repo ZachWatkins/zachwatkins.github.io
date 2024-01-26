@@ -34,9 +34,9 @@ const { frontmatter, theme } = useData()
               is the lead application developer for Communications at Texas A&M
               Transportation Institute in College Station, Texas. He spends most
               of his time creating web-based tools, visualizing data, and
-              writing technical documents. He also posts on Twitter
+              following other devs on X and YouTube. He also posts on Twitter
               <a
-                :href="'https://twitter.com/' + theme.twitter"
+                :href="'https://x.com/' + theme.twitter"
                 target="_blank"
                 rel="noopnener noreferrer"
                 >{{ theme.twitter }}</a

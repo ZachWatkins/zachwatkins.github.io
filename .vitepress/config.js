@@ -105,7 +105,7 @@ export default defineConfig({
         icon: 'linkedin',
         link: 'https://www.linkedin.com/in/zacharykwatkins/',
       },
-      { icon: 'email', link: 'mailto:watkinza@gmail.com' },
+      { icon: 'email', link: 'mailto:zach@zachwatkins.dev' },
     ],
   },
   sitemap: {

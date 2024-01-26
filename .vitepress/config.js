@@ -29,7 +29,7 @@ export default defineConfig({
   title: 'Zachary Watkins',
   titleTemplate: ':title - Zachary Watkins',
   description:
-    'A blog website with articles and tutorials about JavaScript, PHP, WordPress, Laravel, DevOps, and anything related to web technology.',
+    'A blog website with articles and tutorials about JavaScript, PHP, WordPress, Laravel, DevOps, hosting, and anything related to web technology.',
   lastUpdated: true,
   head: [
     ['meta', { name: 'author', content: 'Zachary K. Watkins' }],
@@ -49,7 +49,7 @@ export default defineConfig({
       {
         name: 'twitter:description',
         content:
-          'A blog website with articles and tutorials about JavaScript, PHP, WordPress, Laravel, DevOps, and anything related to web technology.',
+          'A blog website with articles and tutorials about JavaScript, PHP, WordPress, Laravel, DevOps, hosting, and anything related to web technology.',
       },
     ],
     [

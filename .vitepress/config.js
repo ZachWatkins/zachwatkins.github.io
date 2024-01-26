@@ -39,7 +39,7 @@ export default defineConfig({
       'meta',
       {
         name: 'twitter:image',
-        content: 'https://zachwatkins.github.io/android-chrome-192x192.png',
+        content: 'https://zacharywatkins.com/android-chrome-192x192.png',
       },
     ],
     ...googleAnalytics,

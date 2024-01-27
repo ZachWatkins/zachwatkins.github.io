@@ -23,6 +23,26 @@ const googleAnalytics = !process.env.GA_TAG_ID
       ],
     ]
 
+function applyPageSEO(pageData) {
+  const canonicalUrl = `https://zacharywatkins.com/${pageData.relativePath}`
+    .replace(/index\.md$/, '')
+    .replace(/\.md$/, '.html')
+
+  pageData.frontmatter.head ??= []
+  pageData.frontmatter.head.push([
+    'link',
+    { rel: 'canonical', href: canonicalUrl },
+  ])
+  pageData.frontmatter.head.push([
+    'meta',
+    { property: 'og:title', content: pageData.frontmatter.title },
+  ])
+  pageData.frontmatter.head.push([
+    'meta',
+    { property: 'og:description', content: pageData.frontmatter.description },
+  ])
+}
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'en-US',
@@ -75,17 +95,7 @@ export default defineConfig({
     ],
     ...googleAnalytics,
   ],
-  transformPageData(pageData) {
-    const canonicalUrl = `https://zacharywatkins.com/${pageData.relativePath}`
-      .replace(/index\.md$/, '')
-      .replace(/\.md$/, '.html')
-
-    pageData.frontmatter.head ??= []
-    pageData.frontmatter.head.push([
-      'link',
-      { rel: 'canonical', href: canonicalUrl },
-    ])
-  },
+  transformPageData: applyPageSEO,
   themeConfig: {
     search: {
       provider: 'local',

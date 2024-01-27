@@ -3,7 +3,6 @@ import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import Author from './Author.vue'
 import { data as articles } from './articles.data.js'
-import VPDocFooterLastUpdated from './VPDocFooterLastUpdated.vue'
 
 const { page, frontmatter, lang, theme } = useData()
 

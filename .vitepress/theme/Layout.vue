@@ -4,7 +4,7 @@ import { useData } from 'vitepress'
 const { page, site, theme, frontmatter, params } = useData()
 import Header from './Header.vue'
 import Home from './Home.vue'
-import Post from './Post.vue'
+import Article from './Article.vue'
 import Articles from './Articles.vue'
 </script>
 
@@ -24,7 +24,7 @@ import Articles from './Articles.vue'
     <Articles
       v-else-if="page.filePath.startsWith('articles/tags') && params?.tag"
     />
-    <Post
+    <Article
       v-else-if="
         page.filePath.startsWith('articles/') &&
         page.filePath !== 'articles/tags.md'

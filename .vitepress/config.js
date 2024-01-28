@@ -68,7 +68,6 @@ const CONFIG = {
       },
     ],
   ],
-  transformPageData: applyPageSEO,
   themeConfig: {
     search: {
       provider: 'local',
@@ -149,10 +148,7 @@ CONFIG.transformPageData = function (pageData) {
     ],
     ['meta', { property: 'og:type', content: ogType }],
     ['meta', { property: 'og:image', content: ogImage }],
-    [
-      'meta',
-      { property: 'og:updated_time', content: pageData.git.updatedTime },
-    ],
+    ['meta', { property: 'og:updated_time', content: pageData.lastUpdated }],
     ['meta', { property: 'og:locale', content: CONFIG.lang }],
   )
 
@@ -180,7 +176,7 @@ CONFIG.transformPageData = function (pageData) {
         'meta',
         {
           property: 'article:modified_time',
-          content: pageData.git.updatedTime,
+          content: pageData.lastUpdated,
         },
       ],
     )

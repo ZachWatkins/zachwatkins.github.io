@@ -9,4 +9,5 @@ hero:
   actions:
     - text: Articles
       link: /articles/
+  photo: /img/profile/20221122_081808-home.jpg
 ---

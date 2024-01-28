@@ -152,6 +152,21 @@ const jobs = [
       fit: 'cover',
     },
   },
+  {
+    src: 'assets/20221122_081808.jpg',
+    dest: 'public/img/profile/20221122_081808-home.jpg',
+    extract: {
+      left: 600,
+      top: 1600,
+      width: 1500,
+      height: 1500,
+    },
+    resize: {
+      width: 300,
+      height: 300,
+      fit: 'cover',
+    },
+  },
 ]
 
 for (const job of jobs) {

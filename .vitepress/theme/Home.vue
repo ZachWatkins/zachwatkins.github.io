@@ -1,6 +1,9 @@
 <script setup>
 import { useData } from 'vitepress'
+import { data as articles } from './articles.data.js'
 const { frontmatter } = useData()
+// Get the latest Article.
+const latestArticle = articles[0]
 </script>
 
 <template>
@@ -9,26 +12,40 @@ const { frontmatter } = useData()
       >{{ frontmatter.hero.name }}<br class="hidden md:block" /></span
     ><span class="ml-2">{{ frontmatter.hero.text }}</span></h1
   >
-  <div class="md:flex md:flex-row items-center md:w-3/4 ml-auto mr-auto">
-    <img
-      class="mb-8 md:mb-0 md:mr-8 overflow-clip rounded-full"
-      :src="frontmatter.hero.photo"
-    />
-    <div class="">
-      <p class="text-2xl mb-8">
-        {{ frontmatter.hero.tagline }}
-      </p>
-      <p class="mb-8">
-        <a
-          v-for="(action, i) in frontmatter.hero.actions"
-          :key="action.text"
-          :href="action.link"
-          :class="`hero-action-${i} p-2 pl-6 pr-6 m-2 ml-0 text-2xl rounded-full whitespace-nowrap inline-block`"
-        >
-          {{ action.text }}
-        </a>
-      </p>
-    </div>
+  <div class="md:text-left font-family-heading text-2xl">
+    <a
+      class="mb-8 md:mb-0 md:mr-16 overflow-clip md:float-left md:flow-circle"
+      :href="frontmatter.hero.photoLink"
+    >
+      <img
+        :src="frontmatter.hero.photo"
+        :alt="frontmatter.hero.photoAlt"
+      />
+    </a>
+    <p class="w-full">
+      {{ frontmatter.hero.tagline }}
+    </p>
+    <p>
+      Check out my <a href="/articles/">articles</a> on JavaScript, PHP,
+      Laravel, WordPress, DevOps, and other subjects.
+    </p>
+    <p
+      >I published
+      <a :href="latestArticle.url">{{ latestArticle.title }}</a>
+      on
+      <time :datetime="latestArticle.date.time">{{
+        latestArticle.date.string
+      }}</time
+      >.
+    </p>
+    <p>
+      I'm also building a crossword puzzle tool at
+      <a
+        href="https://ohmyword.net"
+        target="_blank"
+        >ohmyword.net</a
+      >
+    </p>
   </div>
   <Content />
 </template>

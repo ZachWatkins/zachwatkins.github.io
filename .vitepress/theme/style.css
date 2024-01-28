@@ -41,7 +41,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.font-family-heading {
   font-family: 'Franklin Gothic', sans-serif;
 }
 
@@ -238,7 +239,7 @@ main ol {
 }
 
 .table-of-contents ul::after {
-  content: "";
+  content: '';
   display: block;
   clear: both;
 }
@@ -258,6 +259,11 @@ main ol {
 
   .table-of-contents li {
     display: block;
+  }
+
+  .md\:flow-circle {
+    border-radius: 50%;
+    shape-outside: circle(50%);
   }
 }
 /** <-- */

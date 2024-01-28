@@ -1,50 +1,7 @@
 import { defineConfig } from 'vitepress'
 import pkg from '../package.json'
 
-const googleAnalytics = !process.env.GA_TAG_ID
-  ? []
-  : [
-      [
-        'script',
-        {
-          async: true,
-          src: `https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TAG_ID}`,
-        },
-      ],
-      [
-        'script',
-        {},
-        [
-          `window.dataLayer = window.dataLayer || [];`,
-          `function gtag(){dataLayer.push(arguments);}`,
-          `gtag('js', new Date());`,
-          `gtag('config', '${process.env.GA_TAG_ID}');`,
-        ].join(''),
-      ],
-    ]
-
-function applyPageSEO(pageData) {
-  const canonicalUrl = `https://zacharywatkins.com/${pageData.relativePath}`
-    .replace(/index\.md$/, '')
-    .replace(/\.md$/, '.html')
-
-  pageData.frontmatter.head ??= []
-  pageData.frontmatter.head.push([
-    'link',
-    { rel: 'canonical', href: canonicalUrl },
-  ])
-  pageData.frontmatter.head.push([
-    'meta',
-    { property: 'og:title', content: pageData.frontmatter.title },
-  ])
-  pageData.frontmatter.head.push([
-    'meta',
-    { property: 'og:description', content: pageData.frontmatter.description },
-  ])
-}
-
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+const CONFIG = {
   lang: 'en-US',
   title: 'Zachary Watkins',
   titleTemplate: ':title - Zachary Watkins',
@@ -61,6 +18,23 @@ export default defineConfig({
         content:
           'zachary watkins, zach watkins, web developer, full stack developer, software engineer, javascript, php, wordpress, laravel, devops, web technology',
       },
+    ],
+    [
+      'script',
+      {
+        async: true,
+        src: `https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TAG_ID}`,
+      },
+    ],
+    [
+      'script',
+      {},
+      [
+        `window.dataLayer = window.dataLayer || [];`,
+        `function gtag(){dataLayer.push(arguments);}`,
+        `gtag('js', new Date());`,
+        `gtag('config', '${process.env.GA_TAG_ID}');`,
+      ].join(''),
     ],
     ['meta', { name: 'twitter:site', content: '@zachwatkinsv1' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
@@ -93,7 +67,6 @@ export default defineConfig({
         content: 'index,follow',
       },
     ],
-    ...googleAnalytics,
   ],
   transformPageData: applyPageSEO,
   themeConfig: {
@@ -147,4 +120,72 @@ export default defineConfig({
     'articles/tags/:tag.md': 'articles/tags/:tag/index.md',
     'articles/tags.md': 'articles/tags/index.md',
   },
-})
+}
+
+CONFIG.transformPageData = function (pageData) {
+  const canonicalUrl =
+    CONFIG.sitemap.hostname +
+    `/${pageData.relativePath}`
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '.html')
+
+  const isSingleArticleRoute =
+    pageData.relativePath.startsWith('articles/') &&
+    !pageData.relativePath.startsWith('articles/index.md') &&
+    !pageData.relativePath.startsWith('articles/tags/')
+
+  const ogType = isSingleArticleRoute ? 'article' : 'website'
+  const ogImage = `${CONFIG.sitemap.hostname}/${pageData.frontmatter.image ?? 'android-chrome-192x192.png'}`
+
+  pageData.frontmatter.head ??= []
+  pageData.frontmatter.head.push(
+    ['link', { rel: 'canonical', href: canonicalUrl }],
+    ['meta', { property: 'og:url', content: canonicalUrl }],
+    ['meta', { property: 'og:site_name', content: CONFIG.title }],
+    ['meta', { property: 'og:title', content: pageData.frontmatter.title }],
+    [
+      'meta',
+      { property: 'og:description', content: pageData.frontmatter.description },
+    ],
+    ['meta', { property: 'og:type', content: ogType }],
+    ['meta', { property: 'og:image', content: ogImage }],
+    [
+      'meta',
+      { property: 'og:updated_time', content: pageData.git.updatedTime },
+    ],
+    ['meta', { property: 'og:locale', content: CONFIG.lang }],
+  )
+
+  if (isSingleArticleRoute) {
+    pageData.frontmatter.head.push(
+      [
+        'meta',
+        { property: 'article:author', content: CONFIG.themeConfig.author },
+      ],
+      [
+        'meta',
+        {
+          property: 'article:tag',
+          content: pageData.frontmatter.tags ?? pageData.frontmatter.tag,
+        },
+      ],
+      [
+        'meta',
+        {
+          property: 'article:published_time',
+          content: pageData.frontmatter.date,
+        },
+      ],
+      [
+        'meta',
+        {
+          property: 'article:modified_time',
+          content: pageData.git.updatedTime,
+        },
+      ],
+    )
+  }
+}
+
+// https://vitepress.dev/reference/site-config
+export default defineConfig(CONFIG)

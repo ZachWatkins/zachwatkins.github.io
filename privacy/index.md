@@ -1,3 +1,8 @@
+---
+title: Privacy Policy
+description: Privacy Policy for zacharywatkins.com
+---
+
 # Privacy Policy for zacharywatkins.com
 
 Last updated on January 24, 2024.
@@ -6,7 +11,7 @@ Last updated on January 24, 2024.
 
 This Privacy Policy outlines how Zachary Watkins collects, uses, and protects your personal information when you visit zacharywatkins.com.
 
-This website is a personal project of Zachary Watkins. The purpose of this website is to share information about Zach Watkins, his career, and his work.
+This website is a personal project of Zachary Watkins. The purpose of this website is to share information about Zachary Watkins, his career, and his work.
 
 ## Information We Collect:
 

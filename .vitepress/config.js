@@ -1,42 +1,22 @@
 import { defineConfig } from 'vitepress'
 import pkg from '../package.json'
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+const CONFIG = {
   lang: 'en-US',
   title: 'Zachary Watkins',
-  titleTemplate: ':title - Zach Watkins',
-  description: 'Full stack developer with an art degree.',
+  titleTemplate: ':title - Zachary Watkins',
+  description:
+    'A blog website with articles and tutorials about JavaScript, PHP, WordPress, Laravel, DevOps, hosting, and anything related to web technology.',
   lastUpdated: true,
   head: [
-    ['meta', { name: 'author', content: 'Zachary Watkins' }],
+    ['meta', { name: 'author', content: 'Zachary K. Watkins' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
-    [
-      'link',
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-    ],
-    [
-      'link',
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Source+Sans+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,900;1,8..60,400;1,8..60,600;1,8..60,900&display=swap',
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,900;1,8..60,400;1,8..60,600;1,8..60,900&display=swap',
-      },
-    ],
-    ['meta', { name: 'twitter:site', content: '@zachwatkinsv1' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
     [
       'meta',
       {
-        name: 'twitter:image',
-        content: 'https://zachwatkins.github.io/android-chrome-192x192.png',
+        name: 'keywords',
+        content:
+          'zachary watkins, zach watkins, web developer, full stack developer, software engineer, javascript, php, wordpress, laravel, devops, web technology',
       },
     ],
     [
@@ -55,6 +35,37 @@ export default defineConfig({
         `gtag('js', new Date());`,
         `gtag('config', '${process.env.GA_TAG_ID}');`,
       ].join(''),
+    ],
+    ['meta', { name: 'twitter:site', content: '@zachwatkinsv1' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    [
+      'meta',
+      {
+        name: 'twitter:description',
+        content:
+          'A blog website with articles and tutorials about JavaScript, PHP, WordPress, Laravel, DevOps, hosting, and anything related to web technology.',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'twitter:title',
+        content: 'Zachary Watkins - Senior Full Stack Engineer',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'twitter:image',
+        content: 'https://zacharywatkins.com/android-chrome-192x192.png',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'robots',
+        content: 'index,follow',
+      },
     ],
   ],
   themeConfig: {
@@ -91,15 +102,6 @@ export default defineConfig({
         target: '_blank',
       },
     ],
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-        ],
-      },
-    ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/zachwatkins/' },
       { icon: 'x', link: 'https://x.com/zachwatkinsv1' },
@@ -107,7 +109,7 @@ export default defineConfig({
         icon: 'linkedin',
         link: 'https://www.linkedin.com/in/zacharykwatkins/',
       },
-      { icon: 'email', link: 'mailto:watkinza@gmail.com' },
+      { icon: 'email', link: 'mailto:zach@zachwatkins.dev' },
     ],
   },
   sitemap: {
@@ -117,4 +119,69 @@ export default defineConfig({
     'articles/tags/:tag.md': 'articles/tags/:tag/index.md',
     'articles/tags.md': 'articles/tags/index.md',
   },
-})
+}
+
+CONFIG.transformPageData = function (pageData) {
+  const canonicalUrl =
+    CONFIG.sitemap.hostname +
+    `/${pageData.relativePath}`
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '.html')
+
+  const isSingleArticleRoute =
+    pageData.relativePath.startsWith('articles/') &&
+    !pageData.relativePath.startsWith('articles/index.md') &&
+    !pageData.relativePath.startsWith('articles/tags/')
+
+  const ogType = isSingleArticleRoute ? 'article' : 'website'
+  const ogImage = `${CONFIG.sitemap.hostname}/${pageData.frontmatter.image ?? 'android-chrome-192x192.png'}`
+
+  pageData.frontmatter.head ??= []
+  pageData.frontmatter.head.push(
+    ['link', { rel: 'canonical', href: canonicalUrl }],
+    ['meta', { property: 'og:url', content: canonicalUrl }],
+    ['meta', { property: 'og:site_name', content: CONFIG.title }],
+    ['meta', { property: 'og:title', content: pageData.frontmatter.title }],
+    [
+      'meta',
+      { property: 'og:description', content: pageData.frontmatter.description },
+    ],
+    ['meta', { property: 'og:type', content: ogType }],
+    ['meta', { property: 'og:image', content: ogImage }],
+    ['meta', { property: 'og:updated_time', content: pageData.lastUpdated }],
+    ['meta', { property: 'og:locale', content: CONFIG.lang }],
+  )
+
+  if (isSingleArticleRoute) {
+    pageData.frontmatter.head.push(
+      [
+        'meta',
+        { property: 'article:author', content: CONFIG.themeConfig.author },
+      ],
+      [
+        'meta',
+        {
+          property: 'article:tag',
+          content: pageData.frontmatter.tags ?? pageData.frontmatter.tag,
+        },
+      ],
+      [
+        'meta',
+        {
+          property: 'article:published_time',
+          content: pageData.frontmatter.date,
+        },
+      ],
+      [
+        'meta',
+        {
+          property: 'article:modified_time',
+          content: pageData.lastUpdated,
+        },
+      ],
+    )
+  }
+}
+
+// https://vitepress.dev/reference/site-config
+export default defineConfig(CONFIG)

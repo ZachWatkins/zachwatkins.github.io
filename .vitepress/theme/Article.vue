@@ -4,7 +4,7 @@ import { useData, useRoute } from 'vitepress'
 import Author from './Author.vue'
 import { data as articles } from './articles.data.js'
 
-const { frontmatter: data } = useData()
+const { page, frontmatter, lang, theme } = useData()
 
 const route = useRoute()
 
@@ -12,7 +12,27 @@ function findCurrentIndex() {
   return articles.findIndex((p) => p.url === route.path)
 }
 
-const date = computed(() => articles && articles.length ? articles[findCurrentIndex()].date : { time: null, string: '' })
+const date = computed(() =>
+  articles && articles.length
+    ? articles[findCurrentIndex()].date
+    : { time: null, string: '' },
+)
+const dateUpdated = computed(() =>
+  page.value.lastUpdated && frontmatter.value.lastUpdated !== false
+    ? new Date(page.value.lastUpdated ?? frontmatter.value.lastUpdated)
+    : null,
+)
+const dateUpdatedFormat = computed(() => {
+  return new Intl.DateTimeFormat(
+    theme.value.lastUpdated?.formatOptions?.forceLocale
+      ? lang.value
+      : undefined,
+    theme.value.lastUpdated?.formatOptions ?? {
+      dateStyle: 'long',
+      timeStyle: 'short',
+    },
+  )
+})
 const nextPost = computed(() => articles[findCurrentIndex() - 1])
 const prevPost = computed(() => articles[findCurrentIndex() + 1])
 </script>
@@ -21,7 +41,7 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
   <article>
     <header class="text-center mb-4">
       <h1>
-        {{ data.title }}
+        {{ frontmatter.title }}
       </h1>
       <dl>
         <dt class="sr-only">Published on</dt>
@@ -29,6 +49,19 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
           <time :datetime="new Date(date.time).toISOString()">{{
             date.string
           }}</time>
+        </dd>
+        <dt
+          class="inline-block text-base"
+          v-if="dateUpdated"
+          >Updated on
+        </dt>
+        <dd
+          class="inline-block text-base leading-3"
+          v-if="dateUpdated"
+        >
+          &nbsp;<time :datetime="dateUpdated.toISOString()">
+            {{ dateUpdatedFormat.format(dateUpdated) }}
+          </time>
         </dd>
         <dt
           v-if="data?.tags?.length"

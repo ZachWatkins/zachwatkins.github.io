@@ -17,7 +17,7 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
-  "author": "Zachary Kendall Watkins <watkinza@gmail.com>",
+  "author": "Zachary Kendall Watkins <zach@zachwatkins.dev>",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.16",

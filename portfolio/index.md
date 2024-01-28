@@ -1,3 +1,8 @@
+---
+title: Portfolio
+description: Links to my online accounts and photos.
+---
+
 # Portfolio
 
 <p style="float:left;margin:0 2rem 1.5rem 0;"><a href="/img/profile/20210719_074933.jpg" title="Zachary Watkins in 2021"><img src="/img/profile/20210719_074933-thumbnail.jpg" alt="Zachary Watkins in 2021" width="250" /></a></p>
@@ -12,7 +17,7 @@ I have a presence on the following platforms, which I draw from to build this po
 | CodePen   | https://codepen.io/zw                             |
 | WordPress | https://profiles.wordpress.org/zachwtx/           |
 | LinkedIn  | https://www.linkedin.com/in/zacharykwatkins/      |
-| Twitter   | https://twitter.com/zachwatkinsv1                 |
+| Twitter   | https://x.com/zachwatkinsv1                       |
 | Packagist | https://packagist.org/users/zachwatkins/packages/ |
 
 ## Photos

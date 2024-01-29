@@ -2,7 +2,7 @@
 import { tags } from './tags/[tag].paths.js'
 </script>
 
-# Article Collections by Tag
+# Articles by Tag
 
 <ul>
   <li v-for="tag in tags">

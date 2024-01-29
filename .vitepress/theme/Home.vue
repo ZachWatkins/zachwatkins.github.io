@@ -27,7 +27,8 @@ const latestArticle = articles[0]
     </p>
     <p>
       Check out my <a href="/articles/">articles</a> on JavaScript, PHP,
-      Laravel, WordPress, DevOps, and other subjects.
+      Laravel, WordPress, DevOps, and
+      <a href="/articles/tags/">other subjects</a>.
     </p>
     <p
       >I published
@@ -44,7 +45,7 @@ const latestArticle = articles[0]
         href="https://ohmyword.net"
         target="_blank"
         >ohmyword.net</a
-      >
+      >.
     </p>
   </div>
   <Content />

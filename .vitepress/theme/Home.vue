@@ -2,8 +2,6 @@
 import { useData } from 'vitepress'
 import { data as articles } from './articles.data.js'
 const { frontmatter } = useData()
-// Get the latest Article.
-const latestArticle = articles[0]
 </script>
 
 <template>
@@ -30,12 +28,12 @@ const latestArticle = articles[0]
       Laravel, WordPress, DevOps, and
       <a href="/articles/tags/"> other subjects</a>.
     </p>
-    <p
+    <p v-if="articles.length > 0"
       >I published
-      <a :href="latestArticle.url">{{ latestArticle.title }}</a>
+      <a :href="articles[0].url">{{ articles[0].title }}</a>
       on
-      <time :datetime="latestArticle.date.time">{{
-        latestArticle.date.string
+      <time :datetime="articles[0].date.time">{{
+        articles[0].date.string
       }}</time
       >.
     </p>

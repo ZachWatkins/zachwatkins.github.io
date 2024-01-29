@@ -9,8 +9,8 @@ const latestArticle = articles[0]
 <template>
   <h1 class="leading-10 md:text-6xl mb-8 md:leading-tight"
     ><span class="font-extrabold"
-      >{{ frontmatter.hero.name }}<br class="hidden md:block" /></span
-    ><span class="ml-2">{{ frontmatter.hero.text }}</span></h1
+      >{{ frontmatter.hero.title }}<br class="hidden md:block" /></span
+    ><span class="ml-2">{{ frontmatter.hero.subtitle }}</span></h1
   >
   <div class="md:text-left font-family-heading text-2xl">
     <a

@@ -7,7 +7,7 @@ const latestArticle = articles[0]
 </script>
 
 <template>
-  <h1 class="leading-10 md:text-6xl mb-8 md:leading-tight"
+  <h1 class="leading-10 text-center md:text-6xl mb-8 md:leading-tight"
     ><span class="font-extrabold"
       >{{ frontmatter.hero.title }}<br class="hidden md:block" /></span
     ><span class="ml-2">{{ frontmatter.hero.subtitle }}</span></h1
@@ -28,7 +28,7 @@ const latestArticle = articles[0]
     <p>
       Check out my <a href="/articles/">articles</a> on JavaScript, PHP,
       Laravel, WordPress, DevOps, and
-      <a href="/articles/tags/">other subjects</a>.
+      <a href="/articles/tags/"> other subjects</a>.
     </p>
     <p
       >I published

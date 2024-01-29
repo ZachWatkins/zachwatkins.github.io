@@ -192,12 +192,6 @@ main ol {
   content: '\22C6 ';
 }
 
-#app:has(.home) {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-
 .hero-action-0,
 .hero-action-1,
 .hero-action-2 {

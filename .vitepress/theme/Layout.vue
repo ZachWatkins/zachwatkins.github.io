@@ -14,12 +14,9 @@ import Articles from './Articles.vue'
     v-if="'index.md' === page.filePath"
     class="home flex-grow flex flex-col justify-center pl-5 pr-5 max-w-screen-xl text-xl text-center ml-auto mr-auto"
   >
-    <Home />
   </main>
-  <main
-    v-else
-    class="pl-10 pr-5 pt-5 w-full m-auto"
-  >
+  <main class="pl-10 pr-5 pt-5 w-full m-auto flex-grow">
+    <Home v-if="'index.md' === page.filePath" />
     <Articles v-if="'articles/index.md' === page.filePath" />
     <Articles
       v-else-if="page.filePath.startsWith('articles/tags') && params?.tag"

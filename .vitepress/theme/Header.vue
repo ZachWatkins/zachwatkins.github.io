@@ -6,7 +6,7 @@ const { site, theme } = useData()
 
 <template>
   <header
-    class="p-4 text-center md:text-left w-full max-w-screen-lg m-auto md:flex md:items-center md:pt-8 pb-8"
+    class="p-4 pb-0 mb-4 text-center md:text-left w-full max-w-screen-lg ml-auto mr-auto md:flex md:items-center md:pt-8 md:mb-8"
   >
     <div class="p-1 font-bold text-2xl lg:text-4xl md:flex-grow">
       <a href="/">{{ site.title }}</a>

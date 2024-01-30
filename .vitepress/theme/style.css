@@ -188,6 +188,20 @@ main ol {
   margin-left: 2rem;
 }
 
+main ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 2rem;
+}
+
+.dark .vp-code span {
+  color: var(--shiki-dark, inherit);
+}
+
+html:not(.dark) .vp-code span {
+  color: var(--shiki-light, inherit);
+}
+
 .star::before {
   content: '\22C6 ';
 }
@@ -224,6 +238,10 @@ main ol {
   line-height: 1.75;
   margin-bottom: 2rem;
   margin-top: 1rem;
+}
+
+.table-of-contents ul {
+  margin-left: 0;
 }
 
 .table-of-contents li {

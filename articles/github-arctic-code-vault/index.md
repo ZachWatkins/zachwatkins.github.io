@@ -21,7 +21,7 @@ While at AgriLife I developed custom plugins and themes for a network of more th
 
 I gave two conference presentations on my development and CD processes and you can check out my slides from my 2019 presentation here:
 
-[Streamline Building, Deploying, and Maintaining Your (Higher-Ed) Websites with WordPress](/pdf/Presentation-2019-WP-Higher-Ed-WordPress.pdf)
+[Streamline Building, Deploying, and Maintaining Your (Higher-Ed) Websites with WordPress](/presentations/Presentation-2019-WP-Higher-Ed-WordPress.pdf)
 
 Download I also created a set of files for facilitating this process, although it could definitely use some modernization and is specific to git push deployments: https://github.com/ZachWatkins/Template-Continuous-Deployment-Repo
 

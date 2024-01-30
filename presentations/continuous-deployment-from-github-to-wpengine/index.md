@@ -246,7 +246,7 @@ rules:
 
 We used this file to simplify the process of excluding development-only files from being uploaded to the server.
 
-```.gitignore
+```txt
 # RECOMMENDED BY WPENGINE
 *~
 .DS_Store

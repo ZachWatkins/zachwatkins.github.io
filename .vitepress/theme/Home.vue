@@ -21,7 +21,8 @@ const { frontmatter } = useData()
       />
     </a>
     <p class="w-full">
-      {{ frontmatter.hero.tagline }}
+      Howdy! I'm a Software Applications Developer III and manager at Texas A&M
+      Transportation Institute.
     </p>
     <p>
       Check out my <a href="/articles/">articles</a> on JavaScript, PHP,

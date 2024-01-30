@@ -79,7 +79,7 @@ git commit -m "DEPLOYMENT"
 git push servers HEAD:master --force
 ```
 
-## codeship-production.bash
+### codeship-production.bash
 
 ```bash
 # Get around shallow update restriction
@@ -129,7 +129,7 @@ git commit -m "DEPLOYMENT"
 git push servers HEAD:master --force
 ```
 
-## config.rb
+### config.rb
 
 We used compass to compile our Sass files. This is the config.rb file we used.
 
@@ -166,7 +166,7 @@ preferred_syntax = :scss
 sass_options = {:debug_info => false}
 ```
 
-## .sass-lint.yml
+### .sass-lint.yml
 
 We used sass-lint to check our Sass files for errors and code style. This is the .sass-lint.yml file we used.
 
@@ -242,7 +242,7 @@ rules:
   zero-unit: 0
 ```
 
-## .codeshipignore
+### .codeshipignore
 
 We used this file to simplify the process of excluding development-only files from being uploaded to the server.
 
@@ -331,7 +331,7 @@ js/src
 AgriFlex3.zip
 ```
 
-## package.json
+### package.json
 
 This is the package.json file for the AgriFlex3 theme, which was used as an example repository for deployment to our network of WordPress websites.
 
@@ -364,7 +364,7 @@ This is the package.json file for the AgriFlex3 theme, which was used as an exam
 }
 ```
 
-## Gruntfile.coffee
+### Gruntfile.coffee
 
 Yes, it's in CoffeeScript. It was in place when I started working on the project and I didn't want to change it.
 

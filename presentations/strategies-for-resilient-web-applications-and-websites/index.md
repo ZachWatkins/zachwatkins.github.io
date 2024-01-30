@@ -17,11 +17,10 @@ We always plan to succeed, but are you also planning for failures? Learn effecti
 
 [strategies-for-resilient-web-applications-and-websites.pdf](../strategies-for-resilient-web-applications-and-websites.pdf)
 
-[Slides (PDF)](/presentations/Strategies-for-Resilient-Web-Applications-and-Websites.pdf)
+<iframe src="../strategies-for-resilient-web-applications-and-websites.pdf" width="100%" height="600px">
+  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../strategies-for-resilient-web-applications-and-websites.pdf">Download PDF</a>.</p>
+</iframe>
 
-This presentation was originally given on Wednesday, September 28, 2022 from 12:55pm to 1:40pm CST at the Texas A&M University System's annual Tech Summit conference. Speaker introduction by Kris Guye.
-
-[See the original agenda here](https://www.accelevents.com/e/tech-summit-2022?sessionId=268761&pastSession=true#agenda).
 ## Conference Agenda
 
 [Conference agenda page](https://www.accelevents.com/e/tech-summit-2022?sessionId=268761&pastSession=true#agenda) (shown below).

@@ -27,7 +27,7 @@ const { frontmatter, theme } = useData()
             <dd class="text-xl font-family-prose"
               ><a
                 target="_blank"
-                rel="noopnener noreferrer"
+                rel="noopener noreferrer"
                 href="{{ theme.linkedin }}"
                 >Zachary Watkins</a
               >
@@ -38,7 +38,7 @@ const { frontmatter, theme } = useData()
               <a
                 :href="'https://x.com/' + theme.twitter"
                 target="_blank"
-                rel="noopnener noreferrer"
+                rel="noopener noreferrer"
                 >{{ theme.twitter }}</a
               >
               and made a site for

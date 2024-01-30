@@ -368,7 +368,7 @@ This is the package.json file for the AgriFlex3 theme, which was used as an exam
 
 Yes, it's in CoffeeScript. It was in place when I started working on the project and I didn't want to change it.
 
-```coffeescript
+```coffee
 module.exports = (grunt) ->
   @initConfig
     pkg: @file.readJSON('package.json')

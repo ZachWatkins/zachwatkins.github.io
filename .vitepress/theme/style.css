@@ -240,6 +240,10 @@ html:not(.dark) .vp-code span {
   margin-top: 1rem;
 }
 
+.table-of-contents ul {
+  margin-left: 0;
+}
+
 .table-of-contents li {
   display: block;
   position: relative;

@@ -15,10 +15,10 @@ We always plan to succeed, but are you also planning for failures? Learn effecti
 
 ## Slides
 
-[2022-strategies-for-resilient-web-applications-and-websites.pdf](../2022-strategies-for-resilient-web-applications-and-websites.pdf)
+[2022-strategies-for-resilient-web-applications-and-websites.pdf](/presentations/2022-strategies-for-resilient-web-applications-and-websites.pdf)
 
-<iframe src="../2022-strategies-for-resilient-web-applications-and-websites.pdf" width="100%" height="600px">
-  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../2022-strategies-for-resilient-web-applications-and-websites.pdf">Download PDF</a>.</p>
+<iframe src="/presentations/2022-strategies-for-resilient-web-applications-and-websites.pdf" width="100%" height="600px">
+  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/presentations/2022-strategies-for-resilient-web-applications-and-websites.pdf">Download PDF</a>.</p>
 </iframe>
 
 ## Conference Agenda

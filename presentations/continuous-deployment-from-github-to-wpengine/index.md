@@ -15,10 +15,10 @@ Learn how to make the switch from FTP clients to the creation of a continuous de
 
 ## Slides
 
-[2017-continuous-deployment-from-github-to-wpengine.pdf](../2017-continuous-deployment-from-github-to-wpengine.pdf)
+[2017-continuous-deployment-from-github-to-wpengine.pdf](/presentations/2017-continuous-deployment-from-github-to-wpengine.pdf)
 
-<iframe src="../2017-continuous-deployment-from-github-to-wpengine.pdf" width="100%" height="600px">
-  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../2017-continuous-deployment-from-github-to-wpengine.pdf">Download PDF</a>.</p>
+<iframe src="/presentations/2017-continuous-deployment-from-github-to-wpengine.pdf" width="100%" height="600px">
+  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/presentations/2017-continuous-deployment-from-github-to-wpengine.pdf">Download PDF</a>.</p>
 </iframe>
 
 ## Conference Agenda

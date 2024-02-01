@@ -17,10 +17,10 @@ WordPress is democratizing the way universities can build, deploy and maintain t
 
 I've provided my slides separate from those of the other presenters. You can download them here:
 
-[2019-wp-higher-ed-wordpress.pdf](../2019-wp-higher-ed-wordpress.pdf)
+[2019-wp-higher-ed-wordpress.pdf](/presentations/2019-wp-higher-ed-wordpress.pdf)
 
-<iframe src="../2019-wp-higher-ed-wordpress.pdf" width="100%" height="600px">
-  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../2019-wp-higher-ed-wordpress.pdf">Download PDF</a>.</p>
+<iframe src="/presentations/2019-wp-higher-ed-wordpress.pdf" width="100%" height="600px">
+  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/presentations/2019-wp-higher-ed-wordpress.pdf">Download PDF</a>.</p>
 </iframe>
 
 ## Conference Agenda

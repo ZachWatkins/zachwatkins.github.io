@@ -12,7 +12,7 @@ const { theme } = useData()
         v-for="link in theme.footerNav"
         :key="link.text"
         :href="link.link"
-        class="mr-5 mb-2 inline-block whitespace-nowrap text-lg"
+        class="ml-2 mr-2 mb-2 md:ml-0 md:mr-4 inline-block whitespace-nowrap text-lg"
       >
         {{ link.text }}
       </a>

@@ -16,7 +16,7 @@ if (params?.value?.tag) {
 <template>
   <div>
     <Content />
-    <ul>
+    <ul class="list-none ml-0">
       <li v-for="{ title, url, date, excerpt } of articles">
         <article>
           <div>

@@ -133,6 +133,12 @@ main a img {
   display: inline-block;
 }
 
+main h1,
+main h2,
+main h3 {
+  line-height: 1.2;
+}
+
 h2,
 h3 {
   font-weight: bold;
@@ -271,6 +277,11 @@ html:not(.dark) .vp-code span {
 .table-of-contents li a:focus,
 .table-of-contents li a:active {
   text-decoration: underline;
+}
+
+.flow-circle {
+  border-radius: 50%;
+  shape-outside: circle(50%);
 }
 
 @media screen and (min-width: 768px) {

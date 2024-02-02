@@ -3,7 +3,12 @@ export default {
   content: ['./.vitepress/**/*.js', './.vitepress/**/*.vue'],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        '1/3': '33.333333%',
+        '2/5': '40%',
+      },
+    },
   },
   variants: {
     extend: {},

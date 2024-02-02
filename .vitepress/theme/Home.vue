@@ -10,9 +10,11 @@ const { frontmatter } = useData()
       >{{ frontmatter.hero.title }}<br class="hidden md:block" /></span
     ><span class="ml-2">{{ frontmatter.hero.subtitle }}</span></h1
   >
-  <div class="md:text-left font-family-heading text-2xl">
+  <div
+    class="pl-2 pr-2 md:pl-0 md:pr-0 md:text-left font-family-heading text-2xl"
+  >
     <a
-      class="mb-8 md:mb-0 md:mr-16 overflow-clip md:float-left md:flow-circle"
+      class="mb-8 mr-8 md:ml-0 md:mr-16 overflow-clip float-left flow-circle max-w-2/5 md:max-w-none"
       :href="frontmatter.hero.photoLink"
     >
       <img

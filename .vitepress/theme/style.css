@@ -235,6 +235,24 @@ html:not(.dark) .vp-code span {
   background-color: hsl(235, 90%, 50%);
 }
 
+.flow-circle {
+  border-radius: 50%;
+  shape-outside: circle(50%);
+}
+
+@media screen and (min-width: 768px) {
+  .md\:flow-circle {
+    border-radius: 50%;
+    shape-outside: circle(50%);
+  }
+}
+/** <-- */
+
+#localsearch-list a {
+  text-decoration: none;
+  font-family: 'Franklin Gothic', sans-serif;
+}
+
 /** --> Table of contents */
 .table-of-contents {
   padding: 1rem;
@@ -249,26 +267,17 @@ html:not(.dark) .vp-code span {
 }
 
 .table-of-contents ul {
+  list-style-position: outside;
+  display: flex;
+  flex-wrap: wrap;
   margin-left: 0;
+  padding-left: 0;
 }
 
 .table-of-contents li {
-  display: block;
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.table-of-contents li::before {
-  content: '#';
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.table-of-contents ul::after {
-  content: '';
-  display: block;
-  clear: both;
+  list-style-type: disc;
+  padding-right: 0.75rem;
+  margin-left: 1.25rem;
 }
 
 .table-of-contents li a {
@@ -279,38 +288,4 @@ html:not(.dark) .vp-code span {
 .table-of-contents li a:focus,
 .table-of-contents li a:active {
   text-decoration: underline;
-}
-
-.flow-circle {
-  border-radius: 50%;
-  shape-outside: circle(50%);
-}
-
-@media screen and (min-width: 768px) {
-  .table-of-contents {
-    margin-top: 0;
-    float: right;
-    max-width: 20rem;
-    margin-left: 2rem;
-  }
-
-  .table-of-contents::before {
-    display: block;
-    font-weight: bold;
-  }
-
-  .table-of-contents li {
-    display: block;
-  }
-
-  .md\:flow-circle {
-    border-radius: 50%;
-    shape-outside: circle(50%);
-  }
-}
-/** <-- */
-
-#localsearch-list a {
-  text-decoration: none;
-  font-family: 'Franklin Gothic', sans-serif;
 }

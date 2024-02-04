@@ -4,7 +4,7 @@ Check out the presentations I've given at conferences and meetups.
 
 ## 2023
 
-**[User Story Mapping](./user-story-mapping/)**
+**[Story Maps: Planning Outcome-oriented Solutions](./story-maps/)**
 
 ## 2022
 

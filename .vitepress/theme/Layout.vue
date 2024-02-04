@@ -7,6 +7,8 @@ import Footer from './Footer.vue'
 import Home from './Home.vue'
 import Article from './Article.vue'
 import Articles from './Articles.vue'
+import Presentation from './Presentation.vue'
+import Presentations from './Presentations.vue'
 </script>
 
 <template>
@@ -28,6 +30,8 @@ import Articles from './Articles.vue'
         page.filePath !== 'articles/tags.md'
       "
     />
+    <Presentations v-else-if="'presentations/index.md' === page.filePath" />
+    <Presentation v-else-if="page.filePath.startsWith('presentations/')" />
     <Content v-else-if="!page.isNotFound" />
     <div v-else> Oh no! </div>
   </main>

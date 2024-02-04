@@ -39,48 +39,59 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
 
 <template>
   <article>
-    <header class="text-center mb-4">
-      <h1>
+    <header>
+      <h1 class="text-center">
         {{ frontmatter.title }}
       </h1>
-      <dl>
-        <dt class="sr-only">Published on</dt>
-        <dd>
+      <dl class="text-center text-2xl font-family-prose mb-4">
+        <dt class="inline-block">By&nbsp;</dt>
+        <dd class="inline-block">
+          <a href="/career/">{{ theme.author }}</a>
+        </dd>
+      </dl>
+      <dl class="text-xl font-family-prose leading-8 italic mb-4">
+        <dt class="inline">Published on&nbsp;</dt>
+        <dd class="inline leading-3">
           <time :datetime="new Date(date.time).toISOString()">{{
             date.string
-          }}</time>
+          }}</time
+          ><span v-if="!dateUpdated">.</span>
         </dd>
         <dt
-          class="inline-block text-base"
+          class="inline"
           v-if="dateUpdated"
-          >Updated on
+          >;&nbsp;updated on
         </dt>
         <dd
-          class="inline-block text-base leading-3"
+          class="inline leading-3"
           v-if="dateUpdated"
         >
-          &nbsp;<time :datetime="dateUpdated.toISOString()">
-            {{ dateUpdatedFormat.format(dateUpdated) }}
-          </time>
+          <time :datetime="dateUpdated.toISOString()">
+            {{ dateUpdatedFormat.format(dateUpdated) }} </time
+          >.
         </dd>
+        <br />
         <dt
-          v-if="data?.tags?.length"
-          class="inline-block mr-2"
-          >Posted in:</dt
+          v-if="frontmatter.tags?.length"
+          class="inline-block"
+          >Published in&nbsp;</dt
         >
         <dd
-          v-if="data?.tags?.length"
+          v-if="frontmatter.tags?.length"
           class="inline-block"
         >
-          <ul class="flex justify-center">
+          <ul class="list-none ml-0 flex justify-center">
             <li
-              v-for="(tag, i) in data.tags"
+              v-for="(tag, i) in frontmatter.tags"
               :key="tag"
             >
-              {{ i > 0 ? ', ' : '' }}
+              {{
+                i === 0 ? '' : i < frontmatter.tags.length - 1 ? ', ' : ', and '
+              }}
               <a :href="'/articles/tags/' + tag.toLowerCase() + '/'">
                 {{ tag }}
               </a>
+              <span v-if="i === frontmatter.tags.length - 1">.</span>
             </li>
           </ul>
         </dd>

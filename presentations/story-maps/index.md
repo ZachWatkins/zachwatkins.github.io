@@ -8,11 +8,9 @@ date: 2023-08-22
 <script setup>
 import { onMounted } from 'vue'
 import Reveal from 'reveal.js'
-import StoryMap from './src/story-map.js'
 
 // On window load, initialize the StoryMap.
 onMounted(() => {
-  new StoryMap(document.getElementById('storymap'))
   const deck = new Reveal()
   deck.initialize({
       hash: true,
@@ -108,38 +106,6 @@ This presentation is an adaptation of user story mapping for transportation serv
         </div>
     </div>
 </div>
-
-## Example Story Map
-
-**Note: the story map rendering is not functioning correctly within the new website and a fix is in progress.**
-
-"I am a rail safety inspector. I want to receive relevant rail safety reports, so I can prioritize inspections for problem areas."
-
-<input type="radio" id="list-option" name="display-option" value="list"> &nbsp;<label for="list-option">List</label>&nbsp;<input type="radio" id="storymap-option" name="display-option" value="storymap" checked> &nbsp;<label for="storymap-option">Story Map</label> &nbsp;<input type="radio" id="labels-option" name="display-option" value="labels"> &nbsp;<label for="labels-option">Labels</label> &nbsp;<input type="radio" id="flow-option" name="display-option" value="flow"> &nbsp;<label for="flow-option">Flow</label><br />
-
-<ol id="storymap">
-    <li>"I want to view relevant rail safety reports so I can prioritize my work."
-        <ol>
-            <li>"I identify what rail safety data is relevant to my work."
-                <ol>
-                    <li>Identify zone of operation for each inspector.</li>
-                    <li>Identify relevant timeframe.</li>
-                    <li>Identify data set meeting above criteria.</li>
-                    <li>Identify relevant data in that data set.</li>
-                    <li>Identify how the data should be visualized.</li>
-                    <li>Create the report.</li>
-                </ol>
-            </li>
-            <li>"I request the report."
-                <ol>
-                    <li>Upload report to the website.</li>
-                    <li>Link to it on the Reports page.</li>
-                    <li>Ensure inspectors know where to find it.</li>
-                </ol>
-            </li>
-        </ol>
-    </li>
-</ol>
 
 ## What are Story Maps?
 

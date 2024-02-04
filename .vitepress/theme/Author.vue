@@ -28,7 +28,7 @@ const { frontmatter, theme } = useData()
               ><a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="{{ theme.linkedin }}"
+                href="https://zacharywatkins.com/"
                 >Zachary Watkins</a
               >
               is the lead application developer for Communications at Texas A&M

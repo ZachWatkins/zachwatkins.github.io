@@ -1,6 +1,6 @@
 ---
 title: User Story Mapping
-description: Slides and other resources for "User Story Mapping" which I originally presented in 2023 at Texas A&M Transportation Institute to staff and researchers. The presentation adapts user story mapping for transportation service development and transportation research.
+description: This presentation is an adaptation of user story mapping for transportation service development and transportation research. Slides and other resources are available. I originally presented this to researchers and staff at Texas A&M Transportation Institute on Tuesday, August 22, 2023 from 12:30pm to 1:00pm CST during a meetup for Collaboration Station.
 ---
 
 <script setup>
@@ -27,11 +27,11 @@ onMounted(() => {
 
 # {{ $frontmatter.title }}
 
-[[toc]]
-
-_This presentation was originally given on Tuesday, August 22, 2023 from 12:30pm to 1:00pm CST at Texas A&M Transportation Institute._
+{{ $frontmatter.description }}
 
 ---
+
+[[toc]]
 
 ## Slides
 

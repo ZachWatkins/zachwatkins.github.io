@@ -1,7 +1,7 @@
 <script setup>
 import { useData } from 'vitepress'
 
-const { frontmatter, theme } = useData()
+const { theme } = useData()
 </script>
 
 <template>

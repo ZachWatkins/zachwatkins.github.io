@@ -44,5 +44,8 @@
     "singleAttributePerLine": true,
     "proseWrap": "never",
     "htmlWhitespaceSensitivity": "strict"
+  },
+  "dependencies": {
+    "reveal.js": "^5.0.4"
   }
 }

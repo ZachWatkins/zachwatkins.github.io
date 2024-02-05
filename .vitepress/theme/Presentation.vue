@@ -56,12 +56,13 @@ const prevPost = computed(() => presentations[findCurrentIndex() + 1])
           <time :datetime="date.toISOString()">{{
             dateFormat.format(date)
           }}</time
-          ><span v-if="!dateUpdated">.</span>
+          >.
         </dd>
+        <br v-if="datePublished || dateUpdated" />
         <dt
           class="inline"
           v-if="datePublished"
-          >;&nbsp;published on
+          >Published on
         </dt>
         <dd
           class="inline leading-3"
@@ -69,12 +70,12 @@ const prevPost = computed(() => presentations[findCurrentIndex() + 1])
         >
           <time :datetime="datePublished.toISOString()">
             {{ dateFormat.format(datePublished) }} </time
-          ><span v-if="!dateUpdated">.</span>
+          ><span v-if="dateUpdated">;</span><span v-else>.</span>
         </dd>
         <dt
           class="inline"
           v-if="dateUpdated"
-          >;&nbsp;updated on
+          >&nbsp;updated on
         </dt>
         <dd
           class="inline leading-3"

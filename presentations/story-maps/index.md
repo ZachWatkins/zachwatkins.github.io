@@ -111,8 +111,6 @@ This presentation is an adaptation of user story mapping for transportation serv
 
 ## Example Story Map
 
-**Note: the story map rendering is not functioning correctly within the new website and a fix is in progress.**
-
 "I am a rail safety inspector. I want to receive relevant rail safety reports, so I can prioritize inspections for problem areas."
 
 <input type="radio" id="list-option" name="display-option" value="list"> &nbsp;<label for="list-option">List</label>&nbsp;<input type="radio" id="storymap-option" name="display-option" value="storymap" checked> &nbsp;<label for="storymap-option">Story Map</label> &nbsp;<input type="radio" id="labels-option" name="display-option" value="labels"> &nbsp;<label for="labels-option">Labels</label> &nbsp;<input type="radio" id="flow-option" name="display-option" value="flow"> &nbsp;<label for="flow-option">Flow</label><br />

@@ -12,17 +12,7 @@ function findCurrentIndex() {
   return presentations.findIndex((p) => p.url === route.path)
 }
 
-const date = computed(() =>
-  presentations && presentations.length
-    ? presentations[findCurrentIndex()].date
-    : { time: null, string: '' },
-)
-const dateUpdated = computed(() =>
-  page.value.lastUpdated && frontmatter.value.lastUpdated !== false
-    ? new Date(page.value.lastUpdated ?? frontmatter.value.lastUpdated)
-    : null,
-)
-const dateUpdatedFormat = computed(() => {
+const dateFormat = computed(() => {
   return new Intl.DateTimeFormat(
     theme.value.lastUpdated?.formatOptions?.forceLocale
       ? lang.value
@@ -33,6 +23,17 @@ const dateUpdatedFormat = computed(() => {
     },
   )
 })
+const date = computed(() => new Date(frontmatter.value.date))
+const datePublished = computed(() =>
+  frontmatter.value.published !== false
+    ? new Date(frontmatter.value.published)
+    : null,
+)
+const dateUpdated = computed(() =>
+  page.value.lastUpdated && frontmatter.value.lastUpdated !== false
+    ? new Date(page.value.lastUpdated ?? frontmatter.value.lastUpdated)
+    : null,
+)
 const nextPost = computed(() => presentations[findCurrentIndex() - 1])
 const prevPost = computed(() => presentations[findCurrentIndex() + 1])
 </script>
@@ -50,11 +51,24 @@ const prevPost = computed(() => presentations[findCurrentIndex() + 1])
         </dd>
       </dl>
       <dl class="text-xl font-family-prose leading-8 italic mb-4">
-        <dt class="inline">Published on&nbsp;</dt>
+        <dt class="inline">Presented on&nbsp;</dt>
         <dd class="inline leading-3">
-          <time :datetime="new Date(date.time).toISOString()">{{
-            date.string
+          <time :datetime="date.toISOString()">{{
+            dateFormat.format(date)
           }}</time
+          ><span v-if="!dateUpdated">.</span>
+        </dd>
+        <dt
+          class="inline"
+          v-if="datePublished"
+          >;&nbsp;published on
+        </dt>
+        <dd
+          class="inline leading-3"
+          v-if="datePublished"
+        >
+          <time :datetime="datePublished.toISOString()">
+            {{ dateFormat.format(datePublished) }} </time
           ><span v-if="!dateUpdated">.</span>
         </dd>
         <dt
@@ -67,7 +81,7 @@ const prevPost = computed(() => presentations[findCurrentIndex() + 1])
           v-if="dateUpdated"
         >
           <time :datetime="dateUpdated.toISOString()">
-            {{ dateUpdatedFormat.format(dateUpdated) }} </time
+            {{ dateFormat.format(dateUpdated) }} </time
           >.
         </dd>
         <br />

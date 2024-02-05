@@ -1,8 +1,9 @@
 ---
 title: Strategies for Resilient Web Applications and Websites
 description: Slides and other resources for "Strategies for Resilient Web Applications and Websites" which I originally presented in 2022 at the Texas A&M University System's annual Tech Summit conference.
-date: 2022-09-28
 author: Zachary Watkins
+date: 2022-09-28 12:55 pm
+published: 2024-01-28 6:00 pm
 ---
 
 This presentation identifies points along the software development lifecycle and how they can be used to improve the resilience of a website or web application. Slides are available. It was originally presented to the Texas A&M University System on Wednesday, September 28, 2022 from 12:55pm to 1:40pm CST at the annual Tech Summit conference. Speaker introduction by Kris Guye.

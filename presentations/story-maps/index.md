@@ -2,7 +2,8 @@
 title: 'Story Maps: Planning Outcome-oriented Solutions'
 description: This presentation is an adaptation of user story mapping for transportation service development and transportation research. Slides and other resources are available. I originally presented this to researchers and staff at Texas A&M Transportation Institute on Tuesday, August 22, 2023 from 12:30pm to 1:00pm CST during a meetup for Collaboration Station.
 author: Zachary Watkins
-date: 2023-08-22
+date: 2023-08-22 12:30 pm
+published: 2023-08-22 5:00 pm
 ---
 
 <script setup>

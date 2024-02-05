@@ -1,8 +1,9 @@
 ---
 title: Streamline Building, Deploying, and Maintaining Your (Higher-Ed) Websites with WordPress
 description: Slides and other resources for "Streamline Building, Deploying, and Maintaining Your (Higher-Ed) Websites with WordPress" which I co-presented in 2019 at the Texas A&M University System's annual Tech Summit conference.
-date: 2019-02-26
 author: Zachary Watkins
+date: 2019-02-26 3:45 pm
+published: 2019-01-28 6:00 pm
 ---
 
 This presentation is a case study of how I build, deploy, and maintain WordPress websites at the Communications department of Texas A&M AgriLife. Slides from my portion of the presentation are available. It was originally presented to the Texas A&M University System on Tuesday, February 26, 2019 from 3:45pm to 4:30pm CST at the annual Tech Summit conference. It was co-presented by Zachary Watkins, Hassan Abbasi, and Steven Word.

@@ -1,8 +1,10 @@
 ---
 title: Continuous Deployment from GitHub to WPEngine
 description: Slides and other resources for "Continuous Deployment from GitHub to WPEngine" which I originally presented in 2017 at the Texas A&M University System's annual Tech Summit conference.
-date: 2017-02-21
 author: Zachary Watkins
+date: 2017-02-21 11:00 am
+published: 2017-02-22 6:00 pm
+publishdateuncertain: true
 ---
 
 This presentation is a case study of how we implemented continuous deployment for WordPress theme and plugin development at Texas A&M AgriLife. Slides are available. It was originally presented to the Texas A&M University System on Tuesday, February 21, 2017 from 11:00am to 11:45am CST at the annual Tech Summit conference.

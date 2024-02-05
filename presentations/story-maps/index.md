@@ -8,12 +8,15 @@ published: 2023-08-22 5:00 pm
 
 <script setup>
 import { onMounted } from 'vue'
-import Reveal from 'reveal.js'
 import StoryMap from './src/story-map.js'
+import './src/story-map.css'
+import 'reveal.js/dist/reveal.css'
+import 'reveal.js/dist/theme/beige.css'
 
-onMounted(() => {
+onMounted(async () => {
   new StoryMap(document.getElementById('storymap'))
-  const deck = new Reveal()
+  const Reveal = await import('reveal.js')
+  const deck = new Reveal.default()
   deck.initialize({
       hash: true,
       slideNumber: true,
@@ -187,9 +190,6 @@ For more information on the author and book, visit https://jpattonassociates.com
 > "Story mapping is a technique that provides the big picture that a pile of stories so often misses. [...] A big picture helps communicate effectively with users, it helps everyone involved avoid building unnecessary features, and it provides an orientation for a coherent user experience. [...] Stories are the building blocks of communication between developers and those who use their work. Story maps organize and structure these building blocks, and thus enhance this communication process — which is the most critical part of software development itself." <cite>Foreword by Martin Fowler</cite> in <cite>User Story Mapping</cite> by Jeff Patton
 
 <style>
-@import './src/story-map.css';
-@import 'reveal.js/dist/reveal.css';
-@import 'reveal.js/dist/theme/beige.css';
 :root {
     --gutter-width: 16px;
     --story-bg: #FFFF99;

@@ -28,6 +28,10 @@
   --vp-local-search-highlight-text: #fff;
 }
 
+.color-tapfuel-blue {
+  color: var(--tapfuel-blue);
+}
+
 html,
 .font-family-prose {
   font-family: Georgia, Times, 'Times New Roman', serif;

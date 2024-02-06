@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import Author from './Author.vue'
 import { data as articles } from './articles.data.js'
+import Share from './Share.vue'
 
 const { page, frontmatter, lang, theme } = useData()
 
@@ -99,6 +100,7 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
     </header>
     <Content />
     <footer>
+      <Share />
       <Author />
       <div class="flex">
         <div

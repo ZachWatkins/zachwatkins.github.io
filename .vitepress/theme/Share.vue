@@ -41,7 +41,7 @@ const tweetUrl = [
 </script>
 <template>
   <a
-    class="inline-block font-bold color-tapfuel-blue"
+    class="inline-block mr-8 font-bold color-tapfuel-blue"
     :href="tweetUrl"
     target="_blank"
     rel="noopener noreferrer"
@@ -50,7 +50,7 @@ const tweetUrl = [
   </a>
   <a
     id="share"
-    class="inline-block ml-8 font-bold color-tapfuel-blue"
+    class="inline-block font-bold color-tapfuel-blue"
     @click="share"
     href="#share"
   >

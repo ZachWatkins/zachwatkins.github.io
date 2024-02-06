@@ -4,7 +4,7 @@
 
 import { useData } from 'vitepress'
 import { onMounted } from 'vue'
-const { theme, frontmatter } = useData()
+const { theme, page, frontmatter } = useData()
 
 // Detect if the browser supports the Web Share API.
 // If not, do not include the share button in the web page.
@@ -15,6 +15,9 @@ onMounted(() => {
   }
 })
 
+const contentType = page.value.filePath.startsWith('presentations/')
+  ? 'presentation'
+  : 'article'
 const share = () => {
   if (navigator.share) {
     navigator.share({
@@ -43,7 +46,7 @@ const tweetUrl = [
     target="_blank"
     rel="noopener noreferrer"
   >
-    Tweet this article
+    Tweet this {{ contentType }}
   </a>
   <a
     id="share"
@@ -86,6 +89,6 @@ const tweetUrl = [
         stroke-width="2"
       />
     </svg>
-    Share this article
+    Share this {{ contentType }}
   </a>
 </template>

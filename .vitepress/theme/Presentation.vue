@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import Author from './Author.vue'
 import { data as presentations } from './presentations.data.js'
+import Share from './Share.vue'
 
 const { page, frontmatter, lang, theme } = useData()
 
@@ -111,9 +112,13 @@ const prevPost = computed(() => presentations[findCurrentIndex() + 1])
           </ul>
         </dd>
       </dl>
+      <div class="text-xl mb-4">
+        <Share />
+      </div>
     </header>
     <Content />
     <footer>
+      <Share />
       <Author />
       <div class="flex">
         <div

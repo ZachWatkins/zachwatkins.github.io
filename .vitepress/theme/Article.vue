@@ -97,6 +97,9 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
           </ul>
         </dd>
       </dl>
+      <div class="text-xl mb-4">
+        <Share />
+      </div>
     </header>
     <Content />
     <footer>

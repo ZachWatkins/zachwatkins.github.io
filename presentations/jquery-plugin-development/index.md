@@ -40,14 +40,6 @@ This presentation is an introduction to jQuery plugin development (using jQuery 
 
 Would you like to learn how to create a jQuery plugin? This presentation is an introduction to jQuery plugin development. It covers the basics of creating a simple jQuery plugin which follows recommended practices. The presentation demonstrates the basic jQuery plugin structure, how to allow for user extensions, and how to document your plugin. It also covers how to publish your plugin to NPM and how to manage your plugin's source code on Github.
 
-## Slides
-
-[2015-jquery-plugin-development.pdf](/presentations/2015-jquery-plugin-development.pdf)
-
-<iframe src="/presentations/2015-jquery-plugin-development.pdf" width="100%" height="600px">
-  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/presentations/2015-jquery-plugin-development.pdf">Download PDF</a>.</p>
-</iframe>
-
 ## Example Plugin
 
 The example plugin is designed to parse the text content of an element into keys and values and attach the resulting JavaScript object to each element during runtime.
@@ -138,6 +130,14 @@ jQuery('#demo ol li').gumboot({
     <li>2012 - 2013<br><em>Year - 2012</em> | <em>Make - Nissan</em> | <em>Model - Juke</em></li>
   </ol>
 </div>
+
+## Slides
+
+[2015-jquery-plugin-development.pdf](/presentations/2015-jquery-plugin-development.pdf)
+
+<iframe src="/presentations/2015-jquery-plugin-development.pdf" width="100%" height="600px">
+  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/presentations/2015-jquery-plugin-development.pdf">Download PDF</a>.</p>
+</iframe>
 
 ## Further Reading
 

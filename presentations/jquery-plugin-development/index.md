@@ -48,7 +48,7 @@ Would you like to learn how to create a jQuery plugin? This presentation is an i
   <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/presentations/2015-jquery-plugin-development.pdf">Download PDF</a>.</p>
 </iframe>
 
-## Demo
+## Example Plugin
 
 The example plugin is designed to parse the text content of an element into keys and values and attach the resulting JavaScript object to each element during runtime.
 
@@ -139,14 +139,14 @@ jQuery('#demo ol li').gumboot({
   </ol>
 </div>
 
-## Code
+## Further Reading
 
 The original code for this presentation can be found here:
 
 - [GitHub Repository](https://github.com/ZachWatkins/Gumboot)
 - [Demonstration of the plugin](https://codepen.io/zw/pen/YXLoWj)
 
-## Further Reading
+Additional resources for jQuery plugin development:
 
 - [Making jQuery Plugins](https://learn.jquery.com/plugins/)
 - [Publishing to NPM](http://blog.npmjs.org/post/111475741445/publishing-your-jquery-plugin-to-npm-the-quick)

@@ -8,22 +8,27 @@ published: 2024-02-07 10:19 pm
 
 <script setup>
   import { onMounted } from 'vue';
-  import 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js';
-  import * as gumboot from './gumboot.js';
 
-  onMounted(() => {
-    // Override the plugin's default settings for the entire page.
-    jQuery.fn.gumboot.defaults = {
-      separator: "-",
-    };
-    // Apply the plugin to the demo.
-    jQuery('#demo ol li').gumboot({
-      selector: 'em',
-      callback: function (settings, index, length) {
-        var $this = jQuery(this)
-        $this.append('<br>' + JSON.stringify($this.data('gumboot')))
-      },
-    })
+  onMounted(async () => {
+
+    import('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js').then(() => {
+
+      import('./gumboot.js').then(() => {
+
+        // Override the plugin's default settings for the entire page.
+        jQuery.fn.gumboot.defaults = {
+          separator: "-",
+        };
+        // Apply the plugin to the demo.
+        jQuery('#demo ol li').gumboot({
+          selector: 'em',
+          callback: function (settings, index, length) {
+            var $this = jQuery(this)
+            $this.append('<br>' + JSON.stringify($this.data('gumboot')))
+          },
+        });
+      });
+    });
   });
 </script>
 

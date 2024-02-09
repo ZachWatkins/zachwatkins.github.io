@@ -78,16 +78,16 @@ $.fn.gumboot = function (options) {
 <div id="demo">
   <ol>
     <li
-      >Present Vehicle<br /><em>Year - 2001</em> | <em>Make - Chevrolet</em> |
-      <em>Model - Tahoe</em></li
+      >Customer A<br /><em>Joined - 2001</em> | <em>Last Rental - SUV</em> |
+      <em>Purpose - Business</em></li
     >
     <li
-      >2013 - 2014<br /><em>Year - 2011</em> | <em>Make - Toyota</em> |
-      <em>Model - Prius</em> | <em>Notes - Certified Preowned</em></li
+      >Customer B<br /><em>Joined - 2009</em> | <em>Last Rental - Hybrid</em> |
+      <em>Purpose - Business</em> | <em>Current Customer - Yes</em></li
     >
     <li
-      >2012 - 2013<br /><em>Year - 2012</em> | <em>Make - Nissan</em> |
-      <em>Model - Juke</em></li
+      >Customer C<br /><em>Joined - 2012</em> | <em>Last Rental - Minivan</em> |
+      <em>Purpose - Personal</em></li
     >
   </ol>
 </div>
@@ -113,9 +113,18 @@ $('#demo ol li').gumboot({
 
 <div id="demo">
   <ol>
-    <li>Present Vehicle<br><em>Year - 2001</em> | <em>Make - Chevrolet</em> | <em>Model - Tahoe</em></li>
-    <li>2013 - 2014<br><em>Year - 2011</em> | <em>Make - Toyota</em> | <em>Model - Prius</em> | <em>Notes - Certified Preowned</em></li>
-    <li>2012 - 2013<br><em>Year - 2012</em> | <em>Make - Nissan</em> | <em>Model - Juke</em></li>
+    <li
+      >Customer A<br /><em>Joined - 2001</em> | <em>Last Rental - SUV</em> |
+      <em>Purpose - Business</em></li
+    >
+    <li
+      >Customer B<br /><em>Joined - 2009</em> | <em>Last Rental - Hybrid</em> |
+      <em>Purpose - Business</em> | <em>Current Customer - Yes</em></li
+    >
+    <li
+      >Customer C<br /><em>Joined - 2012</em> | <em>Last Rental - Minivan</em> |
+      <em>Purpose - Personal</em></li
+    >
   </ol>
 </div>
 

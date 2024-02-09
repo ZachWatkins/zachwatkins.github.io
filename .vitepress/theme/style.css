@@ -163,7 +163,8 @@ main h3 {
 
 main p,
 main table,
-main ol {
+main ol,
+main pre {
   margin-top: 0;
   margin-bottom: 1rem;
 }

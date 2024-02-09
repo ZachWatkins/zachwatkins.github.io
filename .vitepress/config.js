@@ -41,21 +41,6 @@ const CONFIG = {
     [
       'meta',
       {
-        name: 'twitter:description',
-        content:
-          'A blog website with articles and tutorials about JavaScript, PHP, WordPress, Laravel, DevOps, hosting, and anything related to web technology.',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'twitter:title',
-        content: 'Zachary Watkins - Senior Full Stack Engineer',
-      },
-    ],
-    [
-      'meta',
-      {
         name: 'twitter:image',
         content: 'https://zacharywatkins.com/android-chrome-192x192.png',
       },
@@ -152,6 +137,14 @@ CONFIG.transformPageData = function (pageData) {
     ['meta', { property: 'og:image', content: ogImage }],
     ['meta', { property: 'og:updated_time', content: pageData.lastUpdated }],
     ['meta', { property: 'og:locale', content: CONFIG.lang }],
+    ['meta', { name: 'twitter:title', content: pageData.frontmatter.title }],
+    [
+      'meta',
+      {
+        name: 'twitter:description',
+        content: pageData.frontmatter.description,
+      },
+    ],
   )
 
   if (isSingleArticleRoute) {

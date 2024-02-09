@@ -44,8 +44,8 @@ Would you like to learn how to create a jQuery plugin? This presentation is an i
 
 [2015-jquery-plugin-development.pdf](/presentations/2015-jquery-plugin-development.pdf)
 
-<iframe src="/presentations/2017-continuous-deployment-from-github-to-wpengine.pdf" width="100%" height="600px">
-  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/presentations/2017-continuous-deployment-from-github-to-wpengine.pdf">Download PDF</a>.</p>
+<iframe src="/presentations/2015-jquery-plugin-development.pdf" width="100%" height="600px">
+  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/presentations/2015-jquery-plugin-development.pdf">Download PDF</a>.</p>
 </iframe>
 
 ## Demo

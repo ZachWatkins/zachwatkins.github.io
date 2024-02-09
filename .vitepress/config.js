@@ -37,6 +37,7 @@ const CONFIG = {
       ].join(''),
     ],
     ['meta', { name: 'twitter:site', content: '@zachwatkinsv1' }],
+    ['meta', { name: 'twitter:creator', content: '@zachwatkinsv1' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     [
       'meta',

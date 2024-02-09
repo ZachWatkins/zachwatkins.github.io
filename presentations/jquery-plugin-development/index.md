@@ -45,16 +45,7 @@ Would you like to learn how to create a jQuery plugin? This presentation is an i
 The example plugin is designed to parse the text content of an element into keys and values and attach the resulting JavaScript object to each element during runtime.
 
 ```javascript
-// Plugin source code.
 $.fn.gumboot = function (options) {
-  /**
-   * The plugin instance can be configured from three different levels.
-   * 1. The default settings for the plugin.
-   * 1. The override default settings for the plugin.
-   * 2. The settings passed to the plugin when it is called.
-   *
-   * Then the settings are merged together using the jQuery extend method.
-   */
   var settings = $.extend(
     {
       selector: '.data',
@@ -63,13 +54,11 @@ $.fn.gumboot = function (options) {
     $.fn.gumboot.defaults,
     options,
   )
-
-  // Execute and return for chaining.
   return this.each(function (index) {
-    var data = {},
-      $item = $(this)
+    var data = {}
+    var $item = $(this)
 
-    // Parse the text content of the element.
+    // Parse the text content of the element to a data object.
     $item.find(settings.selector).each(function () {
       var pair = this.innerHTML.trim().split(settings.separator)
       data[pair[0].trim()] = pair[1].trim()
@@ -78,8 +67,7 @@ $.fn.gumboot = function (options) {
     // Assign data object to the element.
     $item.data('gumboot', data)
 
-    if ($.isFunction(settings.callback)) {
-      // Note: $.isFunction is removed in jQuery 4.0.
+    if (settings.callback) {
       settings.callback.call(this, settings, index, length)
     }
   })
@@ -106,16 +94,16 @@ $.fn.gumboot = function (options) {
 ```
 
 ```javascript
-// Override the plugin's default settings for the entire page.
+// Globally modify the plugin's defaults.
 jQuery.fn.gumboot.defaults = {
-  separator: '-', // The default separator is ':'.
+  separator: '-',
 }
-// Apply the plugin to the list items.
+
+// Assign data to list items with a callback to use it immediately.
 jQuery('#demo ol li').gumboot({
-  selector: 'em', // The default selector is '.data'.
+  selector: 'em',
   callback: function (settings, index, length) {
     var $this = jQuery(this)
-    // This is where you can make use of each element's data object.
     $this.append('<br>' + JSON.stringify($this.data('gumboot')))
   },
 })

@@ -95,15 +95,15 @@ $.fn.gumboot = function (options) {
 
 ```javascript
 // Globally modify the plugin's defaults.
-jQuery.fn.gumboot.defaults = {
+$.fn.gumboot.defaults = {
   separator: '-',
 }
 
 // Assign data to list items with a callback to use it immediately.
-jQuery('#demo ol li').gumboot({
+$('#demo ol li').gumboot({
   selector: 'em',
   callback: function (settings, index, length) {
-    var $this = jQuery(this)
+    var $this = $(this)
     $this.append('<br>' + JSON.stringify($this.data('gumboot')))
   },
 })

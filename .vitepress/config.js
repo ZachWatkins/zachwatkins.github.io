@@ -38,12 +38,13 @@ const CONFIG = {
     ],
     ['meta', { name: 'twitter:site', content: '@zachwatkinsv1' }],
     ['meta', { name: 'twitter:creator', content: '@zachwatkinsv1' }],
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
     [
       'meta',
       {
         name: 'twitter:image',
-        content: 'https://zacharywatkins.com/android-chrome-192x192.png',
+        content:
+          'https://zacharywatkins.com/img/profile/20221122_081808-home.jpg',
       },
     ],
     [

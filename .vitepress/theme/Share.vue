@@ -2,9 +2,9 @@
 // This component uses the native browser Share API to allow a user to share the current page.
 // https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share
 
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 import { onMounted } from 'vue'
-const { theme, page, frontmatter } = useData()
+const { theme, page, frontmatter, site, params } = useData()
 
 // Detect if the browser supports the Web Share API.
 // If not, do not include the share button in the web page.
@@ -21,7 +21,7 @@ const contentType = page.value.filePath.startsWith('presentations/')
 const share = () => {
   if (navigator.share) {
     navigator.share({
-      url: window.location.href,
+      url: window?.location.href,
       text: frontmatter.value.description || theme.value.description,
       title: document.title,
     })
@@ -29,20 +29,11 @@ const share = () => {
     console.log('Web Share API not supported in your browser')
   }
 }
-const tweetUrl = [
-  'https://twitter.com/intent/tweet?url=',
-  encodeURIComponent(window.location.origin + window.location.pathname),
-  '&text=',
-  encodeURIComponent(
-    `I just read "${frontmatter.value.title}" by ${theme.value.twitter}`,
-  ),
-  encodeURIComponent('\n\n'),
-].join('')
 </script>
 <template>
   <a
     class="inline-block mr-8 font-bold color-tapfuel-blue"
-    :href="tweetUrl"
+    :href="`https://twitter.com/intent/tweet?url=${encodeURIComponent('https://zacharywatkins.com/' + page.relativePath)}&text=${encodeURIComponent('I just read ' + frontmatter.title)}&via=${theme.twitter}`"
     target="_blank"
     rel="noopener noreferrer"
   >

@@ -33,7 +33,7 @@ const share = () => {
 <template>
   <a
     class="inline-block mr-8 font-bold color-tapfuel-blue"
-    :href="`https://twitter.com/intent/tweet?url=${encodeURIComponent('https://zacharywatkins.com/' + page.relativePath)}&text=${encodeURIComponent('I just read ' + frontmatter.title)}&via=${theme.twitter}`"
+    :href="`https://twitter.com/intent/tweet?url=${encodeURIComponent('https://zacharywatkins.com/' + page.relativePath.replace(/index\.md$/, ''))}&text=${encodeURIComponent('I just read ' + frontmatter.title)}&via=${theme.twitter}`"
     target="_blank"
     rel="noopener noreferrer"
   >

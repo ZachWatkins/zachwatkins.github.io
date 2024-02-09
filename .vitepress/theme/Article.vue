@@ -102,7 +102,7 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
       </div>
     </header>
     <Content />
-    <footer>
+    <footer class="mt-6">
       <Share />
       <Author />
       <div class="flex">

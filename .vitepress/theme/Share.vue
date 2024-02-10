@@ -2,33 +2,33 @@
 // This component uses the native browser Share API to allow a user to share the current page.
 // https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share
 
-import { useData, withBase } from 'vitepress'
-import { onMounted } from 'vue'
-const { theme, page, frontmatter, site, params } = useData()
+import { useData, withBase } from 'vitepress';
+import { onMounted } from 'vue';
+const { theme, page, frontmatter, site, params } = useData();
 
 // Detect if the browser supports the Web Share API.
 // If not, do not include the share button in the web page.
 onMounted(() => {
   if (!navigator.share) {
-    const shareButton = document.getElementById('share')
-    shareButton.style.display = 'none'
+    const shareButton = document.getElementById('share');
+    shareButton.style.display = 'none';
   }
-})
+});
 
 const contentType = page.value.filePath.startsWith('presentations/')
   ? 'presentation'
-  : 'article'
+  : 'article';
 const share = () => {
   if (navigator.share) {
     navigator.share({
       url: window?.location.href,
       text: frontmatter.value.description || theme.value.description,
       title: document.title,
-    })
+    });
   } else {
-    console.log('Web Share API not supported in your browser')
+    console.log('Web Share API not supported in your browser');
   }
-}
+};
 </script>
 <template>
   <a

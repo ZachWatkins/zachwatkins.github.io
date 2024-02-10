@@ -1,16 +1,16 @@
 <script setup>
-import { computed } from 'vue'
-import { useData, useRoute } from 'vitepress'
-import Author from './Author.vue'
-import { data as presentations } from './presentations.data.js'
-import Share from './Share.vue'
+import { computed } from 'vue';
+import { useData, useRoute } from 'vitepress';
+import Author from './Author.vue';
+import { data as presentations } from './presentations.data.js';
+import Share from './Share.vue';
 
-const { page, frontmatter, lang, theme } = useData()
+const { page, frontmatter, lang, theme } = useData();
 
-const route = useRoute()
+const route = useRoute();
 
 function findCurrentIndex() {
-  return presentations.findIndex((p) => p.url === route.path)
+  return presentations.findIndex((p) => p.url === route.path);
 }
 
 const dateFormat = computed(() => {
@@ -22,21 +22,21 @@ const dateFormat = computed(() => {
       dateStyle: 'long',
       timeStyle: 'short',
     },
-  )
-})
-const date = computed(() => new Date(frontmatter.value.date))
+  );
+});
+const date = computed(() => new Date(frontmatter.value.date));
 const datePublished = computed(() =>
   frontmatter.value.published !== false
     ? new Date(frontmatter.value.published)
     : null,
-)
+);
 const dateUpdated = computed(() =>
   page.value.lastUpdated && frontmatter.value.lastUpdated !== false
     ? new Date(page.value.lastUpdated ?? frontmatter.value.lastUpdated)
     : null,
-)
-const nextPost = computed(() => presentations[findCurrentIndex() - 1])
-const prevPost = computed(() => presentations[findCurrentIndex() + 1])
+);
+const nextPost = computed(() => presentations[findCurrentIndex() - 1]);
+const prevPost = computed(() => presentations[findCurrentIndex() + 1]);
 </script>
 
 <template>

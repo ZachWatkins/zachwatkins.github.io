@@ -1,28 +1,28 @@
 <script setup>
-import { computed } from 'vue'
-import { useData, useRoute } from 'vitepress'
-import Author from './Author.vue'
-import { data as articles } from './articles.data.js'
-import Share from './Share.vue'
+import { computed } from 'vue';
+import { useData, useRoute } from 'vitepress';
+import Author from './Author.vue';
+import { data as articles } from './articles.data.js';
+import Share from './Share.vue';
 
-const { page, frontmatter, lang, theme } = useData()
+const { page, frontmatter, lang, theme } = useData();
 
-const route = useRoute()
+const route = useRoute();
 
 function findCurrentIndex() {
-  return articles.findIndex((p) => p.url === route.path)
+  return articles.findIndex((p) => p.url === route.path);
 }
 
 const date = computed(() =>
   articles && articles.length
     ? articles[findCurrentIndex()].date
     : { time: null, string: '' },
-)
+);
 const dateUpdated = computed(() =>
   page.value.lastUpdated && frontmatter.value.lastUpdated !== false
     ? new Date(page.value.lastUpdated ?? frontmatter.value.lastUpdated)
     : null,
-)
+);
 const dateUpdatedFormat = computed(() => {
   return new Intl.DateTimeFormat(
     theme.value.lastUpdated?.formatOptions?.forceLocale
@@ -32,10 +32,10 @@ const dateUpdatedFormat = computed(() => {
       dateStyle: 'long',
       timeStyle: 'short',
     },
-  )
-})
-const nextPost = computed(() => articles[findCurrentIndex() - 1])
-const prevPost = computed(() => articles[findCurrentIndex() + 1])
+  );
+});
+const nextPost = computed(() => articles[findCurrentIndex() - 1]);
+const prevPost = computed(() => articles[findCurrentIndex() + 1]);
 </script>
 
 <template>

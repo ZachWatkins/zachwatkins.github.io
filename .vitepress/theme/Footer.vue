@@ -1,6 +1,6 @@
 <script setup>
-import { useData } from 'vitepress'
-const { theme } = useData()
+import { useData } from 'vitepress';
+const { theme } = useData();
 </script>
 
 <template>

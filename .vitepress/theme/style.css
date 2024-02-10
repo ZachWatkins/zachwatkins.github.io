@@ -276,6 +276,7 @@ html:not(.dark) .vp-code span {
 }
 
 .vp-doc p:first-child + hr,
+.vp-doc h1:first-child + hr,
 .table-of-contents + h2 {
   border-color: var(--javascript-yellow);
 }

@@ -32,7 +32,12 @@ import Presentations from './Presentations.vue';
     />
     <Presentations v-else-if="'presentations/index.md' === page.filePath" />
     <Presentation v-else-if="page.filePath.startsWith('presentations/')" />
-    <Content v-else-if="!page.isNotFound" />
+    <div
+      v-else-if="!page.isNotFound"
+      class="vp-doc"
+    >
+      <Content />
+    </div>
     <div v-else> Oh no! </div>
   </main>
   <Footer />

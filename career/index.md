@@ -5,7 +5,11 @@ description: Zachary Watkins' career history, skills, accomplishments, and educa
 
 # Career
 
+---
+
 [[toc]]
+
+## Introduction
 
 <a href="/profile.jpg" class="md:float-left md:mr-8 md:mb-4" title="Zach in Fall of 2021 wearing a suit jacket and buttoned-up shirt"><img style="display:inline-block" src="/img/profile/profile-214x300.jpg" alt="Zach in Fall of 2021 wearing a suit jacket and buttoned-up shirt" width="214" height="300" /></a>
 

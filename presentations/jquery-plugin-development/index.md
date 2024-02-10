@@ -95,7 +95,6 @@ $.fn.gumboot = function (options) {
 $.fn.gumboot.defaults = {
   separator: '-',
 };
-
 $('#demo ol li').gumboot({
   selector: 'em',
   callback: function (settings, index, length) {

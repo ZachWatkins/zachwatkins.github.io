@@ -42,7 +42,49 @@ This presentation is an introduction to jQuery plugin development (using jQuery 
 
 The example plugin is designed to parse the text content of an element into keys and values and attach the resulting JavaScript object to each element during runtime.
 
-```javascript
+::: code-group
+
+```html [index.html]
+<div id="demo">
+  <ol>
+    <li>
+      Customer A <br />
+      <em>Joined - 2001</em> | <em>Last Rental - SUV</em> |
+      <em>Purpose - Business</em>
+    </li>
+    <li>
+      Customer B <br />
+      <em>Joined - 2009</em> | <em>Last Rental - Hybrid</em> |
+      <em>Purpose - Business</em> | <em>Current Customer - Yes</em>
+    </li>
+    <li>
+      Customer C <br />
+      <em>Joined - 2012</em> | <em>Last Rental - Minivan</em> |
+      <em>Purpose - Personal</em>
+    </li>
+  </ol>
+</div>
+<script src="main.js"></script>
+```
+
+```js [main.js]
+import(
+  'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'
+).then(() => {
+  import('./plugin.js').then(() => {
+    $('#demo ol li').gumboot({
+      selector: 'em',
+      separator: '-',
+      callback: function (settings, index, length) {
+        var $this = $(this);
+        $this.append('<br>' + JSON.stringify($this.data('gumboot')));
+      },
+    });
+  });
+});
+```
+
+```js [plugin.js]
 $.fn.gumboot = function (options) {
   var settings = $.extend(
     {
@@ -69,39 +111,7 @@ $.fn.gumboot = function (options) {
 };
 ```
 
-```html
-<div id="demo">
-  <ol>
-    <li>
-      Customer A <br />
-      <em>Joined - 2001</em> | <em>Last Rental - SUV</em> |
-      <em>Purpose - Business</em>
-    </li>
-    <li>
-      Customer B <br />
-      <em>Joined - 2009</em> | <em>Last Rental - Hybrid</em> |
-      <em>Purpose - Business</em> | <em>Current Customer - Yes</em>
-    </li>
-    <li>
-      Customer C <br />
-      <em>Joined - 2012</em> | <em>Last Rental - Minivan</em> |
-      <em>Purpose - Personal</em>
-    </li>
-  </ol>
-</div>
-<script>
-  $.fn.gumboot.defaults = {
-    separator: '-',
-  };
-  $('#demo ol li').gumboot({
-    selector: 'em',
-    callback: function (settings, index, length) {
-      var $this = $(this);
-      $this.append('<br>' + JSON.stringify($this.data('gumboot')));
-    },
-  });
-</script>
-```
+:::
 
 **Results:**
 
@@ -132,17 +142,9 @@ $.fn.gumboot = function (options) {
 
 ## Further Reading
 
-The original code for this presentation can be found here:
-
-- [GitHub Repository](https://github.com/ZachWatkins/Gumboot)
-- [Demonstration of the plugin](https://codepen.io/zw/pen/YXLoWj)
-
-Additional resources for jQuery plugin development:
-
-- [Making jQuery Plugins](https://learn.jquery.com/plugins/)
-- [Publishing to NPM](http://blog.npmjs.org/post/111475741445/publishing-your-jquery-plugin-to-npm-the-quick)
-- [jQuery Style Guide](http://contribute.jquery.org/style-guide/)
-- [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax)
-- [Presentation Slides](https://docs.google.com/presentation/d/1xgRXiqPBDWNxUNUf3DcocO0VHZ2dJgAuSfYPvLRKlIc/pub?start=false&loop=false&delayms=15000)
-- [Plugin Pattern That Avoids Redundant Attachment](http://www.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/)
-- [Much More Advanced jQuery Plugin Development (YouTube)](https://www.youtube.com/watch?v=FdJINb0breE)
+- https://github.com/ZachWatkins/Gumboot
+- https://codepen.io/zw/pen/YXLoWj
+- https://learn.jquery.com/plugins/
+- http://contribute.jquery.org/style-guide/
+- http://blog.npmjs.org/post/111475741445/publishing-your-jquery-plugin-to-npm-the-quick
+- http://www.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/

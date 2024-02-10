@@ -15,4 +15,4 @@ export default {
   },
   plugins: [],
   safelist: ['md:float-left', 'md:mr-8', 'md:mb-4'],
-}
+};

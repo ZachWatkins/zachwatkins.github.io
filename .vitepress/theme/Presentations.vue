@@ -1,5 +1,5 @@
 <script setup>
-import { data as presentations } from './presentations.data.js'
+import { data as presentations } from './presentations.data.js';
 </script>
 
 <template>

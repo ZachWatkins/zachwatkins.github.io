@@ -1,4 +1,4 @@
-import { createContentLoader } from 'vitepress'
+import { createContentLoader } from 'vitepress';
 
 export default createContentLoader('articles/*/*.md', {
   excerpt: true,
@@ -12,13 +12,13 @@ export default createContentLoader('articles/*/*.md', {
         date: formatDate(frontmatter.date),
         tags: frontmatter.tags,
       }))
-      .sort((a, b) => b.date.time - a.date.time)
+      .sort((a, b) => b.date.time - a.date.time);
   },
-})
+});
 
 function formatDate(raw) {
-  const date = new Date(raw)
-  date.setUTCHours(12)
+  const date = new Date(raw);
+  date.setUTCHours(12);
   return {
     time: +date,
     string: date.toLocaleDateString('en-US', {
@@ -26,5 +26,5 @@ function formatDate(raw) {
       month: 'long',
       day: 'numeric',
     }),
-  }
+  };
 }

@@ -1,5 +1,5 @@
-import { defineConfig } from 'vitepress'
-import pkg from '../package.json'
+import { defineConfig } from 'vitepress';
+import pkg from '../package.json';
 
 const CONFIG = {
   lang: 'en-US',
@@ -108,24 +108,24 @@ const CONFIG = {
     'articles/tags/:tag.md': 'articles/tags/:tag/index.md',
     'articles/tags.md': 'articles/tags/index.md',
   },
-}
+};
 
 CONFIG.transformPageData = function (pageData) {
   const canonicalUrl =
     CONFIG.sitemap.hostname +
     `/${pageData.relativePath}`
       .replace(/index\.md$/, '')
-      .replace(/\.md$/, '.html')
+      .replace(/\.md$/, '.html');
 
   const isSingleArticleRoute =
     pageData.relativePath.startsWith('articles/') &&
     !pageData.relativePath.startsWith('articles/index.md') &&
-    !pageData.relativePath.startsWith('articles/tags/')
+    !pageData.relativePath.startsWith('articles/tags/');
 
-  const ogType = isSingleArticleRoute ? 'article' : 'website'
-  const ogImage = `${CONFIG.sitemap.hostname}/${pageData.frontmatter.image ?? 'android-chrome-192x192.png'}`
+  const ogType = isSingleArticleRoute ? 'article' : 'website';
+  const ogImage = `${CONFIG.sitemap.hostname}/${pageData.frontmatter.image ?? 'android-chrome-192x192.png'}`;
 
-  pageData.frontmatter.head ??= []
+  pageData.frontmatter.head ??= [];
   pageData.frontmatter.head.push(
     ['link', { rel: 'canonical', href: canonicalUrl }],
     ['meta', { property: 'og:url', content: canonicalUrl }],
@@ -147,7 +147,7 @@ CONFIG.transformPageData = function (pageData) {
         content: pageData.frontmatter.description,
       },
     ],
-  )
+  );
 
   if (isSingleArticleRoute) {
     pageData.frontmatter.head.push(
@@ -176,9 +176,9 @@ CONFIG.transformPageData = function (pageData) {
           content: pageData.lastUpdated,
         },
       ],
-    )
+    );
   }
-}
+};
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig(CONFIG)
+export default defineConfig(CONFIG);

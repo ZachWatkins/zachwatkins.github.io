@@ -1,5 +1,4 @@
-jQuery.noConflict()
-;(function ($) {
+(function () {
   $.fn.gumboot = function (options) {
     var settings = $.extend(
       {
@@ -27,4 +26,4 @@ jQuery.noConflict()
       }
     })
   }
-})(jQuery)
+})();

@@ -1,32 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
-:root {
-  --tapfuel-blue: #00b3dd;
-  --tapfuel-blue-rgb: rgb(0, 179, 221);
-  --tapfuel-blue-hsl: hsl(191, 100%, 43%);
-  --theme-orange: #ff8c00;
-  --javascript-yellow: #f7df1e;
-  --javascript-yellow-rgb: rgb(247, 223, 30);
-  --javascript-yellow-hsl: hsl(50, 92%, 59%);
-  --javascript-yellow-dark: #e6c700;
-  --javascript-yellow-dark-rgb: rgb(230, 199, 0);
-  --php-purple: #777bb3;
-  --php-purple-rgb: rgb(119, 123, 179);
-  --php-purple-hsl: hsl(240, 33%, 55%);
-  --computer-green: #007700;
-  --computer-green-rgb: rgb(0, 119, 0);
-  --error: #ff0000;
-  --success: #00ff00;
-  --vp-local-search-bg: #000;
-  --vp-local-search-result-bg: #000;
-  --vp-local-search-result-border: #666;
-  --vp-local-search-result-selected-bg: #000;
-  --vp-local-search-result-selected-border: var(--tapfuel-blue);
-  --vp-local-search-highlight-bg: var(--tapfuel-blue);
-  --vp-local-search-highlight-text: #fff;
-}
+@import './styles/vars.css';
 
 .color-tapfuel-blue {
   color: var(--tapfuel-blue);
@@ -195,6 +170,10 @@ main h2 {
   position: relative;
 }
 
+main h2 + table {
+  float: left;
+}
+
 main ol {
   list-style-type: decimal;
   list-style-position: outside;
@@ -260,10 +239,8 @@ html:not(.dark) .vp-code span {
 
 /** --> Table of contents */
 .table-of-contents {
-  padding: 1rem;
   border-radius: 0.5rem;
   background-color: hsla(0, 0%, 0%, 0.5);
-  backdrop-filter: blur(0.5rem);
   border: 1px solid hsla(50, 92%, 59%, 50%);
   font-size: 1.25rem;
   line-height: 1.75;
@@ -277,12 +254,15 @@ html:not(.dark) .vp-code span {
   flex-wrap: wrap;
   margin-left: 0;
   padding-left: 0;
+  padding-left: 1.25rem;
 }
 
-.table-of-contents li {
+.table-of-contents li,
+.vp-doc .table-of-contents li {
   list-style-type: disc;
   padding-right: 0.75rem;
   margin-left: 1.25rem;
+  margin-top: 0;
 }
 
 .table-of-contents li a {
@@ -293,4 +273,27 @@ html:not(.dark) .vp-code span {
 .table-of-contents li a:focus,
 .table-of-contents li a:active {
   text-decoration: underline;
+}
+
+/* Override vp-doc styles. */
+.vp-doc dl,
+.vp-doc dl + span {
+  line-height: 28px;
+}
+
+.vp-doc ul.list-none {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.vp-doc dl ul.list-none {
+  margin: 0;
+}
+
+.vp-doc ul.list-none li {
+  margin-top: 0;
+}
+
+.vp-doc h2 + table {
+  margin: 8px 20px 20px 0;
 }

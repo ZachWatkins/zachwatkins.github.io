@@ -39,7 +39,7 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1])
 </script>
 
 <template>
-  <article>
+  <article class="vp-doc">
     <header>
       <h1 class="text-center">
         {{ frontmatter.title }}

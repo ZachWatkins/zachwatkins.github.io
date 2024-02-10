@@ -18,7 +18,7 @@ if (params?.value?.tag) {
     <Content />
     <ul class="list-none ml-0">
       <li v-for="{ title, url, date, excerpt } of articles">
-        <article>
+        <article class="vp-doc">
           <div>
             <div>
               <h2 class="mb-0">
@@ -35,7 +35,6 @@ if (params?.value?.tag) {
               <span class="float-left mr-2">&mdash;</span>
               <div
                 v-if="excerpt"
-                class="italic"
                 v-html="excerpt"
               ></div>
             </div>

@@ -51,25 +51,22 @@ $.fn.gumboot = function (options) {
     },
     $.fn.gumboot.defaults,
     options,
-  )
+  );
   return this.each(function (index) {
-    var data = {}
-    var $item = $(this)
-
+    var data = {};
+    var $item = $(this);
     // Parse the text content of the element to a data object.
     $item.find(settings.selector).each(function () {
-      var pair = this.innerHTML.trim().split(settings.separator)
-      data[pair[0].trim()] = pair[1].trim()
-    })
-
+      var pair = this.innerHTML.trim().split(settings.separator);
+      data[pair[0].trim()] = pair[1].trim();
+    });
     // Assign data object to the element.
-    $item.data('gumboot', data)
-
+    $item.data('gumboot', data);
     if (settings.callback) {
-      settings.callback.call(this, settings, index, length)
+      settings.callback.call(this, settings, index, length);
     }
-  })
-}
+  });
+};
 ```
 
 ```html
@@ -97,15 +94,15 @@ $.fn.gumboot = function (options) {
 ```javascript
 $.fn.gumboot.defaults = {
   separator: '-',
-}
+};
 
 $('#demo ol li').gumboot({
   selector: 'em',
   callback: function (settings, index, length) {
-    var $this = $(this)
-    $this.append('<br>' + JSON.stringify($this.data('gumboot')))
+    var $this = $(this);
+    $this.append('<br>' + JSON.stringify($this.data('gumboot')));
   },
-})
+});
 ```
 
 **Results:**

@@ -64,7 +64,10 @@ The example plugin is designed to parse the text content of an element into keys
     </li>
   </ol>
 </div>
-<script src="main.js"></script>
+<script
+  src="main.js"
+  type="module"
+></script>
 ```
 
 ```js [main.js]

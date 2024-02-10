@@ -1,14 +1,14 @@
 <script setup>
-import { useData } from 'vitepress'
+import { useData } from 'vitepress';
 // https://vitepress.dev/reference/runtime-api#usedata
-const { page, site, theme, frontmatter, params } = useData()
-import Header from './Header.vue'
-import Footer from './Footer.vue'
-import Home from './Home.vue'
-import Article from './Article.vue'
-import Articles from './Articles.vue'
-import Presentation from './Presentation.vue'
-import Presentations from './Presentations.vue'
+const { page, site, theme, frontmatter, params } = useData();
+import Header from './Header.vue';
+import Footer from './Footer.vue';
+import Home from './Home.vue';
+import Article from './Article.vue';
+import Articles from './Articles.vue';
+import Presentation from './Presentation.vue';
+import Presentations from './Presentations.vue';
 </script>
 
 <template>

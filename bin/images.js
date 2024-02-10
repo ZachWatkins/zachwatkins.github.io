@@ -1,8 +1,8 @@
-import sharp from 'sharp'
-import fs from 'fs'
+import sharp from 'sharp';
+import fs from 'fs';
 
-const THUMBNAIL = 150
-const FULL = 1500
+const THUMBNAIL = 150;
+const FULL = 1500;
 
 /**
  * A list of image processing task parameters for the processImage function which can run in any order.
@@ -167,33 +167,33 @@ const jobs = [
       fit: 'cover',
     },
   },
-]
+];
 
 for (const job of jobs) {
-  cleanImage(job.src).then(() => processImage(job))
+  cleanImage(job.src).then(() => processImage(job));
 }
 
 async function cleanImage(src) {
   return sharp(src)
     .metadata()
     .then((metadata) => {
-      let needsCleaning = false
-      if (metadata.exif) needsCleaning = true
-      if (metadata.icc) needsCleaning = true
-      if (metadata.xmp) needsCleaning = true
-      if (metadata.iptc) needsCleaning = true
-      if (!needsCleaning) return
+      let needsCleaning = false;
+      if (metadata.exif) needsCleaning = true;
+      if (metadata.icc) needsCleaning = true;
+      if (metadata.xmp) needsCleaning = true;
+      if (metadata.iptc) needsCleaning = true;
+      if (!needsCleaning) return;
 
       // Proceed with cleaning the source image and overwriting it.
-      const fileType = src.split('.').pop()
-      const tempFilename = src.replace(`.${fileType}`, `-old.${fileType}`)
-      fs.renameSync(src, tempFilename)
+      const fileType = src.split('.').pop();
+      const tempFilename = src.replace(`.${fileType}`, `-old.${fileType}`);
+      fs.renameSync(src, tempFilename);
       return sharp(tempFilename)
         .toFile(src)
         .then(() => {
-          fs.unlinkSync(tempFilename)
-        })
-    })
+          fs.unlinkSync(tempFilename);
+        });
+    });
 }
 
 /**
@@ -208,7 +208,7 @@ async function cleanImage(src) {
  * @returns {Promise} - The promise of the image processing.
  */
 async function processImage({ src, dest, thumbnail, resize, extract, rotate }) {
-  const srcSharp = sharp(src)
+  const srcSharp = sharp(src);
   return srcSharp.metadata().then((metadata) => {
     console.log('before', {
       fileSize: (fs.statSync(src).size / 1024).toFixed(2) + ' kb',
@@ -216,18 +216,18 @@ async function processImage({ src, dest, thumbnail, resize, extract, rotate }) {
       height: metadata.height,
       density: metadata.density,
       resolutionUnit: metadata.resolutionUnit,
-    })
+    });
 
     if (extract) {
-      srcSharp.extract(extract)
+      srcSharp.extract(extract);
     }
 
     if (rotate) {
-      srcSharp.rotate(rotate)
+      srcSharp.rotate(rotate);
     }
 
     if (resize) {
-      srcSharp.resize(resize)
+      srcSharp.resize(resize);
     }
 
     return srcSharp
@@ -247,7 +247,7 @@ async function processImage({ src, dest, thumbnail, resize, extract, rotate }) {
           height: result.height,
           density: 72,
           resolutionUnit: 'pixelsperinch',
-        })
+        });
         if (thumbnail) {
           return sharp(dest)
             .resize(thumbnail)
@@ -255,8 +255,8 @@ async function processImage({ src, dest, thumbnail, resize, extract, rotate }) {
               quality: 95,
               mozjpeg: true,
             })
-            .toFile(dest.replace('.jpg', '-thumbnail.jpg'))
+            .toFile(dest.replace('.jpg', '-thumbnail.jpg'));
         }
-      })
-  })
+      });
+  });
 }

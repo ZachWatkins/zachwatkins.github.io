@@ -1,7 +1,7 @@
 <script setup>
-import { useData } from 'vitepress'
-import VPNavBarSearch from '../../node_modules/vitepress/dist/client/theme-default/components/VPNavBarSearch.vue'
-const { site, theme } = useData()
+import { useData } from 'vitepress';
+import VPNavBarSearch from '../../node_modules/vitepress/dist/client/theme-default/components/VPNavBarSearch.vue';
+const { site, theme } = useData();
 </script>
 
 <template>

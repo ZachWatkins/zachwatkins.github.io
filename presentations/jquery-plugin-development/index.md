@@ -8,27 +8,8 @@ published: 2024-02-07 10:19 pm
 
 <script setup>
   import { onMounted } from 'vue';
-
   onMounted(async () => {
-
-    import('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js').then(() => {
-
-      import('./gumboot.js').then(() => {
-
-        // Override the plugin's default settings for the entire page.
-        jQuery.fn.gumboot.defaults = {
-          separator: "-",
-        };
-        // Apply the plugin to the demo.
-        jQuery('#demo ol li').gumboot({
-          selector: 'em',
-          callback: function (settings, index, length) {
-            var $this = jQuery(this)
-            $this.append('<br>' + JSON.stringify($this.data('gumboot')))
-          },
-        });
-      });
-    });
+    import('./main.js');
   });
 </script>
 
@@ -67,53 +48,13 @@ The example plugin is designed to parse the text content of an element into keys
 <script src="main.js" type="module"></script>
 ```
 
-```js [main.js]
-import(
-  'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'
-).then(() => {
-  import('./plugin.js').then(() => {
-    $('#demo ol li').gumboot({
-      selector: 'em',
-      separator: '-',
-      callback: function (settings, index, length) {
-        var $this = $(this);
-        $this.append('<br>' + JSON.stringify($this.data('gumboot')));
-      },
-    });
-  });
-});
-```
+<<< @/presentations/jquery-plugin-development/main.js
 
-```js [plugin.js]
-$.fn.gumboot = function (options) {
-  var settings = $.extend(
-    {
-      selector: '.data',
-      separator: ':',
-    },
-    $.fn.gumboot.defaults,
-    options,
-  );
-  return this.each(function (index) {
-    var data = {};
-    var $item = $(this);
-    // Parse the text content of the element to a data object.
-    $item.find(settings.selector).each(function () {
-      var pair = this.innerHTML.trim().split(settings.separator);
-      data[pair[0].trim()] = pair[1].trim();
-    });
-    // Assign data object to the element.
-    $item.data('gumboot', data);
-    if (settings.callback) {
-      settings.callback.call(this, settings, index, length);
-    }
-  });
-};
-```
+<<< @/presentations/jquery-plugin-development/jquery-plugin.js
 
 :::
 
-**Results:**
+Result:
 
 <div id="demo">
   <ol>

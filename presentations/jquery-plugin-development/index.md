@@ -89,19 +89,18 @@ $.fn.gumboot = function (options) {
     </li>
   </ol>
 </div>
-```
-
-```javascript
-$.fn.gumboot.defaults = {
-  separator: '-',
-};
-$('#demo ol li').gumboot({
-  selector: 'em',
-  callback: function (settings, index, length) {
-    var $this = $(this);
-    $this.append('<br>' + JSON.stringify($this.data('gumboot')));
-  },
-});
+<script>
+  $.fn.gumboot.defaults = {
+    separator: '-',
+  };
+  $('#demo ol li').gumboot({
+    selector: 'em',
+    callback: function (settings, index, length) {
+      var $this = $(this);
+      $this.append('<br>' + JSON.stringify($this.data('gumboot')));
+    },
+  });
+</script>
 ```
 
 **Results:**

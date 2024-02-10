@@ -77,29 +77,30 @@ $.fn.gumboot = function (options) {
 ```html
 <div id="demo">
   <ol>
-    <li
-      >Customer A<br /><em>Joined - 2001</em> | <em>Last Rental - SUV</em> |
-      <em>Purpose - Business</em></li
-    >
-    <li
-      >Customer B<br /><em>Joined - 2009</em> | <em>Last Rental - Hybrid</em> |
-      <em>Purpose - Business</em> | <em>Current Customer - Yes</em></li
-    >
-    <li
-      >Customer C<br /><em>Joined - 2012</em> | <em>Last Rental - Minivan</em> |
-      <em>Purpose - Personal</em></li
-    >
+    <li>
+      Customer A <br />
+      <em>Joined - 2001</em> | <em>Last Rental - SUV</em> |
+      <em>Purpose - Business</em>
+    </li>
+    <li>
+      Customer B <br />
+      <em>Joined - 2009</em> | <em>Last Rental - Hybrid</em> |
+      <em>Purpose - Business</em> | <em>Current Customer - Yes</em>
+    </li>
+    <li>
+      Customer C <br />
+      <em>Joined - 2012</em> | <em>Last Rental - Minivan</em> |
+      <em>Purpose - Personal</em>
+    </li>
   </ol>
 </div>
 ```
 
 ```javascript
-// Globally modify the plugin's defaults.
 $.fn.gumboot.defaults = {
   separator: '-',
 }
 
-// Assign data to list items with a callback to use it immediately.
 $('#demo ol li').gumboot({
   selector: 'em',
   callback: function (settings, index, length) {

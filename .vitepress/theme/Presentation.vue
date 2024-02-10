@@ -40,7 +40,7 @@ const prevPost = computed(() => presentations[findCurrentIndex() + 1])
 </script>
 
 <template>
-  <article>
+  <article class="vp-doc">
     <header>
       <h1 class="text-center">
         {{ frontmatter.title }}

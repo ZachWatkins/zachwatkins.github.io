@@ -7,7 +7,7 @@ import { data as presentations } from './presentations.data.js'
     <Content />
     <ul class="list-none ml-0">
       <li v-for="{ title, url, date, excerpt } of presentations">
-        <article>
+        <article class="vp-doc">
           <div>
             <div>
               <h2 class="mb-0">
@@ -24,7 +24,6 @@ import { data as presentations } from './presentations.data.js'
               <span class="float-left mr-2">&mdash;</span>
               <div
                 v-if="excerpt"
-                class="italic"
                 v-html="excerpt"
               ></div>
             </div>

@@ -239,12 +239,8 @@ html:not(.dark) .vp-code span {
 
 /** --> Table of contents */
 .table-of-contents {
-  border-radius: 0.5rem;
-  background-color: hsla(0, 0%, 0%, 0.5);
-  border: 1px solid hsla(50, 92%, 59%, 50%);
   font-size: 1.25rem;
   line-height: 1.75;
-  margin-bottom: 2rem;
   margin-top: 1rem;
 }
 
@@ -273,6 +269,15 @@ html:not(.dark) .vp-code span {
 .table-of-contents li a:focus,
 .table-of-contents li a:active {
   text-decoration: underline;
+}
+
+.table-of-contents + h2 {
+  margin-top: 1rem;
+}
+
+.vp-doc p:first-child + hr,
+.table-of-contents + h2 {
+  border-color: var(--javascript-yellow);
 }
 
 /* Override vp-doc styles. */

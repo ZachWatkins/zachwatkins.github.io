@@ -38,8 +38,6 @@ This presentation is an introduction to jQuery plugin development (using jQuery 
 
 [[toc]]
 
-Would you like to learn how to create a jQuery plugin? This presentation is an introduction to jQuery plugin development. It covers the basics of creating a simple jQuery plugin which follows recommended practices. The presentation demonstrates the basic jQuery plugin structure, how to allow for user extensions, and how to document your plugin. It also covers how to publish your plugin to NPM and how to manage your plugin's source code on Github.
-
 ## Example Plugin
 
 The example plugin is designed to parse the text content of an element into keys and values and attach the resulting JavaScript object to each element during runtime.

@@ -11,17 +11,20 @@ I have a presence on the following platforms, which I draw from to build this po
 
 <br style="clear:both" />
 
-GitHub https://github.com/zachwatkins
-
-CodePen https://codepen.io/zw
-
-WordPress https://profiles.wordpress.org/zachwtx/
-
-LinkedIn https://www.linkedin.com/in/zacharykwatkins/
-
-Twitter https://x.com/zachwatkinsv1
-
-Packagist https://packagist.org/users/zachwatkins/packages/
+<dl>
+  <dt>GitHub</dt>
+  <dd><a href="https://github.com/zachwatkins">https://github.com/zachwatkins</a></dd>
+  <dt>CodePen</dt>
+  <dd><a href="https://codepen.io/zw">https://codepen.io/zw</a></dd>
+  <dt>WordPress</dt>
+  <dd><a href="https://profiles.wordpress.org/zachwtx/">https://profiles.wordpress.org/zachwtx/</a></dd>
+  <dt>LinkedIn</dt>
+  <dd><a href="https://www.linkedin.com/in/zacharykwatkins/">https://www.linkedin.com/in/zacharykwatkins/</a></dd>
+  <dt>Twitter</dt>
+  <dd><a href="https://x.com/zachwatkinsv1">https://x.com/zachwatkinsv1</a></dd>
+  <dt>Packagist</dt>
+  <dd><a href="https://packagist.org/users/zachwatkins/packages/">https://packagist.org/users/zachwatkins/packages/</a></dd>
+</dl>
 
 ## Photos
 

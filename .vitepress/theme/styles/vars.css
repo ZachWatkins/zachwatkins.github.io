@@ -15,6 +15,7 @@
   --computer-green-rgb: rgb(0, 119, 0);
   --error: #ff0000;
   --success: #00ff00;
+  --section-spacing: 48px;
 }
 /**
  * Colors: Solid

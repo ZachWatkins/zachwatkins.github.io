@@ -242,6 +242,14 @@ html:not(.dark) .vp-code span {
   font-size: 1.25rem;
   line-height: 1.75;
   margin-top: 1rem;
+  margin-bottom: var(--section-spacing);
+  border-color: var(--javascript-yellow);
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+hr + .table-of-contents {
+  border-top-width: 0;
 }
 
 .table-of-contents ul {
@@ -271,12 +279,19 @@ html:not(.dark) .vp-code span {
   text-decoration: underline;
 }
 
+/* Resolve spacing after the table of contents. */
 .table-of-contents + h2 {
-  margin-top: 1rem;
+  margin-top: 0;
+  border-top-width: 0;
+  padding-top: 0;
 }
 
+p:first-child + hr {
+  margin-top: 1.5rem;
+}
+
+.vp-doc hr:first-child,
 .vp-doc p:first-child + hr,
-.vp-doc h1:first-child + hr,
 .table-of-contents + h2 {
   border-color: var(--javascript-yellow);
 }

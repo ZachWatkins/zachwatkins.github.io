@@ -280,7 +280,8 @@ hr + .table-of-contents {
 }
 
 /* Resolve spacing after the table of contents. */
-.table-of-contents + h2 {
+.table-of-contents + h2,
+.vp-doc .table-of-contents + h2 {
   margin-top: 0;
   border-top-width: 0;
   padding-top: 0;

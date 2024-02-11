@@ -3,8 +3,6 @@ title: Resources
 description: Websites, applications, and open source software I've published.
 ---
 
-# Resources
-
 Websites, applications, and open source software I've published.
 
 ## Open Source Packages

@@ -3,10 +3,6 @@ title: Career
 description: Zachary Watkins' career history, skills, accomplishments, and education.
 ---
 
-# Career
-
----
-
 [[toc]]
 
 ## Introduction

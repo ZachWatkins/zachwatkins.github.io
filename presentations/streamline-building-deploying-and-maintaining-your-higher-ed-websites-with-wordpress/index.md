@@ -12,6 +12,8 @@ This presentation is a case study of how I build, deploy, and maintain WordPress
 
 [[toc]]
 
+## Abstract
+
 WordPress is democratizing the way universities can build, deploy and maintain their digital properties. Without endless budgets and the need to get information out faster, AgriLife and Prairie View A&M University have turned to the CMS that powers 31% of the web to make their life easier. Hear how these departments use WordPress for continuous deployment, streamlining development and empowering teams to publish. The session will also explore how WordPress can lead to efficiencies from agile publishing to creating and launching internal processes.
 
 ## Slides

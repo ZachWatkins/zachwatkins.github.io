@@ -1,4 +1,4 @@
-(function () {
+;(function () {
   $.fn.gumboot = function (options) {
     var settings = $.extend(
       {
@@ -24,6 +24,6 @@
       if ($.isFunction(settings.callback)) {
         settings.callback.call(this, settings, index, length);
       }
-    })
-  }
+    });
+  };
 })();

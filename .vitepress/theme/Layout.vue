@@ -5,6 +5,7 @@ const { page, site, theme, frontmatter, params } = useData();
 import Header from './Header.vue';
 import Footer from './Footer.vue';
 import Home from './Home.vue';
+import Page from './Page.vue';
 import Article from './Article.vue';
 import Articles from './Articles.vue';
 import Presentation from './Presentation.vue';
@@ -32,12 +33,7 @@ import Presentations from './Presentations.vue';
     />
     <Presentations v-else-if="'presentations/index.md' === page.filePath" />
     <Presentation v-else-if="page.filePath.startsWith('presentations/')" />
-    <div
-      v-else-if="!page.isNotFound"
-      class="vp-doc"
-    >
-      <Content />
-    </div>
+    <Page v-else-if="!page.isNotFound" />
     <div v-else> Oh no! </div>
   </main>
   <Footer />

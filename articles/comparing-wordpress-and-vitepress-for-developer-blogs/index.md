@@ -45,10 +45,16 @@ I've given each framework a number score out of 3 for each area. Low scores are 
 
 ## Writing Experience for Developer Content
 
+::: info Figure 1.1: Amount of time and effort involved when writing developer content.
+
 |           | Time | Effort |
 | --------: | :--: | :----: |
 | VitePress |  1   |   1    |
 | WordPress |  2   |   2    |
+
+1 = lower, 3 = higher
+
+:::
 
 WordPress has a great writing experience, but writing articles is much easier with my IDE (Visual Studio Code). I write articles using markdown syntax and VitePress builds them to HTML files. If that's all I was doing then WordPress has the advantage due to the limitations of markdown syntax compared to the block editor.
 
@@ -62,10 +68,16 @@ There's no question that I would choose WordPress for any kind of website that n
 
 ## Content Discovery
 
+::: info Figure 1.2: Amount of time and effort involved when providing content discovery features for users.
+
 |           | Time | Effort |
 | --------: | :--: | :----: |
 | VitePress |  2   |   2    |
 | WordPress |  1   |   1    |
+
+1 = lower, 3 = higher
+
+:::
 
 WordPress has a built-in search feature that works well, and has post tags and categories that provide dynamic routes for post collections. It's hard to argue that a website without content in a database is better at providing content discovery than a website with content in a database.
 
@@ -75,10 +87,16 @@ I may be wrong, but to provide a search feature with filters and sorting I belie
 
 ## Custom Theme Development
 
+::: info Figure 1.3: Amount of time and effort involved when developing a custom theme.
+
 |           | Time | Effort |
 | --------: | :--: | :----: |
 | VitePress |  1   |   2    |
 | WordPress |  2   |   3    |
+
+1 = lower, 3 = higher
+
+:::
 
 I've developed custom themes for WordPress for years, and I've developed custom themes for VitePress for a few weeks. That being said, my comparison is based on making an identical custom theme with both frameworks.
 
@@ -94,10 +112,16 @@ Overall, I prefer VitePress for custom theme development because it's faster and
 
 ## Forms and Email
 
+::: info Figure 1.4: Amount of time and effort involved when providing forms and email features for users.
+
 |           | Time | Effort |
 | --------: | :--: | :----: |
 | VitePress |  3   |   2    |
 | WordPress |  2   |   1    |
+
+1 = lower, 3 = higher
+
+:::
 
 Without server scripting, I can't send email, receive form submissions, or store them in a database. I can use a third party service for these things, but I have to consider the financial cost and level of effort to implement and maintain each service. With WordPress, I can send email, receive form submissions, and store them in a database by writing my own PHP scripts or using plugins. I've implemented these features for long enough to know it's a piece of cake with WordPress and just takes some time to set up plugins.
 
@@ -105,10 +129,16 @@ If I had to pick an ideal solution for doing this with VitePress, I would use Go
 
 ## Cost, Hosting, and Maintenance
 
+::: info Figure 1.5: Amount of time, effort, and cost involved with hosting and maintaining a website.
+
 |           | Time | Effort | Cost |
 | --------: | :--: | :----: | :--: |
 | VitePress |  1   |   1    |  1   |
 | WordPress |  3   |   2    |  3   |
+
+1 = lower, 3 = higher
+
+:::
 
 A static website is quick, easy, and more affordable to host and maintain than a Linux server running Apache or NGINX, MySQL, and PHP.
 
@@ -124,10 +154,16 @@ If I use page caching for WordPress to improve load times, then I'll need to ens
 
 ## Analytics
 
+::: info Figure 1.6: Amount of time and effort involved when adding and monitoring analytics for a website.
+
 |           | Time | Effort |
 | --------: | :--: | :----: |
 | VitePress |  2   |   2    |
 | WordPress |  1   |   1    |
+
+1 = lower, 3 = higher
+
+:::
 
 Hands-down the easiest time I'll have adding analytics to a blog is with WordPress. I can self-host analytics logic and data, or use a plugin (Jetpack, Monster Insights, etc.) and configure the third party service's credentials. Plugins can embed analytics data in the WordPress admin user interface which makes it quick and easy to check. If the content writing experience for my developer blog weren't so much better with VitePress, I would have stuck with WordPress for its ease of implementation for site analytics and content discovery.
 
@@ -135,10 +171,16 @@ It's easy enough to add Google Analytics to a VitePress site and check it in the
 
 ## Security
 
+::: info Figure 1.7: Amount of time and effort involved when securing a website.
+
 |           | Time | Effort |
 | --------: | :--: | :----: |
 | VitePress |  1   |   1    |
 | WordPress |  3   |   2    |
+
+1 = lower, 3 = higher
+
+:::
 
 Without a database, users, or public forms, there's not much to secure with a VitePress site. I just need an SSL certificate and a good hosting provider. If and when I need forms, like a newsletter or contact form, then I can try a third party service, but if the level of effort or cost is too high then I may consider switching back to WordPress.
 
@@ -146,10 +188,16 @@ When installed correctly and on a good hosting provider, WordPress Core is gener
 
 ## Conclusion
 
+::: info Figure 2: Amount of time and effort involved when creating a developer blog and portfolio website.
+
 |           | Time | Effort | Cost |
 | --------: | :--: | :----: | :--: |
 | VitePress |  11  |   11   |  1   |
 | WordPress |  14  |   12   |  3   |
+
+Lower scores are better.
+
+:::
 
 It's close but I'm not that surprised. The best way I can explain this score is that the time saved with using WordPress to provide the features that most developer blogs have is offset by the additional time and effort to develop its custom theme and maintain the site long-term.
 

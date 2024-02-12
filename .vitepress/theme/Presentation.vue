@@ -47,9 +47,7 @@ const prevPost = computed(() => presentations[findCurrentIndex() + 1]);
       </h1>
       <dl class="text-center text-2xl font-family-prose mb-4">
         <dt class="inline-block">By&nbsp;</dt>
-        <dd class="inline-block">
-          <a href="/career/">{{ theme.author }}</a>
-        </dd>
+        <dd class="inline-block">{{ theme.author }}</dd>
       </dl>
       <dl class="text-xl font-family-prose leading-8 italic mb-4">
         <dt class="inline">Presented on&nbsp;</dt>

@@ -1,0 +1,199 @@
+#viewport {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+#grid-wrapper {
+  position: relative;
+  margin: 0;
+  background: #bbb;
+}
+
+#grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#ui {
+  font:
+    12px/12px Arial,
+    Helvetica,
+    sans-serif;
+  background: #999;
+  margin: 2px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: 150px;
+  z-index: 1000;
+  display: none;
+}
+
+#ui.show {
+  display: block;
+}
+
+#ui * {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#ui > label,
+#ui button {
+  display: block;
+  background: #eee;
+  color: #000;
+  padding: 3px;
+  border-width: 0;
+  margin: 1px 0 0;
+  text-align: left;
+  font:
+    12px/12px Arial,
+    Helvetica,
+    sans-serif;
+  cursor: pointer;
+}
+
+#ui button:first-child {
+  margin-top: 0;
+}
+
+#ui > label:after {
+  content: '+';
+  display: block;
+  float: right;
+  margin-right: 2px;
+}
+
+#ui > label.expanded:after {
+  content: '-';
+}
+
+#ui > label.expanded + fieldset {
+  display: block;
+}
+
+#ui fieldset {
+  border: 0 none;
+  padding: 5px;
+  margin: 0;
+  display: none;
+}
+
+#ui fieldset > * {
+  width: 50%;
+  float: left;
+}
+
+#ui fieldset label {
+  display: inline-block;
+  clear: left;
+  line-height: 21.5px;
+}
+
+#ui fieldset input {
+  display: inline-block;
+}
+
+#ui #size.full ~ label[for='canvaswidth'],
+#ui #size.full ~ #canvaswidth,
+#ui #size.full ~ label[for='canvasheight'],
+#ui #size.full ~ #canvasheight {
+  display: none;
+}
+
+#svgui-wrapper {
+  position: absolute;
+  border: 2px solid #000;
+  background: #fff;
+  z-index: 1000;
+  display: none;
+  color: #000;
+  width: 150px;
+  font:
+    12px consolas,
+    monospace;
+}
+
+#svgui-wrapper.active {
+  display: block;
+}
+
+#svgui {
+  margin: 0;
+  padding: 4px;
+}
+
+#svgui label,
+#svgui input {
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+#svgui label {
+  text-align: right;
+  padding-right: 6px;
+}
+
+#svgui input.x,
+#svgui input.y,
+#svgui input.x1,
+#svgui input.y1,
+#svgui input.x2,
+#svgui input.y2,
+#svgui input.cx,
+#svgui input.cy,
+#svgui input.r {
+  width: 34%;
+}
+
+#svgui label.x,
+#svgui label.y,
+#svgui label.x1,
+#svgui label.y1,
+#svgui label.x2,
+#svgui label.y2,
+#svgui label.cx,
+#svgui label.cy,
+#svgui label.r {
+  width: 16%;
+}
+
+#svgui input.r {
+  margin-right: 10%;
+}
+
+#svgui .disabled {
+  display: none;
+}
+
+#svgui-close {
+  position: absolute;
+  right: -9px;
+  top: -9px;
+  width: 18px;
+  height: 18px;
+  line-height: 1px;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: top;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 9px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+svg .line,
+svg .circle,
+svg .square {
+  /*   transition: stroke-width 1s linear; */
+  cursor: pointer;
+}

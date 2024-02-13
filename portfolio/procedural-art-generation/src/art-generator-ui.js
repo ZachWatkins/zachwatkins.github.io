@@ -6,9 +6,8 @@ export const ui = {
     refresh: ['button'],
     save: ['button'],
     canvas: {
-      size: ['select', 'options:full,custom'],
-      width: ['input', 'type:number', 'value:640'],
-      height: ['input', 'type:number', 'value:200'],
+      width: ['input', 'type:number', 'value:'],
+      height: ['input', 'type:number', 'value:'],
       xbuffer: ['input', 'type:number', 'value:10', 'min:0'],
       ybuffer: ['input', 'type:number', 'value:10', 'min:0'],
     },
@@ -47,18 +46,24 @@ export const ui = {
     svgstring += new XMLSerializer().serializeToString(svg);
     var datauri = 'data:image/svg+xml;base64,';
     datauri += window.btoa(svgstring);
+    console.log(datauri);
     window.open(datauri);
   },
   setSVGDimensions: function (e) {
+    e.preventDefault();
     var width, height;
-    if (this.canvas.size.value == 'custom') {
-      width = this.canvas.width.value;
-      height = this.canvas.height.value;
+    var reference = document.querySelector('#viewport');
+    if (this.canvas.width.value) {
+      width = parseInt(this.canvas.width.value);
     } else {
-      var reference = document.querySelector('#viewport');
       width = reference.offsetWidth - 1;
-      height = window.innerHeight - 1;
     }
+    if (this.canvas.height.value) {
+      height = parseInt(this.canvas.height.value);
+    } else {
+      height = (width / 16) * 9;
+    }
+    console.log('setting svg dimensions', width, height);
 
     svg.setdimensions(width, height);
   },
@@ -82,15 +87,18 @@ ui.closeForm = function (e) {
 };
 
 ui.openForm = function (e) {
-  if (e.clientX < 10 && e.clientY < 10) {
+  // If the mouse is moving over the svg element, then show the form.
+  var svgBounds = svg.el.getBoundingClientRect();
+  if (
+    e.clientX > svgBounds.left &&
+    e.clientX < svgBounds.right &&
+    e.clientY > svgBounds.top &&
+    e.clientY < svgBounds.bottom
+  ) {
     this.form.classList.add('show');
+  } else {
+    this.form.classList.remove('show');
   }
-};
-
-ui.refreshView = function (e) {
-  e.preventDefault();
-  refreshLines();
-  refreshCircles();
 };
 
 ui.updateLineWidths = function (e) {
@@ -116,7 +124,7 @@ ui.init = function (e) {
   this.canvas.ybuffer.max = Math.floor(grid.offsetHeight / 2);
 };
 
-ui.generate = function () {
+ui.render = function (target) {
   // Generate form elements
   this.form.action = '';
   this.form.id = 'ui';
@@ -199,12 +207,19 @@ ui.generate = function () {
     }
   }
 
-  document.body.appendChild(this.form);
+  target.appendChild(this.form);
 };
 
-ui.once = function () {
-  this.generate();
+ui.once = function ({ root, refresh }) {
+  ui.refreshView = function (e) {
+    e.preventDefault();
+    refresh();
+  };
+  this.render(root);
   this.addEvents();
+
+  this.canvas.width.value = root.offsetWidth;
+  this.canvas.height.value = root.offsetHeight;
 
   // Add event listeners
   var menus = document.querySelectorAll('#ui > label');
@@ -217,13 +232,15 @@ ui.once = function () {
 };
 
 ui.addEvents = function () {
-  this.canvas.size.addEventListener('change', this.changeCanvasSize.bind(this));
+  this.form.addEventListener('submit', function (e) {
+    e.preventDefault();
+  });
   this.canvas.width.addEventListener('keyup', this.setSVGDimensions.bind(this));
   this.canvas.height.addEventListener(
     'keyup',
     this.setSVGDimensions.bind(this),
   );
-  this.close.addEventListener('click', this.closeForm.bind(this));
+  this.close.addEventListener('mouseup', this.closeForm.bind(this));
   this.lines.count.addEventListener(
     'change',
     this.updateDiagonalValues.bind(this),
@@ -232,12 +249,9 @@ ui.addEvents = function () {
     'change',
     this.updateLineWidths.bind(this),
   );
-  this.refresh.addEventListener('click', this.refreshView.bind(this));
-  this.save.addEventListener('click', this.saveEvent);
+  this.refresh.addEventListener('mouseup', this.refreshView.bind(this));
+  this.save.addEventListener('mouseup', this.saveEvent);
 
   window.addEventListener('resize', this.init.bind(this));
   window.addEventListener('mousemove', this.openForm.bind(this));
 };
-
-// Initialize
-ui.once();

@@ -1,10 +1,6 @@
-import { ui } from './art-generator-ui.js';
 import { svg } from './art-generator-svg.js';
-
-// Create SVG elements
-svg.createElements('line', ui.lines.count.value);
-svg.createElements('circle', ui.circles.count.value);
-svg.createElements('square', ui.squares.count.value);
+import { ui } from './art-generator-ui.js';
+import './styles.css';
 
 var refreshLines = function () {
   var grid = document.querySelector('#grid'),
@@ -61,14 +57,14 @@ var refreshLines = function () {
         }
 
         /* Line function: y = mx + b
-                Line function for top edge:
-                m = 0, b = 0 - d, y = 0 - d
-                Line function for bottom edge:
-                m = 0, b = svgheight + d, y = svgheight + d
-                Get x value for intersection between two lines:
-                m1 * x + b1 = m2 * x + b2
-                or
-                x = (b2 - b1) / (m1 - m2) */
+					Line function for top edge:
+					m = 0, b = 0 - d, y = 0 - d
+					Line function for bottom edge:
+					m = 0, b = svgheight + d, y = svgheight + d
+					Get x value for intersection between two lines:
+					m1 * x + b1 = m2 * x + b2
+					or
+					x = (b2 - b1) / (m1 - m2) */
 
         var m = (p1[1] - p2[1]) / (p1[0] - p2[0]),
           b = parseInt(p1[1] - m * p2[0]),
@@ -235,32 +231,57 @@ function getYIntersect(m1, b1, m2, b2) {
   return parseInt((b2 - b1) / (m1 - m2));
 }
 
-// Keyboard functionality
-window.addEventListener('keyup', function (e) {
-  var keys = [];
-  keys[8] = true; // delete
-  keys[46] = true; // delete
+function addEvents() {
+  // Keyboard functionality
+  window.addEventListener('keyup', function (e) {
+    var keys = [];
+    keys[8] = true; // delete
+    keys[46] = true; // delete
 
-  if (!keys[e.keyCode]) {
-    return;
-  }
+    if (!keys[e.keyCode]) {
+      return;
+    }
 
-  e.preventDefault();
+    e.preventDefault();
 
-  switch (e.keyCode) {
-    case 8:
-    case 46:
-      if (svg.mouse.target && e.target.tagName.toUpperCase() != 'INPUT') {
-        svg.el.removeChild(svg.mouse.target);
-        svg.mouse.target = null;
-      }
-      break;
-    default:
-      break;
-  }
-});
+    switch (e.keyCode) {
+      case 8:
+      case 46:
+        if (svg.mouse.target && e.target.tagName.toUpperCase() != 'INPUT') {
+          svg.el.removeChild(svg.mouse.target);
+          svg.mouse.target = null;
+        }
+        break;
+      default:
+        break;
+    }
+  });
+}
 
-// Initialize
-refreshLines();
-refreshCircles();
-refreshSquares();
+export function init(root) {
+  console.log('init');
+  // Create the UI.
+  ui.once({
+    root,
+    refresh: function () {
+      console.log('refresh');
+      // Populate dynamic UI field values.
+      refreshLines();
+      refreshCircles();
+      refreshSquares();
+    },
+  });
+
+  // Create SVG elements.
+  svg.createElements('line', ui.lines.count.value);
+  svg.createElements('circle', ui.circles.count.value);
+  svg.createElements('square', ui.squares.count.value);
+
+  // Add event listeners.
+  addEvents();
+
+  // Populate dynamic UI field values.
+  refreshLines();
+  refreshCircles();
+  refreshSquares();
+}

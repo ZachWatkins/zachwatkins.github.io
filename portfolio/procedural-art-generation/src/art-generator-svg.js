@@ -228,6 +228,9 @@ svg.mouse.mode.func = function () {
 };
 
 svg.setdimensions = function (width, height) {
+  if (!height) {
+    height = (width / 16) * 9;
+  }
   this.el.setAttribute('width', width);
   this.el.setAttribute('height', height);
 
@@ -247,7 +250,7 @@ svg.init = function () {
 
   this.el.setAttribute('xmlns', this.ns);
   this.el.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
-  this.setdimensions(window.innerWidth - 1, window.innerHeight - 1);
+  this.setdimensions(grid.offsetWidth);
   this.el.style.cssText =
     'position:absolute;z-index:999;background-color:rgba(255,255,255,0.9);';
 

@@ -3,7 +3,7 @@ import { svg } from './art-generator-svg.js';
 export const ui = {
   form: document.createElement('form'),
   elements: {
-    refresh: ['button'],
+    randomize: ['button'],
     save: ['button'],
     canvas: {
       width: ['input', 'type:number', 'value:'],
@@ -40,14 +40,21 @@ export const ui = {
   },
   saveEvent: function (e) {
     e.preventDefault();
-    var svg = document.querySelector('svg');
-    var svgstring =
-      '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
-    svgstring += new XMLSerializer().serializeToString(svg);
-    var datauri = 'data:image/svg+xml;base64,';
-    datauri += window.btoa(svgstring);
-    console.log(datauri);
-    window.open(datauri);
+
+    var serializer = new XMLSerializer();
+    var svgBlob = new Blob([serializer.serializeToString(svg.el)], {
+      type: 'image/svg+xml',
+    });
+    var url = URL.createObjectURL(svgBlob);
+
+    var downloadLink = document.createElement('a');
+    downloadLink.href = url;
+    downloadLink.download = 'my-svg.svg';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+    console.log(url);
+    URL.revokeObjectURL(url);
   },
   setSVGDimensions: function (e) {
     e.preventDefault();
@@ -249,7 +256,7 @@ ui.addEvents = function () {
     'change',
     this.updateLineWidths.bind(this),
   );
-  this.refresh.addEventListener('mouseup', this.refreshView.bind(this));
+  this.randomize.addEventListener('mouseup', this.refreshView.bind(this));
   this.save.addEventListener('mouseup', this.saveEvent);
 
   window.addEventListener('resize', this.init.bind(this));

@@ -11,8 +11,7 @@ const { frontmatter } = useData();
   <h1 class="leading-10 text-center md:text-6xl mb-8 md:leading-tight"
     ><span class="font-extrabold"
       >{{ frontmatter.hero.title }}<br class="hidden md:block" /></span
-    ><span class="ml-2">{{ frontmatter.hero.subtitle }}</span></h1
-  >
+  ></h1>
   <div
     class="pl-2 pr-2 md:pl-0 md:pr-0 md:text-left font-family-heading text-2xl vp-doc"
   >
@@ -75,6 +74,8 @@ const { frontmatter } = useData();
       >, or via email at
       <a href="mailto:zach@zachwatkins.dev">zach&#64;zachwatkins.dev</a>.
     </p>
+    <br class="clear-both" />
+    <Content />
     <ArticleListing
       v-if="articles.length > 0"
       :article="articles[0]"
@@ -84,5 +85,4 @@ const { frontmatter } = useData();
       :presentation="presentations[0]"
     />
   </div>
-  <Content />
 </template>

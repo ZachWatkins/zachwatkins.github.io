@@ -11,7 +11,7 @@ date: 2024-02-11
   });
 </script>
 
-Years ago, I played around with the idea of randomly generating abstract, non-representational, geometric art using JavaScript and SVG. The idea was to codify certain design principles and parameters and then generate random values within those constraints. I really like the result and may revisit this in the future by adding some kind of animation.
+Years ago (maybe 2016), I played around with the idea of randomly generating abstract, non-representational, geometric art using JavaScript and SVG. The idea was to codify certain design principles and parameters and then generate random values within those constraints. I really like the result and may revisit this in the future by adding some kind of animation.
 
 It's even interactive! Click and drag the shapes :thumbsup:
 

@@ -249,6 +249,18 @@ svg.init = function () {
 
   this.el.setAttribute('xmlns', this.ns);
   this.el.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
+
+  // Create a title element for the SVG document.
+  var title = document.createElementNS(this.ns, 'title');
+  title.textContent = 'Generative Art from zacharywatkins.com';
+  this.el.appendChild(title);
+
+  // Create a description element for the SVG document.
+  var desc = document.createElementNS(this.ns, 'desc');
+  desc.textContent =
+    'By Zachary Watkins, Math.random(), and maybe you if you changed the input parameters.';
+  this.el.appendChild(desc);
+
   this.setdimensions(grid.offsetWidth);
   this.el.style.cssText =
     'position:absolute;z-index:999;background-color:rgba(255,255,255,0.9);';

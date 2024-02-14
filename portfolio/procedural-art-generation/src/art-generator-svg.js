@@ -99,8 +99,7 @@ svg.removeElements = function (type, count) {
 };
 
 svg.changeElementCount = function (type, value) {
-  type += 's';
-  var length = this[type].length,
+  var length = this[type + 's'].length,
     diff = Math.abs(value - length);
   if (length < value) {
     this.createElements(type, diff);

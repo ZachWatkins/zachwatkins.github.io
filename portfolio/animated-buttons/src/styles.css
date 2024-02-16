@@ -1,0 +1,223 @@
+.webfont {
+  visibility: hidden;
+}
+.wf-active .webfont {
+  visibility: visible;
+}
+.sanchez {
+  font-family: 'Sanchez', serif;
+  font-weight: 700;
+}
+.arvo-700 {
+  font-family: 'Arvo', serif;
+  font-weight: 700;
+}
+.homenaje {
+  font-family: 'Homenaje', sans-serif;
+  font-weight: 700;
+}
+.montserrat-700 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700;
+}
+.boogaloo {
+  font-family: 'Boogaloo', sans-serif;
+  font-weight: 400;
+}
+.averia-sans-libre-italic-700 {
+  font-family: 'Averia Sans Libre';
+  font-style: italic;
+  font-weight: 700;
+}
+.fontchanger {
+  box-sizing: content-box;
+  font-size: 12pt;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  padding: 5px 10px;
+  background-color: maroon;
+  color: #fff;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: bottom;
+}
+.fontchanger#sanchez,
+.fontchanger#sanchez:hover ~ .button {
+  font-family: 'Sanchez', serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.fontchanger#arvo-700,
+.fontchanger#arvo-700:hover ~ .button {
+  font-family: 'Arvo', serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.fontchanger#homenaje,
+.fontchanger#homenaje:hover ~ .button {
+  font-family: 'Homenaje', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.fontchanger#montserrat-700,
+.fontchanger#montserrat-700:hover ~ .button {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.fontchanger#boogaloo,
+.fontchanger#boogaloo:hover ~ .button {
+  font-family: 'Boogaloo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.fontchanger#averia-sans-libre-italic-700,
+.fontchanger#averia-sans-libre-italic-700:hover ~ .button {
+  font-family: 'Averia Sans Libre';
+  font-style: italic;
+  font-weight: 700;
+}
+.colorchanger {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+#red.colorchanger,
+#red.colorchanger:hover ~ .button {
+  background-color: red;
+  border-color: red;
+}
+#orange.colorchanger,
+#orange.colorchanger:hover ~ .button {
+  background-color: orange;
+  border-color: orange;
+}
+#yellow.colorchanger,
+#yellow.colorchanger:hover ~ .button {
+  background-color: yellow;
+  border-color: yellow;
+}
+#green.colorchanger,
+#green.colorchanger:hover ~ .button {
+  background-color: green;
+  border-color: green;
+}
+#blue.colorchanger,
+#blue.colorchanger:hover ~ .button {
+  background-color: blue;
+  border-color: blue;
+}
+#indigo.colorchanger,
+#indigo.colorchanger:hover ~ .button {
+  background-color: indigo;
+  border-color: indigo;
+}
+#violet.colorchanger,
+#violet.colorchanger:hover ~ .button {
+  background-color: violet;
+  border-color: violet;
+}
+p {
+  padding: 0;
+  margin: 10px 0;
+}
+.button .fa {
+  position: absolute;
+  left: 5px;
+  top: -1px;
+  vertical-align: baseline;
+  opacity: 0.3;
+  font-size: 38pt;
+  color: rgb(221, 221, 221);
+  transition: color 0.25s linear;
+  -webkit-transition: color 0.25s linear;
+  text-shadow: 1px 1px 2px #000;
+}
+.button .fa + span {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 2px #000;
+  display: block;
+}
+a.button {
+  overflow: hidden;
+  position: relative;
+  font-size: 19px;
+  display: inline-block;
+  padding: 10px 20px 10px;
+  margin: 5px;
+  border-radius: 9px 9px 9px 9px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #c71444;
+  box-shadow:
+    0 -3px 3px rgba(0, 0, 0, 0.2) inset,
+    0 3px 3px rgba(255, 255, 255, 0.45) inset,
+    0 3px 4px #000,
+    0 12px 12px rgba(255, 255, 255, 0.23) inset;
+  overflow: hidden;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.23) 12%,
+      rgba(255, 255, 255, 0) 29%
+    )
+    #c71444;
+  transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
+  z-index: 1;
+}
+a.button:hover {
+  color: #fff;
+  box-shadow:
+    0 -3px 3px rgba(0, 0, 0, 0.2) inset,
+    0 3px 3px rgba(255, 255, 255, 0.45) inset,
+    0 3px 4px #000,
+    0px 0px 32px #fff inset;
+}
+.button:hover .fa {
+  color: rgb(255, 255, 0);
+}
+.button hr {
+  display: block;
+  border: 0 none;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: -10px;
+  left: 0%;
+  margin-left: -30px;
+  z-index: 555;
+  transform: skew(-15deg);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 29%,
+    rgba(255, 255, 255, 0.01) 99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: all 0.75s ease-out;
+  -webkit-transition: all 0.75s ease-out;
+}
+.button:hover hr {
+  left: 100%;
+  margin-left: 0;
+}
+.button span + span {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 11px;
+  top: 0px;
+  right: -43px;
+  opacity: 0;
+  transition: all 0.75s ease-out;
+  -webkit-transition: all 0.75s ease-out;
+  font:
+    normal 11px Arial,
+    Helvetica,
+    sans-serif;
+}
+.button:hover span + span {
+  right: 3px;
+  opacity: 1;
+}

@@ -21,7 +21,7 @@ import Presentations from './Presentations.vue';
   </main>
   <main class="pl-5 pr-5 w-full m-auto flex-grow">
     <Home v-if="'index.md' === page.filePath" />
-    <Articles v-if="'articles/index.md' === page.filePath" />
+    <Articles v-else-if="'articles/index.md' === page.filePath" />
     <Articles
       v-else-if="page.filePath.startsWith('articles/tags') && params?.tag"
     />

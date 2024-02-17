@@ -13,7 +13,8 @@ hero:
 <script setup>
   import { onMounted } from 'vue';
   onMounted(async () => {
-    import('./portfolio/procedural-art-generation/src/main.js');
+    const main = await import('./portfolio/procedural-art-generation/src/art-generator.js');
+    main.createApp(document.querySelector('#viewport'));
   });
 </script>
 

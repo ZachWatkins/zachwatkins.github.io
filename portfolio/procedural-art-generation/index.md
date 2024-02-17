@@ -7,7 +7,8 @@ date: 2024-02-11
 <script setup>
   import { onMounted } from 'vue';
   onMounted(async () => {
-    import('./src/main.js');
+    const main = await import('./src/art-generator.js');
+    main.createApp(document.querySelector('#viewport'));
   });
 </script>
 

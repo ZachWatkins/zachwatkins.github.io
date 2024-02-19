@@ -21,7 +21,7 @@ export default {
 input[type='text'] {
   font-size: 18px;
   padding: 8px 10px;
-  border: 2px solid #000;
+  border: 2px solid;
   text-align: left;
 }
 </style>

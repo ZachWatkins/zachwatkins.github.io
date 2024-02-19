@@ -82,7 +82,7 @@ export default {
   margin: 10px 0;
   max-width: 400px;
   margin: 10px auto;
-  border: 1px solid #000;
+  border: 1px solid;
   padding: 10px;
   text-align: left;
 }

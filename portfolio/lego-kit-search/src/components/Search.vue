@@ -26,10 +26,9 @@ export default {
 <style scoped>
 #results {
   margin: 10px 0;
-  color: #00AA00;
   max-width: 400px;
   margin: 10px auto;
-  border: 1px solid #000;
+  border: 1px solid;
   padding: 10px;
   text-align: left;
 }
@@ -43,8 +42,5 @@ ul {
 }
 li {
   list-style-type: none;
-}
-a {
-  color: #42b983;
 }
 </style>

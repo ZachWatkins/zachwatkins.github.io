@@ -10,13 +10,7 @@ import Home from './views/Home.vue';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   font-size: 18px;
-  background-color: #fff;
   padding: 30px;
-}
-
-#main a {
-  color: #42b983;
 }
 </style>

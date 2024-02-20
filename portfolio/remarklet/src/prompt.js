@@ -11,6 +11,20 @@
  */
 export function createPrompt(prefix) {
   var $ = window.jQuery;
+  var ui = {
+    window: $('<div id="remarklet-prompt-window"></div>').on(
+      'keydown',
+      keydown,
+    ),
+    form: $('<form></form>'),
+    content: $('<div id="remarklet-prompt-content"></div>'),
+    submit: $(
+      '<button id="remarklet-prompt-submit" type="button">Submit</button>',
+    ).on('click', submit),
+    cancel: $(
+      '<button id="remarklet-prompt-cancel" type="button">Cancel</button>',
+    ).on('click', close),
+  };
   var callback, formobj;
   var open = function (args) {
     if (typeof args.form == 'string') {
@@ -44,13 +58,6 @@ export function createPrompt(prefix) {
     }
     ui.form.html('');
   };
-  var ui = {
-    window: $('<div></div>').on('keydown', keydown),
-    form: $('<div></div>'),
-    content: $('<div></div>'),
-    submit: $('<button type="button">Submit</button>').on('click', submit),
-    cancel: $('<button type="button">Cancel</button>').on('click', close),
-  };
   var keydown = function (e) {
     e.stopPropagation();
     if (e.keyCode == 27) {
@@ -59,19 +66,15 @@ export function createPrompt(prefix) {
       close();
     }
   };
+
+  ui.content
+    .append(ui.form)
+    .append(ui.submit)
+    .append(ui.cancel)
+    .appendTo(ui.window);
+  ui.window.appendTo('body');
+
   return {
-    init: function () {
-      var key;
-      for (key in ui) {
-        ui[key].attr('id', prefix + '-prompt-' + key);
-      }
-      ui.content
-        .append(ui.form)
-        .append(ui.submit)
-        .append(ui.cancel)
-        .appendTo(ui.window);
-      ui.window.appendTo('body');
-    },
     get: {
       window: function () {
         return ui.window;

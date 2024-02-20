@@ -11,6 +11,7 @@
 import * as $jq from './jquery-2.1.3';
 import * as $ui from './jquery-ui';
 import * as $ri from './rangyinputs';
+import './remarklet.css';
 import { createStylesheet } from './stylesheet';
 import { createDuplicate } from './duplicate';
 import { createPrompt } from './prompt';

@@ -20,7 +20,7 @@ export function createPrompt(prefix) {
     content: $('<div id="remarklet-prompt-content"></div>'),
     submit: $(
       '<button id="remarklet-prompt-submit" type="button">Submit</button>',
-    ).on('click', submit),
+    ),
     cancel: $(
       '<button id="remarklet-prompt-cancel" type="button">Cancel</button>',
     ).on('click', close),
@@ -43,14 +43,14 @@ export function createPrompt(prefix) {
     ui.form.find('input,textarea').first().focus();
     callback = args.callback;
   };
-  var submit = function () {
+  ui.submit.on('click', function (e) {
     var data = {};
     ui.form.find('*[name]').each(function () {
       data[this.name] = this.value;
     });
     callback(data);
     close();
-  };
+  });
   var close = function () {
     ui.window.focus().blur().hide();
     if (formobj) {

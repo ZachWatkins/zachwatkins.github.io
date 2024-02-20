@@ -9,8 +9,8 @@
  * @link        https://github.com/zachwatkins/remarklet
  * @license     https://spdx.org/licenses/MIT.html MIT License
  */
-import * as $ from './jquery-2.1.3';
-export function createPrompt() {
+export function createPrompt(prefix) {
+  var $ = window.jQuery;
   var callback, formobj;
   var open = function (args) {
     if (typeof args.form == 'string') {
@@ -60,7 +60,7 @@ export function createPrompt() {
     }
   };
   return {
-    init: function (prefix) {
+    init: function () {
       var key;
       for (key in ui) {
         ui[key].attr('id', prefix + '-prompt-' + key);

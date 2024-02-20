@@ -11,13 +11,14 @@
 import * as $jq from './jquery-2.1.3';
 import * as $ui from './jquery-ui';
 import * as $ri from './rangyinputs';
-import stylesheet from './stylesheet';
-import duplicate from './duplicate';
-import prompt from './prompt';
-import storedobject from './storedobject';
+import { createStylesheet } from './stylesheet';
+import { createDuplicate } from './duplicate';
+import { createPrompt } from './prompt';
+import { createStoredObject } from './storedobject';
 
 export function createRemarklet() {
   var $ = window.jQuery;
+  var stylesheet, duplicate, prompt, storedobject;
   var remarklet = {};
   var _getBlobURL =
     (window.URL && URL.createObjectURL.bind(URL)) ||
@@ -584,7 +585,6 @@ export function createRemarklet() {
           });
       },
       Restore: function () {
-        console.log('restore(' + _stored.pageSavedState + ')');
         if (_stored.pageSavedState !== '') {
           $b.children().not(views.retained).remove();
           // Prepend page state to body as string.
@@ -833,7 +833,6 @@ export function createRemarklet() {
       .not(':hidden')
       .not('.remarklet')
       .each(function (index, item) {
-        console.log(item.className);
         last++;
         var num = last;
         item.classList.add('remarklet');
@@ -846,25 +845,26 @@ export function createRemarklet() {
       element: views.usercss.get(0),
       indent: _stored.preferences.CSS_Editor.Indentation,
     };
-    stylesheet.init(cssOptions);
-    duplicate.init(cssOptions, {
+    stylesheet = createStylesheet(cssOptions);
+    duplicate = createDuplicate(stylesheet, cssOptions, {
       tag: false,
       id: false,
       classname: '.remarklet-[0-9]+',
     });
-    prompt.init('remarklet');
-    // Handle Preferences Storage
-    // BACKLOG: Preference update functionality.
+    prompt = createPrompt('remarklet');
+    // TODO: Preference storage and update functionality.
     // For now, all we are doing is pulling them from the server
     // to localStorage if they are not in localStorage already.
-    storedobject.init('remarklet-preferences', _stored.preferences);
+    storedobject = createStoredObject(
+      'remarklet-preferences',
+      _stored.preferences,
+    );
     if (_stored.userid) {
       _stored.userid = _stored.userid[1];
       var data = {};
       storedobject.set(data);
       storedobject.publish('/update/', data);
       _stored.preferences = data;
-      console.log(_stored.preferences);
     }
 
     /* Add UI Elements to page. */

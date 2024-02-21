@@ -20,7 +20,8 @@
 		  its children do not have, using the ID and class from <clone> for the new rule's CSS selector.
 */
 export function createDuplicate(stylesheet, args, selectoroptions) {
-  var addRule, selectorSettings;
+  var addRule = stylesheet.setRule;
+  var selectorSettings = selectoroptions || {};
   var getSelector = function (el) {
     var value = el.tagName.toLowerCase(),
       id = el.id,
@@ -149,11 +150,6 @@ export function createDuplicate(stylesheet, args, selectoroptions) {
     return values;
   };
   return {
-    init: function (args, selectoroptions) {
-      stylesheet.init(args);
-      addRule = stylesheet.setRule;
-      selectorSettings = selectoroptions || {};
-    },
     create: function (original, destination, attrs) {
       if (typeof original === 'string') {
         original = document.querySelector(original);
@@ -202,7 +198,7 @@ export function createDuplicate(stylesheet, args, selectoroptions) {
           origEl = originalChildren[i - 1];
           cloneEl = cloneChildren[i - 1];
         }
-        cloneSelector = getSelectorsBetween(clone, cloneEl);
+        var cloneSelector = getSelectorsBetween(clone, cloneEl);
         // This is getting a little messy. We need to only add rules for Remarklet that
         // select the outermost element using ".remarklet-[0-9]" and nothing else. How
         // to provide such functionality in a module, which should be useable elsewhere,

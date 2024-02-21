@@ -6,7 +6,8 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["remarklet.iife.js"]
+      "js": ["remarklet.iife.js"],
+      "css": ["style.css"]
     }
   ]
 }

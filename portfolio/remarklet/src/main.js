@@ -1,7 +1,7 @@
 import { createRemarklet } from './remarklet';
 
 export function createApp() {
-    createRemarklet();
+  createRemarklet();
 }
 
 export default { createApp };

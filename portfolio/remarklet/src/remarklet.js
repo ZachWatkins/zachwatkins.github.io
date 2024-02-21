@@ -11,6 +11,7 @@
 import * as $jq from './jquery-2.1.3';
 import * as $ui from './jquery-ui';
 import * as $ri from './rangyinputs';
+import { findElementOffset } from './utils.js';
 import './remarklet.css';
 import { createStylesheet } from './stylesheet';
 import { createDuplicate } from './duplicate';
@@ -187,10 +188,6 @@ export function createRemarklet() {
               controllers.switchmode('text');
               e.preventDefault();
             } else if (e.altKey) {
-              // Resolve existing draggable instances.
-              /*$('.ui-draggable').each(function(){
-								$(this).trigger('dragstop').draggable('destroy');
-							});*/
               $('.ui-resizable,.ui-wrapper').each(function () {
                 var $this = $(this);
                 if ($this.resizable('instance') !== undefined) {
@@ -198,7 +195,6 @@ export function createRemarklet() {
                 }
               });
               _target.resizable(resizeOps);
-              //e.preventDefault();
             }
             break;
           case 86 /*V*/:
@@ -213,6 +209,12 @@ export function createRemarklet() {
               var dupe = duplicate.create(original, original, {
                 id: '',
                 class: 'remarklet remarklet-' + _stored.editcounter,
+              });
+              var offset = findElementOffset(original);
+              $(dupe).css({
+                position: 'absolute',
+                left: offset.left + 10,
+                top: offset.top + 10,
               });
               views.csstextarea.val(stylesheet.getString());
             }

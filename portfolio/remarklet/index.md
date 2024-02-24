@@ -7,8 +7,8 @@ date: 2024-02-20
 <script setup>
   import { onMounted } from 'vue';
   onMounted(async () => {
-    const main = await import('./src/main.js');
-    main.createApp();
+    const main = await import('./app/src/remarklet.js');
+    main.createRemarklet();
   });
 </script>
 

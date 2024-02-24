@@ -8,15 +8,15 @@
  * @link        https://github.com/zachwatkins/remarklet
  * @license     https://spdx.org/licenses/MIT.html MIT License
  */
-import * as $jq from './jquery-2.1.3';
-import * as $ui from './jquery-ui';
-import * as $ri from './rangyinputs';
+import * as $jq from './jquery-2.1.3.js';
+import * as $ui from './jquery-ui.js';
+import * as $ri from './rangyinputs.js';
 import { findElementOffset } from './utils.js';
 import './remarklet.css';
-import { createStylesheet } from './stylesheet';
-import { createDuplicate } from './duplicate';
-import { createPrompt } from './prompt';
-import { createStoredObject } from './storedobject';
+import { createStylesheet } from './stylesheet.js';
+import { createDuplicate } from './duplicate.js';
+import { createPrompt } from './prompt.js';
+import { createStoredObject } from './storedobject.js';
 
 export function createRemarklet() {
   var $ = window.jQuery;

@@ -26,13 +26,15 @@ I have a presence on the following platforms, which I draw from to build this po
 
 ## Demos
 
+[Remarklet](./remarklet/)
+
 [Procedural art generation](./procedural-art-generation/)
 
 [Browser Game using Phaser 3](./phaser-game/)
 
-[Animated Buttons](./animated-buttons/)
-
 [Lego Kit Search](./lego-kit-search/)
+
+[Animated Buttons](./animated-buttons/)
 
 ## Photos
 

@@ -167,6 +167,51 @@ const jobs = [
       fit: 'cover',
     },
   },
+  {
+    src: 'portfolio/remarklet/app/assets/logo.svg',
+    dest: 'portfolio/remarklet/app/assets/logo.png',
+    resize: {
+      width: 128,
+      height: 128,
+      fit: 'cover',
+    },
+  },
+  {
+    src: 'portfolio/remarklet/app/assets/logo.png',
+    dest: 'portfolio/remarklet/app/public/images/icon-16.png',
+    resize: {
+      width: 16,
+      height: 16,
+      fit: 'cover',
+    },
+  },
+  {
+    src: 'portfolio/remarklet/app/assets/logo.png',
+    dest: 'portfolio/remarklet/app/public/images/icon-32.png',
+    resize: {
+      width: 32,
+      height: 32,
+      fit: 'cover',
+    },
+  },
+  {
+    src: 'portfolio/remarklet/app/assets/logo.png',
+    dest: 'portfolio/remarklet/app/public/images/icon-48.png',
+    resize: {
+      width: 48,
+      height: 48,
+      fit: 'cover',
+    },
+  },
+  {
+    src: 'portfolio/remarklet/app/assets/logo.png',
+    dest: 'portfolio/remarklet/app/public/images/icon-128.png',
+    resize: {
+      width: 128,
+      height: 128,
+      fit: 'cover',
+    },
+  },
 ];
 
 for (const job of jobs) {

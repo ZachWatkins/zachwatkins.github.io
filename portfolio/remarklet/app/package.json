@@ -1,0 +1,20 @@
+{
+  "name": "remarklet",
+  "version": "1.0.0",
+  "description": "Make website change mockups quickly and easily.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "vite build --mode production --config vite.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachwatkins/remarklet.git"
+  },
+  "author": "Zachary K. Watkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zachwatkins/remarklet/issues"
+  },
+  "homepage": "https://github.com/zachwatkins/remarklet#readme"
+}

@@ -4,6 +4,8 @@ export const tags = [
   'wordpress',
   'comparison',
   'development',
+  'accessibility',
+  'productivity',
 ];
 export default {
   paths() {

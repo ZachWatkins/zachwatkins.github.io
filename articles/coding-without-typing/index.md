@@ -22,6 +22,10 @@ I have to find a way to get my work done without typing, or as little as I can g
 
 I've had a few days to think about how I can make things easier on myself. I have listed below the tools and techniques I considered to solve this problem. If you can think of any others, please send me a message on X (@zachwatkinsv1).
 
+## Windows and Mac voice control
+
+I've had a few days to get familiar with the voice command features of both operating systems. I use Mac at work and Windows at home. To anyone else who wants to try these out, I recommend to try whispering commands to save your voice over time. Both OS's have feature parity as far as I can tell, except for one thing: Windows doesn't allow you to set custom commands specific to an application. It's likely a small thing, but I felt it was worth noting.
+
 ## GitHub Copilot
 
 I've used GitHub Copilot since 2021 and have found several ways to use it effectively.
@@ -40,11 +44,18 @@ Touchpads reduce the travel distance and resistance of my fingers for mouse inpu
 
 I prefer a rollerball mouse so my forearm isn't needed to move the cursor, but the angle of my hand while resting on the mouse is not as close to neutral as I would like.
 
-## Windows and Mac voice control
+## Other inputs
 
-I've had a few days to get familiar with the voice command features of both operating systems. I use Mac at work and Windows at home. To anyone else who wants to try these out, I recommend to try whispering commands to save your voice over time. Both OS's have feature parity as far as I can tell, except for one thing: Windows doesn't allow you to set custom commands specific to an application. It's likely a small thing, but I felt it was worth noting.
+- **Foot pedal**  
+  Ordered, will add feedback here later.
+- **Headset with microphone**  
+  This allows me to turn down the sensitivity of my microphone so that it doesn't pick up the sound of others' voices.
+- **Keyboard macros**  
+  I haven't tried this yet but it's an option to reduce typing. It doesn't avoid typing altogether, but it could help.
 
-## Keyboard shortcuts in visual studio code that save time
+## Keyboard shortcuts
+
+I need to memorize or keep a cheatsheet of keyboard shortcuts that are much more relevant to me now. Examples:
 
 - Select All Occurences of Find Match: Ctrl + Shift + L (Windows); Cmd + Shift + L (Mac)
 - Go to Next Problem (Error, Warning, Info): Alt + F8
@@ -61,20 +72,11 @@ I've had a few days to get familiar with the voice command features of both oper
 
 It'll likely save me time if I can decide on code snippets that I'm likely to use often enough. The nice thing about custom voice commands is that I can make them to paste code snippets.
 
-## Input devices to consider
-
-- **Foot pedal**  
-  Ordered, will add feedback here later.
-- **Headset with microphone**  
-  This allows me to turn down the sensitivity of my microphone so that it doesn't pick up the sound of others' voices.
-- **Keyboard macros**  
-  I haven't tried this yet but it's an option to reduce typing. It doesn't avoid typing altogether, but it could help.
-
 ## UI component libraries
 
 I don't want to have to write basic HTML elements again if I can help it. I'll rely on UI component libraries to save time and typing.
 
-## Drink plenty of water
+## Drink water
 
 I've read that it's good to drink plenty of water to help with joint pain and inflammation.
 
@@ -93,5 +95,3 @@ I use things like code formatters and GitHub Actions to automate tasks and reduc
 ## Conclusion
 
 I'm optimistic that I can maintain my productivity and hope to improve on it during this process of reevaluating my tools and techniques. I'm documenting what I learn from this here to remind myself and educate others about this subject.
-
-If you liked this article, I'd like to hear from you on X (@zachwatkinsv1).

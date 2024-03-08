@@ -28,7 +28,7 @@ I've had a few days to get familiar with the voice command features of both oper
 
 ## GitHub Copilot
 
-I've used GitHub Copilot since 2021 and have found several ways to use it effectively.
+I've used GitHub Copilot since 2022 and have found several ways to use it effectively.
 
 The code auto completion is exceptional. It routinely saves me 15 to 30 seconds of typing several times a minute when I'm in the flow. One limitation is that it has a smaller character limit on the text it generates than the co-pilot chat interface's responses.
 

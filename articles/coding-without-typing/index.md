@@ -15,7 +15,7 @@ My hands and wrists have hurt for over a year now. I knew something was wrong wh
 
 > *Patient may return to work on Monday 3/4/2024 with the following restrictions:*
 > 
-> *- No typing*
+> *- No typing*  
 > *- Limited use of both hands*
 > 
 > *The patient will follow up in 8 weeks.*
@@ -30,7 +30,7 @@ I've had a few days to get familiar with the voice command features of both oper
 
 ## Mac first-party head tracking and facial expression controls
 
-I would write this shorter but want to be sure people see it up top. It's incredible that they have this built into the operating system's accessibility features. I found it this morning (2024-03-07) and it's a game changer. I still think an eye tracking camera like the Tobii 5 would be better, but this is a great help for now and may be good enough for most people :thumbsup:. I tilt my head to move the cursor, smile to left click, pucker to right click, and stick my tongue out to double click. I can pause this feature by raising my eyebrows. All of these gestures can be reassigned. I'm almost as fast at navigating a page like this than I am with a mouse!
+I would write this shorter but want to be sure people see it in the table of contents. It's incredible that Apple has a built-in head tracking and face recognition feature to replace mouse / trackpad inputs. I found it this morning (2024-03-07) and it's a game changer. I still think an eye tracking camera like the Tobii 5 would be faster, but this is a great help for now and may be good enough for most people :thumbsup:. I tilt my head to move the cursor, smile to left click, pucker to right click, and stick my tongue out to double click. To click and drag, I pucker my lips to the left to start dragging and do it again to stop. I can pause head / cursor movement by raising my eyebrows. All of these gestures can be reassigned. I'm almost as fast at navigating a page like this than I am with a mouse!
 
 ## GitHub Copilot
 

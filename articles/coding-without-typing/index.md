@@ -26,6 +26,10 @@ I've had a few days to think about how I can make things easier on myself. I hav
 
 I've had a few days to get familiar with the voice command features of both operating systems. I use Mac at work and Windows at home. To anyone else who wants to try these out, I recommend to try whispering commands to save your voice over time. Both OS's have feature parity as far as I can tell, except for one thing: Windows doesn't allow you to set custom commands specific to an application. It's likely a small thing, but I felt it was worth noting.
 
+## Mac first-party head tracking and facial expression controls
+
+I would write this shorter but want to be sure people see it up top. It's incredible that they have this built into the operating system's accessibility features. I found it this morning (2024-03-07) and it's a game changer. I still think an eye tracking camera like the Tobii 5 would be better, but this is a great help for now and may be good enough for most people :thumbsup:. I tilt my head to move the cursor, smile to left click, pucker to right click, and stick my tongue out to double click. I can pause this feature by raising my eyebrows. All of these gestures can be reassigned. I'm almost as fast at navigating a page like this than I am with a mouse!
+
 ## GitHub Copilot
 
 I've used GitHub Copilot since 2022 and have found several ways to use it effectively.

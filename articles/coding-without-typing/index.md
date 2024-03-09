@@ -28,6 +28,10 @@ I've had a few days to think about how I can make things easier on myself. I hav
 
 I've had a few days to get familiar with the voice command features of both operating systems. I use Mac at work and Windows at home. To anyone else who wants to try these out, I recommend to try whispering commands to save your voice over time. Both OS's have feature parity as far as I can tell, except for one thing: Windows doesn't allow you to set custom commands specific to an application. It's likely a small thing, but I felt it was worth noting.
 
+### Windows
+
+If you're having trouble with it not recognizing words, you should try increasing the volume level of the microphone you're using from within the sound settings panel.
+
 ## Mac first-party head tracking and facial expression controls
 
 I would write this shorter but want to be sure people see it in the table of contents. It's incredible that Apple has a built-in head tracking and face recognition feature to replace mouse / trackpad inputs. I found it this morning (2024-03-07) and it's a game changer. I still think an eye tracking camera like the Tobii 5 would be faster, but this is a great help for now and may be good enough for most people :thumbsup:. I tilt my head to move the cursor, smile to left click, pucker to right click, and stick my tongue out to double click. To click and drag, I pucker my lips to the left to start dragging and do it again to stop. I can pause head / cursor movement by raising my eyebrows. All of these gestures can be reassigned. I'm almost as fast at navigating a page like this than I am with a mouse!
@@ -50,7 +54,9 @@ Touchpads reduce the travel distance and resistance of my fingers for mouse inpu
 
 I prefer a rollerball mouse so my forearm isn't needed to move the cursor, but the angle of my hand while resting on the mouse is not as close to neutral as I would like. My thumb is also worn down like the rest of my fingers, so I prefer to use it as little as possible.
 
-~~I plan to get a vertical mouse, and will likely get the Logitech Tilt since my hands are on the medium to small end of the spectrum.~~ Update 2024-03-08: I've ordered a presentation remote that I can use with my hand in any position that feels comfortable. I'll update this section with my thoughts on it after I've used it for a while.
+~~I plan to get a vertical mouse, and will likely get the Logitech Tilt since my hands are on the medium to small end of the spectrum.~~ Update 2024-03-08: I've considered ordering a presentation remote that I can use with my hand in any position that feels comfortable. I'm still deciding whether to try it out.
+
+Update 2024-03-09: I bought a Logitech Tilt mouse today and it's been great. It's pretty light, well shaped, much more vertical than the Logitech MX, and keeps my fingers more flat.
 
 ## Other inputs
 

@@ -13,12 +13,12 @@ On the advice of an orthopedic surgeon, I am taking a break from typing For the 
 
 My hands and wrists have hurt for over a year now. I knew something was wrong when I had trouble turning the pages in my kids' story books; I couldn't feel the pages. Last December, I finally saw an orthopedic surgeon. They ordered scans and tests and diagnosed some of my symptoms as carpal tunnel syndrome. I received a steroid injection in each wrist next to the nerve, a referral to another specialist for possible rheumatoid arthritis, and a note.
 
-> *Patient may return to work on Monday 3/4/2024 with the following restrictions:*
-> 
-> *- No typing*  
-> *- Limited use of both hands*
-> 
-> *The patient will follow up in 8 weeks.*
+> _Patient may return to work on Monday 3/4/2024 with the following restrictions:_
+>
+> _- No typing_  
+> _- Limited use of both hands_
+>
+> _The patient will follow up in 8 weeks._
 
 I have to find a way to get my work done without typing, or as little as I can get away with. I tried to do this once before, many years ago, when I had tendonitis in both of my forearms. I probably bothered a lot of people in the cubicles next to mine as they heard me say things like "show grid ... 6 ... click" and "open brace ... new line ... position colon absolute". It's a good thing I didn't have any confidential emails to send.
 
@@ -103,3 +103,7 @@ I use things like code formatters and GitHub Actions to automate tasks and reduc
 ## Conclusion
 
 I'm optimistic that I can maintain my productivity and hope to improve on it during this process of reevaluating my tools and techniques. I'm documenting what I learn from this here to remind myself and educate others about this subject.
+
+## Resources
+
+- [List of different kinds of accessibility devices](https://udservices.org/assistive-devices-disabilities/)

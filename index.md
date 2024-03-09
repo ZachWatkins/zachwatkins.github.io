@@ -18,7 +18,7 @@ hero:
   });
 </script>
 
-## Latest Demo: <a href="/portfolio/procedural-art-generation/">Procedural Art Generation</a> (February 13, 2024)
+## Latest Demo: <a href="/portfolio/remarklet/">Remarklet</a> (March 8, 2024)
 
 <div id="viewport">
   <div id="grid-wrapper">

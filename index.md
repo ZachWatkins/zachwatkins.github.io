@@ -10,18 +10,4 @@ hero:
   photoLink: '/portfolio/#photos'
 ---
 
-<script setup>
-  import { onMounted } from 'vue';
-  onMounted(async () => {
-    const main = await import('./portfolio/procedural-art-generation/src/art-generator.js');
-    main.createApp(document.querySelector('#viewport'));
-  });
-</script>
-
 ## Latest Demo: <a href="/portfolio/remarklet/">Remarklet</a> (March 8, 2024)
-
-<div id="viewport">
-  <div id="grid-wrapper">
-    <div id="grid"></div>
-  </div>
-</div>

@@ -48,9 +48,9 @@ Touchpads reduce the travel distance and resistance of my fingers for mouse inpu
 
 ## Mouse
 
-I prefer a rollerball mouse so my forearm isn't needed to move the cursor, but the angle of my hand while resting on the mouse is not as close to neutral as I would like.
+I prefer a rollerball mouse so my forearm isn't needed to move the cursor, but the angle of my hand while resting on the mouse is not as close to neutral as I would like. My thumb is also worn down like the rest of my fingers, so I prefer to use it as little as possible.
 
-I plan to get a vertical mouse, and will likely get the Logitech Tilt since my hands are on the medium to small end of the spectrum.
+~~I plan to get a vertical mouse, and will likely get the Logitech Tilt since my hands are on the medium to small end of the spectrum.~~ Update 2024-03-08: I've ordered a presentation remote that I can use with my hand in any position that feels comfortable. I'll update this section with my thoughts on it after I've used it for a while.
 
 ## Other inputs
 

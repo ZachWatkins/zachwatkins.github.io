@@ -20,7 +20,7 @@
   "author": "Zachary Kendall Watkins <zach@zachwatkins.dev>",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^10.4.18",
+    "autoprefixer": "^10.4.19",
     "postcss": "^8.4.36",
     "prettier": "^3.2.5",
     "sharp": "^0.33.2",

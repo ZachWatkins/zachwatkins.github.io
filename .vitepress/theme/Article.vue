@@ -83,6 +83,7 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1]);
             <li
               v-for="(tag, i) in frontmatter.tags"
               :key="tag"
+              class="text-nowrap"
             >
               {{
                 i === 0 ? '' : i < frontmatter.tags.length - 1 ? ', ' : ', and '

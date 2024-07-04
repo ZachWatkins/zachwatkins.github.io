@@ -5,7 +5,7 @@ date: 2024-2-29
 tags: [development, accessibility, productivity]
 ---
 
-On the advice of an orthopedic surgeon, I am taking a break from typing For the next eight weeks. Here are some tools and techniques I've found to help maintain productivity as a lead application developer and manager.
+On the advice of an orthopedic surgeon, I am taking a break from typing for the next eight weeks. Here are some tools and techniques I've found to help maintain productivity as a lead application developer and manager.
 
 ---
 

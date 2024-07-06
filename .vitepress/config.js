@@ -111,6 +111,12 @@ const CONFIG = {
 };
 
 CONFIG.transformPageData = function (pageData) {
+  const canonicalUrl =
+    CONFIG.sitemap.hostname +
+    `/${pageData.relativePath}`
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '.html');
+
   const isSingleArticleRoute =
     pageData.relativePath.startsWith('articles/') &&
     !pageData.relativePath.startsWith('articles/index.md') &&
@@ -123,22 +129,10 @@ CONFIG.transformPageData = function (pageData) {
     ['meta', { property: 'og:site_name', content: CONFIG.title }],
     ['meta', { property: 'og:type', content: ogType }],
     ['meta', { property: 'og:image', content: ogImage }],
-    ['meta', { property: 'og:updated_time', content: pageData.lastUpdated }],
     ['meta', { property: 'og:locale', content: CONFIG.lang }],
+    ['link', { rel: 'canonical', href: canonicalUrl }],
+    ['meta', { property: 'og:url', content: canonicalUrl }]
   ];
-
-  if (pageData.relativePath) {
-    const canonicalUrl =
-      CONFIG.sitemap.hostname +
-      `/${pageData.relativePath}`
-        .replace(/index\.md$/, '')
-        .replace(/\.md$/, '.html');
-
-    headItems.push(
-      ['link', { rel: 'canonical', href: canonicalUrl }],
-      ['meta', { property: 'og:url', content: canonicalUrl }]
-    );
-  }
 
   if (pageData.frontmatter.title) {
     headItems.push(
@@ -149,15 +143,20 @@ CONFIG.transformPageData = function (pageData) {
 
   if (pageData.frontmatter.description) {
     headItems.push(
-      [
-        'meta',
-        {
-          property: 'og:description',
-          content: pageData.frontmatter.description,
-        },
-      ],
+      ['meta', { property: 'og:description', content: pageData.frontmatter.description }],
       ['meta', { name: 'twitter:description', content: pageData.frontmatter.description }]
     );
+  }
+
+  if (pageData.lastUpdated) {
+    headItems.push(
+      ['meta', { property: 'og:updated_time', content: String(pageData.lastUpdated) }]
+    );
+    if (isSingleArticleRoute) {
+      headItems.push(
+        ['meta', { property: 'article:modified_time', content: String(pageData.lastUpdated) }]
+      );
+    }
   }
 
   if (isSingleArticleRoute) {
@@ -169,32 +168,19 @@ CONFIG.transformPageData = function (pageData) {
       [
         'meta',
         {
-          property: 'article:tag',
-          content: pageData.frontmatter.tags ?? pageData.frontmatter.tag,
-        },
-      ],
-      [
-        'meta',
-        {
           property: 'article:published_time',
           content: pageData.frontmatter.date,
         },
-      ],
-      [
-        'meta',
-        {
-          property: 'article:modified_time',
-          content: pageData.lastUpdated,
-        },
-      ],
+      ]
     );
+    if (pageData.frontmatter.tags) {
+      headItems.push(['meta', { property: 'article:tag', content: pageData.frontmatter.tags.join(', ') }]);
+    } else if (pageData.frontmatter.tag) {
+      headItems.push(['meta', { property: 'article:tag', content: pageData.frontmatter.tag }]);
+    }
   }
 
   pageData.frontmatter.head ??= [];
-  // Detect whether any frontmatter head item's content is undefined.
-  for (const [tag, attrs] of pageData.frontmatter.head) {
-    console.log(`Frontmatter head item: ${tag}`, attrs);
-  }
   pageData.frontmatter.head.push(...headItems);
 };
 

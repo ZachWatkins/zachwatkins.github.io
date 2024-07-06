@@ -72,26 +72,33 @@ const prevPost = computed(() => articles[findCurrentIndex() + 1]);
         <br />
         <dt
           v-if="frontmatter.tags?.length"
-          class="inline-block"
+          class="float-left md:float-none inline-block"
           >Published in&nbsp;</dt
         >
         <dd
           v-if="frontmatter.tags?.length"
-          class="inline-block"
+          class="inline md:inline-block"
         >
-          <ul class="list-none ml-0 flex justify-center">
+          <ul class="inline list-none ml-0">
             <li
               v-for="(tag, i) in frontmatter.tags"
               :key="tag"
-              class="text-nowrap"
+              class="break-normal inline text-nowrap"
             >
               {{
-                i === 0 ? '' : i < frontmatter.tags.length - 1 ? ', ' : ', and '
+                i === frontmatter.tags.length - 1 && frontmatter.tags.length > 1
+                  ? 'and '
+                  : ''
+              }}<a :href="'/articles/tags/' + tag.toLowerCase() + '/'">{{
+                tag
+              }}</a
+              >{{
+                i < frontmatter.tags.length - 1 && frontmatter.tags.length > 1
+                  ? ', '
+                  : i === frontmatter.tags.length - 1
+                    ? '.'
+                    : ''
               }}
-              <a :href="'/articles/tags/' + tag.toLowerCase() + '/'">
-                {{ tag }}
-              </a>
-              <span v-if="i === frontmatter.tags.length - 1">.</span>
             </li>
           </ul>
         </dd>

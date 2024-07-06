@@ -2,9 +2,6 @@
 title: 'Animated Buttons'
 description: 'Example animated buttons using CSS.'
 date: 2024-02-15
-head:
-  - - script
-    - src: 'https://cdnjs.cloudflare.com/ajax/libs/phaser/2.4.3/phaser.min.js'
 ---
 
 <script setup>

@@ -111,12 +111,6 @@ const CONFIG = {
 };
 
 CONFIG.transformPageData = function (pageData) {
-  const canonicalUrl =
-    CONFIG.sitemap.hostname +
-    `/${pageData.relativePath}`
-      .replace(/index\.md$/, '')
-      .replace(/\.md$/, '.html');
-
   const isSingleArticleRoute =
     pageData.relativePath.startsWith('articles/') &&
     !pageData.relativePath.startsWith('articles/index.md') &&
@@ -125,32 +119,49 @@ CONFIG.transformPageData = function (pageData) {
   const ogType = isSingleArticleRoute ? 'article' : 'website';
   const ogImage = `${CONFIG.sitemap.hostname}/${pageData.frontmatter.image ?? 'android-chrome-192x192.png'}`;
 
-  pageData.frontmatter.head ??= [];
-  pageData.frontmatter.head.push(
-    ['link', { rel: 'canonical', href: canonicalUrl }],
-    ['meta', { property: 'og:url', content: canonicalUrl }],
+  const headItems = [
     ['meta', { property: 'og:site_name', content: CONFIG.title }],
-    ['meta', { property: 'og:title', content: pageData.frontmatter.title }],
-    [
-      'meta',
-      { property: 'og:description', content: pageData.frontmatter.description },
-    ],
     ['meta', { property: 'og:type', content: ogType }],
     ['meta', { property: 'og:image', content: ogImage }],
     ['meta', { property: 'og:updated_time', content: pageData.lastUpdated }],
     ['meta', { property: 'og:locale', content: CONFIG.lang }],
-    ['meta', { name: 'twitter:title', content: pageData.frontmatter.title }],
-    [
-      'meta',
-      {
-        name: 'twitter:description',
-        content: pageData.frontmatter.description,
-      },
-    ],
-  );
+  ];
+
+  if (pageData.relativePath) {
+    const canonicalUrl =
+      CONFIG.sitemap.hostname +
+      `/${pageData.relativePath}`
+        .replace(/index\.md$/, '')
+        .replace(/\.md$/, '.html');
+
+    headItems.push(
+      ['link', { rel: 'canonical', href: canonicalUrl }],
+      ['meta', { property: 'og:url', content: canonicalUrl }]
+    );
+  }
+
+  if (pageData.frontmatter.title) {
+    headItems.push(
+      ['meta', { property: 'og:title', content: pageData.frontmatter.title }],
+      ['meta', { name: 'twitter:title', content: pageData.frontmatter.title }]
+    );
+  }
+
+  if (pageData.frontmatter.description) {
+    headItems.push(
+      [
+        'meta',
+        {
+          property: 'og:description',
+          content: pageData.frontmatter.description,
+        },
+      ],
+      ['meta', { name: 'twitter:description', content: pageData.frontmatter.description }]
+    );
+  }
 
   if (isSingleArticleRoute) {
-    pageData.frontmatter.head.push(
+    headItems.push(
       [
         'meta',
         { property: 'article:author', content: CONFIG.themeConfig.author },
@@ -178,6 +189,13 @@ CONFIG.transformPageData = function (pageData) {
       ],
     );
   }
+
+  pageData.frontmatter.head ??= [];
+  // Detect whether any frontmatter head item's content is undefined.
+  for (const [tag, attrs] of pageData.frontmatter.head) {
+    console.log(`Frontmatter head item: ${tag}`, attrs);
+  }
+  pageData.frontmatter.head.push(...headItems);
 };
 
 // https://vitepress.dev/reference/site-config

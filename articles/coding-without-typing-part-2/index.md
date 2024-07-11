@@ -29,7 +29,7 @@ My most used voice commands are:
 4. `command mode` to issue commands to the computer. I can dictate text by saying a command word first like `sentence` or `say` without having to switch modes.
 5. I make a popping noise to trigger the eye tracking camera as my mouse.
 
-### Hardware
+## Hardware
 
 I use a Macbook Pro with a wireless split keyboard I built from a kit. It has 34 low profile mechanical key switches which take very little effort to press. I also have 3 foot pedals at work that replace the tab, enter, and page down keys.
 

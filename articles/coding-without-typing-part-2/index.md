@@ -11,9 +11,11 @@ In February I found out my hands are wearing down. I searched for ways to keep u
 
 [[toc]]
 
+Nothing in this article is medical advice. I am not a medical professional. If you're experiencing pain or discomfort, please consult a medical professional.
+
 ## Daily Routine
 
-Most mornings, I take a 15 minute walk while swinging my arms and opening and closing my hands. This relieves a lot of the stiffness and pain in my hands for most of the work day. I take Tylenol, fish oil, turmeric, and chondroitin supplements.
+Most mornings, I take a 15 minute walk while swinging my arms and opening and closing my hands. This relieves a lot of the stiffness and pain in my hands for most of the work day. I take Tylenol, fish oil, turmeric, and chondroitin supplements. My arthritis specialist said I must monitor my blood pressure and have blood tests done every 6 months to check whether the Tylenol is causing liver damage.
 
 ## Software
 

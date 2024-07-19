@@ -17,6 +17,8 @@ Nothing in this article is medical advice. I am not a medical professional. If y
 
 Most mornings, I take a 15 minute walk while swinging my arms and opening and closing my hands. This relieves a lot of the stiffness and pain in my hands for most of the work day. I take Tylenol, fish oil, turmeric, and chondroitin supplements. My arthritis specialist said I must monitor my blood pressure and have blood tests done every 6 months to check whether the Tylenol is causing liver damage.
 
+Nothing in this article is medical advice. I am not a medical professional. If you're experiencing pain or discomfort, please consult a medical professional.
+
 ## Software
 
 I use Visual Studio Code with GitHub Copilot, and I use workspace configuration features to start up a project's local dev environment when I open the workspace. I also use extensions to automate as much typing as I can, like code formatting and snippets. To save time I've learned some of the VSCode keyboard shortcuts that let me navigate a project's files and manipulate text.

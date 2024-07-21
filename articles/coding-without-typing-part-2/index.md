@@ -30,8 +30,9 @@ My most used voice commands are:
 1. `switch` to switch between applications.
 2. `cut`, `copy`, and `paste` to cut, copy, and paste text.
 3. `dictation mode` to dictate every word as I speak it, with exceptions for certain punctuation words which are interpreted as commands.
-4. `command mode` to issue commands to the computer. I can dictate text by saying a command word first like `sentence` or `say` without having to switch modes.
-5. I make a popping noise to trigger the eye tracking camera as my mouse.
+4. `command mode` to issue commands to the computer. I can dictate text by saying a command word first like `sentence` or `say` without switching modes.
+5. I make a popping noise to trigger the eye tracking camera to move the mouse cursor based on where my eye is looking.
+6. I say `touch`, `duke`, or `righty` to left click, double click, or right click without using the mouse.
 
 ## Hardware
 

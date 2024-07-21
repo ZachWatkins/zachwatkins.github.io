@@ -38,7 +38,7 @@ I keep my Talon commands in a GitHub repository here: https://github.com/ZachWat
 
 ## Hardware
 
-I use a Macbook Pro with a wireless split keyboard I built from a kit. It has 34 low profile mechanical key switches which take very little effort to press. I also have 3 foot pedals at work that replace the tab, enter, and page down keys.
+I use a Macbook Pro with a wireless split keyboard I built from a kit. I chose Kailh Choc Pink linear mechanical switches with low profiles for the lightest pressure and range of movement needed to press the keys. I also have 3 foot pedals at work that replace the tab, enter, and page down keys.
 
 For microphones, it's important to have good quality when using voice command and dictation software. This saves time and makes it easier for the software to understand what you want it to do. A budget option I use at the office is a $16 BOYA-II lapel microphone on an ear hook for better accuracy than it would have clipped to my shirt. At home I use a Blue Yeti Nano microphone and I haven't noticed a difference yet between the two as far as how well Talon Voice understands what I'm saying.
 

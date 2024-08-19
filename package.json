@@ -26,7 +26,7 @@
     "sharp": "^0.33.4",
     "tailwindcss": "^3.4.9",
     "vitepress": "^1.2.3",
-    "vue": "^3.4.37"
+    "vue": "^3.4.38"
   },
   "prettier": {
     "singleQuote": true,

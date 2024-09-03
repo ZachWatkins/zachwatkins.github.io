@@ -170,10 +170,6 @@ main h2 {
   position: relative;
 }
 
-main h2 + table {
-  float: left;
-}
-
 main ol {
   list-style-type: decimal;
   list-style-position: outside;

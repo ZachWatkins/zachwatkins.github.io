@@ -26,6 +26,8 @@ I have a presence on the following platforms, which I draw from to build this po
 
 ## Demos
 
+[Handwriting Worksheet Maker](./handwriting-worksheet-maker/)
+
 [Remarklet](./remarklet/)
 
 [Procedural art generation](./procedural-art-generation/)

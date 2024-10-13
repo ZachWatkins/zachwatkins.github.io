@@ -1,7 +1,11 @@
 <template>
     <div id="preview" :style="{ fontFamily, fontSize }">
         <div class="title">{{ title }}</div>
-        <div class="content">{{ content }}</div>
+        <div class="content">
+            <span v-for="(line, index) in contentElements" :key="index">
+                {{ line }}<br>
+            </span>
+        </div>
     </div>
 </template>
 <script>
@@ -25,13 +29,24 @@ export default {
             default: '18px',
         },
     },
+    computed: {
+        contentElements() {
+            return this.content.split(/[\r\n]+/g);
+        },
+    },
 };
 </script>
 <style scoped>
 #preview {
     width: 8.5in;
     height: 11in;
-    margin: 0.5in;
+    padding: 1in;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    background-color: #FFF;
+    color: #000;
 }
 
 .title {
@@ -42,6 +57,6 @@ export default {
 }
 
 .content {
-    white-space: pre;
+    word-wrap: break-all;
 }
 </style>

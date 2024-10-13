@@ -2,21 +2,19 @@
     <div id="app">
         <form id="form">
             <label for="title" class="mr-2">Title:</label>
-            <input type="text" id="title" name="title" v-model="title" /><br>
+            <input type="text" id="title" name="title" v-model="title" :style="{
+                width: `${title.length}ch`,
+            }" /><br>
             <label for="font" class="mr-2">Font:</label>
-            <select id="font" name="font" v-model="font">
+            <input type="number" id="fontSize" name="fontSize" v-model="fontSize" :style="{
+                width: `${fontSize.toString().length}ch`,
+            }" /><select id="fontUnit" name="fontUnit" v-model="fontUnit">
+                <option value="px">px</option>
+                <option value="pt">pt</option>
+            </select> <select id="font" name="font" v-model="font">
                 <option value="Century Gothic">Century Gothic</option>
                 <option value="Comic Sans MS">Comic Sans MS</option>
                 <option value="Arial">Arial</option>
-            </select><br>
-            <label for="fontSize" class="mr-2">Font Size:</label>
-            <input type="number" id="fontSize" name="fontSize" v-model="fontSize" :style="{
-                width: `${fontSize.toString().length + 1}ch`,
-            }" /><br>
-            <label for="fontUnit" class="mr-2">Font Unit:</label>
-            <select id="fontUnit" name="fontUnit" v-model="fontUnit">
-                <option value="px">px</option>
-                <option value="pt">pt</option>
             </select><br>
             <label for="content" class="mr-2">Content:</label><br>
             <textarea id="content" name="content" class="w-full" v-model="content"
@@ -68,6 +66,12 @@ select {
     border-width: 2px;
     border-style: solid;
     border-color: transparent transparent #fff transparent;
+}
+
+textarea {
+    border-width: 2px;
+    border-style: solid;
+    padding: 0.5em;
 }
 
 input[type="number"] {

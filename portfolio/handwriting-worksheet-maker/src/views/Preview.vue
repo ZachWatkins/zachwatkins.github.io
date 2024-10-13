@@ -1,7 +1,7 @@
 <template>
     <div id="preview" :style="{ fontFamily, fontSize }">
         <div class="title">{{ title }}</div>
-        <div class="content">
+        <div class="content" :style="{ opacity }">
             <span v-for="(line, index) in contentElements" :key="index">
                 {{ line }}<br>
             </span>
@@ -27,6 +27,10 @@ export default {
         fontSize: {
             type: String,
             default: '18px',
+        },
+        opacity: {
+            type: Number,
+            default: 0.25,
         },
     },
     computed: {

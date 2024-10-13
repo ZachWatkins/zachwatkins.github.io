@@ -15,13 +15,14 @@
                 <option value="Century Gothic">Century Gothic</option>
                 <option value="Comic Sans MS">Comic Sans MS</option>
                 <option value="Arial">Arial</option>
-            </select><br>
+            </select> <input type="number" id="opacity" name="opacity" v-model="opacity" min="0" max="1" step="0.05"
+                :style="{ width: '4ch' }" /> opacity<br>
             <label for="content" class="mr-2">Content:</label><br>
             <textarea id="content" name="content" class="w-full" v-model="content"
                 :style="{ fontFamily: font }"></textarea><br>
             <input type="submit" value="Print" @click="print" />
         </form>
-        <Preview :title="title" :content="content" :font-size="`${fontSize}${fontUnit}`" :font-family="font" />
+        <Preview :title="title" :content="content" :font-size="`${fontSize}${fontUnit}`" :font-family="font" :opacity="opacity" />
     </div>
 </template>
 <script>
@@ -35,8 +36,9 @@ export default {
         return {
             title: 'Today\'s Handwriting Worksheet',
             font: 'Century Gothic',
-            fontSize: 32,
+            fontSize: 36,
             fontUnit: 'pt',
+            opacity: 0.25,
             content: 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz',
         };
     },

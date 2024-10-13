@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <form id="form">
+        <form id="form" class="mb-2">
             <label for="title" class="mr-2">Title:</label>
             <input type="text" id="title" name="title" v-model="title" :style="{
                 width: `${title.length}ch`,
@@ -21,9 +21,7 @@
                 :style="{ fontFamily: font }"></textarea><br>
             <input type="submit" value="Print" @click="print" />
         </form>
-        <div id="print-preview">
-            <Preview :title="title" :content="content" :font-size="`${fontSize}${fontUnit}`" :font-family="font" />
-        </div>
+        <Preview :title="title" :content="content" :font-size="`${fontSize}${fontUnit}`" :font-family="font" />
     </div>
 </template>
 <script>
@@ -37,7 +35,7 @@ export default {
         return {
             title: 'Today\'s Handwriting Worksheet',
             font: 'Century Gothic',
-            fontSize: 16,
+            fontSize: 32,
             fontUnit: 'pt',
             content: 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz',
         };
@@ -101,13 +99,5 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #0056b3;
-}
-
-#print-preview {
-    margin-top: 20px;
-    border: 1px solid;
-    overflow: scroll;
-    background-color: white;
-    color: #000;
 }
 </style>

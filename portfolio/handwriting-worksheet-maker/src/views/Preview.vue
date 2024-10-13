@@ -1,5 +1,5 @@
 <template>
-    <div id="preview" :style="{ fontFamily }">
+    <div id="preview" :style="{ fontFamily, fontSize }">
         <div class="title">{{ title }}</div>
         <div class="content">{{ content }}</div>
     </div>
@@ -20,22 +20,28 @@ export default {
             type: String,
             default: 'Century Gothic',
         },
+        fontSize: {
+            type: String,
+            default: '18px',
+        },
     },
 };
 </script>
 <style scoped>
-/** paper width: 8.5", height: 11", margins: 0.5" */
 #preview {
     width: 8.5in;
     height: 11in;
     margin: 0.5in;
-    font-size: 16pt;
 }
 
 .title {
     text-align: center;
-    font-size: 1.6em;
+    font-size: 24pt;
     line-height: 0.75;
     margin-bottom: 0.25in;
+}
+
+.content {
+    white-space: pre;
 }
 </style>

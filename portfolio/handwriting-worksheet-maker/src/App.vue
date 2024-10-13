@@ -9,12 +9,22 @@
                 <option value="Comic Sans MS">Comic Sans MS</option>
                 <option value="Arial">Arial</option>
             </select><br>
-            <label for="content" class="mr-2">Content:</label>
-            <input type="text" id="content" name="content" v-model="content" :style="{ fontFamily: font }" /><br>
+            <label for="fontSize" class="mr-2">Font Size:</label>
+            <input type="number" id="fontSize" name="fontSize" v-model="fontSize" :style="{
+                width: `${fontSize.toString().length + 1}ch`,
+            }" /><br>
+            <label for="fontUnit" class="mr-2">Font Unit:</label>
+            <select id="fontUnit" name="fontUnit" v-model="fontUnit">
+                <option value="px">px</option>
+                <option value="pt">pt</option>
+            </select><br>
+            <label for="content" class="mr-2">Content:</label><br>
+            <textarea id="content" name="content" class="w-full" v-model="content"
+                :style="{ fontFamily: font }"></textarea><br>
             <input type="submit" value="Print" @click="print" />
         </form>
-        <div id="print-preview" :style="{ border: '1px solid', marginTop: '20px', overflow: 'scroll' }">
-            <Preview :title="title" :content="content" />
+        <div id="print-preview">
+            <Preview :title="title" :content="content" :font-size="`${fontSize}${fontUnit}`" :font-family="font" />
         </div>
     </div>
 </template>
@@ -29,8 +39,17 @@ export default {
         return {
             title: 'Today\'s Handwriting Worksheet',
             font: 'Century Gothic',
+            fontSize: 16,
+            fontUnit: 'pt',
             content: 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz',
         };
+    },
+    computed: {
+        fontSizeInPoints() {
+            // Formula: px = pt * (96 / 72);
+            // pt = px / (96 / 72);
+            return parseFloat(this.fontSize) / (96 / 72) + 'pt';
+        },
     },
     methods: {
         print(e) {
@@ -38,20 +57,28 @@ export default {
                 e.preventDefault();
             }
             window.print();
-            // // Create a new window for printing.
-            // const printWindow = window.open('', '_blank');
-            // // Write the content of the print preview to the new window.
-            // printWindow.document.write(document.getElementById('print-preview').innerHTML);
-            // // Print the new window.
-            // printWindow.print();
         },
     },
 };
 </script>
 <style scoped>
 input[type="text"],
+input[type="number"],
 select {
-    border-bottom: 1px solid;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+input[type="number"] {
+    width: auto;
+    box-sizing: content-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: #007bff solid 2px;
 }
 
 .word-wrap {
@@ -70,5 +97,13 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+#print-preview {
+    margin-top: 20px;
+    border: 1px solid;
+    overflow: scroll;
+    background-color: white;
+    color: #000;
 }
 </style>

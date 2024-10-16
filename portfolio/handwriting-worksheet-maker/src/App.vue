@@ -15,14 +15,35 @@
                 <option value="Century Gothic">Century Gothic</option>
                 <option value="Comic Sans MS">Comic Sans MS</option>
                 <option value="Arial">Arial</option>
-            </select> <input type="number" id="opacity" name="opacity" v-model="opacity" min="0" max="1" step="0.05"
-                :style="{ width: '4ch' }" /> opacity<br>
+            </select><br>
+            <label for="lineHeight" class="mr-2">Line Height:</label>
+            <input type="number" id="lineHeight" name="lineHeight" v-model="lineHeight" min="0" step="0.1"
+                :style="{ width: `${lineHeight.toString().length}ch` }" /><select id="lineHeightUnit" name="lineHeightUnit"
+                v-model="lineHeightUnit">
+                <option value="em">em</option>
+                <option value="px">px</option>
+            </select><br>
+            <label for="letterSpacing" class="mr-2">Letter Spacing:</label>
+            <input type="number" id="letterSpacing" name="letterSpacing" v-model="letterSpacing" min="0" step="0.1"
+                :style="{ width: `${letterSpacing.toString().length}ch` }" />px<br>
+            <label for="opacity" class="mr-2">Opacity:</label>
+            <input type="number" id="opacity" name="opacity" v-model="opacity" min="0" max="1" step="0.05"
+                :style="{ width: `${opacity.toString().length}ch` }" /><br>
             <label for="content" class="mr-2">Content:</label><br>
             <textarea id="content" name="content" class="w-full" v-model="content"
                 :style="{ fontFamily: font }"></textarea><br>
             <input type="submit" value="Print" @click="print" />
         </form>
-        <Preview :title="title" :content="content" :font-size="`${fontSize}${fontUnit}`" :font-family="font" :opacity="opacity" />
+        <h2>Preview</h2>
+        <hr>
+        <div id="preview" :style="{ fontFamily, fontSize }">
+            <div class="title">{{ title }}</div>
+            <div class="content" :style="{ opacity, letterSpacing: `${letterSpacing}px`, lineHeight: `${lineHeight}${lineHeightUnit}` }">
+                <span v-for="(line, index) in contentElements" :key="index">
+                    {{ line }}<br>
+                </span>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -34,19 +55,20 @@ export default {
     },
     data() {
         return {
-            title: 'Today\'s Handwriting Worksheet',
+            title: 'Handwriting Worksheet',
             font: 'Century Gothic',
             fontSize: 36,
             fontUnit: 'pt',
-            opacity: 0.25,
+            lineHeight: 1.5,
+            lineHeightUnit: 'em',
+            opacity: 0.15,
+            letterSpacing: 1,
             content: 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz',
         };
     },
     computed: {
-        fontSizeInPoints() {
-            // Formula: px = pt * (96 / 72);
-            // pt = px / (96 / 72);
-            return parseFloat(this.fontSize) / (96 / 72) + 'pt';
+        contentElements() {
+            return this.content.split(/[\r\n]+/g);
         },
     },
     methods: {
@@ -54,7 +76,45 @@ export default {
             if (e) {
                 e.preventDefault();
             }
-            window.print();
+            let win = window.open('', 'print', 'width=800,height=600');
+            win.document.write(`
+                <html>
+                    <head>
+                        <title>${this.title}</title>
+                        <style>
+                            body {
+                                margin: 0;
+                                padding: 0.8in 1in;
+                                width: 8.5in;
+                                height: 11in;
+                                box-sizing: border-box;
+                                overflow-wrap: break-word;
+                            }
+                            .title {
+                                text-align: center;
+                                font-size: 24pt;
+                                line-height: 0.75;
+                                margin-bottom: 0.5in;
+                            }
+                            .content {
+                                font-family: ${this.font};
+                                font-size: ${this.fontSize}${this.fontUnit};
+                                opacity: ${this.opacity};
+                                letter-spacing: ${this.letterSpacing}px;
+                                line-height: ${this.lineHeight}${this.lineHeightUnit};
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="title">${this.title}</div>
+                        <div class="content">
+                            ${this.contentElements.map(line => `<span>${line}<br></span>`).join('')}
+                        </div>
+                    </body>
+                </html>
+            `);
+            win.document.close();
+            win.print();
         },
     },
 };
@@ -85,10 +145,6 @@ select:focus {
     outline: #007bff solid 2px;
 }
 
-.word-wrap {
-    word-break: break-all;
-}
-
 input[type="submit"] {
     margin-top: 10px;
     color: white;
@@ -101,5 +157,21 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+#preview {
+    border: 1px solid;
+    width: 8.5in;
+    height: 11in;
+    margin: 0 auto;
+    padding: 0.8in 1in;
+    overflow-wrap: break-word;
+}
+
+#preview .title {
+    font-size: 24pt;
+    text-align: center;
+    line-height: 0.75;
+    margin-bottom: 0.5in;
 }
 </style>

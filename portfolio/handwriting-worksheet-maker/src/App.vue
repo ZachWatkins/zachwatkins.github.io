@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="root">
         <form id="form" class="mb-2">
             <label for="title" class="mr-2">Title:</label>
             <input type="text" id="title" name="title" v-model="title" :style="{
@@ -11,15 +11,15 @@
             }" /><select id="fontUnit" name="fontUnit" v-model="fontUnit">
                 <option value="px">px</option>
                 <option value="pt">pt</option>
-            </select> <select id="font" name="font" v-model="font">
+            </select> <select id="font-family" name="font-family" v-model="fontFamily">
                 <option value="Century Gothic">Century Gothic</option>
                 <option value="Comic Sans MS">Comic Sans MS</option>
                 <option value="Arial">Arial</option>
             </select><br>
             <label for="lineHeight" class="mr-2">Line Height:</label>
             <input type="number" id="lineHeight" name="lineHeight" v-model="lineHeight" min="0" step="0.1"
-                :style="{ width: `${lineHeight.toString().length}ch` }" /><select id="lineHeightUnit" name="lineHeightUnit"
-                v-model="lineHeightUnit">
+                :style="{ width: `${lineHeight.toString().length}ch` }" /><select id="lineHeightUnit"
+                name="lineHeightUnit" v-model="lineHeightUnit">
                 <option value="em">em</option>
                 <option value="px">px</option>
             </select><br>
@@ -36,9 +36,10 @@
         </form>
         <h2>Preview</h2>
         <hr>
-        <div id="preview" :style="{ fontFamily, fontSize }">
+        <div id="preview" :style="{ fontFamily, fontSize: `${fontSize}${fontUnit}` }">
             <div class="title">{{ title }}</div>
-            <div class="content" :style="{ opacity, letterSpacing: `${letterSpacing}px`, lineHeight: `${lineHeight}${lineHeightUnit}` }">
+            <div class="content"
+                :style="{ opacity, letterSpacing: `${letterSpacing}px`, lineHeight: `${lineHeight}${lineHeightUnit}` }">
                 <span v-for="(line, index) in contentElements" :key="index">
                     {{ line }}<br>
                 </span>
@@ -56,7 +57,7 @@ export default {
     data() {
         return {
             title: 'Handwriting Worksheet',
-            font: 'Century Gothic',
+            fontFamily: 'Century Gothic',
             fontSize: 36,
             fontUnit: 'pt',
             lineHeight: 1.5,
@@ -76,76 +77,38 @@ export default {
             if (e) {
                 e.preventDefault();
             }
-            let win = window.open('', 'print', 'width=800,height=600');
-            win.document.write(`
-                <html>
-                    <head>
-                        <title>${this.title}</title>
-                        <style>
-                            body {
-                                margin: 0;
-                                padding: 0.8in 1in;
-                                width: 8.5in;
-                                height: 11in;
-                                box-sizing: border-box;
-                                overflow-wrap: break-word;
-                            }
-                            .title {
-                                text-align: center;
-                                font-size: 24pt;
-                                line-height: 0.75;
-                                margin-bottom: 0.5in;
-                            }
-                            .content {
-                                font-family: ${this.font};
-                                font-size: ${this.fontSize}${this.fontUnit};
-                                opacity: ${this.opacity};
-                                letter-spacing: ${this.letterSpacing}px;
-                                line-height: ${this.lineHeight}${this.lineHeightUnit};
-                            }
-                        </style>
-                    </head>
-                    <body>
-                        <div class="title">${this.title}</div>
-                        <div class="content">
-                            ${this.contentElements.map(line => `<span>${line}<br></span>`).join('')}
-                        </div>
-                    </body>
-                </html>
-            `);
-            win.document.close();
-            win.print();
+            window.print();
         },
     },
 };
 </script>
-<style scoped>
-input[type="text"],
-input[type="number"],
-select {
+<style>
+#root input[type="text"],
+#root input[type="number"],
+#root select {
     border-width: 2px;
     border-style: solid;
     border-color: transparent transparent #fff transparent;
 }
 
-textarea {
+#root textarea {
     border-width: 2px;
     border-style: solid;
     padding: 0.5em;
 }
 
-input[type="number"] {
+#root input[type="number"] {
     width: auto;
     box-sizing: content-box;
 }
 
-input[type="text"]:focus,
-input[type="number"]:focus,
-select:focus {
+#root input[type="text"]:focus,
+#root input[type="number"]:focus,
+#root select:focus {
     outline: #007bff solid 2px;
 }
 
-input[type="submit"] {
+#root input[type="submit"] {
     margin-top: 10px;
     color: white;
     background-color: #007bff;
@@ -155,7 +118,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+#root input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
@@ -173,5 +136,45 @@ input[type="submit"]:hover {
     text-align: center;
     line-height: 0.75;
     margin-bottom: 0.5in;
+}
+
+#preview .content {
+    word-wrap: break-word;
+}
+
+@media print {
+    body * {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    body>#app,
+    body>#app>main,
+    body>#app>main>.vp-doc,
+    body>#app>main>.vp-doc>div,
+    body>#app>main>.vp-doc>div>div,
+    body>#app>main>.vp-doc>div>div>#main,
+    body>#app>main>.vp-doc>div>div>#main>#root {
+        display: inline-block;
+    }
+
+    body #preview,
+    body #preview * {
+        display: block;
+    }
+
+    body #preview {
+        border: 0 none;
+        color: #000;
+        padding: 0;
+        margin: 0.4in 0.45in;
+        width: auto;
+        height: auto;
+    }
+
+    #preview .title {
+        margin-bottom: 0.5in;
+    }
 }
 </style>

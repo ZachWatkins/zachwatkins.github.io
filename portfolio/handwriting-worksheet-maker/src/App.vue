@@ -12,8 +12,8 @@
                 <option value="px">px</option>
                 <option value="pt">pt</option>
             </select> <select id="font-family" name="font-family" v-model="fontFamily">
-                <option value="Century Gothic">Century Gothic</option>
                 <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Century Gothic">Century Gothic</option>
             </select><br>
             <label for="lineHeight" class="mr-2">Line Height:</label>
             <input type="number" id="lineHeight" name="lineHeight" v-model="lineHeight" min="0" step="0.1"
@@ -56,7 +56,7 @@ export default {
     data() {
         return {
             title: 'Handwriting Worksheet',
-            fontFamily: 'Century Gothic',
+            fontFamily: 'Comic Sans MS',
             fontSize: 36,
             fontUnit: 'pt',
             lineHeight: 1.5,

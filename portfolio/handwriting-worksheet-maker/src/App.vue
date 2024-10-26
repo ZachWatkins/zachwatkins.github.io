@@ -1,40 +1,31 @@
 <template>
     <div id="root">
-        <form id="form" class="mb-2">
-            <label for="title" class="mr-2">Title:</label>
-            <input type="text" id="title" name="title" v-model="title" :style="{
-                width: `${title.length}ch`,
-            }" /><br>
+        <form id="form" class="mb-2 hidden">
             <label for="font" class="mr-2">Font Size:</label>
             <input type="number" id="fontSize" name="fontSize" v-model="fontSize" :style="{
                 width: `${fontSize.toString().length}ch`,
             }" /><select id="fontUnit" name="fontUnit" v-model="fontUnit">
                 <option value="px">px</option>
                 <option value="pt">pt</option>
-            </select><br>
+            </select> &bull;
             <label for="lineHeight" class="mr-2">Line Height:</label>
             <input type="number" id="lineHeight" name="lineHeight" v-model="lineHeight" min="0" step="0.1"
                 :style="{ width: `${lineHeight.toString().length}ch` }" /><select id="lineHeightUnit"
                 name="lineHeightUnit" v-model="lineHeightUnit">
                 <option value="em">em</option>
                 <option value="px">px</option>
-            </select><br>
+            </select> &bull;
             <label for="letterSpacing" class="mr-2">Letter Spacing:</label>
             <input type="number" id="letterSpacing" name="letterSpacing" v-model="letterSpacing" min="0" step="0.1"
-                :style="{ width: `${letterSpacing.toString().length}ch` }" />px<br>
-            <label for="opacity" class="mr-2">Opacity:</label>
+                :style="{ width: `${letterSpacing.toString().length}ch` }" />px &bull;
+            <label for="opacity" class="mr-2">Lightness:</label>
             <input type="number" id="opacity" name="opacity" v-model="opacity" min="0" max="1" step="0.05"
-                :style="{ width: `${opacity.toString().length}ch` }" /><br>
-            <label for="content" class="mr-2">Content:</label><br>
-            <textarea id="content" name="content" class="w-full" v-model="content"
-                :style="{ fontFamily: font }"></textarea><br>
-            <input type="submit" value="Print" @click="print" />
+                :style="{ width: `${opacity.toString().length}ch` }" />
+            <input type="submit" value="Print" @click="print" class="ml-2" />
         </form>
-        <h2>Preview</h2>
-        <hr>
         <div id="preview" :style="{ fontFamily, fontSize: `${fontSize}${fontUnit}` }">
-            <div class="title">{{ title }}</div>
-            <div class="content"
+            <div class="title" contenteditable>Today's Practice</div>
+            <div class="content" contenteditable
                 :style="{ opacity, letterSpacing: `${letterSpacing}px`, lineHeight: `${lineHeight}${lineHeightUnit}` }">
                 <span v-for="(line, index) in contentElements" :key="index">
                     {{ line }}<br>
@@ -50,9 +41,13 @@ export default {
     components: {
         Preview,
     },
+    mounted() {
+        document.getElementById('preview').addEventListener('click', function () {
+            document.getElementById('form').classList.remove('hidden');
+        }, { once: true });
+    },
     data() {
         return {
-            title: 'Handwriting Worksheet',
             fontFamily: 'ABeeZee',
             fontSize: 36,
             fontUnit: 'pt',
@@ -129,17 +124,19 @@ UuVvWwXxYyZz`,
     margin: 0 auto;
     padding: 0.8in 1in;
     overflow-wrap: break-word;
+    text-align: center;
 }
 
 #preview .title {
     font-size: 24pt;
     text-align: center;
-    line-height: 0.75;
     margin-bottom: 0.5in;
+    display: inline-block;
 }
 
 #preview .content {
     word-wrap: break-word;
+    text-align: left;
 }
 
 @media print {

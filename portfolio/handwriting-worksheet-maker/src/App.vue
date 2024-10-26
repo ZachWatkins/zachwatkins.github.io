@@ -5,15 +5,12 @@
             <input type="text" id="title" name="title" v-model="title" :style="{
                 width: `${title.length}ch`,
             }" /><br>
-            <label for="font" class="mr-2">Font:</label>
+            <label for="font" class="mr-2">Font Size:</label>
             <input type="number" id="fontSize" name="fontSize" v-model="fontSize" :style="{
                 width: `${fontSize.toString().length}ch`,
             }" /><select id="fontUnit" name="fontUnit" v-model="fontUnit">
                 <option value="px">px</option>
                 <option value="pt">pt</option>
-            </select> <select id="font-family" name="font-family" v-model="fontFamily">
-                <option value="Comic Sans MS">Comic Sans MS</option>
-                <option value="Century Gothic">Century Gothic</option>
             </select><br>
             <label for="lineHeight" class="mr-2">Line Height:</label>
             <input type="number" id="lineHeight" name="lineHeight" v-model="lineHeight" min="0" step="0.1"
@@ -56,7 +53,7 @@ export default {
     data() {
         return {
             title: 'Handwriting Worksheet',
-            fontFamily: 'Comic Sans MS',
+            fontFamily: 'ABeeZee',
             fontSize: 36,
             fontUnit: 'pt',
             lineHeight: 1.5,
@@ -84,6 +81,8 @@ UuVvWwXxYyZz`,
 };
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
 #root input[type="text"],
 #root input[type="number"],
 #root select {

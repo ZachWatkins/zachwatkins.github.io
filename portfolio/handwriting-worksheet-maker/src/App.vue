@@ -1,35 +1,49 @@
 <template>
-    <div id="root">
-        <form id="form" class="mb-2 hidden">
-            <label for="font" class="mr-2">Font Size:</label>
-            <input type="number" id="fontSize" name="fontSize" v-model="fontSize" :style="{
-                width: `${fontSize.toString().length}ch`,
-            }" /><select id="fontUnit" name="fontUnit" v-model="fontUnit">
-                <option value="px">px</option>
-                <option value="pt">pt</option>
-            </select> &bull;
-            <label for="lineHeight" class="mr-2">Line Height:</label>
-            <input type="number" id="lineHeight" name="lineHeight" v-model="lineHeight" min="0" step="0.1"
-                :style="{ width: `${lineHeight.toString().length}ch` }" /><select id="lineHeightUnit"
-                name="lineHeightUnit" v-model="lineHeightUnit">
-                <option value="em">em</option>
-                <option value="px">px</option>
-            </select> &bull;
-            <label for="letterSpacing" class="mr-2">Letter Spacing:</label>
-            <input type="number" id="letterSpacing" name="letterSpacing" v-model="letterSpacing" min="0" step="0.1"
-                :style="{ width: `${letterSpacing.toString().length}ch` }" />px &bull;
-            <label for="opacity" class="mr-2">Lightness:</label>
-            <input type="number" id="opacity" name="opacity" v-model="opacity" min="0" max="1" step="0.05"
-                :style="{ width: `${opacity.toString().length}ch` }" />
-            <input type="submit" value="Print" @click="print" class="ml-2" />
-        </form>
-        <div id="preview" :style="{ fontFamily, fontSize: `${fontSize}${fontUnit}` }">
-            <div class="title" contenteditable>Today's Practice</div>
-            <div class="content" contenteditable
-                :style="{ opacity, letterSpacing: `${letterSpacing}px`, lineHeight: `${lineHeight}${lineHeightUnit}` }">
-                <span v-for="(line, index) in contentElements" :key="index">
-                    {{ line }}<br>
-                </span>
+    <div id="overflow-root" class="overflow-auto">
+        <div id="root" class="inline-block border mx-auto box-content">
+            <form id="form" class="mb-2 border-b flex">
+                <div class="border-r p-2">
+                    <label for="fontSize" class="mr-2">Size:</label>
+                    <input type="number" id="fontSize" name="fontSize" v-model="fontSize" class="w-auto box-content"
+                        :style="{
+                            width: `${fontSize.toString().length}ch`,
+                        }" />
+                    <select id="fontUnit" name="fontUnit" v-model="fontUnit">
+                        <option value="px">px</option>
+                        <option value="pt">pt</option>
+                    </select>
+                    /
+                    <input type="number" id="lineHeight" name="lineHeight" v-model="lineHeight" min="0" step="0.1"
+                        class="w-auto box-content" :style="{ width: `${lineHeight.toString().length}ch` }" /><select
+                        id="lineHeightUnit" name="lineHeightUnit" v-model="lineHeightUnit">
+                        <option value="em">em</option>
+                        <option value="px">px</option>
+                    </select>
+                </div>
+                <div class="border-r p-2">
+                    <label for="letterSpacing" class="mr-2">Kerning:</label>
+                    <input type="number" id="letterSpacing" name="letterSpacing" v-model="letterSpacing" min="0"
+                        step="0.1" class="w-auto box-content"
+                        :style="{ width: `${letterSpacing.toString().length}ch` }" />px
+                </div>
+                <div class="border-r p-2">
+                    <label for="opacity" class="mr-2">Fade:</label>
+                    <input type="number" id="opacity" name="opacity" v-model="opacity" min="0" max="1" step="0.05"
+                        class="w-auto box-content" :style="{ width: `${opacity.toString().length}ch` }" />
+                </div>
+                <div class="border-r p-2">
+                    <input type="submit" value="Print" @click="print" />
+                </div>
+            </form>
+            <div id="preview" class="text-center break-words"
+                :style="{ fontFamily, fontSize: `${fontSize}${fontUnit}` }">
+                <div class="title text-center inline-block" contenteditable>Today's Practice</div>
+                <div class="content" contenteditable
+                    :style="{ opacity, letterSpacing: `${letterSpacing}px`, lineHeight: `${lineHeight}${lineHeightUnit}` }">
+                    <span v-for="(line, index) in contentElements" :key="index">
+                        {{ line }}<br>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
@@ -40,11 +54,6 @@ export default {
     name: 'App',
     components: {
         Preview,
-    },
-    mounted() {
-        document.getElementById('preview').addEventListener('click', function () {
-            document.getElementById('form').classList.remove('hidden');
-        }, { once: true });
     },
     data() {
         return {
@@ -78,7 +87,6 @@ UuVvWwXxYyZz`,
 <style>
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
-#root input[type="text"],
 #root input[type="number"],
 #root select {
     border-width: 2px;
@@ -86,25 +94,12 @@ UuVvWwXxYyZz`,
     border-color: transparent transparent #fff transparent;
 }
 
-#root textarea {
-    border-width: 2px;
-    border-style: solid;
-    padding: 0.5em;
-}
-
-#root input[type="number"] {
-    width: auto;
-    box-sizing: content-box;
-}
-
-#root input[type="text"]:focus,
 #root input[type="number"]:focus,
 #root select:focus {
     outline: #007bff solid 2px;
 }
 
 #root input[type="submit"] {
-    margin-top: 10px;
     color: white;
     background-color: #007bff;
     padding: 5px 10px;
@@ -117,19 +112,18 @@ UuVvWwXxYyZz`,
     background-color: #0056b3;
 }
 
+#root {
+    width: 8.5in;
+}
+
 #preview {
-    border: 1px solid;
     width: 8.5in;
     height: 11in;
-    margin: 0 auto;
     padding: 0.8in 1in;
-    overflow-wrap: break-word;
-    text-align: center;
 }
 
 #preview .title {
     font-size: 24pt;
-    text-align: center;
     margin-bottom: 0.5in;
     display: inline-block;
 }
@@ -152,13 +146,22 @@ UuVvWwXxYyZz`,
     body>#app>main>.vp-doc>div,
     body>#app>main>.vp-doc>div>div,
     body>#app>main>.vp-doc>div>div>#main,
-    body>#app>main>.vp-doc>div>div>#main>#root {
+    body>#app>main>.vp-doc>div>div>#main>#overflow-root,
+    body>#app>main>.vp-doc>div>div>#main>#overflow-root>#root {
         display: inline-block;
+    }
+
+    body>#app>main>.vp-doc>div>div>#main>#overflow-root>#root>#form {
+        display: none;
     }
 
     body #preview,
     body #preview * {
         display: block;
+    }
+
+    body #root {
+        border: 0 none;
     }
 
     body #preview {

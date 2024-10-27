@@ -14,5 +14,5 @@ export default {
     extend: {},
   },
   plugins: [],
-  safelist: ['md:float-left', 'md:mr-8', 'md:mb-4'],
+  safelist: ['md:float-left', 'md:mr-8', 'md:mb-4', 'p-2', 'shrink', 'inline-block', 'border', 'border-b', 'border-t', 'border-r', 'text-center', 'break-words', 'box-content', 'relative', 'absolute'],
 };

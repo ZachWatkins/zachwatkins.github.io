@@ -119,7 +119,7 @@ UuVvWwXxYyZz`,
 #preview {
     width: 8.5in;
     height: 11in;
-    padding: 0.8in 1in;
+    padding: 0.8in 0.8in;
 }
 
 #preview .title {

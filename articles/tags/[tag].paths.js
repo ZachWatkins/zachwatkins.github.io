@@ -6,6 +6,8 @@ export const tags = [
   'development',
   'accessibility',
   'productivity',
+  'laravel',
+  'rememboard',
 ];
 export default {
   paths() {

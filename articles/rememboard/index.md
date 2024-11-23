@@ -23,6 +23,6 @@ I do. That's why I'm building Rememboard ([on GitHub](https://github.com/zachwat
 - The weather, so everyone knows what to wear.
 - A calendar to keep track of important activities that day.
 
-You can follow my progress at [Rememboard](/rememboard/). I'll be using Laravel, InertiaJS, and React to build it and I'll host it locally on an extra computer in our house.
+You can follow my progress by viewing articles tagged ["rememboard"](/articles/tags/rememboard/). I'll be using Laravel, InertiaJS, and React to build it and I'll host it locally on an extra computer in our house.
 
 I'd like to thank [Jason McCreary](https://jasonmccreary.me/) for making [Blueprint](https://blueprint.laravelshift.com/) which has saved me time with generating boilerplate code on several projects, including this one. I really favor code generation solutions these days (see why [here](/articles/coding-without-typing/)). I'm trying to make an InertiaJS and React addon for it, but in a private repo since it's not functional yet.

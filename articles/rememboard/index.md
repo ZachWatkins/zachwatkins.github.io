@@ -9,8 +9,6 @@ I am building a dashboard for our family computer. It will help my family get ex
 
 ---
 
-[[toc]]
-
 Do you want a way to share fun and important information with the people in your house on a single shared screen?
 
 I do. That's why I'm building Rememboard ([on GitHub](https://github.com/zachwatkins/rememboard)) to be a dashboard for the home computer. It will show things like:

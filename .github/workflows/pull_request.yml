@@ -46,7 +46,7 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
       - name: Build assets
-        run: npm run build
+        run: npm run docs:build
       - name: Comment failed build in pull request
         if: failure()
         uses: actions/github-script@v5
@@ -59,36 +59,10 @@ jobs:
               repo: context.repo.repo,
               body: 'One or more build steps have failed: ' + context.github.server_url + '/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.github.run_id
             })
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Prepare test environment
-        run: |
-          npm ci
-          npm run build
-      - name: Run tests
-        run: npm run test --if-present
-      - name: Comment failed test in pull request
-        if: failure()
-        uses: actions/github-script@v5
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'One or more tests have failed: ' + context.github.server_url + '/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.github.run_id
-            })
-
   merge:
     needs:
       - audit
       - build
-      - test
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     permissions:

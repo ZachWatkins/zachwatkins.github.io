@@ -23,6 +23,7 @@ h6,
 }
 
 h1 {
+  font-size: var(--text-4xl);
   font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;

@@ -2,7 +2,7 @@
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import Layout from './Layout.vue';
 import './tailwind.postcss';
-// import './style.css';
+import './style.css';
 
 /** @type {import('vitepress').Theme} */
 export default {

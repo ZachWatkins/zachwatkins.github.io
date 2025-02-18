@@ -8,8 +8,8 @@ const { frontmatter } = useData();
 </script>
 
 <template>
-  <h1 class="leading-10 text-center md:text-6xl mb-8 md:leading-tight"><span class="font-extrabold">{{
-      frontmatter.hero.title }}<br class="hidden md:block" /></span></h1>
+  <h1 class="leading-10 text-center mb-8 md:leading-tight"><span class="md:text-6xl font-bold">{{
+    frontmatter.hero.title }}<br class="hidden md:block" /></span></h1>
   <div class="pl-2 pr-2 md:pl-0 md:pr-0 md:text-left font-family-heading text-2xl vp-doc">
     <a class="mb-8 mr-8 md:ml-0 md:mr-16 overflow-clip float-left flow-circle max-w-2/5 md:max-w-none"
       :href="frontmatter.hero.photoLink">
@@ -20,8 +20,7 @@ const { frontmatter } = useData();
     </p>
     <p>
       Sometimes I write <a href="/articles/">articles</a> on JavaScript, PHP,
-      Laravel, WordPress, DevOps, and
-      <a href="/articles/tags/"> other subjects</a>.
+      Laravel, DevOps, and <a href="/articles/tags/"> other subjects</a>.
     </p>
     <p>
       I also have a crossword puzzle maker at

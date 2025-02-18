@@ -20,11 +20,11 @@
   "author": "Zachary Kendall Watkins <zach@zachwatkins.dev>",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
+    "@tailwindcss/postcss": "^4.0.0",
     "postcss": "^8.5.2",
     "prettier": "^3.5.1",
     "sharp": "^0.33.5",
-    "tailwindcss": "^3.4.17",
+    "tailwindcss": "^4.0.0",
     "vitepress": "^1.6.3",
     "vue": "^3.5.13"
   },

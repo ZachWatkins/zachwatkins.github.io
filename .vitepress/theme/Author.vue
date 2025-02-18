@@ -10,7 +10,7 @@ const { theme } = useData();
     <dd>
       <ul class="list-none ml-0">
         <li class="flex items-center">
-          <div class="pr-4 flex-shrink-0">
+          <div class="pr-4 shrink-0">
             <img v-if="theme.gravatar" :src="'https://gravatar.com/avatar/' + theme.gravatar + '.jpg?s=176'
               " alt="author image" class="rounded-full" />
           </div>

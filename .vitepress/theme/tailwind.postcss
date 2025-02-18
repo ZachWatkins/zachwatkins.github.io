@@ -1,5 +1,316 @@
-@tailwind base;
+@import 'tailwindcss';
+@import './styles/vars.css';
+@config "../../tailwind.config.js";
 
-@tailwind components;
+.color-tapfuel-blue {
+  color: var(--tapfuel-blue);
+}
 
-@tailwind utilities;
+html,
+.font-family-prose {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  text-rendering: optimizeLegibility;
+}
+
+header,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-family-heading {
+  font-family: 'Franklin Gothic', sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+html {
+  font-size: 16px;
+}
+
+.bg-js-yellow {
+  background-color: var(--javascript-yellow);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(
+      circle farthest-corner at 0 -150px,
+      hsla(191, 100%, 43%, 100%),
+      hsla(191, 100%, 43%, 0%) 23vw
+    ),
+    radial-gradient(
+      circle farthest-corner at 100% 100vh,
+      hsl(50, 92%, 59%) 0%,
+      #000 23vw
+    );
+  color: #fff;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: inline-block;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#app > header,
+#app > footer {
+  color: #fff;
+  text-shadow:
+    0 0 0.5rem #000,
+    0 0 0.25rem #000,
+    0 0 0.25rem #000;
+}
+
+header a[href='/'] {
+  text-decoration: none;
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+main td {
+  padding: 0.25rem 0.5rem;
+  vertical-align: top;
+}
+
+main td:first-child {
+  word-break: keep-all;
+}
+
+main a {
+  text-decoration: underline;
+}
+
+main a img {
+  display: inline-block;
+}
+
+main h1,
+main h2,
+main h3 {
+  line-height: 1.2;
+}
+
+h2,
+h3 {
+  font-weight: bold;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+main h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+main p,
+main table,
+main ol,
+main pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+main table,
+main table th,
+main table td {
+  border-width: 1px;
+}
+
+main table th,
+main table td {
+  padding: 0.5rem 1rem;
+  vertical-align: top;
+}
+
+main blockquote {
+  margin: 1rem;
+  padding: 0 1rem;
+  border-left: 0.25rem solid #666;
+}
+
+main hr {
+  margin: 1rem 0;
+}
+
+main h2 {
+  position: relative;
+}
+
+main ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin-left: 2rem;
+}
+
+main ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 2rem;
+}
+
+.dark .vp-code span {
+  color: var(--shiki-dark, inherit);
+}
+
+html:not(.dark) .vp-code span {
+  color: var(--shiki-light, inherit);
+}
+
+.star::before {
+  content: '\22C6 ';
+}
+
+.hero-action-0,
+.hero-action-1,
+.hero-action-2 {
+  color: #fff;
+  text-shadow: 0 0 0.5rem #000;
+  box-shadow: 0 0 0.25rem #000 inset;
+  text-decoration: none;
+}
+
+.hero-action-0 {
+  background-color: hsl(0, 90%, 32%);
+}
+
+.hero-action-1 {
+  background-color: hsl(118, 90%, 20%);
+}
+
+.hero-action-2 {
+  background-color: hsl(235, 90%, 50%);
+}
+
+.flow-circle {
+  border-radius: 50%;
+  shape-outside: circle(50%);
+}
+
+@media screen and (min-width: 768px) {
+  .md\:flow-circle {
+    border-radius: 50%;
+    shape-outside: circle(50%);
+  }
+}
+/** <-- */
+
+#localsearch-list a {
+  text-decoration: none;
+  font-family: 'Franklin Gothic', sans-serif;
+}
+
+/** --> Table of contents */
+.table-of-contents {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  margin-top: 1rem;
+  margin-bottom: var(--section-spacing);
+  border-color: var(--javascript-yellow);
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+hr + .table-of-contents {
+  border-top-width: 0;
+}
+
+.table-of-contents ul {
+  list-style-position: outside;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0;
+  padding-left: 0;
+  padding-left: 1.25rem;
+}
+
+.table-of-contents li,
+.vp-doc .table-of-contents li {
+  list-style-type: disc;
+  padding-right: 0.75rem;
+  margin-left: 1.25rem;
+  margin-top: 0;
+}
+
+.table-of-contents li a {
+  text-decoration: none;
+}
+
+.table-of-contents li a:hover,
+.table-of-contents li a:focus,
+.table-of-contents li a:active {
+  text-decoration: underline;
+}
+
+/* Resolve spacing after the table of contents. */
+.table-of-contents + h2,
+.vp-doc .table-of-contents + h2 {
+  margin-top: 0;
+  border-top-width: 0;
+  padding-top: 0;
+}
+
+p:first-child + hr {
+  margin-top: 1.5rem;
+}
+
+.vp-doc hr:first-child,
+.vp-doc p:first-child + hr,
+.table-of-contents + h2 {
+  border-color: var(--javascript-yellow);
+}
+
+/* Override vp-doc styles. */
+.vp-doc dl,
+.vp-doc dl + span {
+  line-height: 28px;
+}
+
+.vp-doc ul.list-none {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.vp-doc dl ul.list-none {
+  margin: 0;
+}
+
+.vp-doc ul.list-none li {
+  margin-top: 0;
+}
+
+.vp-doc h2 + table {
+  margin: 8px 20px 20px 0;
+}

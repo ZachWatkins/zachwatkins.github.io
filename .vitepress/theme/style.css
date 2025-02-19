@@ -168,13 +168,13 @@ main h2 {
   position: relative;
 }
 
-main ol {
+main ol:not(.list-none) {
   list-style-type: decimal;
   list-style-position: outside;
   margin-left: 2rem;
 }
 
-main ul {
+main ul:not(.list-none) {
   list-style-type: disc;
   list-style-position: outside;
   margin-left: 2rem;

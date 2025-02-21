@@ -12,6 +12,8 @@ Can we get this report for every county in the state? Yes! Learn how Adobe InDes
 
 ---
 
+[[toc]]
+
 Due to client confidentiality, I cannot share my presentation slides publicly. However, I can share some of its content as well as aspects of the code and the process since they are freely available.
 
 Getting the right information to the right people at the right time is no small task. I’m going to show you how we generate hundreds of unique PDFs in less than an hour from a public federal database that can change every day.

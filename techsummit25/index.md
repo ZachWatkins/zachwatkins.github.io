@@ -1,4 +1,5 @@
 ---
+canonicalLink: https://zacharywatkins.com/presentations/document-automation-with-adobe-indesign
 title: Document Automation with Adobe InDesign
 description: Texas A&M Tech Summit 2025
 author: Zachary Watkins

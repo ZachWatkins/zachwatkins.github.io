@@ -180,6 +180,10 @@ CONFIG.transformPageData = function (pageData) {
     }
   }
 
+  if (pageData.frontmatter.canonicalLink) {
+    headItems.push(['link', { rel: 'canonical', href: pageData.frontmatter.canonicalLink }]);
+  }
+
   pageData.frontmatter.head ??= [];
   pageData.frontmatter.head.push(...headItems);
 };

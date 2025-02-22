@@ -313,3 +313,7 @@ p:first-child + hr {
 .vp-doc h2 + table {
   margin: 8px 20px 20px 0;
 }
+
+svg.inline-block {
+  display: inline-block;
+}

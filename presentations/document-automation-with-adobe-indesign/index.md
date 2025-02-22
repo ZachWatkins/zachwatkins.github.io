@@ -72,11 +72,11 @@ The county factsheet was adapted from the statewide factsheet, which was made in
   - Embed titles and descriptions in the document, not the graph image.
   - Check your final document using Acrobat Pro's accessibility scanner: https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html
 
-## Resources Referenced in the Presentation
+## Resources
+
+[Document Automation with Adobe InDesign (GitHub repository)](https://github.com/zachwatkins/document-automation-with-adobe-indesign)
 
 [Form 54 - Railroad Equipment Accident/Incident Report](https://data.transportation.gov/Railroads/Railroad-Equipment-Accident-Incident-Source-Data-F/aqxq-n5hy/about_data)
-
-[Form 54 - Railroad Equipment Accident/Incident Report - PDF](https://railroads.dot.gov/sites/fra.dot.gov/files/2019-09/F6180_54_EffectiveJune012011.pdf)
 
 [Colin Flashman's InDesign plugin for renaming data merge exports](https://exchange.adobe.com/apps/cc/100404)
 

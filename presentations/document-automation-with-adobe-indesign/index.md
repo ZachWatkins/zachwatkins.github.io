@@ -58,19 +58,19 @@ The county factsheet was adapted from the statewide factsheet, which was made in
 ## Challenges of Data Merge
 
 - Long column names make template layout difficult.
-- Formatting data - can be done in Excel.
-- Handling text overflow - shorten words and use text flow.
-- Character encoding - use UTF16 and choose Unicode for accents or other special characters.
-- Conditional content - use a separate InDesign template and data file.
-- File names - always uses a number for each filename.
+- Formatting data – can be done in Excel.
+- Handling text overflow – shorten words and use text flow.
+- Character encoding – use UTF16 and choose Unicode for accents or other special characters.
+- Conditional content – use a separate InDesign template and data file.
+- File names – always uses a number for each filename.
   - I use a script to replace numbers with county names in the filename.
-  - Colin Flashman created an InDesign plugin script for this: exchange.adobe.com/apps/cc/100404
-  - You may be able to use InDesign's table of contents feature with bookmarks and Acrobat Pro's organize pages feature to split the file using bookmark names for file names. See here: community.adobe.com/t5/indesign-discussions/naming-pdf-files-created-via-data-merge/td-p/10314812
+  - Colin Flashman created an InDesign plugin script for this: https://exchange.adobe.com/apps/cc/100404
+  - You may be able to use InDesign's table of contents feature with bookmarks and Acrobat Pro's organize pages feature to split the file using bookmark names for file names. See here: https://community.adobe.com/t5/indesign-discussions/naming-pdf-files-created-via-data-merge/td-p/10314812
 - Charts, Graphs
   - I use a script to generate graph images.
   - Other solutions like Excel, PowerBI, or R Studio may help generate graph images without writing code.
   - Embed titles and descriptions in the document, not the graph image.
-  - Check your final document using Acrobat Pro's accessibility scanner: helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html
+  - Check your final document using Acrobat Pro's accessibility scanner: https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html
 
 ## Resources Referenced in the Presentation
 

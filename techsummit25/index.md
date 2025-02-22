@@ -14,7 +14,7 @@ Can we get this report for every county in the state? Yes! Learn how Adobe InDes
 
 [[toc]]
 
-Getting the right information to the right people at the right time is no small task. I’m going to show you how we generate hundreds of unique PDFs in less than an hour from a public federal database that can change every day.
+Getting the right information to the right people at the right time is no small task. I'm going to show you how we generate hundreds of unique PDFs in less than an hour from a public federal database that can change every day.
 
 ## The Web Application
 
@@ -22,7 +22,7 @@ The web application is focused on rail safety in Texas. It provides a map with s
 
 ## The Request
 
-The client requested the state’s 5 cause factsheets for each county along with the state factsheet. This would allow people responsible for rail safety to prioritize their efforts within a given county by comparing it with the state. The source dataset updates daily so update requests can happen at any time.
+The client requested the state's 5 cause factsheets for each county along with the state factsheet. This would allow people responsible for rail safety to prioritize their efforts within a given county by comparing it with the state. The source dataset updates daily so update requests can happen at any time.
 
 The state factsheets were made in Adobe InDesign so I chose to use its data merge feature.
 
@@ -64,13 +64,13 @@ The county factsheet was adapted from the statewide factsheet, which was made in
 - Conditional content – use a separate InDesign template and data file.
 - File names – always uses a number for each filename.
   - I use a script to replace numbers with county names in the filename.
-  - Colin Flashman created an InDesign plugin script for this: exchange.adobe.com/apps/cc/100404
-  - You may be able to use InDesign’s table of contents feature with bookmarks and Acrobat Pro’s organize pages feature to split the file using bookmark names for file names. See here: community.adobe.com/t5/indesign-discussions/naming-pdf-files-created-via-data-merge/td-p/10314812
+  - Colin Flashman created an InDesign plugin script for this: https://exchange.adobe.com/apps/cc/100404
+  - You may be able to use InDesign's table of contents feature with bookmarks and Acrobat Pro's organize pages feature to split the file using bookmark names for file names. See here: https://community.adobe.com/t5/indesign-discussions/naming-pdf-files-created-via-data-merge/td-p/10314812
 - Charts, Graphs
   - I use a script to generate graph images.
   - Other solutions like Excel, PowerBI, or R Studio may help generate graph images without writing code.
   - Embed titles and descriptions in the document, not the graph image.
-  - Check your final document using Acrobat Pro’s accessibility scanner: helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html
+  - Check your final document using Acrobat Pro's accessibility scanner: https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html
 
 ## Resources Referenced in the Presentation
 

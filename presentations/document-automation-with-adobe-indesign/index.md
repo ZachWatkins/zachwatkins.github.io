@@ -44,6 +44,16 @@ Once the InDesign documents are exported, the script has a second routine which:
 
 Now we deploy the documents to the server!
 
+I can't share the exact script because it's under contract, but I can share a similar script I made for processing Texas Lottery Winner data: https://github.com/ZachWatkins/document-automation-with-adobe-indesign/blob/main/cli.js
+
+[Source dataset from data.texas.gov](https://data.texas.gov/dataset/Winners-List-of-Texas-Lottery-Prizes/54pj-3dxy/about_data)
+
+My analysis of the Texas Lottery data grouping winners by game category for each county: [texas-lottery-analysis.csv](https://github.com/ZachWatkins/document-automation-with-adobe-indesign/blob/main/public/texas-lottery-analysis.csv)
+
+Here is an example graph generated from the Lottery data:
+
+![Texas Lottery Winners by County](https://raw.githubusercontent.com/ZachWatkins/document-automation-with-adobe-indesign/main/public/images/game-category-winners-in-harris-county.svg)
+
 ## Adobe InDesign Template
 
 The county factsheet was adapted from the statewide factsheet, which was made in Adobe InDesign and uses 65 different data merge fields. Since I don't own a personal license for Adobe InDesign, I can't share the template nor a video demonstrating the process. You can read about it in depth here: https://helpx.adobe.com/indesign/using/data-merge.html.

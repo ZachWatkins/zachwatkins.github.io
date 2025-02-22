@@ -44,9 +44,9 @@ Once the InDesign documents are exported, the script has a second routine which:
 
 Now we deploy the documents to the server!
 
-I can't share the exact script because it's under contract, but I can share a similar script I made for processing Texas Lottery Winner data: https://github.com/ZachWatkins/document-automation-with-adobe-indesign/blob/main/cli.js
+I can't share the exact script because it's under contract, but I can share a similar script I made for processing Texas Lottery Winner data: [cli.js](https://github.com/ZachWatkins/document-automation-with-adobe-indesign/blob/main/cli.js)
 
-[Source dataset from data.texas.gov](https://data.texas.gov/dataset/Winners-List-of-Texas-Lottery-Prizes/54pj-3dxy/about_data)
+The source dataset is from data.texas.gov: [Winners List of Texas Lottery Prizes](https://data.texas.gov/dataset/Winners-List-of-Texas-Lottery-Prizes/54pj-3dxy/about_data)
 
 My analysis of the Texas Lottery data grouping winners by game category for each county: [texas-lottery-analysis.csv](https://github.com/ZachWatkins/document-automation-with-adobe-indesign/blob/main/public/texas-lottery-analysis.csv)
 

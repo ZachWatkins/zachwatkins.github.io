@@ -9,23 +9,30 @@ description: "Zachary Watkins' career history, skills, accomplishments, and educ
 
 <a href="/profile.jpg" class="md:float-left md:mr-8 md:mb-4" title="Zach in Fall of 2021 wearing a suit jacket and buttoned-up shirt"><img style="display:inline-block" src="/img/profile/profile-214x300.jpg" alt="Zach in Fall of 2021 wearing a suit jacket and buttoned-up shirt" width="214" height="300" /></a>
 
-I am a full stack application and website developer with 18 years of experience (13 years with WordPress), CI/CD, DevOps, database and system administration. While at the Texas A&M University System I’ve given presentations on creating CI/CD pipelines between Github and WP Engine, created custom WordPress plugins and themes, migrated and managed large multisite networks using WP-CLI, and evaluated and addressed web accessibility issues. At Texas A&M Transportation Institute I develop and administrate custom full stack web applications for transportation research grants and meet with researchers to ensure the right work gets done.
+I am a software engineer for Texas A&M Transportation Institute with 18 years of experience providing websites and web applications for the public and private sector. I have a bachelor's degree in fine arts from Angelo State University and have been a public speaker on technical subjects since 2015. In my current role I work with engineers and researchers to save time, lives, and resources by developing custom technology solutions for transportation research grants.
 
 I’ve developed for more than 1,400 high-traffic websites and applications for public and private sector clients. In my freelance work I meet with clients, discuss their problems, requirements, and limitations, and we come up with a solution that meets their needs while being mindful of its impact on the long term cost of ownership of their web technology. I am happiest when my work is saving people a significant amount of time or makes their work and lives easier.
 
-For frameworks I primarily use WordPress, Laravel, and React and am comfortable picking up new JavaScript and PHP frameworks. I have experience modernizing PHP and JavaScript code and am able to develop with or without frameworks depending on a project’s needs due to a thorough understanding of the languages. I spend most of my time developing and implementing application features and communicating with clients to ensure these solutions meet their needs. I also have experience with web design and CSS frameworks and have a BFA in graphic design, and although my most valuable work typically comes from producing features I am also responsible for their appearance.
+For frameworks I primarily use Laravel and React and am comfortable picking up new JavaScript and PHP frameworks. I have experience modernizing PHP and JavaScript code and am able to develop with or without frameworks depending on a project’s needs due to a thorough understanding of the languages. I spend most of my time developing and implementing application features and communicating with clients to ensure these solutions meet their needs. I also have experience with web design and CSS frameworks and have a BFA in graphic design, and although my most valuable work typically comes from producing features I am also responsible for their appearance.
 
 ## Skills
 
 |  |  |
 | :-- | :-- |
-| **Languages** | PHP, SQL, JavaScript, HTML, CSS, bash |
-| **Frameworks** | WordPress, Laravel, React, jQuery, SASS, Node, Vue, Foundation, Grunt |
-| **Tools** | Visual Studio Code, Docker, git, composer, npm, wp-cli, Local (by Flywheel), Sourcetree, Github actions |
-| **Practices** | OOP, CI/CD, unit testing, documentation, code style and analysis, accessibility, SEO |
-| **Services** | WP Engine, Github, Google Analytics, Azure, Browserstack |
+| **Languages** | PHP, SQL, JavaScript, bash, HTML, CSS |
+| **Frameworks** | Laravel, React, Vue, WordPress |
+| **Runtimes** | NodeJS |
+| **Databases** | SQLite, SQL Server, MySQL |
+| **Version Control** | git + GitHub |
+| **Operating Systems** | Windows, macOS, Linux |
+| **Web Servers** | Nginx |
+| **Platforms** | Azure, AWS, WP Engine |
+| **Tools** | Visual Studio Code, Docker, composer, npm, wp-cli |
+| **Practices** | CI/CD, testing, accessibility, OOP, documentation, code style and analysis, SEO |
 
 ## Accomplishments
+
+In 2023 I developed a process for creating factsheets for every county in Texas using a data set, a NodeJS command line application I wrote, and Adobe InDesign in a way that only takes an hour to update across 5 different templates. In 2025 I added a feature to the NodeJS application to generate bar charts for each document. You can read about it here: [Document Automation with Adobe InDesign](/presentations/document-automation-with-adobe-indesign/).
 
 In 2022 I refactored the data import and certification processes for an Internet of Things sensor data application to reduce runtimes from 4 hours to 5 minutes and wrote a database connection circuit breaker process in PHP to recover from transient connection issues during high-throughput operations which trigger load balancing.
 

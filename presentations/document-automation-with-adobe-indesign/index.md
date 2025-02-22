@@ -44,13 +44,17 @@ Once the InDesign documents are exported, the script has a second routine which:
 
 Now we deploy the documents to the server!
 
-I can't share the exact script because it's under contract, but I can share a similar script I made for processing Texas Lottery Winner data: [cli.js](https://github.com/ZachWatkins/document-automation-with-adobe-indesign/blob/main/cli.js)
+## Example Repository
+
+I made a repository to demonstrate how to implement this process using Texas Lottery Winner data as an example: https://github.com/ZachWatkins/document-automation-with-adobe-indesign
 
 The source dataset is from data.texas.gov: [Winners List of Texas Lottery Prizes](https://data.texas.gov/dataset/Winners-List-of-Texas-Lottery-Prizes/54pj-3dxy/about_data)
 
-My analysis of the Texas Lottery data grouping winners by game category for each county: [texas-lottery-analysis.csv](https://github.com/ZachWatkins/document-automation-with-adobe-indesign/blob/main/public/texas-lottery-analysis.csv)
+I made a command line application to read this data and produce a CSV file which groups winners by game category for each county: [texas-lottery-analysis.csv](https://github.com/ZachWatkins/document-automation-with-adobe-indesign/blob/main/public/texas-lottery-analysis.csv)
 
-Here is an example graph generated from the Lottery data:
+Here is the NodeJS command line application: [cli.js](https://github.com/ZachWatkins/document-automation-with-adobe-indesign/blob/main/cli.js)
+
+Here is an example graph generated from the Lottery data for Harris county:
 
 ![Texas Lottery Winners by County](https://raw.githubusercontent.com/ZachWatkins/document-automation-with-adobe-indesign/main/public/images/game-category-winners-in-harris-county.svg)
 

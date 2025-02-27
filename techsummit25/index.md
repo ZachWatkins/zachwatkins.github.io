@@ -62,6 +62,12 @@ Here is an example graph generated from the Lottery data for Harris county:
 
 The county factsheet was adapted from the statewide factsheet, which was made in Adobe InDesign and uses 65 different data merge fields. Since I don't own a personal license for Adobe InDesign, I can't share the template nor a video demonstrating the process. You can read about it in depth here: https://helpx.adobe.com/indesign/using/data-merge.html.
 
+## Video
+
+I don't have a personal license for InDesign so I can't share a video I create, so here is a video from Adobe demonstrating the process:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B8cSK82VeDk?si=YvkJXIsqvDUcKD8p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Benefits of Data Merge
 
 - Quickly create and update document variations using a template that is not feasible when done manually.
@@ -97,5 +103,3 @@ The county factsheet was adapted from the statewide factsheet, which was made in
 [Alternate method for controlling file names for data merge exports](https://community.adobe.com/t5/indesign-discussions/naming-pdf-files-created-via-data-merge/td-p/10314812)
 
 [Using Acrobat Pro to create accessible PDFs](https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html)
-
-[My crossword puzzle website which I prerender PDFs for inside of GitHub Actions](https://crossword.zacharywatkins.com)

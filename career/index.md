@@ -133,7 +133,8 @@ I provided web solutions for clients in the automotive industry that drove leads
 
 ## Publications
 
-<iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" title="“Continuous Deployment with Codeship and WP Engine” — GoWeb" src="https://goweb.tamu.edu/continuous-deployment-with-codeship-and-wp-engine/embed/#?secret=horEAPVEnp#?secret=MJaiBkERXA" data-secret="MJaiBkERXA" width="500" height="306" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+"Continuous Deployment with Codeship and WP Engine"
+https://goweb.tamu.edu/continuous-deployment-with-codeship-and-wp-engine/  
 
 ## Volunteer Work
 

@@ -20,7 +20,7 @@
   "author": "Zachary Kendall Watkins <zach@zachwatkins.dev>",
   "license": "MIT",
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.14",
     "postcss": "^8.5.2",
     "prettier": "^3.5.1",
     "sharp": "^0.33.5",

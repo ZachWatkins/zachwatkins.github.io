@@ -46,6 +46,6 @@
     "htmlWhitespaceSensitivity": "strict"
   },
   "dependencies": {
-    "reveal.js": "^5.1.0"
+    "reveal.js": "^5.2.0"
   }
 }

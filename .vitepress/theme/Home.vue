@@ -33,7 +33,7 @@ const { frontmatter } = useData();
       <a target="_blank" href="https://www.linkedin.com/in/zacharykwatkins/">LinkedIn</a>,
       <a target="_blank" href="https://x.com/zachwatkinsv1">Twitter</a>,
       <a target="_blank" href="https://packagist.org/users/zachwatkins/packages/">Packagist</a>, or via email at
-      <a href="mailto:zach@zachwatkins.dev">zach&#64;zachwatkins.dev</a>.
+      <a href="mailto:zwatkins.it@gmail.com">zwatkins.it&#64;gmail.com</a>.
     </p>
     <br class="clear-both" />
     <ArticleListing v-if="articles.length > 0" :article="articles[0]" />

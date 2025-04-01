@@ -26,7 +26,7 @@ Remarklet makes modifying and commenting on websites remarkably easy! Activate i
 
 - Return to Drag Mode: Ctrl + Enter
 
-If you enjoy using this tool, I'd love to know! You can email me at <a href="mailto:zach@zachwatkins.dev">zach&#64;zachwatkins.dev</a>.
+If you enjoy using this tool, I'd love to know! You can email me at <a href="mailto:zwatkins.it@gmail.com">zwatkins.it&#64;gmail.com</a>.
 
 # Features:
 

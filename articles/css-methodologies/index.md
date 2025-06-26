@@ -30,12 +30,12 @@ Benefits of using iframes include:
 2. Universal browser support, as iframes have been around since the early days of the web.
 3. Giving a website owner control over what capability your `<iframe>` code has on their website using the `sandbox` attribute. This isn't as big of a benefit if an iframe feature comes with a script as part of the iframe's functionality.
 
-This has a few drawbacks:
+This has drawbacks:
 
-1. The owner of the page containing the `<iframe>` tag must rely on the iframe's owner to make their content accessible.
-2. Loading an iframe's content is much slower than if the page included the code directly.
-3. Responsive design becomes more difficult, although this can be overcome by either the website owner or the iframe owner accounting for this need as necessary. The owner can change the size of the iframe, and the iframe owner can make their content responsive when the iframe is resized.
-4. Content Security Policy (CSP) headers may block the iframe from loading until the website owner enables the iframe explicitly.
+1. Loading an iframe's content is much slower than if the page included the code directly.
+2. The owner of the page containing the `<iframe>` tag must rely on the iframe's owner to make their content accessible.
+3. Responsive design may require effort from the website owner and/or the iframe owner.
+4. Content Security Policy headers may block the iframe from loading without modification.
 
 It's a solid choice for people who want to cut down on integration risk. Nobody wants to cause a problem during the integration phase - it can become a huge time sink and lose trust.
 

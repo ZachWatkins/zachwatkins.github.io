@@ -1,5 +1,5 @@
 ---
-title: 'Methodologies for Style Isolation'
+title: 'Isolating Component Styles'
 author: Zachary Watkins
 date: 2025-06-21
 tags: [web-components, remarklet]

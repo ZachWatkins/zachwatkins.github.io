@@ -73,7 +73,6 @@ const CONFIG = {
     },
     nav: [
       { text: 'Articles', link: '/articles/' },
-      { text: 'Presentations', link: '/presentations/' },
       { text: 'Portfolio', link: '/portfolio/' },
       { text: 'Career', link: '/career/' },
     ],
@@ -98,7 +97,7 @@ const CONFIG = {
         icon: 'linkedin',
         link: 'https://www.linkedin.com/in/zacharykwatkins/',
       },
-      { icon: 'email', link: 'mailto:zach@zachwatkins.dev' },
+      { icon: 'email', link: 'mailto:zwatkins.it@gmail.com' },
     ],
   },
   sitemap: {

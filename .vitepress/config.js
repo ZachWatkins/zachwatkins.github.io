@@ -75,6 +75,7 @@ const CONFIG = {
       { text: 'Articles', link: '/articles/' },
       { text: 'Portfolio', link: '/portfolio/' },
       { text: 'Career', link: '/career/' },
+      { text: 'GitHub', link: 'https://github.com/zachwatkins/' },
     ],
     footerNav: [
       { text: 'Articles', link: '/articles/' },

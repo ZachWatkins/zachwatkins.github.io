@@ -19,16 +19,17 @@ For frameworks I primarily use Laravel and React and am comfortable picking up n
 
 |  |  |
 | :-- | :-- |
-| **Languages** | PHP, SQL, JavaScript, bash, HTML, CSS |
-| **Frameworks** | Laravel, React, Vue, WordPress |
-| **Runtimes** | NodeJS |
-| **Databases** | SQLite, SQL Server, MySQL |
-| **Version Control** | git + GitHub |
+| **Languages** | PHP, SQL, JavaScript, TypeScript, HTML, CSS, Bash, Python, C# (I helped with a VR game in Unity) |
+| **Frameworks** | Laravel, Vue |
+| **Libraries** | React, Material UI, Inertia, Leaflet, Playwright, Jest, Pest, PHPUnit |
+| **Databases** | SQL Server, MySQL, SQLite |
+| **Tools** | Visual Studio Code, Docker, git, composer, npm, wp-cli |
 | **Operating Systems** | Windows, macOS, Linux |
-| **Web Servers** | Nginx |
-| **Platforms** | Azure, AWS, WP Engine |
-| **Tools** | Visual Studio Code, Docker, composer, npm, wp-cli |
-| **Practices** | CI/CD, testing, accessibility, OOP, documentation, code style and analysis, SEO |
+| **Practices** | PRs, CI/CD, testing, accessibility, documentation, OOP, SEO |
+| **Platforms** | Azure, AWS, GCP, GitHub, Google Analytics, WP Engine |
+| **Web Servers** | Nginx, Apache |
+| **JavaScript Runtimes** | NodeJS |
+| **Content Management Systems** | WordPress, Drupal, Joomla |
 
 ## Accomplishments
 
@@ -44,6 +45,10 @@ In 2016 I developed and implemented a continuous deployment workflow for all of 
 
 ## Public Speaking
 
+**Document Automation with Adobe InDesign**
+
+[Slides (PDF)](/presentations/document-automation-with-adobe-indesign.pdf) &bull; 2025 &bull; Texas A&M Technology Summit &bull; Frisco, Texas
+
 **Strategies for Resilient Web Applications and Websites**
 
 [Slides (PDF)](/presentations/strategies-for-resilient-web-applications-and-websites.pdf) &bull; 2022 &bull; Texas A&M Technology Summit &bull; Online
@@ -58,11 +63,17 @@ In 2016 I developed and implemented a continuous deployment workflow for all of 
 
 ## Open Source
 
+[@zw/remarklet](https://www.npmjs.com/package/@zw/remarklet)  
+Remarklet adds visual editing capabilities to any web page. This makes modifying and commenting on them remarkably easy, even on touchscreens! Check out the CodePen demo.  
+`npm install @zw/remarklet`
+
 [thoughtful-web/activation-requirements-wp](https://packagist.org/packages/thoughtful-web/activation-requirements-wp)  
-A PHP library for WordPress to apply activation requirements as a configuration file.
+A PHP library for WordPress to apply activation requirements as a configuration file.  
+`composer require thoughtful-web/activation-requirements-wp`
 
 [thoughtful-web/settings-page-wp](https://packagist.org/packages/thoughtful-web/settings-page-wp)  
-A PHP library for WordPress to declare settings pages as configuration files. Supports multiple field types which connect to individual options table entries.
+A PHP library for WordPress to declare settings pages as configuration files. Supports multiple field types which connect to individual options table entries.  
+`composer require thoughtful-web/settings-page-wp`
 
 [List Item Filter](https://wordpress.org/plugins/list-item-filter/)  
 A WordPress plugin which provides a text search box with auto suggestions. Regrettably I have not kept up with updates to this plugin’s compatibility with WordPress releases or PHP versions.
@@ -72,7 +83,7 @@ A WordPress plugin which provides a text search box with auto suggestions. Regre
 **Angelo State University / Bachelor of Fine Arts**  
 JUNE 2004 – DECEMBER 2008; SAN ANGELO, TEXAS
 
-My coursework focused on graphic design and typography. I was a member of the Honors program and as part of this coursework I created a plan and presentation booth on my proposal to reevaluate and redesign the university’s website to have an audience-based approach to its design and organization.
+My coursework focused on graphic design and typography. I was a member of the Honors program and as part of my coursework I created a plan and presentation booth for a proposal to reevaluate and redesign the university’s website to have an audience-based approach to its design and organization.
 
 ## Certification
 
@@ -98,21 +109,24 @@ October 2021
 ## Experience
 
 **Texas A&M Transportation Institute**  
-_November 2021 – present &bull; Software Applications Developer III_
+_November 2021 – present &bull; Software Engineer III_
 
-As the Communication division’s lead web application developer, I meet with researchers, project managers, and occasionally representatives for applied research grants to discuss goals, requirements, limitations, project schedules, and to give guidance on what the technology can do or additional features they may want to consider. I also manage student technicians and another application developer.
+I work in the Communication division to create web applications and provide other technology solutions for transportation research grants. I meet with division heads, principal investigators, researchers, and project managers to discuss goals, requirements, limitations, estimates, and provide progress updates.
 
-I am responsible for development, deployment, and maintenance of the applications and sites I work on which are either hosted on Azure or WP Engine. I also work with researchers to implement their statistical calculations into application code or refactor their SQL to work more efficiently when driven by the application.
+I am responsible for development, deployment, and maintenance of the applications and sites I work on which are hosted on Azure, AWS, or WP Engine. I also work with researchers to implement their statistical calculations into application code or refactor their SQL to work more efficiently when driven by the application. I manage student technicians who contribute to my projects and previously managed a full-time employee.
+
+To date, I have created or developed 12 different applications related to research grants and assisted with several internal websites. During this work I created ETL data pipelines, database migrations, a machine learning model trained on user inputs, and a rail safety factsheet generation process using Adobe InDesign. I also helped establish a data-sharing program with a Federal agency.
+
 
 **Freelance WordPress Developer**  
-_October 2011 – present &bull; Sole Proprietor_
+_October 2011 – March 2023 &bull; Owner_
 
-I provide development, support, and consultation for clients already on WordPress or who wish to use it for their website. My longest client was a real estate agency using a custom theme and MLS data pipeline. I refactored their custom theme's CRM features to improve performance, security, and reliability, and then added unit tests to expedite testing this and future modifications. I have also implemented version control, SSH push deployment, custom AJAX driven search pages, and performance optimizations.
+I provided development, support, and consultation for several local businesses. My last client whom I worked with for more than a year was a real estate agency with a WordPress website. I refactored their custom CRM workflow to improve performance, security, and reliability, and then added unit tests to expedite testing this and future modifications. I also implemented version control, SSH push deployment, custom AJAX driven search pages, and performance optimizations.
 
 **Texas A&M College of Liberal Arts Dean’s Office**  
 _November 2020 – November 2021 &bull; Software Applications Developer II_
 
-I was the Lead Web / Applications Developer for the Dean’s Office at the College of Liberal Arts. I completely rebuilt a critical self-hosted Ruby on Rails/Kubernetes application using PHP and WordPress to remove obstacles to its management and maintenance. I also moved their WordPress multisite network from self-hosted Kubernetes to WP Engine, performed security upgrades, implemented Active Directory authentication for WordPress users, and created and contributed to standard operating procedures for website governance.
+I was the Lead Web Applications Developer for the Dean’s Office at the College of Liberal Arts. I completely rebuilt a critical self-hosted Ruby on Rails and Kubernetes application using PHP and WordPress to remove obstacles to its management and maintenance. I also moved their WordPress multisite network from self-hosted Kubernetes to WP Engine, performed security upgrades, implemented Active Directory authentication for WordPress users, and created and contributed to standard operating procedures for website governance.
 
 **Texas A&M AgriLife Communications**  
 _April 2015 – November 2020 &bull; Software Applications Developer II_

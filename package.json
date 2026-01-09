@@ -17,7 +17,7 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
-  "author": "Zachary Kendall Watkins <zach@zachwatkins.dev>",
+  "author": "Zachary Kendall Watkins <zwatkins.it@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.0",

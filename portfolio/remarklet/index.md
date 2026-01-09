@@ -44,4 +44,4 @@ If you enjoy using this tool, I'd love to know! You can email me at <a href="mai
 - Delete Elements
 - Edit Text
 
-Copyright 2025 Zachary Kendall Watkins <zwatkins.it@gmail.com> (https://github.com/zachwatkins)
+Copyright 2026 Zachary Kendall Watkins <zwatkins.it@gmail.com> (https://github.com/zachwatkins)

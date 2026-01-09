@@ -49,4 +49,4 @@ We may update this Privacy Policy periodically. The latest version will be poste
 
 ## Contact Information:
 
-For any questions or concerns regarding this Privacy Policy, you can contact us at zach@zachwatkins.dev.
+For any questions or concerns regarding this Privacy Policy, you can contact me at zwatkins.it@gmail.com.

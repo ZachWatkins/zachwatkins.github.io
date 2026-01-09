@@ -47,7 +47,7 @@ In 2016 I developed and implemented a continuous deployment workflow for all of 
 
 **Document Automation with Adobe InDesign**
 
-&bull; 2025 &bull; Texas A&M Technology Summit &bull; Frisco, Texas
+[Article](/presentations/document-automation-with-adobe-indesign) &bull; 2025 &bull; Texas A&M Technology Summit &bull; Frisco, Texas
 
 **Strategies for Resilient Web Applications and Websites**
 

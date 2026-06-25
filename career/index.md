@@ -33,7 +33,7 @@ For frameworks I primarily use Laravel and React and am comfortable picking up n
 
 ## Accomplishments
 
-In 2023 I developed a process for creating factsheets for every county in Texas using a data set, a NodeJS command line application I wrote, and Adobe InDesign in a way that only takes an hour to update across 5 different templates. In 2025 I added a feature to the NodeJS application to generate bar charts for each document. You can read about it here: [Document Automation with Adobe InDesign](/presentations/document-automation-with-adobe-indesign/).
+In 2023 I developed a process for creating factsheets for every county in Texas using a data set, a NodeJS command line application I wrote, and Adobe InDesign in a way that only takes an hour to update across 5 different templates. In 2025 I added a feature to the NodeJS application to generate bar charts for each document. You can read about it here: [Document Automation with Adobe InDesign](../presentations/document-automation-with-adobe-indesign/).
 
 In 2022 I refactored the data import and certification processes for an Internet of Things sensor data application to reduce runtimes from 4 hours to 5 minutes and wrote a database connection circuit breaker process in PHP to recover from transient connection issues during high-throughput operations which trigger load balancing.
 
@@ -47,7 +47,7 @@ In 2016 I developed and implemented a continuous deployment workflow for all of 
 
 **Document Automation with Adobe InDesign**
 
-[Article](/presentations/document-automation-with-adobe-indesign) &bull; 2025 &bull; Texas A&M Technology Summit &bull; Frisco, Texas
+[Article](../presentations/document-automation-with-adobe-indesign/) &bull; 2025 &bull; Texas A&M Technology Summit &bull; Frisco, Texas
 
 **Strategies for Resilient Web Applications and Websites**
 

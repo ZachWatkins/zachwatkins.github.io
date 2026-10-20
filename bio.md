@@ -16,4 +16,5 @@ Did you know that your front-end team can build well designed PDFs into an app e
 
 ## Previous Talks
 
+"Save Your Hands for Another Day",\
 "Document Automation with Adobe InDesign", "Story Maps: Planning Outcome-oriented Solutions", "Strategies for Resilient Web Applications and Websites", "Streamline Building, Deploying, and Maintaining Your (Higher-Ed) Websites with WordPress"

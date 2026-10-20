@@ -45,6 +45,10 @@ In 2016 I developed and implemented a continuous deployment workflow for all of 
 
 ## Public Speaking
 
+**Save Your Hands for Another Day**
+
+[Talk](../presentations/save-your-hands-for-another-day/) &bull; 2026 &bull; LonghornPHP
+
 **Document Automation with Adobe InDesign**
 
 [Article](../presentations/document-automation-with-adobe-indesign/) &bull; 2025 &bull; Texas A&M Technology Summit &bull; Frisco, Texas

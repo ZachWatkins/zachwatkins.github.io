@@ -47,7 +47,7 @@ In 2016 I developed and implemented a continuous deployment workflow for all of 
 
 **Save Your Hands for Another Day**
 
-[Talk](../presentations/save-your-hands-for-another-day/) &bull; 2026 &bull; LonghornPHP
+[Slides (PDF)](/Save-your-hands-for-another-day-longhornphp-2026.pdf) &bull; 2026 &bull; LonghornPHP
 
 **Document Automation with Adobe InDesign**
 

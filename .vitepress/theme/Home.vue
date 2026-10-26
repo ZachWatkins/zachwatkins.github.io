@@ -36,8 +36,11 @@ const { frontmatter } = useData();
       <a href="mailto:zwatkins.it@gmail.com">zwatkins.it&#64;gmail.com</a>.
     </p>
     <br class="clear-both" />
+    <PresentationListing
+      v-if="presentations.length > 0"
+      :presentation="presentations[0]"
+    />
     <ArticleListing v-if="articles.length > 0" :article="articles[0]" />
     <Content />
-    <PresentationListing v-if="presentations.length > 0" :presentation="presentations[0]" />
   </div>
 </template>

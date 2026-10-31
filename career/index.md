@@ -39,7 +39,7 @@ In 2023 I developed a process for creating factsheets for every county in Texas 
 
 In 2022 I refactored the data import and certification processes for an Internet of Things sensor data application to reduce runtimes from 4 hours to 5 minutes and wrote a database connection circuit breaker process in PHP to recover from transient connection issues during high-throughput operations which trigger load balancing.
 
-In 2021 I rebuilt an in-house Ruby on Rails workstation ordering application in PHP for WordPress which launched that Fall. This application provides a manageable, authenticated storefront for the College of Liberal Arts’ faculty and staff workstation ordering program.
+In 2021 I rebuilt a Ruby on Rails workstation ordering application in PHP for WordPress which launched that Fall. This application provides a manageable, authenticated storefront for the College of Liberal Arts’ faculty and staff workstation ordering program.
 
 In 2020 I developed a custom WordPress theme based on the Genesis framework for Texas A&M AgriLife’s News website (https://agrilifetoday.tamu.edu/) and launched it that year.
 

@@ -57,7 +57,7 @@ In 2016 I developed and implemented a continuous deployment workflow for all of 
 
 **Strategies for Resilient Web Applications and Websites**
 
-[Slides (PDF)](/presentations/strategies-for-resilient-web-applications-and-websites.pdf) &bull; 2022 &bull; Texas A&M Technology Summit &bull; Online
+[Slides (PDF)](/presentations/2022-strategies-for-resilient-web-applications-and-websites.pdf) &bull; 2022 &bull; Texas A&M Technology Summit &bull; Online
 
 **Streamline Building, Deploying, and Maintaining Your (Higher-Ed) Websites with WordPress!**
 

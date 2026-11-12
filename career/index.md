@@ -61,7 +61,7 @@ In 2016 I developed and implemented a continuous deployment workflow for all of 
 
 **Streamline Building, Deploying, and Maintaining Your (Higher-Ed) Websites with WordPress!**
 
-[Slides (PDF)](/presentations/Presentation-2019-WP-Higher-Ed-WordPress.pdf) &bull; 2019 &bull; Texas A&M Technology Summit &bull; Moody Gardens Convention Center, Corpus Christi, Texas
+[Slides (PDF)](/presentations/2019-wp-higher-ed-wordpress.pdf) &bull; 2019 &bull; Texas A&M Technology Summit &bull; Moody Gardens Convention Center, Corpus Christi, Texas
 
 **Continuous Deployment from GitHub to WP Engine**
 
